@@ -1,0 +1,352 @@
+import React, { Fragment, useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import axios from "axios";
+import WordsItem from "../texts/WordsItem";
+import WordModal from "../translation/WordModal";
+import {
+  puppeteerFunc,
+  addWord,
+  // removeWord,
+  loadUserWords,
+  loadUserWordsLen
+} from "../../actions/userWords";
+import "./style.css";
+import HanziWriter from "hanzi-writer";
+// import Spinner from "../layout/Spinner";
+import Tippy from "@tippyjs/react";
+
+const Search = ({
+  loading,
+  addWord,
+  loadUserWords,
+  loadUserWordsLen,
+  dictResponse,
+  puppeteerFunc
+}) => {
+  useEffect(() => {
+    console.log("汉语是世界上最难学的一个语言");
+    loadUserWords();
+  }, []);
+
+  const [clicked, setClicked] = useState(false);
+  const [wordFromSearch, setWordFromSearch] = useState(null);
+  const [wordsFromSearch, setWordsFromSearch] = useState(null);
+  const [showExamples, setShowExamples] = useState(true);
+  const [hideFlag, setHideFlag] = useState({
+    chinese: false,
+    pinyin: false,
+    translation: false
+  });
+
+  const getWords = async words => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+
+    let res;
+    try {
+      res = await axios.post("/api/dictionary/allwords", words, config);
+    } catch (err) {
+      console.log(err);
+    }
+    return res.data;
+  };
+
+  const onSubmit = async e => {
+    e.preventDefault();
+    const searchedWords = document.getElementById("searchInput");
+
+    let words = searchedWords.value.trim();
+    const showCharDiv = document.getElementById("showCharDiv");
+    showCharDiv.innerHTML = "";
+
+    const segmenter = async text => {
+      const config = {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      };
+
+      let res;
+      try {
+        res = await axios.post("/api/dictionary/segmenter", { text }, config);
+      } catch (err) {
+        console.log(err);
+      }
+      return res.data;
+    };
+
+    if (/\p{Script=Han}/u.test(words) && !(/[а-яА-ЯЁё]/.test(words) || /[A-Za-z0-9]/.test(words))) {
+      for (let i = 0; i < words.length; i++) {
+        const writer = HanziWriter.create("showCharDiv", words[i], {
+          width: 60,
+          height: 60,
+          padding: 0,
+          showOutline: true,
+          radicalColor: "#168F16",
+          delayBetweenLoops: 3000
+        });
+        writer.loopCharacterAnimation();
+      }
+    } else {
+      showCharDiv.innerHTML =
+        "<p class='text-danger'>Пока только поддерживается китайско-русский перевод, приносим извинения за неудобства.</p>";
+      return;
+    }
+
+    // searchedWords.value = "";
+
+    let allwords = await segmenter(words);
+    allwords = allwords.filter(word => /\p{Script=Han}/u.test(word));
+
+    const wordsFromDB = await getWords(allwords);
+
+    // console.log(wordsFromDB);
+    let newArr = allwords.map(word => {
+      for (let i = 0; i < wordsFromDB.length; i++) {
+        if (word === wordsFromDB[i].chinese) {
+          return wordsFromDB[i];
+        }
+      }
+      return word;
+    });
+
+    if (newArr.length === 1) {
+      setWordsFromSearch(null);
+      setWordFromSearch(newArr[0]);
+      await puppeteerFunc(newArr[0].chinese);
+      // console.log(dictResponse);
+    } else {
+      setWordFromSearch(null);
+      setWordsFromSearch(newArr);
+    }
+
+    // console.log(newArr);
+  };
+
+  const markUpRussianText = text => {
+    return text
+      .replace(/\[b\]\\\[o\\\]\d\[\/b\]/g, "")
+      .replace(/\[b\]/g, "<span class='tippyBold'>")
+      .replace(/\[\/b\]/g, "</span>")
+      .replace(/\[c\]/g, "<span class='tippyColor'>")
+      .replace(/\[\/c\]/g, "</span>")
+      .replace(/\[p\]/g, "<span class='tippyColor tippyItalic'>")
+      .replace(/\[\/p\]/g, "</span>")
+      .replace(/\[i\]/g, "<span class='tippyItalic'>")
+      .replace(/\[\/i\]/g, "</span>")
+      .replace(/\[m1\]/g, "<span class='tippyParagraph'>")
+      .replace(/\[m\d\]/g, "<span class='tippyExample'>")
+      .replace(/\[\/m\]/g, "</span>")
+      .replace(/\[\*\]\[ex\]/g, "<div class='tippyExsShow'>")
+      .replace(/\[\/ex\]\[\/\*\]/g, "</div>")
+      .replace(/\\\[(.{1,})\\\]/g, "($1)")
+      .replace(/\[ref\]/g, "<span class='text-info'>")
+      .replace(/\[\/ref\]/g, "</span>");
+  };
+
+  const showMoreButton = () => {
+    const examples = document.getElementsByClassName("tippyExsShow");
+
+    if (showExamples) {
+      Array.from(examples).forEach(el => {
+        el.classList.add("tippyExs");
+      });
+      setShowExamples(false);
+    } else {
+      Array.from(examples).forEach(el => {
+        el.classList.remove("tippyExs");
+      });
+      setShowExamples(true);
+    }
+  };
+
+  const hideChinese = e => {
+    setHideFlag({
+      chinese: !hideFlag.chinese,
+      translation: hideFlag.translation,
+      pinyin: hideFlag.pinyin
+    });
+    e.target.innerHTML = !hideFlag.chinese ? "Скрыто" : "Иероглифы";
+  };
+
+  const hidePinyin = e => {
+    setHideFlag({
+      pinyin: !hideFlag.pinyin,
+      translation: hideFlag.translation,
+      chinese: hideFlag.chinese
+    });
+    e.target.innerHTML = !hideFlag.pinyin ? "Скрыто" : "Пиньинь";
+  };
+
+  const hideFanyi = e => {
+    setHideFlag({
+      translation: !hideFlag.translation,
+      chinese: hideFlag.chinese,
+      pinyin: hideFlag.pinyin
+    });
+    e.target.innerHTML = !hideFlag.translation ? "Скрыто" : "Перевод";
+  };
+
+  const updateVocabulary = async word => {
+    // console.log(word);
+    if (!clicked) {
+      setClicked(true);
+      await addWord(word);
+      setTimeout(() => {
+        loadUserWords();
+        loadUserWordsLen();
+      }, 100);
+    }
+  };
+
+  return (
+    <Fragment>
+      <div style={{ maxWidth: "500px", margin: "auto" }}>
+        <form onSubmit={e => onSubmit(e)}>
+          <div className='form-group'>
+            <h4 className='control-label'>Китайско-русский словарь</h4>
+            <label>
+              <i>
+                база данных{" "}
+                <a href='https://bkrs.info/' target='_blank'>
+                  БКРС
+                </a>
+              </i>
+            </label>
+            <div className='form-group'>
+              <div className='input-group mb-3'>
+                <input
+                  type='text'
+                  className='form-control'
+                  id='searchInput'
+                  placeholder='汉字。。。'
+                />
+                <div className='input-group-append' id='searchButton'>
+                  <button className='btn btn-primary' type='submit'>
+                    <i className='fas fa-search'></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id='showCharDiv'></div>
+
+      {wordFromSearch && (
+        <Fragment>
+          <Fragment>
+            <Tippy content={<span>{showExamples ? "Скрыть примеры" : "Показать примеры"}</span>}>
+              <button
+                className='btn btn-sm btn-warning'
+                id='showMoreButton'
+                onClick={showMoreButton}
+              >
+                {showExamples ? "Меньше" : "Больше"}
+              </button>
+            </Tippy>
+            <Tippy content={<span>Добавить слово в вокабуляр</span>}>
+              <button
+                className='btn btn-sm btn-info'
+                onClick={() => updateVocabulary(wordFromSearch)}
+              >
+                {clicked ? <i className='fas fa-minus'></i> : <i className='fas fa-plus'></i>}
+              </button>
+            </Tippy>
+
+            {dictResponse && (
+              <button
+                className='btn btn-sm btn-warning ml-2'
+                dangerouslySetInnerHTML={{
+                  __html: dictResponse
+                }}
+              ></button>
+            )}
+          </Fragment>
+
+          <h4 className='mt-2'>{wordFromSearch && wordFromSearch.pinyin}</h4>
+          <div
+            className='mb-3'
+            dangerouslySetInnerHTML={{
+              __html: wordFromSearch && markUpRussianText(wordFromSearch.russian)
+            }}
+          ></div>
+        </Fragment>
+      )}
+
+      {wordsFromSearch && (
+        <Fragment>
+          <WordModal />
+          <table className='table table-hover mb-3'>
+            <thead>
+              <tr className='table-info'>
+                <th>
+                  <button
+                    type='button'
+                    className='btn btn-light btn-sm'
+                    onClick={e => hideChinese(e)}
+                  >
+                    Иероглифы
+                  </button>
+                </th>
+                <th>
+                  <button
+                    type='button'
+                    className='btn btn-light btn-sm'
+                    onClick={e => hidePinyin(e)}
+                  >
+                    Пиньинь
+                  </button>
+                </th>
+                <th style={{ width: "60%" }}>
+                  <button
+                    type='button'
+                    className='btn btn-light btn-sm'
+                    onClick={e => hideFanyi(e)}
+                  >
+                    Перевод
+                  </button>
+                </th>
+                <th>Примеры</th>
+                <th>Изучать</th>
+              </tr>
+            </thead>
+            <tbody>
+              {wordsFromSearch.map(word => (
+                <WordsItem
+                  key={word._id}
+                  lexicon={{
+                    chinese: word.chinese,
+                    pinyin: word.pinyin,
+                    translation: word.russian,
+                    fromSearch: true
+                  }}
+                  hideFlag={hideFlag}
+                />
+              ))}
+            </tbody>
+          </table>
+        </Fragment>
+      )}
+    </Fragment>
+  );
+};
+
+Search.propTypes = {};
+
+const mapStateToProps = state => ({
+  loading: state.userwords.loading,
+  dictResponse: state.userwords.dictResponse
+});
+
+export default connect(mapStateToProps, {
+  loadUserWords,
+  loadUserWordsLen,
+  addWord,
+  puppeteerFunc
+})(Search);
