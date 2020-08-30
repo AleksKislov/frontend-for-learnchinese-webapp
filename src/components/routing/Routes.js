@@ -64,7 +64,7 @@ const Routes = () => {
           <Route exact path='/search' component={Search} />
           <Route exact path='/posts' component={Posts} />
           <Route exact path='/posts/:id' component={PostPage} />
-          <Route exact path='/createtext' component={TextForm} />
+          <PrivateRoute exact path='/create-text' component={TextForm} />
 
           <NotFound />
         </Switch>

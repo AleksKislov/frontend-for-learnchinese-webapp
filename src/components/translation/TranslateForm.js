@@ -162,7 +162,7 @@ const TranslateForm = ({ loadUserWords }) => {
 
         <div>
           <h4>Перевод</h4>
-          <div id='result'>
+          <div className='result'>
             <p>
               {wordsFromText &&
                 wordsFromText.map(word => <TippyTooltip word={word} key={uuid()} />)}

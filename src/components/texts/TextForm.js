@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { connect } from "react-redux";
 import store from "../../store";
 import axios from "axios";
@@ -6,31 +6,41 @@ import PropTypes from "prop-types";
 import WordModal from "../translation/WordModal";
 import { setAlert } from "../../actions/alert";
 import { loadUserWords } from "../../actions/userWords";
-import TippyTooltip from "../translation/TippyTooltip";
+import Paragraph from "./Paragraph";
 import { v4 as uuid } from "uuid";
 
 const TextForm = ({ loadUserWords }) => {
   useEffect(() => {
     console.log("汉语是世界上最难学的一个语言");
+    console.log("Китайский язык - самый сложный в мире");
     loadUserWords();
   }, []);
 
   const [textLen, setTextLen] = useState(0);
-
-  const [wordsFromText, setWordsFromText] = useState([]);
+  const [formData, setFormData] = useState({
+    chineseChunkedWords: [],
+    chunkedTranslation: [],
+    description: "",
+    title: "",
+    level: 1,
+    chunkedOriginText: [],
+    tags: [],
+    length: 0
+  });
 
   const onSubmit = async e => {
     e.preventDefault();
     const textArea = document.getElementById("textArea");
+    const translationArea = document.getElementById("translationArea");
+    const tagsId = document.getElementById("tags");
 
-    if (textLen > 350) {
-      store.dispatch(setAlert("Максимум 350 знаков, удалите лишние", "danger"));
+    if (textLen > 800) {
+      store.dispatch(setAlert("Максимум 800 знаков в китайском тексте, удалите лишние", "danger"));
     } else {
       let originText = textArea.value.trim();
-      // let allwords = hanzi.segment(originText);
+      let translationTrimed = translationArea.value.trim();
 
       let allwords = await segmenter(originText);
-      // console.log(allwords);
       allwords = allwords.filter(word => word !== " ");
       const wordsFromDB = await getWords(allwords);
 
@@ -44,12 +54,55 @@ const TextForm = ({ loadUserWords }) => {
         return word;
       });
 
-      console.log(newArr);
-      setWordsFromText(newArr);
+      const length = originText.length;
+      let tags = tagsId.value.split(",");
+      tags = tags.map(tag => tag.trim()); // array of words
+      const chineseChunkedWords = chunkArrayFunc(newArr); // array of object arrays
+      const chunkedTranslation = translationTrimed.split("\n"); // array of strings
+      const chunkedOriginText = originText.split("\n"); // array of strings
+      const title = document.getElementById("title").value; // string
+      const description = document.getElementById("description").value; // string
+      const level = parseInt(document.getElementById("level").value); // number
+
+      setFormData({
+        ...formData,
+        chineseChunkedWords,
+        chunkedTranslation,
+        tags,
+        chunkedOriginText,
+        title,
+        description,
+        level,
+        length
+      });
     }
 
-    textArea.value = "";
-    setTextLen(0);
+    // textArea.value = "";
+    // setTextLen(0);
+  };
+
+  const chunkArrayFunc = arr => {
+    // get indexes for \n in the array of words
+    let inds = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === "\n") {
+        inds.push(i);
+      }
+    }
+    // console.log(inds);
+
+    let chunkedArr = [];
+
+    for (let i = 0; i < inds.length; i++) {
+      if (i === 0) {
+        chunkedArr.push(arr.slice(0, inds[i]));
+      } else {
+        chunkedArr.push(arr.slice(inds[i - 1] + 1, inds[i]));
+      }
+    }
+    chunkedArr.push(arr.slice(inds[inds.length - 1] + 1));
+
+    return chunkedArr;
   };
 
   const segmenter = async text => {
@@ -86,49 +139,142 @@ const TextForm = ({ loadUserWords }) => {
 
   const onChange = e => setTextLen(e.target.value.length);
 
+  const publishText = async formdata => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+
+    const {
+      chineseChunkedWords,
+      chunkedTranslation,
+      tags,
+      chunkedOriginText,
+      title,
+      description,
+      level,
+      length
+    } = formdata;
+
+    const body = JSON.stringify({
+      origintext: chunkedOriginText,
+      title,
+      description,
+      level,
+      tags,
+      translation: chunkedTranslation,
+      wordsarr: chineseChunkedWords,
+      length
+    });
+
+    try {
+      const { data } = await axios.post(`/api/texts`, body, config);
+
+      alert("Текст опубликован!");
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
-    <div className='row'>
-      <WordModal />
+    <Fragment>
+      <div className='row'>
+        <WordModal />
 
-      <div className='col-sm-3'>
-        <div className='card bg-light mb-3'>
-          <div className='card-body'>
-            <h4 className='card-title'>Pop-up Перевод</h4>
-            <p className='card-text'>тесты</p>
-          </div>
-        </div>
-      </div>
-
-      <div className='col-sm-9'>
-        <form onSubmit={e => onSubmit(e)}>
-          <div className='form-group'>
-            <label htmlFor='textArea'>Вставьте китайский текст для обработки:</label>
-            <textarea
-              onChange={e => onChange(e)}
-              className='form-control'
-              id='textArea'
-              rows='3'
-              placeholder='汉字。。。'
-            ></textarea>
-            <small className='text-muted'>{textLen}/350</small>
-          </div>
-          <button type='submit' className='btn btn-primary'>
-            Перевести Слова
-          </button>
+        <form onSubmit={e => onSubmit(e)} style={{ width: "100%" }}>
+          <fieldset>
+            <div className='form-row'>
+              <div className='form-group col-md-6'>
+                <label htmlFor='title'>Заголовок текста</label>
+                <input
+                  type='text'
+                  className='form-control'
+                  id='title'
+                  placeholder='Заголовок'
+                  autoComplete='off'
+                />
+              </div>
+              <div className='form-group col-md-6'>
+                <label htmlFor='description'>Краткое описание</label>
+                <input
+                  type='text'
+                  className='form-control'
+                  id='description'
+                  autoComplete='off'
+                  placeholder='О чем текст...'
+                />
+              </div>
+            </div>
+            <div className='form-row'>
+              <div className='form-group col-md-6'>
+                <label htmlFor='tags'>Тэги</label>
+                <input
+                  type='text'
+                  className='form-control'
+                  id='tags'
+                  placeholder='Тэги через запятую'
+                />
+              </div>
+              <div className='form-group col-md-6'>
+                <label htmlFor='level'>Уровень</label>
+                <select className='form-control' id='level'>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+              </div>
+            </div>
+            <div className='form-row'>
+              <div className='form-group col-md-6'>
+                <label htmlFor='textArea'>Вставьте китайский текст для обработки:</label>
+                <textarea
+                  onChange={e => onChange(e)}
+                  className='form-control'
+                  id='textArea'
+                  rows='3'
+                  placeholder='汉字。。。'
+                ></textarea>
+                <small className='text-muted'>{textLen}/800</small>
+              </div>
+              <div className='form-group col-md-6'>
+                <label htmlFor='translationArea'>Вставьте перевод:</label>
+                <textarea
+                  className='form-control'
+                  id='translationArea'
+                  rows='3'
+                  placeholder='Перевод...'
+                ></textarea>
+                <small className='text-muted'>не забывайте про параграфы</small>
+              </div>
+            </div>
+            <div className='form-row'>
+              <button type='submit' className='btn btn-primary mx-1'>
+                Предобработка
+              </button>
+            </div>
+          </fieldset>
         </form>
-        <hr />
-
-        <div>
-          <h4>Перевод</h4>
-          <div id='result'>
-            <p>
-              {wordsFromText &&
-                wordsFromText.map(word => <TippyTooltip word={word} key={uuid()} />)}
-            </p>
-          </div>
-        </div>
       </div>
-    </div>
+      <hr />
+
+      <button className='btn btn-primary mx-1' onClick={e => publishText(formData)}>
+        Опубликовать
+      </button>
+      <hr />
+
+      <div className='row'>
+        {formData &&
+          formData.chineseChunkedWords.map((chunk, index) => (
+            <Paragraph
+              chunk={chunk}
+              key={uuid()}
+              translation={formData.chunkedTranslation[index]}
+            />
+          ))}
+      </div>
+    </Fragment>
   );
 };
 

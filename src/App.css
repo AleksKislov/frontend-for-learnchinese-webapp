@@ -11116,8 +11116,12 @@
   border-radius: 4px;
 }
 
-#result {
+.result {
   font-size: 2em;
+}
+
+.textPadding {
+  padding: 8px;
 }
 
 .tippyPinyin {
