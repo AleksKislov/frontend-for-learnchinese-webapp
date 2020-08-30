@@ -1,4 +1,5 @@
 node_modules/
 public/audio/
 src/img/
+src/apikeys.json
 .DS_Store

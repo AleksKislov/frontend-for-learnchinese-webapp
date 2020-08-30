@@ -21,6 +21,7 @@ import Search from "../translation/Search";
 import Posts from "../posts/Posts";
 import PostPage from "../posts/PostPage";
 import TextForm from "../texts/TextForm";
+import Texts from "../texts/Texts";
 
 const Routes = () => {
   useEffect(() => {
@@ -65,6 +66,7 @@ const Routes = () => {
           <Route exact path='/posts' component={Posts} />
           <Route exact path='/posts/:id' component={PostPage} />
           <PrivateRoute exact path='/create-text' component={TextForm} />
+          <Route exact path='/texts' component={Texts} />
 
           <NotFound />
         </Switch>

@@ -63,6 +63,22 @@ const TextForm = ({ loadUserWords }) => {
       const title = document.getElementById("title").value; // string
       const description = document.getElementById("description").value; // string
       const level = parseInt(document.getElementById("level").value); // number
+      const pic_theme = document.getElementById("pic_theme").value;
+
+      try {
+        const config = {
+          headers: {
+            Authorization: "my secret token"
+          }
+        };
+        const { data } = axios.get(
+          `https://api.unsplash.com/search/photos?query=${pic_theme}&per_page=4&orientation=portrait`
+        );
+
+        console.log(data.results[1].urls.small);
+      } catch (err) {
+        console.log(err);
+      }
 
       setFormData({
         ...formData,
@@ -172,7 +188,7 @@ const TextForm = ({ loadUserWords }) => {
       const { data } = await axios.post(`/api/texts`, body, config);
 
       alert("Текст опубликован!");
-      console.log(data);
+      // console.log(data);
     } catch (err) {
       console.log(err);
     }
@@ -224,6 +240,18 @@ const TextForm = ({ loadUserWords }) => {
                   <option>2</option>
                   <option>3</option>
                 </select>
+              </div>
+            </div>
+            <div className='form-row'>
+              <div className='form-group col-md-6'>
+                <label htmlFor='pic_theme'>Тема для картинки</label>
+                <input
+                  type='text'
+                  className='form-control'
+                  id='pic_theme'
+                  placeholder='На английском'
+                  autoComplete='off'
+                />
               </div>
             </div>
             <div className='form-row'>
