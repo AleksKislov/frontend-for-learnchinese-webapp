@@ -50,3 +50,8 @@ export const ADD_DISLIKE = "ADD_DISLIKE";
 export const GET_COMMENTS = "GET_COMMENTS";
 export const ADD_COMMENT = "ADD_COMMENT";
 export const GET_10COMMENTS = "GET_10COMMENTS";
+
+export const LOAD_TEXTS = "LOAD_TEXTS";
+export const LOAD_TEXTS_ERR = "LOAD_TEXTS_ERR";
+export const LOAD_TEXT = "LOAD_TEXT";
+export const LOAD_TEXT_ERR = "LOAD_TEXT_ERR";

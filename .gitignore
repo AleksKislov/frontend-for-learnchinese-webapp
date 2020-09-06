@@ -3,3 +3,4 @@ public/audio/
 src/img/
 src/apikeys.json
 .DS_Store
+build/

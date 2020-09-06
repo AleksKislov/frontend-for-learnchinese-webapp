@@ -8,11 +8,10 @@ import { setAlert } from "../../actions/alert";
 import { loadUserWords } from "../../actions/userWords";
 import Paragraph from "./Paragraph";
 import { v4 as uuid } from "uuid";
+import { unsplash } from "../../apikeys.json";
 
-const TextForm = ({ loadUserWords }) => {
+const TextForm = ({ loadUserWords, user }) => {
   useEffect(() => {
-    console.log("汉语是世界上最难学的一个语言");
-    console.log("Китайский язык - самый сложный в мире");
     loadUserWords();
   }, []);
 
@@ -65,20 +64,7 @@ const TextForm = ({ loadUserWords }) => {
       const level = parseInt(document.getElementById("level").value); // number
       const pic_theme = document.getElementById("pic_theme").value;
 
-      try {
-        const config = {
-          headers: {
-            Authorization: "my secret token"
-          }
-        };
-        const { data } = axios.get(
-          `https://api.unsplash.com/search/photos?query=${pic_theme}&per_page=4&orientation=portrait`
-        );
-
-        console.log(data.results[1].urls.small);
-      } catch (err) {
-        console.log(err);
-      }
+      getPhotos(pic_theme);
 
       setFormData({
         ...formData,
@@ -95,6 +81,29 @@ const TextForm = ({ loadUserWords }) => {
 
     // textArea.value = "";
     // setTextLen(0);
+  };
+
+  const getPhotos = async pic_theme => {
+    const config = { headers: { Authorization: unsplash } };
+
+    const photosDiv = document.getElementById("photosDiv");
+
+    try {
+      const { data } = await axios.get(
+        `https://api.unsplash.com/search/photos?query=${pic_theme}&per_page=5&orientation=portrait`,
+        config
+      );
+
+      console.log(data.results[1].urls.small);
+
+      data.results.forEach(el => {
+        const img = document.createElement("img");
+        img.src = el.urls.thumb;
+        photosDiv.appendChild(img);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const chunkArrayFunc = arr => {
@@ -196,112 +205,121 @@ const TextForm = ({ loadUserWords }) => {
 
   return (
     <Fragment>
-      <div className='row'>
-        <WordModal />
+      {user && user.role !== "admin" ? (
+        "Страница доступна пока только админу"
+      ) : (
+        <Fragment>
+          <div className='row'>
+            <WordModal />
 
-        <form onSubmit={e => onSubmit(e)} style={{ width: "100%" }}>
-          <fieldset>
-            <div className='form-row'>
-              <div className='form-group col-md-6'>
-                <label htmlFor='title'>Заголовок текста</label>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='title'
-                  placeholder='Заголовок'
-                  autoComplete='off'
-                />
-              </div>
-              <div className='form-group col-md-6'>
-                <label htmlFor='description'>Краткое описание</label>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='description'
-                  autoComplete='off'
-                  placeholder='О чем текст...'
-                />
-              </div>
-            </div>
-            <div className='form-row'>
-              <div className='form-group col-md-6'>
-                <label htmlFor='tags'>Тэги</label>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='tags'
-                  placeholder='Тэги через запятую'
-                />
-              </div>
-              <div className='form-group col-md-6'>
-                <label htmlFor='level'>Уровень</label>
-                <select className='form-control' id='level'>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                </select>
-              </div>
-            </div>
-            <div className='form-row'>
-              <div className='form-group col-md-6'>
-                <label htmlFor='pic_theme'>Тема для картинки</label>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='pic_theme'
-                  placeholder='На английском'
-                  autoComplete='off'
-                />
-              </div>
-            </div>
-            <div className='form-row'>
-              <div className='form-group col-md-6'>
-                <label htmlFor='textArea'>Вставьте китайский текст для обработки:</label>
-                <textarea
-                  onChange={e => onChange(e)}
-                  className='form-control'
-                  id='textArea'
-                  rows='3'
-                  placeholder='汉字。。。'
-                ></textarea>
-                <small className='text-muted'>{textLen}/800</small>
-              </div>
-              <div className='form-group col-md-6'>
-                <label htmlFor='translationArea'>Вставьте перевод:</label>
-                <textarea
-                  className='form-control'
-                  id='translationArea'
-                  rows='3'
-                  placeholder='Перевод...'
-                ></textarea>
-                <small className='text-muted'>не забывайте про параграфы</small>
-              </div>
-            </div>
-            <div className='form-row'>
-              <button type='submit' className='btn btn-primary mx-1'>
-                Предобработка
-              </button>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-      <hr />
+            <form onSubmit={e => onSubmit(e)} style={{ width: "100%" }}>
+              <fieldset>
+                <div className='form-row'>
+                  <div className='form-group col-md-6'>
+                    <label htmlFor='title'>Заголовок текста</label>
+                    <input
+                      type='text'
+                      className='form-control'
+                      id='title'
+                      placeholder='Заголовок'
+                      autoComplete='off'
+                    />
+                  </div>
+                  <div className='form-group col-md-6'>
+                    <label htmlFor='description'>Краткое описание</label>
+                    <input
+                      type='text'
+                      className='form-control'
+                      id='description'
+                      autoComplete='off'
+                      placeholder='О чем текст...'
+                    />
+                  </div>
+                </div>
+                <div className='form-row'>
+                  <div className='form-group col-md-6'>
+                    <label htmlFor='tags'>Тэги</label>
+                    <input
+                      type='text'
+                      className='form-control'
+                      id='tags'
+                      placeholder='Тэги через запятую'
+                    />
+                  </div>
+                  <div className='form-group col-md-6'>
+                    <label htmlFor='level'>Уровень</label>
+                    <select className='form-control' id='level'>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                </div>
+                <div className='form-row'>
+                  <div className='form-group col-md-6'>
+                    <label htmlFor='pic_theme'>Тема для картинки</label>
+                    <input
+                      type='text'
+                      className='form-control'
+                      id='pic_theme'
+                      placeholder='На английском'
+                      autoComplete='off'
+                    />
+                  </div>
+                </div>
+                <div className='form-row'>
+                  <div className='form-group col-md-12' id='photosDiv'></div>
+                </div>
+                <div className='form-row'>
+                  <div className='form-group col-md-6'>
+                    <label htmlFor='textArea'>Вставьте китайский текст для обработки:</label>
+                    <textarea
+                      onChange={e => onChange(e)}
+                      className='form-control'
+                      id='textArea'
+                      rows='3'
+                      placeholder='汉字。。。'
+                    ></textarea>
+                    <small className='text-muted'>{textLen}/800</small>
+                  </div>
+                  <div className='form-group col-md-6'>
+                    <label htmlFor='translationArea'>Вставьте перевод:</label>
+                    <textarea
+                      className='form-control'
+                      id='translationArea'
+                      rows='3'
+                      placeholder='Перевод...'
+                    ></textarea>
+                    <small className='text-muted'>не забывайте про параграфы</small>
+                  </div>
+                </div>
+                <div className='form-row'>
+                  <button type='submit' className='btn btn-primary mx-1'>
+                    Предобработка
+                  </button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <hr />
 
-      <button className='btn btn-primary mx-1' onClick={e => publishText(formData)}>
-        Опубликовать
-      </button>
-      <hr />
+          <button className='btn btn-primary mx-1' onClick={e => publishText(formData)}>
+            Опубликовать
+          </button>
+          <hr />
 
-      <div className='row'>
-        {formData &&
-          formData.chineseChunkedWords.map((chunk, index) => (
-            <Paragraph
-              chunk={chunk}
-              key={uuid()}
-              translation={formData.chunkedTranslation[index]}
-            />
-          ))}
-      </div>
+          <div className='row'>
+            {formData &&
+              formData.chineseChunkedWords.map((chunk, index) => (
+                <Paragraph
+                  chunk={chunk}
+                  key={uuid()}
+                  translation={formData.chunkedTranslation[index]}
+                />
+              ))}
+          </div>
+        </Fragment>
+      )}
     </Fragment>
   );
 };
@@ -313,7 +331,8 @@ TextForm.propTypes = {
 
 const mapStateToProps = state => ({
   userwords: state.userwords.userwords,
-  wordsLoading: state.userwords.loading
+  wordsLoading: state.userwords.loading,
+  user: state.auth.user
 });
 
 export default connect(mapStateToProps, { loadUserWords })(TextForm);

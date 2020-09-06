@@ -81,6 +81,11 @@ const Navbar = ({
           </NavLink>
         </li>
         <li className='nav-item'>
+          <NavLink className='nav-link' to='/texts' activeStyle={activeNavLink}>
+            Читалка
+          </NavLink>
+        </li>
+        <li className='nav-item'>
           <NavLink className='nav-link' to='/posts' activeStyle={activeNavLink}>
             Гостевая
           </NavLink>
@@ -138,6 +143,11 @@ const Navbar = ({
         <li className='nav-item'>
           <NavLink className='nav-link' to='/search' activeStyle={activeNavLink}>
             Словарь
+          </NavLink>
+        </li>
+        <li className='nav-item'>
+          <NavLink className='nav-link' to='/texts' activeStyle={activeNavLink}>
+            Читалка
           </NavLink>
         </li>
         <li className='nav-item'>

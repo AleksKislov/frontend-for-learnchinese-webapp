@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { loadTexts } from "../../actions/texts";
+import Spinner from "../layout/Spinner";
+import TextCard from "./TextCard";
 
-const Texts = ({}) => {
+const Texts = ({ loadTexts, texts, loading }) => {
+  useEffect(() => {
+    loadTexts();
+  }, [loadTexts]);
+
   return (
     <div className='row'>
       <div className='col-sm-3'>
@@ -16,9 +24,16 @@ const Texts = ({}) => {
 
       <div className='col-sm-9'>
         <h2>Чтение Текстов</h2>
+
+        {loading ? <Spinner /> : texts.map(text => <TextCard key={text._id} text={text} />)}
       </div>
     </div>
   );
 };
 
-export default Texts;
+const mapStateToProps = state => ({
+  texts: state.texts.texts,
+  loading: state.texts.loading
+});
+
+export default connect(mapStateToProps, { loadTexts })(Texts);
