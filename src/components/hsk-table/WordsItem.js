@@ -42,7 +42,7 @@ const WordsItem = ({ removeWord, lexicon, loadLengths, hideFlag }) => {
         break;
     }
 
-    new Audio(`../audio/hsk${level}/${word_id}.mp3`).play();
+    new Audio(`http://kislov.chineseplus.ru/audio/hsk${level}/${word_id}.mp3`).play();
     return false;
   };
 

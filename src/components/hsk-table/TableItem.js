@@ -48,7 +48,7 @@ const TableItem = ({ addWord, lexicon, selected, removeWord, loadLengths, hideFl
         break;
     }
 
-    new Audio(`../audio/hsk${level}/${word_id}.mp3`).play();
+    new Audio(`http://kislov.chineseplus.ru/audio/hsk${level}/${word_id}.mp3`).play();
     return false;
   };
 

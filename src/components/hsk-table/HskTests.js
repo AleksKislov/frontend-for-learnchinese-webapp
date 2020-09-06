@@ -143,7 +143,9 @@ const HskTests = ({ lexicons, loadTestLexicon, loading }) => {
         // console.log("in view" + level);
         //add random audio to buttons
         audioButtons[i].addEventListener("click", () => {
-          const audio = new Audio("../audio/" + level + "/" + randInd + ".mp3");
+          const audio = new Audio(
+            "http://kislov.chineseplus.ru/audio/" + level + "/" + randInd + ".mp3"
+          );
           audio.play();
         });
 

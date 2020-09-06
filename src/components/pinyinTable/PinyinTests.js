@@ -1384,7 +1384,9 @@ const PinyinTests = () => {
       setAnswers(answersArr);
       //add random audio to buttons
       audioButtons[i].addEventListener("click", () => {
-        const audio = new Audio("../audio/pinyin/" + pinyinArr[randInd] + ".mp3");
+        const audio = new Audio(
+          "http://kislov.chineseplus.ru/audio/pinyin/" + pinyinArr[randInd] + ".mp3"
+        );
         audio.play();
       });
 

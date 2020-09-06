@@ -143,7 +143,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/a1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/a1.mp3').play(); return false;"
                         type='button'
                       >
                         ā
@@ -152,7 +152,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/a2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/a2.mp3').play(); return false;"
                         type='button'
                       >
                         á
@@ -161,7 +161,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/a3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/a3.mp3').play(); return false;"
                         type='button'
                       >
                         ǎ
@@ -170,7 +170,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/a4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/a4.mp3').play(); return false;"
                         type='button'
                       >
                         à
@@ -187,7 +187,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ai1.mp3').play(); return false;"
                         type='button'
                       >
                         āi
@@ -196,7 +196,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ai2.mp3').play(); return false;"
                         type='button'
                       >
                         ái
@@ -205,7 +205,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ai3.mp3').play(); return false;"
                         type='button'
                       >
                         ǎi
@@ -214,7 +214,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ai4.mp3').play(); return false;"
                         type='button'
                       >
                         ài
@@ -231,7 +231,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ao1.mp3').play(); return false;"
                         type='button'
                       >
                         āo
@@ -240,7 +240,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ao2.mp3').play(); return false;"
                         type='button'
                       >
                         áo
@@ -249,7 +249,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ao3.mp3').play(); return false;"
                         type='button'
                       >
                         ǎo
@@ -258,7 +258,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ao4.mp3').play(); return false;"
                         type='button'
                       >
                         ào
@@ -275,7 +275,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/an1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/an1.mp3').play(); return false;"
                         type='button'
                       >
                         ān
@@ -284,7 +284,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/an2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/an2.mp3').play(); return false;"
                         type='button'
                       >
                         án
@@ -293,7 +293,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/an3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/an3.mp3').play(); return false;"
                         type='button'
                       >
                         ǎn
@@ -302,7 +302,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/an4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/an4.mp3').play(); return false;"
                         type='button'
                       >
                         àn
@@ -319,7 +319,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ang1.mp3').play(); return false;"
                         type='button'
                       >
                         āng
@@ -328,7 +328,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ang2.mp3').play(); return false;"
                         type='button'
                       >
                         áng
@@ -337,7 +337,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ang3.mp3').play(); return false;"
                         type='button'
                       >
                         ǎng
@@ -346,7 +346,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ang4.mp3').play(); return false;"
                         type='button'
                       >
                         àng
@@ -363,7 +363,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/o1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/o1.mp3').play(); return false;"
                         type='button'
                       >
                         ō
@@ -372,7 +372,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/o2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/o2.mp3').play(); return false;"
                         type='button'
                       >
                         ó
@@ -381,7 +381,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/o3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/o3.mp3').play(); return false;"
                         type='button'
                       >
                         ǒ
@@ -390,7 +390,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/o4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/o4.mp3').play(); return false;"
                         type='button'
                       >
                         ò
@@ -407,7 +407,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ong1.mp3').play(); return false;"
                         type='button'
                       >
                         ōng
@@ -416,7 +416,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ong2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ong2.mp3').play(); return false;"
                         type='button'
                       >
                         óng
@@ -425,7 +425,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ong3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ong3.mp3').play(); return false;"
                         type='button'
                       >
                         ǒng
@@ -434,7 +434,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ong4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ong4.mp3').play(); return false;"
                         type='button'
                       >
                         òng
@@ -451,7 +451,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ou1.mp3').play(); return false;"
                         type='button'
                       >
                         ōu
@@ -460,7 +460,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ou2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ou2.mp3').play(); return false;"
                         type='button'
                       >
                         óu
@@ -469,7 +469,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ou3.mp3').play(); return false;"
                         type='button'
                       >
                         ǒu
@@ -478,7 +478,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ou4.mp3').play(); return false;"
                         type='button'
                       >
                         òu
@@ -495,7 +495,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/e1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/e1.mp3').play(); return false;"
                         type='button'
                       >
                         ē
@@ -504,7 +504,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/e2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/e2.mp3').play(); return false;"
                         type='button'
                       >
                         é
@@ -513,7 +513,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/e3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/e3.mp3').play(); return false;"
                         type='button'
                       >
                         ě
@@ -522,7 +522,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/e4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/e4.mp3').play(); return false;"
                         type='button'
                       >
                         è
@@ -539,7 +539,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ei1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ei1.mp3').play(); return false;"
                         type='button'
                       >
                         ēi
@@ -548,7 +548,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ei2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ei2.mp3').play(); return false;"
                         type='button'
                       >
                         éi
@@ -557,7 +557,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ei3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ei3.mp3').play(); return false;"
                         type='button'
                       >
                         ěi
@@ -566,7 +566,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ei4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ei4.mp3').play(); return false;"
                         type='button'
                       >
                         èi
@@ -583,7 +583,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/en1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/en1.mp3').play(); return false;"
                         type='button'
                       >
                         ēn
@@ -592,7 +592,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/en2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/en2.mp3').play(); return false;"
                         type='button'
                       >
                         én
@@ -601,7 +601,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/en3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/en3.mp3').play(); return false;"
                         type='button'
                       >
                         ěn
@@ -610,7 +610,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/en4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/en4.mp3').play(); return false;"
                         type='button'
                       >
                         èn
@@ -627,7 +627,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/eng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/eng1.mp3').play(); return false;"
                         type='button'
                       >
                         ēng
@@ -636,7 +636,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/eng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/eng2.mp3').play(); return false;"
                         type='button'
                       >
                         éng
@@ -645,7 +645,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/eng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/eng3.mp3').play(); return false;"
                         type='button'
                       >
                         ěng
@@ -654,7 +654,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/eng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/eng4.mp3').play(); return false;"
                         type='button'
                       >
                         èng
@@ -671,7 +671,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/er1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/er1.mp3').play(); return false;"
                         type='button'
                       >
                         ēr
@@ -680,7 +680,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/er2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/er2.mp3').play(); return false;"
                         type='button'
                       >
                         ér
@@ -689,7 +689,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/er3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/er3.mp3').play(); return false;"
                         type='button'
                       >
                         ěr
@@ -698,7 +698,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/er4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/er4.mp3').play(); return false;"
                         type='button'
                       >
                         èr
@@ -715,7 +715,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yi1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yi1.mp3').play(); return false;"
                         type='button'
                       >
                         yī
@@ -724,7 +724,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yi2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yi2.mp3').play(); return false;"
                         type='button'
                       >
                         yí
@@ -733,7 +733,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yi3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yi3.mp3').play(); return false;"
                         type='button'
                       >
                         yǐ
@@ -742,7 +742,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yi4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yi4.mp3').play(); return false;"
                         type='button'
                       >
                         yì
@@ -759,7 +759,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ya1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ya1.mp3').play(); return false;"
                         type='button'
                       >
                         yā
@@ -768,7 +768,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ya2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ya2.mp3').play(); return false;"
                         type='button'
                       >
                         yá
@@ -777,7 +777,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ya3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ya3.mp3').play(); return false;"
                         type='button'
                       >
                         yǎ
@@ -786,7 +786,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ya4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ya4.mp3').play(); return false;"
                         type='button'
                       >
                         yà
@@ -803,7 +803,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yao1.mp3').play(); return false;"
                         type='button'
                       >
                         yāo
@@ -812,7 +812,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yao2.mp3').play(); return false;"
                         type='button'
                       >
                         yáo
@@ -821,7 +821,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yao3.mp3').play(); return false;"
                         type='button'
                       >
                         yǎo
@@ -830,7 +830,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yao4.mp3').play(); return false;"
                         type='button'
                       >
                         yào
@@ -847,7 +847,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ye1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ye1.mp3').play(); return false;"
                         type='button'
                       >
                         yē
@@ -856,7 +856,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ye2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ye2.mp3').play(); return false;"
                         type='button'
                       >
                         yé
@@ -865,7 +865,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ye3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ye3.mp3').play(); return false;"
                         type='button'
                       >
                         yě
@@ -874,7 +874,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ye4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ye4.mp3').play(); return false;"
                         type='button'
                       >
                         yè
@@ -891,7 +891,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/you1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/you1.mp3').play(); return false;"
                         type='button'
                       >
                         yōu
@@ -900,7 +900,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/you2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/you2.mp3').play(); return false;"
                         type='button'
                       >
                         yóu
@@ -909,7 +909,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/you3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/you3.mp3').play(); return false;"
                         type='button'
                       >
                         yǒu
@@ -918,7 +918,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/you4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/you4.mp3').play(); return false;"
                         type='button'
                       >
                         yòu
@@ -935,7 +935,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yan1.mp3').play(); return false;"
                         type='button'
                       >
                         yān
@@ -944,7 +944,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yan2.mp3').play(); return false;"
                         type='button'
                       >
                         yán
@@ -953,7 +953,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yan3.mp3').play(); return false;"
                         type='button'
                       >
                         yǎn
@@ -962,7 +962,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yan4.mp3').play(); return false;"
                         type='button'
                       >
                         yàn
@@ -979,7 +979,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yang1.mp3').play(); return false;"
                         type='button'
                       >
                         yāng
@@ -988,7 +988,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yang2.mp3').play(); return false;"
                         type='button'
                       >
                         yáng
@@ -997,7 +997,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yang3.mp3').play(); return false;"
                         type='button'
                       >
                         yǎng
@@ -1006,7 +1006,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yang4.mp3').play(); return false;"
                         type='button'
                       >
                         yàng
@@ -1023,7 +1023,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yin1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yin1.mp3').play(); return false;"
                         type='button'
                       >
                         yīn
@@ -1032,7 +1032,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yin2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yin2.mp3').play(); return false;"
                         type='button'
                       >
                         yín
@@ -1041,7 +1041,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yin3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yin3.mp3').play(); return false;"
                         type='button'
                       >
                         yǐn
@@ -1050,7 +1050,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yin4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yin4.mp3').play(); return false;"
                         type='button'
                       >
                         yìn
@@ -1067,7 +1067,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ying1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ying1.mp3').play(); return false;"
                         type='button'
                       >
                         yīng
@@ -1076,7 +1076,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ying2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ying2.mp3').play(); return false;"
                         type='button'
                       >
                         yíng
@@ -1085,7 +1085,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ying3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ying3.mp3').play(); return false;"
                         type='button'
                       >
                         yǐng
@@ -1094,7 +1094,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ying4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ying4.mp3').play(); return false;"
                         type='button'
                       >
                         yìng
@@ -1111,7 +1111,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yong1.mp3').play(); return false;"
                         type='button'
                       >
                         yōng
@@ -1120,7 +1120,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yong2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yong2.mp3').play(); return false;"
                         type='button'
                       >
                         yóng
@@ -1129,7 +1129,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yong3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yong3.mp3').play(); return false;"
                         type='button'
                       >
                         yǒng
@@ -1138,7 +1138,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yong4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yong4.mp3').play(); return false;"
                         type='button'
                       >
                         yòng
@@ -1155,7 +1155,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wu1.mp3').play(); return false;"
                         type='button'
                       >
                         wū
@@ -1164,7 +1164,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wu2.mp3').play(); return false;"
                         type='button'
                       >
                         wú
@@ -1173,7 +1173,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wu3.mp3').play(); return false;"
                         type='button'
                       >
                         wǔ
@@ -1182,7 +1182,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wu4.mp3').play(); return false;"
                         type='button'
                       >
                         wù
@@ -1199,7 +1199,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wa1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wa1.mp3').play(); return false;"
                         type='button'
                       >
                         wā
@@ -1208,7 +1208,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wa2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wa2.mp3').play(); return false;"
                         type='button'
                       >
                         wá
@@ -1217,7 +1217,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wa3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wa3.mp3').play(); return false;"
                         type='button'
                       >
                         wǎ
@@ -1226,7 +1226,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wa4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wa4.mp3').play(); return false;"
                         type='button'
                       >
                         wà
@@ -1243,7 +1243,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wo1.mp3').play(); return false;"
                         type='button'
                       >
                         wō
@@ -1252,7 +1252,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wo2.mp3').play(); return false;"
                         type='button'
                       >
                         wó
@@ -1261,7 +1261,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wo3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wo3.mp3').play(); return false;"
                         type='button'
                       >
                         wǒ
@@ -1270,7 +1270,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wo4.mp3').play(); return false;"
                         type='button'
                       >
                         wò
@@ -1287,7 +1287,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wei1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wei1.mp3').play(); return false;"
                         type='button'
                       >
                         wēi
@@ -1296,7 +1296,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wei2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wei2.mp3').play(); return false;"
                         type='button'
                       >
                         wéi
@@ -1305,7 +1305,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wei3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wei3.mp3').play(); return false;"
                         type='button'
                       >
                         wěi
@@ -1314,7 +1314,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wei4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wei4.mp3').play(); return false;"
                         type='button'
                       >
                         wèi
@@ -1331,7 +1331,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wai1.mp3').play(); return false;"
                         type='button'
                       >
                         wāi
@@ -1340,7 +1340,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wai2.mp3').play(); return false;"
                         type='button'
                       >
                         wái
@@ -1349,7 +1349,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wai3.mp3').play(); return false;"
                         type='button'
                       >
                         wǎi
@@ -1358,7 +1358,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wai4.mp3').play(); return false;"
                         type='button'
                       >
                         wài
@@ -1375,7 +1375,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wan1.mp3').play(); return false;"
                         type='button'
                       >
                         wān
@@ -1384,7 +1384,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wan2.mp3').play(); return false;"
                         type='button'
                       >
                         wán
@@ -1393,7 +1393,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wan3.mp3').play(); return false;"
                         type='button'
                       >
                         wǎn
@@ -1402,7 +1402,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wan4.mp3').play(); return false;"
                         type='button'
                       >
                         wàn
@@ -1419,7 +1419,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wen1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wen1.mp3').play(); return false;"
                         type='button'
                       >
                         wēn
@@ -1428,7 +1428,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wen2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wen2.mp3').play(); return false;"
                         type='button'
                       >
                         wén
@@ -1437,7 +1437,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wen3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wen3.mp3').play(); return false;"
                         type='button'
                       >
                         wěn
@@ -1446,7 +1446,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wen4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wen4.mp3').play(); return false;"
                         type='button'
                       >
                         wèn
@@ -1463,7 +1463,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wang1.mp3').play(); return false;"
                         type='button'
                       >
                         wāng
@@ -1472,7 +1472,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wang2.mp3').play(); return false;"
                         type='button'
                       >
                         wáng
@@ -1481,7 +1481,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wang3.mp3').play(); return false;"
                         type='button'
                       >
                         wǎng
@@ -1490,7 +1490,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/wang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/wang4.mp3').play(); return false;"
                         type='button'
                       >
                         wàng
@@ -1507,7 +1507,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/weng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/weng1.mp3').play(); return false;"
                         type='button'
                       >
                         wēng
@@ -1516,7 +1516,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/weng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/weng2.mp3').play(); return false;"
                         type='button'
                       >
                         wéng
@@ -1525,7 +1525,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/weng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/weng3.mp3').play(); return false;"
                         type='button'
                       >
                         wěng
@@ -1534,7 +1534,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/weng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/weng4.mp3').play(); return false;"
                         type='button'
                       >
                         wèng
@@ -1551,7 +1551,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yu1.mp3').play(); return false;"
                         type='button'
                       >
                         yū
@@ -1560,7 +1560,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yu2.mp3').play(); return false;"
                         type='button'
                       >
                         yú
@@ -1569,7 +1569,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yu3.mp3').play(); return false;"
                         type='button'
                       >
                         yǔ
@@ -1578,7 +1578,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yu4.mp3').play(); return false;"
                         type='button'
                       >
                         yù
@@ -1595,7 +1595,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yue1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yue1.mp3').play(); return false;"
                         type='button'
                       >
                         yuē
@@ -1604,7 +1604,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yue2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yue2.mp3').play(); return false;"
                         type='button'
                       >
                         yué
@@ -1613,7 +1613,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yue3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yue3.mp3').play(); return false;"
                         type='button'
                       >
                         yuě
@@ -1622,7 +1622,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yue4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yue4.mp3').play(); return false;"
                         type='button'
                       >
                         yuè
@@ -1639,7 +1639,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yuan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yuan1.mp3').play(); return false;"
                         type='button'
                       >
                         yuān
@@ -1648,7 +1648,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yuan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yuan2.mp3').play(); return false;"
                         type='button'
                       >
                         yuán
@@ -1657,7 +1657,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yuan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yuan3.mp3').play(); return false;"
                         type='button'
                       >
                         yuǎn
@@ -1666,7 +1666,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yuan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yuan4.mp3').play(); return false;"
                         type='button'
                       >
                         yuàn
@@ -1683,7 +1683,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yun1.mp3').play(); return false;"
                         type='button'
                       >
                         yūn
@@ -1692,7 +1692,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yun2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yun2.mp3').play(); return false;"
                         type='button'
                       >
                         yún
@@ -1701,7 +1701,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yun3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yun3.mp3').play(); return false;"
                         type='button'
                       >
                         yǔn
@@ -1710,7 +1710,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/yun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/yun4.mp3').play(); return false;"
                         type='button'
                       >
                         yùn
@@ -1732,7 +1732,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ma1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ma1.mp3').play(); return false;"
                         type='button'
                       >
                         mā
@@ -1741,7 +1741,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ma2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ma2.mp3').play(); return false;"
                         type='button'
                       >
                         má
@@ -1750,7 +1750,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ma3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ma3.mp3').play(); return false;"
                         type='button'
                       >
                         mǎ
@@ -1759,7 +1759,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ma4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ma4.mp3').play(); return false;"
                         type='button'
                       >
                         mà
@@ -1781,7 +1781,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mai2.mp3').play(); return false;"
                         type='button'
                       >
                         mái
@@ -1790,7 +1790,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mai3.mp3').play(); return false;"
                         type='button'
                       >
                         mǎi
@@ -1799,7 +1799,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mai4.mp3').play(); return false;"
                         type='button'
                       >
                         mài
@@ -1816,7 +1816,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mao1.mp3').play(); return false;"
                         type='button'
                       >
                         māo
@@ -1825,7 +1825,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mao2.mp3').play(); return false;"
                         type='button'
                       >
                         máo
@@ -1834,7 +1834,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mao3.mp3').play(); return false;"
                         type='button'
                       >
                         mǎo
@@ -1843,7 +1843,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mao4.mp3').play(); return false;"
                         type='button'
                       >
                         mào
@@ -1860,7 +1860,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/man1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/man1.mp3').play(); return false;"
                         type='button'
                       >
                         mān
@@ -1869,7 +1869,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/man2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/man2.mp3').play(); return false;"
                         type='button'
                       >
                         mán
@@ -1878,7 +1878,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/man3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/man3.mp3').play(); return false;"
                         type='button'
                       >
                         mǎn
@@ -1887,7 +1887,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/man4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/man4.mp3').play(); return false;"
                         type='button'
                       >
                         màn
@@ -1904,7 +1904,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mang1.mp3').play(); return false;"
                         type='button'
                       >
                         māng
@@ -1913,7 +1913,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mang2.mp3').play(); return false;"
                         type='button'
                       >
                         máng
@@ -1922,7 +1922,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mang3.mp3').play(); return false;"
                         type='button'
                       >
                         mǎng
@@ -1931,7 +1931,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mang4.mp3').play(); return false;"
                         type='button'
                       >
                         màng
@@ -1948,7 +1948,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mo1.mp3').play(); return false;"
                         type='button'
                       >
                         mō
@@ -1957,7 +1957,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mo2.mp3').play(); return false;"
                         type='button'
                       >
                         mó
@@ -1966,7 +1966,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mo3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mo3.mp3').play(); return false;"
                         type='button'
                       >
                         mǒ
@@ -1975,7 +1975,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mo4.mp3').play(); return false;"
                         type='button'
                       >
                         mò
@@ -1993,7 +1993,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mou1.mp3').play(); return false;"
                         type='button'
                       >
                         mōu
@@ -2002,7 +2002,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mou2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mou2.mp3').play(); return false;"
                         type='button'
                       >
                         móu
@@ -2011,7 +2011,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mou3.mp3').play(); return false;"
                         type='button'
                       >
                         mǒu
@@ -2033,7 +2033,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/me0.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/me0.mp3').play(); return false;"
                         type='button'
                       >
                         me
@@ -2056,7 +2056,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mei2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mei2.mp3').play(); return false;"
                         type='button'
                       >
                         méi
@@ -2065,7 +2065,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mei3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mei3.mp3').play(); return false;"
                         type='button'
                       >
                         měi
@@ -2074,7 +2074,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mei4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mei4.mp3').play(); return false;"
                         type='button'
                       >
                         mèi
@@ -2091,7 +2091,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/men1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/men1.mp3').play(); return false;"
                         type='button'
                       >
                         mēn
@@ -2100,7 +2100,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/men2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/men2.mp3').play(); return false;"
                         type='button'
                       >
                         mén
@@ -2109,7 +2109,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/men3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/men3.mp3').play(); return false;"
                         type='button'
                       >
                         měn
@@ -2118,7 +2118,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/men4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/men4.mp3').play(); return false;"
                         type='button'
                       >
                         mèn
@@ -2135,7 +2135,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/meng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/meng1.mp3').play(); return false;"
                         type='button'
                       >
                         mēng
@@ -2144,7 +2144,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/meng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/meng2.mp3').play(); return false;"
                         type='button'
                       >
                         méng
@@ -2153,7 +2153,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/meng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/meng3.mp3').play(); return false;"
                         type='button'
                       >
                         měng
@@ -2162,7 +2162,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/meng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/meng4.mp3').play(); return false;"
                         type='button'
                       >
                         mèng
@@ -2180,7 +2180,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mi1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mi1.mp3').play(); return false;"
                         type='button'
                       >
                         mī
@@ -2189,7 +2189,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mi2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mi2.mp3').play(); return false;"
                         type='button'
                       >
                         mí
@@ -2198,7 +2198,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mi3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mi3.mp3').play(); return false;"
                         type='button'
                       >
                         mǐ
@@ -2207,7 +2207,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mi4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mi4.mp3').play(); return false;"
                         type='button'
                       >
                         mì
@@ -2225,7 +2225,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/miao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/miao1.mp3').play(); return false;"
                         type='button'
                       >
                         miāo
@@ -2234,7 +2234,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/miao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/miao2.mp3').play(); return false;"
                         type='button'
                       >
                         miáo
@@ -2243,7 +2243,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/miao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/miao3.mp3').play(); return false;"
                         type='button'
                       >
                         miǎo
@@ -2252,7 +2252,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/miao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/miao4.mp3').play(); return false;"
                         type='button'
                       >
                         miào
@@ -2269,7 +2269,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mie1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mie1.mp3').play(); return false;"
                         type='button'
                       >
                         miē
@@ -2288,7 +2288,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mie4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mie4.mp3').play(); return false;"
                         type='button'
                       >
                         miè
@@ -2320,7 +2320,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/miu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/miu4.mp3').play(); return false;"
                         type='button'
                       >
                         miù
@@ -2342,7 +2342,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mian2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mian2.mp3').play(); return false;"
                         type='button'
                       >
                         mián
@@ -2351,7 +2351,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mian3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mian3.mp3').play(); return false;"
                         type='button'
                       >
                         miǎn
@@ -2360,7 +2360,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mian4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mian4.mp3').play(); return false;"
                         type='button'
                       >
                         miàn
@@ -2378,7 +2378,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/min1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/min1.mp3').play(); return false;"
                         type='button'
                       >
                         mīn
@@ -2387,7 +2387,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/min2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/min2.mp3').play(); return false;"
                         type='button'
                       >
                         mín
@@ -2396,7 +2396,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/min3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/min3.mp3').play(); return false;"
                         type='button'
                       >
                         mǐn
@@ -2405,7 +2405,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/min4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/min4.mp3').play(); return false;"
                         type='button'
                       >
                         mìn
@@ -2422,7 +2422,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ming1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ming1.mp3').play(); return false;"
                         type='button'
                       >
                         mīng
@@ -2431,7 +2431,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ming2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ming2.mp3').play(); return false;"
                         type='button'
                       >
                         míng
@@ -2440,7 +2440,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ming3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ming3.mp3').play(); return false;"
                         type='button'
                       >
                         mǐng
@@ -2449,7 +2449,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ming4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ming4.mp3').play(); return false;"
                         type='button'
                       >
                         mìng
@@ -2472,7 +2472,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mu2.mp3').play(); return false;"
                         type='button'
                       >
                         mú
@@ -2481,7 +2481,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mu3.mp3').play(); return false;"
                         type='button'
                       >
                         mǔ
@@ -2490,7 +2490,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/mu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/mu4.mp3').play(); return false;"
                         type='button'
                       >
                         mù
@@ -2524,7 +2524,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fa1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fa1.mp3').play(); return false;"
                         type='button'
                       >
                         fā
@@ -2533,7 +2533,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fa2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fa2.mp3').play(); return false;"
                         type='button'
                       >
                         fá
@@ -2542,7 +2542,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fa3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fa3.mp3').play(); return false;"
                         type='button'
                       >
                         fǎ
@@ -2551,7 +2551,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fa4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fa4.mp3').play(); return false;"
                         type='button'
                       >
                         fà
@@ -2570,7 +2570,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fan1.mp3').play(); return false;"
                         type='button'
                       >
                         fān
@@ -2579,7 +2579,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fan2.mp3').play(); return false;"
                         type='button'
                       >
                         fán
@@ -2588,7 +2588,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fan3.mp3').play(); return false;"
                         type='button'
                       >
                         fǎn
@@ -2597,7 +2597,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fan4.mp3').play(); return false;"
                         type='button'
                       >
                         fàn
@@ -2614,7 +2614,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fang1.mp3').play(); return false;"
                         type='button'
                       >
                         fāng
@@ -2623,7 +2623,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fang2.mp3').play(); return false;"
                         type='button'
                       >
                         fáng
@@ -2632,7 +2632,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fang3.mp3').play(); return false;"
                         type='button'
                       >
                         fǎng
@@ -2641,7 +2641,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fang4.mp3').play(); return false;"
                         type='button'
                       >
                         fàng
@@ -2663,7 +2663,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fo2.mp3').play(); return false;"
                         type='button'
                       >
                         fó
@@ -2701,7 +2701,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fou3.mp3').play(); return false;"
                         type='button'
                       >
                         fǒu
@@ -2724,7 +2724,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fei1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fei1.mp3').play(); return false;"
                         type='button'
                       >
                         fēi
@@ -2733,7 +2733,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fei2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fei2.mp3').play(); return false;"
                         type='button'
                       >
                         féi
@@ -2742,7 +2742,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fei3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fei3.mp3').play(); return false;"
                         type='button'
                       >
                         fěi
@@ -2751,7 +2751,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fei4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fei4.mp3').play(); return false;"
                         type='button'
                       >
                         fèi
@@ -2768,7 +2768,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fen1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fen1.mp3').play(); return false;"
                         type='button'
                       >
                         fēn
@@ -2777,7 +2777,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fen2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fen2.mp3').play(); return false;"
                         type='button'
                       >
                         fén
@@ -2786,7 +2786,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fen3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fen3.mp3').play(); return false;"
                         type='button'
                       >
                         fěn
@@ -2795,7 +2795,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fen4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fen4.mp3').play(); return false;"
                         type='button'
                       >
                         fèn
@@ -2812,7 +2812,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/feng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/feng1.mp3').play(); return false;"
                         type='button'
                       >
                         fēng
@@ -2821,7 +2821,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/feng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/feng2.mp3').play(); return false;"
                         type='button'
                       >
                         féng
@@ -2830,7 +2830,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/feng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/feng3.mp3').play(); return false;"
                         type='button'
                       >
                         fěng
@@ -2839,7 +2839,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/feng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/feng4.mp3').play(); return false;"
                         type='button'
                       >
                         fèng
@@ -2867,7 +2867,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fu1.mp3').play(); return false;"
                         type='button'
                       >
                         fū
@@ -2876,7 +2876,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fu2.mp3').play(); return false;"
                         type='button'
                       >
                         fú
@@ -2885,7 +2885,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fu3.mp3').play(); return false;"
                         type='button'
                       >
                         fǔ
@@ -2894,7 +2894,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/fu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/fu4.mp3').play(); return false;"
                         type='button'
                       >
                         fù
@@ -2928,7 +2928,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ba1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ba1.mp3').play(); return false;"
                         type='button'
                       >
                         bā
@@ -2937,7 +2937,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ba2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ba2.mp3').play(); return false;"
                         type='button'
                       >
                         bá
@@ -2946,7 +2946,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ba3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ba3.mp3').play(); return false;"
                         type='button'
                       >
                         bǎ
@@ -2955,7 +2955,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ba4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ba4.mp3').play(); return false;"
                         type='button'
                       >
                         bà
@@ -2972,7 +2972,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bai1.mp3').play(); return false;"
                         type='button'
                       >
                         bāi
@@ -2981,7 +2981,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bai2.mp3').play(); return false;"
                         type='button'
                       >
                         bái
@@ -2990,7 +2990,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bai3.mp3').play(); return false;"
                         type='button'
                       >
                         bǎi
@@ -2999,7 +2999,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bai4.mp3').play(); return false;"
                         type='button'
                       >
                         bài
@@ -3016,7 +3016,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bao1.mp3').play(); return false;"
                         type='button'
                       >
                         bāo
@@ -3025,7 +3025,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bao2.mp3').play(); return false;"
                         type='button'
                       >
                         báo
@@ -3034,7 +3034,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bao3.mp3').play(); return false;"
                         type='button'
                       >
                         bǎo
@@ -3043,7 +3043,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bao4.mp3').play(); return false;"
                         type='button'
                       >
                         bào
@@ -3060,7 +3060,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ban1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ban1.mp3').play(); return false;"
                         type='button'
                       >
                         bān
@@ -3074,7 +3074,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ban3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ban3.mp3').play(); return false;"
                         type='button'
                       >
                         bǎn
@@ -3083,7 +3083,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ban4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ban4.mp3').play(); return false;"
                         type='button'
                       >
                         bàn
@@ -3100,7 +3100,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bang1.mp3').play(); return false;"
                         type='button'
                       >
                         bāng
@@ -3114,7 +3114,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bang3.mp3').play(); return false;"
                         type='button'
                       >
                         bǎng
@@ -3123,7 +3123,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bang4.mp3').play(); return false;"
                         type='button'
                       >
                         bàng
@@ -3140,7 +3140,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bo1.mp3').play(); return false;"
                         type='button'
                       >
                         bō
@@ -3149,7 +3149,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bo2.mp3').play(); return false;"
                         type='button'
                       >
                         bó
@@ -3158,7 +3158,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bo3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bo3.mp3').play(); return false;"
                         type='button'
                       >
                         bǒ
@@ -3167,7 +3167,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bo4.mp3').play(); return false;"
                         type='button'
                       >
                         bò
@@ -3187,7 +3187,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bei1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bei1.mp3').play(); return false;"
                         type='button'
                       >
                         bēi
@@ -3201,7 +3201,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bei3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bei3.mp3').play(); return false;"
                         type='button'
                       >
                         běi
@@ -3210,7 +3210,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bei4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bei4.mp3').play(); return false;"
                         type='button'
                       >
                         bèi
@@ -3227,7 +3227,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ben1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ben1.mp3').play(); return false;"
                         type='button'
                       >
                         bēn
@@ -3241,7 +3241,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ben3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ben3.mp3').play(); return false;"
                         type='button'
                       >
                         běn
@@ -3250,7 +3250,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ben4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ben4.mp3').play(); return false;"
                         type='button'
                       >
                         bèn
@@ -3267,7 +3267,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/beng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/beng1.mp3').play(); return false;"
                         type='button'
                       >
                         bēng
@@ -3276,7 +3276,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/beng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/beng2.mp3').play(); return false;"
                         type='button'
                       >
                         béng
@@ -3285,7 +3285,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/beng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/beng3.mp3').play(); return false;"
                         type='button'
                       >
                         běng
@@ -3294,7 +3294,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/beng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/beng4.mp3').play(); return false;"
                         type='button'
                       >
                         bèng
@@ -3312,7 +3312,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bi1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bi1.mp3').play(); return false;"
                         type='button'
                       >
                         bī
@@ -3321,7 +3321,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bi2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bi2.mp3').play(); return false;"
                         type='button'
                       >
                         bí
@@ -3330,7 +3330,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bi3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bi3.mp3').play(); return false;"
                         type='button'
                       >
                         bǐ
@@ -3339,7 +3339,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bi4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bi4.mp3').play(); return false;"
                         type='button'
                       >
                         bì
@@ -3357,7 +3357,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/biao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/biao1.mp3').play(); return false;"
                         type='button'
                       >
                         biāo
@@ -3371,7 +3371,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/biao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/biao3.mp3').play(); return false;"
                         type='button'
                       >
                         biǎo
@@ -3380,7 +3380,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/biao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/biao4.mp3').play(); return false;"
                         type='button'
                       >
                         biào
@@ -3397,7 +3397,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bie1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bie1.mp3').play(); return false;"
                         type='button'
                       >
                         biē
@@ -3406,7 +3406,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bie2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bie2.mp3').play(); return false;"
                         type='button'
                       >
                         bié
@@ -3415,7 +3415,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bie3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bie3.mp3').play(); return false;"
                         type='button'
                       >
                         biě
@@ -3424,7 +3424,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bie4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bie4.mp3').play(); return false;"
                         type='button'
                       >
                         biè
@@ -3442,7 +3442,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bian1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bian1.mp3').play(); return false;"
                         type='button'
                       >
                         biān
@@ -3456,7 +3456,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bian3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bian3.mp3').play(); return false;"
                         type='button'
                       >
                         biǎn
@@ -3465,7 +3465,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bian4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bian4.mp3').play(); return false;"
                         type='button'
                       >
                         biàn
@@ -3483,7 +3483,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bin1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bin1.mp3').play(); return false;"
                         type='button'
                       >
                         bīn
@@ -3502,7 +3502,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bin4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bin4.mp3').play(); return false;"
                         type='button'
                       >
                         bìn
@@ -3519,7 +3519,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bing1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bing1.mp3').play(); return false;"
                         type='button'
                       >
                         bīng
@@ -3533,7 +3533,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bing3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bing3.mp3').play(); return false;"
                         type='button'
                       >
                         bǐng
@@ -3542,7 +3542,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bing4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bing4.mp3').play(); return false;"
                         type='button'
                       >
                         bìng
@@ -3560,7 +3560,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bu1.mp3').play(); return false;"
                         type='button'
                       >
                         bū
@@ -3569,7 +3569,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bu2.mp3').play(); return false;"
                         type='button'
                       >
                         bú
@@ -3578,7 +3578,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bu3.mp3').play(); return false;"
                         type='button'
                       >
                         bǔ
@@ -3587,7 +3587,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/bu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/bu4.mp3').play(); return false;"
                         type='button'
                       >
                         bù
@@ -3621,7 +3621,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pa1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pa1.mp3').play(); return false;"
                         type='button'
                       >
                         pā
@@ -3630,7 +3630,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pa2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pa2.mp3').play(); return false;"
                         type='button'
                       >
                         pá
@@ -3644,7 +3644,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pa4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pa4.mp3').play(); return false;"
                         type='button'
                       >
                         pà
@@ -3661,7 +3661,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pai1.mp3').play(); return false;"
                         type='button'
                       >
                         pāi
@@ -3670,7 +3670,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pai2.mp3').play(); return false;"
                         type='button'
                       >
                         pái
@@ -3679,7 +3679,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pai3.mp3').play(); return false;"
                         type='button'
                       >
                         pǎi
@@ -3688,7 +3688,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pai4.mp3').play(); return false;"
                         type='button'
                       >
                         pài
@@ -3705,7 +3705,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pao1.mp3').play(); return false;"
                         type='button'
                       >
                         pāo
@@ -3714,7 +3714,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pao2.mp3').play(); return false;"
                         type='button'
                       >
                         páo
@@ -3723,7 +3723,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pao3.mp3').play(); return false;"
                         type='button'
                       >
                         pǎo
@@ -3732,7 +3732,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pao4.mp3').play(); return false;"
                         type='button'
                       >
                         pào
@@ -3749,7 +3749,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pan1.mp3').play(); return false;"
                         type='button'
                       >
                         pān
@@ -3758,7 +3758,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pan2.mp3').play(); return false;"
                         type='button'
                       >
                         pán
@@ -3772,7 +3772,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pan4.mp3').play(); return false;"
                         type='button'
                       >
                         pàn
@@ -3789,7 +3789,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pang1.mp3').play(); return false;"
                         type='button'
                       >
                         pāng
@@ -3798,7 +3798,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pang2.mp3').play(); return false;"
                         type='button'
                       >
                         páng
@@ -3807,7 +3807,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pang3.mp3').play(); return false;"
                         type='button'
                       >
                         pǎng
@@ -3816,7 +3816,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pang4.mp3').play(); return false;"
                         type='button'
                       >
                         pàng
@@ -3833,7 +3833,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/po1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/po1.mp3').play(); return false;"
                         type='button'
                       >
                         pō
@@ -3842,7 +3842,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/po2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/po2.mp3').play(); return false;"
                         type='button'
                       >
                         pó
@@ -3851,7 +3851,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/po3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/po3.mp3').play(); return false;"
                         type='button'
                       >
                         pǒ
@@ -3860,7 +3860,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/po4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/po4.mp3').play(); return false;"
                         type='button'
                       >
                         pò
@@ -3878,7 +3878,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pou1.mp3').play(); return false;"
                         type='button'
                       >
                         pōu
@@ -3887,7 +3887,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pou2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pou2.mp3').play(); return false;"
                         type='button'
                       >
                         póu
@@ -3896,7 +3896,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pou3.mp3').play(); return false;"
                         type='button'
                       >
                         pǒu
@@ -3919,7 +3919,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pei1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pei1.mp3').play(); return false;"
                         type='button'
                       >
                         pēi
@@ -3928,7 +3928,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pei2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pei2.mp3').play(); return false;"
                         type='button'
                       >
                         péi
@@ -3942,7 +3942,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pei4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pei4.mp3').play(); return false;"
                         type='button'
                       >
                         pèi
@@ -3959,7 +3959,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pen1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pen1.mp3').play(); return false;"
                         type='button'
                       >
                         pēn
@@ -3968,7 +3968,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pen2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pen2.mp3').play(); return false;"
                         type='button'
                       >
                         pén
@@ -3982,7 +3982,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pen4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pen4.mp3').play(); return false;"
                         type='button'
                       >
                         pèn
@@ -3999,7 +3999,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/peng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/peng1.mp3').play(); return false;"
                         type='button'
                       >
                         pēng
@@ -4008,7 +4008,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/peng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/peng2.mp3').play(); return false;"
                         type='button'
                       >
                         péng
@@ -4017,7 +4017,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/peng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/peng3.mp3').play(); return false;"
                         type='button'
                       >
                         pěng
@@ -4026,7 +4026,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/peng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/peng4.mp3').play(); return false;"
                         type='button'
                       >
                         pèng
@@ -4044,7 +4044,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pi1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pi1.mp3').play(); return false;"
                         type='button'
                       >
                         pī
@@ -4053,7 +4053,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pi2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pi2.mp3').play(); return false;"
                         type='button'
                       >
                         pí
@@ -4062,7 +4062,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pi3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pi3.mp3').play(); return false;"
                         type='button'
                       >
                         pǐ
@@ -4071,7 +4071,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pi4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pi4.mp3').play(); return false;"
                         type='button'
                       >
                         pì
@@ -4089,7 +4089,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/piao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/piao1.mp3').play(); return false;"
                         type='button'
                       >
                         piāo
@@ -4098,7 +4098,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/piao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/piao2.mp3').play(); return false;"
                         type='button'
                       >
                         piáo
@@ -4107,7 +4107,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/piao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/piao3.mp3').play(); return false;"
                         type='button'
                       >
                         piǎo
@@ -4116,7 +4116,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/piao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/piao4.mp3').play(); return false;"
                         type='button'
                       >
                         piào
@@ -4133,7 +4133,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pie1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pie1.mp3').play(); return false;"
                         type='button'
                       >
                         piē
@@ -4147,7 +4147,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pie3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pie3.mp3').play(); return false;"
                         type='button'
                       >
                         piě
@@ -4156,7 +4156,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pie4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pie4.mp3').play(); return false;"
                         type='button'
                       >
                         piè
@@ -4174,7 +4174,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pian1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pian1.mp3').play(); return false;"
                         type='button'
                       >
                         piān
@@ -4183,7 +4183,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pian2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pian2.mp3').play(); return false;"
                         type='button'
                       >
                         pián
@@ -4192,7 +4192,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pian3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pian3.mp3').play(); return false;"
                         type='button'
                       >
                         piǎn
@@ -4201,7 +4201,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pian4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pian4.mp3').play(); return false;"
                         type='button'
                       >
                         piàn
@@ -4219,7 +4219,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pin1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pin1.mp3').play(); return false;"
                         type='button'
                       >
                         pīn
@@ -4228,7 +4228,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pin2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pin2.mp3').play(); return false;"
                         type='button'
                       >
                         pín
@@ -4237,7 +4237,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pin3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pin3.mp3').play(); return false;"
                         type='button'
                       >
                         pǐn
@@ -4246,7 +4246,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pin4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pin4.mp3').play(); return false;"
                         type='button'
                       >
                         pìn
@@ -4263,7 +4263,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ping1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ping1.mp3').play(); return false;"
                         type='button'
                       >
                         pīng
@@ -4272,7 +4272,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ping2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ping2.mp3').play(); return false;"
                         type='button'
                       >
                         píng
@@ -4300,7 +4300,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pu1.mp3').play(); return false;"
                         type='button'
                       >
                         pū
@@ -4309,7 +4309,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pu2.mp3').play(); return false;"
                         type='button'
                       >
                         pú
@@ -4318,7 +4318,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pu3.mp3').play(); return false;"
                         type='button'
                       >
                         pǔ
@@ -4327,7 +4327,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/pu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/pu4.mp3').play(); return false;"
                         type='button'
                       >
                         pù
@@ -4361,7 +4361,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/da1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/da1.mp3').play(); return false;"
                         type='button'
                       >
                         dā
@@ -4370,7 +4370,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/da2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/da2.mp3').play(); return false;"
                         type='button'
                       >
                         dá
@@ -4379,7 +4379,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/da3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/da3.mp3').play(); return false;"
                         type='button'
                       >
                         dǎ
@@ -4388,7 +4388,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/da4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/da4.mp3').play(); return false;"
                         type='button'
                       >
                         dà
@@ -4405,7 +4405,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dai1.mp3').play(); return false;"
                         type='button'
                       >
                         dāi
@@ -4419,7 +4419,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dai3.mp3').play(); return false;"
                         type='button'
                       >
                         dǎi
@@ -4428,7 +4428,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dai4.mp3').play(); return false;"
                         type='button'
                       >
                         dài
@@ -4445,7 +4445,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dao1.mp3').play(); return false;"
                         type='button'
                       >
                         dāo
@@ -4454,7 +4454,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dao2.mp3').play(); return false;"
                         type='button'
                       >
                         dáo
@@ -4463,7 +4463,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dao3.mp3').play(); return false;"
                         type='button'
                       >
                         dǎo
@@ -4472,7 +4472,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dao4.mp3').play(); return false;"
                         type='button'
                       >
                         dào
@@ -4489,7 +4489,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dan1.mp3').play(); return false;"
                         type='button'
                       >
                         dān
@@ -4503,7 +4503,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dan3.mp3').play(); return false;"
                         type='button'
                       >
                         dǎn
@@ -4512,7 +4512,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dan4.mp3').play(); return false;"
                         type='button'
                       >
                         dàn
@@ -4529,7 +4529,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dang1.mp3').play(); return false;"
                         type='button'
                       >
                         dāng
@@ -4543,7 +4543,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dang3.mp3').play(); return false;"
                         type='button'
                       >
                         dǎng
@@ -4552,7 +4552,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dang4.mp3').play(); return false;"
                         type='button'
                       >
                         dàng
@@ -4570,7 +4570,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dong1.mp3').play(); return false;"
                         type='button'
                       >
                         dōng
@@ -4584,7 +4584,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dong3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dong3.mp3').play(); return false;"
                         type='button'
                       >
                         dǒng
@@ -4593,7 +4593,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dong4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dong4.mp3').play(); return false;"
                         type='button'
                       >
                         dòng
@@ -4610,7 +4610,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dou1.mp3').play(); return false;"
                         type='button'
                       >
                         dōu
@@ -4624,7 +4624,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dou3.mp3').play(); return false;"
                         type='button'
                       >
                         dǒu
@@ -4633,7 +4633,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dou4.mp3').play(); return false;"
                         type='button'
                       >
                         dòu
@@ -4650,7 +4650,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/de1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/de1.mp3').play(); return false;"
                         type='button'
                       >
                         dē
@@ -4659,7 +4659,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/de2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/de2.mp3').play(); return false;"
                         type='button'
                       >
                         dé
@@ -4696,7 +4696,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dei3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dei3.mp3').play(); return false;"
                         type='button'
                       >
                         děi
@@ -4733,7 +4733,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/den4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/den4.mp3').play(); return false;"
                         type='button'
                       >
                         dèn
@@ -4750,7 +4750,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/deng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/deng1.mp3').play(); return false;"
                         type='button'
                       >
                         dēng
@@ -4764,7 +4764,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/deng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/deng3.mp3').play(); return false;"
                         type='button'
                       >
                         děng
@@ -4773,7 +4773,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/deng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/deng4.mp3').play(); return false;"
                         type='button'
                       >
                         dèng
@@ -4791,7 +4791,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/di1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/di1.mp3').play(); return false;"
                         type='button'
                       >
                         dī
@@ -4800,7 +4800,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/di2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/di2.mp3').play(); return false;"
                         type='button'
                       >
                         dí
@@ -4809,7 +4809,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/di3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/di3.mp3').play(); return false;"
                         type='button'
                       >
                         dǐ
@@ -4818,7 +4818,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/di4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/di4.mp3').play(); return false;"
                         type='button'
                       >
                         dì
@@ -4836,7 +4836,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/diao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/diao1.mp3').play(); return false;"
                         type='button'
                       >
                         diāo
@@ -4850,7 +4850,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/diao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/diao3.mp3').play(); return false;"
                         type='button'
                       >
                         diǎo
@@ -4859,7 +4859,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/diao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/diao4.mp3').play(); return false;"
                         type='button'
                       >
                         diào
@@ -4876,7 +4876,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/die1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/die1.mp3').play(); return false;"
                         type='button'
                       >
                         diē
@@ -4885,7 +4885,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/die2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/die2.mp3').play(); return false;"
                         type='button'
                       >
                         dié
@@ -4912,7 +4912,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/diu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/diu1.mp3').play(); return false;"
                         type='button'
                       >
                         diū
@@ -4944,7 +4944,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dian1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dian1.mp3').play(); return false;"
                         type='button'
                       >
                         diān
@@ -4958,7 +4958,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dian3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dian3.mp3').play(); return false;"
                         type='button'
                       >
                         diǎn
@@ -4967,7 +4967,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dian4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dian4.mp3').play(); return false;"
                         type='button'
                       >
                         diàn
@@ -4986,7 +4986,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ding1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ding1.mp3').play(); return false;"
                         type='button'
                       >
                         dīng
@@ -5000,7 +5000,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ding3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ding3.mp3').play(); return false;"
                         type='button'
                       >
                         dǐng
@@ -5009,7 +5009,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ding4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ding4.mp3').play(); return false;"
                         type='button'
                       >
                         dìng
@@ -5027,7 +5027,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/du1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/du1.mp3').play(); return false;"
                         type='button'
                       >
                         dū
@@ -5036,7 +5036,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/du2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/du2.mp3').play(); return false;"
                         type='button'
                       >
                         dú
@@ -5045,7 +5045,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/du3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/du3.mp3').play(); return false;"
                         type='button'
                       >
                         dǔ
@@ -5054,7 +5054,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/du4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/du4.mp3').play(); return false;"
                         type='button'
                       >
                         dù
@@ -5072,7 +5072,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/duo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/duo1.mp3').play(); return false;"
                         type='button'
                       >
                         duō
@@ -5081,7 +5081,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/duo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/duo2.mp3').play(); return false;"
                         type='button'
                       >
                         duó
@@ -5090,7 +5090,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/duo3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/duo3.mp3').play(); return false;"
                         type='button'
                       >
                         duǒ
@@ -5099,7 +5099,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/duo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/duo4.mp3').play(); return false;"
                         type='button'
                       >
                         duò
@@ -5116,7 +5116,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dui1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dui1.mp3').play(); return false;"
                         type='button'
                       >
                         duī
@@ -5135,7 +5135,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dui4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dui4.mp3').play(); return false;"
                         type='button'
                       >
                         duì
@@ -5153,7 +5153,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/duan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/duan1.mp3').play(); return false;"
                         type='button'
                       >
                         duān
@@ -5167,7 +5167,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/duan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/duan3.mp3').play(); return false;"
                         type='button'
                       >
                         duǎn
@@ -5176,7 +5176,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/duan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/duan4.mp3').play(); return false;"
                         type='button'
                       >
                         duàn
@@ -5193,7 +5193,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dun1.mp3').play(); return false;"
                         type='button'
                       >
                         dūn
@@ -5207,7 +5207,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dun3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dun3.mp3').play(); return false;"
                         type='button'
                       >
                         dǔn
@@ -5216,7 +5216,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/dun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/dun4.mp3').play(); return false;"
                         type='button'
                       >
                         dùn
@@ -5244,7 +5244,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ta1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ta1.mp3').play(); return false;"
                         type='button'
                       >
                         tā
@@ -5258,7 +5258,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ta3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ta3.mp3').play(); return false;"
                         type='button'
                       >
                         tǎ
@@ -5267,7 +5267,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ta4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ta4.mp3').play(); return false;"
                         type='button'
                       >
                         tà
@@ -5284,7 +5284,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tai1.mp3').play(); return false;"
                         type='button'
                       >
                         tāi
@@ -5293,7 +5293,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tai2.mp3').play(); return false;"
                         type='button'
                       >
                         tái
@@ -5302,7 +5302,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tai3.mp3').play(); return false;"
                         type='button'
                       >
                         tǎi
@@ -5311,7 +5311,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tai4.mp3').play(); return false;"
                         type='button'
                       >
                         tài
@@ -5328,7 +5328,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tao1.mp3').play(); return false;"
                         type='button'
                       >
                         tāo
@@ -5337,7 +5337,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tao2.mp3').play(); return false;"
                         type='button'
                       >
                         táo
@@ -5346,7 +5346,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tao3.mp3').play(); return false;"
                         type='button'
                       >
                         tǎo
@@ -5355,7 +5355,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tao4.mp3').play(); return false;"
                         type='button'
                       >
                         tào
@@ -5372,7 +5372,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tan1.mp3').play(); return false;"
                         type='button'
                       >
                         tān
@@ -5381,7 +5381,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tan2.mp3').play(); return false;"
                         type='button'
                       >
                         tán
@@ -5390,7 +5390,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tan3.mp3').play(); return false;"
                         type='button'
                       >
                         tǎn
@@ -5399,7 +5399,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tan4.mp3').play(); return false;"
                         type='button'
                       >
                         tàn
@@ -5416,7 +5416,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tang1.mp3').play(); return false;"
                         type='button'
                       >
                         tāng
@@ -5425,7 +5425,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tang2.mp3').play(); return false;"
                         type='button'
                       >
                         táng
@@ -5434,7 +5434,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tang3.mp3').play(); return false;"
                         type='button'
                       >
                         tǎng
@@ -5443,7 +5443,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tang4.mp3').play(); return false;"
                         type='button'
                       >
                         tàng
@@ -5461,7 +5461,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tong1.mp3').play(); return false;"
                         type='button'
                       >
                         tōng
@@ -5470,7 +5470,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tong2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tong2.mp3').play(); return false;"
                         type='button'
                       >
                         tóng
@@ -5479,7 +5479,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tong3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tong3.mp3').play(); return false;"
                         type='button'
                       >
                         tǒng
@@ -5488,7 +5488,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tong4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tong4.mp3').play(); return false;"
                         type='button'
                       >
                         tòng
@@ -5505,7 +5505,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tou1.mp3').play(); return false;"
                         type='button'
                       >
                         tōu
@@ -5514,7 +5514,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tou2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tou2.mp3').play(); return false;"
                         type='button'
                       >
                         tóu
@@ -5523,7 +5523,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tou3.mp3').play(); return false;"
                         type='button'
                       >
                         tǒu
@@ -5532,7 +5532,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tou4.mp3').play(); return false;"
                         type='button'
                       >
                         tòu
@@ -5564,7 +5564,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/te4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/te4.mp3').play(); return false;"
                         type='button'
                       >
                         tè
@@ -5583,7 +5583,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/teng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/teng1.mp3').play(); return false;"
                         type='button'
                       >
                         tēng
@@ -5592,7 +5592,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/teng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/teng2.mp3').play(); return false;"
                         type='button'
                       >
                         téng
@@ -5606,7 +5606,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/teng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/teng4.mp3').play(); return false;"
                         type='button'
                       >
                         tèng
@@ -5624,7 +5624,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ti1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ti1.mp3').play(); return false;"
                         type='button'
                       >
                         tī
@@ -5633,7 +5633,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ti2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ti2.mp3').play(); return false;"
                         type='button'
                       >
                         tí
@@ -5642,7 +5642,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ti3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ti3.mp3').play(); return false;"
                         type='button'
                       >
                         tǐ
@@ -5651,7 +5651,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ti4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ti4.mp3').play(); return false;"
                         type='button'
                       >
                         tì
@@ -5669,7 +5669,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tiao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tiao1.mp3').play(); return false;"
                         type='button'
                       >
                         tiāo
@@ -5678,7 +5678,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tiao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tiao2.mp3').play(); return false;"
                         type='button'
                       >
                         tiáo
@@ -5687,7 +5687,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tiao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tiao3.mp3').play(); return false;"
                         type='button'
                       >
                         tiǎo
@@ -5696,7 +5696,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tiao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tiao4.mp3').play(); return false;"
                         type='button'
                       >
                         tiào
@@ -5713,7 +5713,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tie1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tie1.mp3').play(); return false;"
                         type='button'
                       >
                         tiē
@@ -5727,7 +5727,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tie3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tie3.mp3').play(); return false;"
                         type='button'
                       >
                         tiě
@@ -5736,7 +5736,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tie4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tie4.mp3').play(); return false;"
                         type='button'
                       >
                         tiè
@@ -5754,7 +5754,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tian1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tian1.mp3').play(); return false;"
                         type='button'
                       >
                         tiān
@@ -5763,7 +5763,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tian2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tian2.mp3').play(); return false;"
                         type='button'
                       >
                         tián
@@ -5772,7 +5772,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tian3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tian3.mp3').play(); return false;"
                         type='button'
                       >
                         tiǎn
@@ -5781,7 +5781,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tian4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tian4.mp3').play(); return false;"
                         type='button'
                       >
                         tiàn
@@ -5800,7 +5800,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ting1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ting1.mp3').play(); return false;"
                         type='button'
                       >
                         tīng
@@ -5809,7 +5809,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ting2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ting2.mp3').play(); return false;"
                         type='button'
                       >
                         tíng
@@ -5818,7 +5818,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ting3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ting3.mp3').play(); return false;"
                         type='button'
                       >
                         tǐng
@@ -5827,7 +5827,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ting4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ting4.mp3').play(); return false;"
                         type='button'
                       >
                         tìng
@@ -5845,7 +5845,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tu1.mp3').play(); return false;"
                         type='button'
                       >
                         tū
@@ -5854,7 +5854,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tu2.mp3').play(); return false;"
                         type='button'
                       >
                         tú
@@ -5863,7 +5863,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tu3.mp3').play(); return false;"
                         type='button'
                       >
                         tǔ
@@ -5872,7 +5872,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tu4.mp3').play(); return false;"
                         type='button'
                       >
                         tù
@@ -5890,7 +5890,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tuo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tuo1.mp3').play(); return false;"
                         type='button'
                       >
                         tuō
@@ -5899,7 +5899,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tuo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tuo2.mp3').play(); return false;"
                         type='button'
                       >
                         tuó
@@ -5908,7 +5908,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tuo3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tuo3.mp3').play(); return false;"
                         type='button'
                       >
                         tuǒ
@@ -5917,7 +5917,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tuo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tuo4.mp3').play(); return false;"
                         type='button'
                       >
                         tuò
@@ -5934,7 +5934,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tui1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tui1.mp3').play(); return false;"
                         type='button'
                       >
                         tuī
@@ -5943,7 +5943,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tui2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tui2.mp3').play(); return false;"
                         type='button'
                       >
                         tuí
@@ -5952,7 +5952,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tui3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tui3.mp3').play(); return false;"
                         type='button'
                       >
                         tuǐ
@@ -5961,7 +5961,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tui4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tui4.mp3').play(); return false;"
                         type='button'
                       >
                         tuì
@@ -5979,7 +5979,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tuan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tuan1.mp3').play(); return false;"
                         type='button'
                       >
                         tuān
@@ -5988,7 +5988,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tuan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tuan2.mp3').play(); return false;"
                         type='button'
                       >
                         tuán
@@ -5997,7 +5997,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tuan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tuan3.mp3').play(); return false;"
                         type='button'
                       >
                         tuǎn
@@ -6006,7 +6006,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tuan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tuan4.mp3').play(); return false;"
                         type='button'
                       >
                         tuàn
@@ -6023,7 +6023,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tun1.mp3').play(); return false;"
                         type='button'
                       >
                         tūn
@@ -6032,7 +6032,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tun2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tun2.mp3').play(); return false;"
                         type='button'
                       >
                         tún
@@ -6041,7 +6041,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tun3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tun3.mp3').play(); return false;"
                         type='button'
                       >
                         tǔn
@@ -6050,7 +6050,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/tun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/tun4.mp3').play(); return false;"
                         type='button'
                       >
                         tùn
@@ -6078,7 +6078,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/na1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/na1.mp3').play(); return false;"
                         type='button'
                       >
                         nā
@@ -6087,7 +6087,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/na2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/na2.mp3').play(); return false;"
                         type='button'
                       >
                         ná
@@ -6096,7 +6096,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/na3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/na3.mp3').play(); return false;"
                         type='button'
                       >
                         nǎ
@@ -6105,7 +6105,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/na4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/na4.mp3').play(); return false;"
                         type='button'
                       >
                         nà
@@ -6132,7 +6132,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nai3.mp3').play(); return false;"
                         type='button'
                       >
                         nǎi
@@ -6141,7 +6141,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nai4.mp3').play(); return false;"
                         type='button'
                       >
                         nài
@@ -6158,7 +6158,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nao1.mp3').play(); return false;"
                         type='button'
                       >
                         nāo
@@ -6167,7 +6167,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nao2.mp3').play(); return false;"
                         type='button'
                       >
                         náo
@@ -6176,7 +6176,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nao3.mp3').play(); return false;"
                         type='button'
                       >
                         nǎo
@@ -6185,7 +6185,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nao4.mp3').play(); return false;"
                         type='button'
                       >
                         nào
@@ -6202,7 +6202,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nan1.mp3').play(); return false;"
                         type='button'
                       >
                         nān
@@ -6211,7 +6211,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nan2.mp3').play(); return false;"
                         type='button'
                       >
                         nán
@@ -6220,7 +6220,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nan3.mp3').play(); return false;"
                         type='button'
                       >
                         nǎn
@@ -6229,7 +6229,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nan4.mp3').play(); return false;"
                         type='button'
                       >
                         nàn
@@ -6246,7 +6246,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nang1.mp3').play(); return false;"
                         type='button'
                       >
                         nāng
@@ -6255,7 +6255,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nang2.mp3').play(); return false;"
                         type='button'
                       >
                         náng
@@ -6264,7 +6264,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nang3.mp3').play(); return false;"
                         type='button'
                       >
                         nǎng
@@ -6273,7 +6273,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nang4.mp3').play(); return false;"
                         type='button'
                       >
                         nàng
@@ -6296,7 +6296,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nong2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nong2.mp3').play(); return false;"
                         type='button'
                       >
                         nóng
@@ -6310,7 +6310,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nong4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nong4.mp3').play(); return false;"
                         type='button'
                       >
                         nòng
@@ -6332,7 +6332,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nou2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nou2.mp3').play(); return false;"
                         type='button'
                       >
                         nóu
@@ -6346,7 +6346,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nou4.mp3').play(); return false;"
                         type='button'
                       >
                         nòu
@@ -6368,7 +6368,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ne2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ne2.mp3').play(); return false;"
                         type='button'
                       >
                         né
@@ -6382,7 +6382,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ne4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ne4.mp3').play(); return false;"
                         type='button'
                       >
                         nè
@@ -6409,7 +6409,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nei3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nei3.mp3').play(); return false;"
                         type='button'
                       >
                         něi
@@ -6418,7 +6418,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nei4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nei4.mp3').play(); return false;"
                         type='button'
                       >
                         nèi
@@ -6450,7 +6450,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nen4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nen4.mp3').play(); return false;"
                         type='button'
                       >
                         nèn
@@ -6472,7 +6472,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/neng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/neng2.mp3').play(); return false;"
                         type='button'
                       >
                         néng
@@ -6500,7 +6500,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ni1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ni1.mp3').play(); return false;"
                         type='button'
                       >
                         nī
@@ -6509,7 +6509,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ni2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ni2.mp3').play(); return false;"
                         type='button'
                       >
                         ní
@@ -6518,7 +6518,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ni3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ni3.mp3').play(); return false;"
                         type='button'
                       >
                         nǐ
@@ -6527,7 +6527,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ni4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ni4.mp3').play(); return false;"
                         type='button'
                       >
                         nì
@@ -6555,7 +6555,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/niao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/niao3.mp3').play(); return false;"
                         type='button'
                       >
                         niǎo
@@ -6564,7 +6564,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/niao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/niao4.mp3').play(); return false;"
                         type='button'
                       >
                         niào
@@ -6581,7 +6581,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nie1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nie1.mp3').play(); return false;"
                         type='button'
                       >
                         niē
@@ -6600,7 +6600,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nie4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nie4.mp3').play(); return false;"
                         type='button'
                       >
                         niè
@@ -6617,7 +6617,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/niu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/niu1.mp3').play(); return false;"
                         type='button'
                       >
                         niū
@@ -6626,7 +6626,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/niu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/niu2.mp3').play(); return false;"
                         type='button'
                       >
                         niú
@@ -6635,7 +6635,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/niu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/niu3.mp3').play(); return false;"
                         type='button'
                       >
                         niǔ
@@ -6644,7 +6644,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/niu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/niu4.mp3').play(); return false;"
                         type='button'
                       >
                         niù
@@ -6661,7 +6661,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nian1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nian1.mp3').play(); return false;"
                         type='button'
                       >
                         niān
@@ -6670,7 +6670,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nian2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nian2.mp3').play(); return false;"
                         type='button'
                       >
                         nián
@@ -6679,7 +6679,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nian3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nian3.mp3').play(); return false;"
                         type='button'
                       >
                         niǎn
@@ -6688,7 +6688,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nian4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nian4.mp3').play(); return false;"
                         type='button'
                       >
                         niàn
@@ -6710,7 +6710,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/niang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/niang2.mp3').play(); return false;"
                         type='button'
                       >
                         niáng
@@ -6724,7 +6724,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/niang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/niang4.mp3').play(); return false;"
                         type='button'
                       >
                         niàng
@@ -6746,7 +6746,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nin2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nin2.mp3').play(); return false;"
                         type='button'
                       >
                         nín
@@ -6778,7 +6778,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ning2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ning2.mp3').play(); return false;"
                         type='button'
                       >
                         níng
@@ -6787,7 +6787,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ning3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ning3.mp3').play(); return false;"
                         type='button'
                       >
                         nǐng
@@ -6796,7 +6796,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ning4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ning4.mp3').play(); return false;"
                         type='button'
                       >
                         nìng
@@ -6819,7 +6819,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nu2.mp3').play(); return false;"
                         type='button'
                       >
                         nú
@@ -6828,7 +6828,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nu3.mp3').play(); return false;"
                         type='button'
                       >
                         nǔ
@@ -6837,7 +6837,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nu4.mp3').play(); return false;"
                         type='button'
                       >
                         nù
@@ -6860,7 +6860,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nuo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nuo2.mp3').play(); return false;"
                         type='button'
                       >
                         nuó
@@ -6874,7 +6874,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nuo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nuo4.mp3').play(); return false;"
                         type='button'
                       >
                         nuò
@@ -6893,7 +6893,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nuan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nuan1.mp3').play(); return false;"
                         type='button'
                       >
                         nuān
@@ -6907,7 +6907,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nuan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nuan3.mp3').play(); return false;"
                         type='button'
                       >
                         nuǎn
@@ -6942,7 +6942,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nv3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nv3.mp3').play(); return false;"
                         type='button'
                       >
                         nǚ
@@ -6951,7 +6951,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nv4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nv4.mp3').play(); return false;"
                         type='button'
                       >
                         nǜ
@@ -6983,7 +6983,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/nve4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/nve4.mp3').play(); return false;"
                         type='button'
                       >
                         nüè
@@ -7007,7 +7007,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/la1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/la1.mp3').play(); return false;"
                         type='button'
                       >
                         lā
@@ -7016,7 +7016,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/la2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/la2.mp3').play(); return false;"
                         type='button'
                       >
                         lá
@@ -7025,7 +7025,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/la3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/la3.mp3').play(); return false;"
                         type='button'
                       >
                         lǎ
@@ -7034,7 +7034,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/la4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/la4.mp3').play(); return false;"
                         type='button'
                       >
                         là
@@ -7056,7 +7056,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lai2.mp3').play(); return false;"
                         type='button'
                       >
                         lái
@@ -7065,7 +7065,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lai3.mp3').play(); return false;"
                         type='button'
                       >
                         lǎi
@@ -7074,7 +7074,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lai4.mp3').play(); return false;"
                         type='button'
                       >
                         lài
@@ -7091,7 +7091,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lao1.mp3').play(); return false;"
                         type='button'
                       >
                         lāo
@@ -7100,7 +7100,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lao2.mp3').play(); return false;"
                         type='button'
                       >
                         láo
@@ -7109,7 +7109,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lao3.mp3').play(); return false;"
                         type='button'
                       >
                         lǎo
@@ -7118,7 +7118,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lao4.mp3').play(); return false;"
                         type='button'
                       >
                         lào
@@ -7140,7 +7140,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lan2.mp3').play(); return false;"
                         type='button'
                       >
                         lán
@@ -7149,7 +7149,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lan3.mp3').play(); return false;"
                         type='button'
                       >
                         lǎn
@@ -7158,7 +7158,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lan4.mp3').play(); return false;"
                         type='button'
                       >
                         làn
@@ -7175,7 +7175,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lang1.mp3').play(); return false;"
                         type='button'
                       >
                         lāng
@@ -7184,7 +7184,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lang2.mp3').play(); return false;"
                         type='button'
                       >
                         láng
@@ -7193,7 +7193,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lang3.mp3').play(); return false;"
                         type='button'
                       >
                         lǎng
@@ -7202,7 +7202,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lang4.mp3').play(); return false;"
                         type='button'
                       >
                         làng
@@ -7225,7 +7225,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/long2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/long2.mp3').play(); return false;"
                         type='button'
                       >
                         lóng
@@ -7234,7 +7234,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/long3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/long3.mp3').play(); return false;"
                         type='button'
                       >
                         lǒng
@@ -7243,7 +7243,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/long4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/long4.mp3').play(); return false;"
                         type='button'
                       >
                         lòng
@@ -7260,7 +7260,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lou1.mp3').play(); return false;"
                         type='button'
                       >
                         lōu
@@ -7269,7 +7269,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lou2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lou2.mp3').play(); return false;"
                         type='button'
                       >
                         lóu
@@ -7278,7 +7278,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lou3.mp3').play(); return false;"
                         type='button'
                       >
                         lǒu
@@ -7287,7 +7287,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lou4.mp3').play(); return false;"
                         type='button'
                       >
                         lòu
@@ -7304,7 +7304,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/le1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/le1.mp3').play(); return false;"
                         type='button'
                       >
                         lē
@@ -7323,7 +7323,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/le4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/le4.mp3').play(); return false;"
                         type='button'
                       >
                         lè
@@ -7340,7 +7340,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lei1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lei1.mp3').play(); return false;"
                         type='button'
                       >
                         lēi
@@ -7349,7 +7349,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lei2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lei2.mp3').play(); return false;"
                         type='button'
                       >
                         léi
@@ -7358,7 +7358,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lei3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lei3.mp3').play(); return false;"
                         type='button'
                       >
                         lěi
@@ -7367,7 +7367,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lei4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lei4.mp3').play(); return false;"
                         type='button'
                       >
                         lèi
@@ -7385,7 +7385,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/leng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/leng1.mp3').play(); return false;"
                         type='button'
                       >
                         lēng
@@ -7394,7 +7394,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/leng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/leng2.mp3').play(); return false;"
                         type='button'
                       >
                         léng
@@ -7403,7 +7403,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/leng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/leng3.mp3').play(); return false;"
                         type='button'
                       >
                         lěng
@@ -7412,7 +7412,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/leng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/leng4.mp3').play(); return false;"
                         type='button'
                       >
                         lèng
@@ -7430,7 +7430,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/li1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/li1.mp3').play(); return false;"
                         type='button'
                       >
                         lī
@@ -7439,7 +7439,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/li2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/li2.mp3').play(); return false;"
                         type='button'
                       >
                         lí
@@ -7448,7 +7448,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/li3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/li3.mp3').play(); return false;"
                         type='button'
                       >
                         lǐ
@@ -7457,7 +7457,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/li4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/li4.mp3').play(); return false;"
                         type='button'
                       >
                         lì
@@ -7484,7 +7484,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lia3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lia3.mp3').play(); return false;"
                         type='button'
                       >
                         liǎ
@@ -7506,7 +7506,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/liao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/liao1.mp3').play(); return false;"
                         type='button'
                       >
                         liāo
@@ -7515,7 +7515,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/liao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/liao2.mp3').play(); return false;"
                         type='button'
                       >
                         liáo
@@ -7524,7 +7524,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/liao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/liao3.mp3').play(); return false;"
                         type='button'
                       >
                         liǎo
@@ -7533,7 +7533,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/liao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/liao4.mp3').play(); return false;"
                         type='button'
                       >
                         liào
@@ -7560,7 +7560,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lie3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lie3.mp3').play(); return false;"
                         type='button'
                       >
                         liě
@@ -7569,7 +7569,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lie4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lie4.mp3').play(); return false;"
                         type='button'
                       >
                         liè
@@ -7586,7 +7586,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/liu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/liu1.mp3').play(); return false;"
                         type='button'
                       >
                         liū
@@ -7595,7 +7595,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/liu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/liu2.mp3').play(); return false;"
                         type='button'
                       >
                         liú
@@ -7604,7 +7604,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/liu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/liu3.mp3').play(); return false;"
                         type='button'
                       >
                         liǔ
@@ -7613,7 +7613,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/liu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/liu4.mp3').play(); return false;"
                         type='button'
                       >
                         liù
@@ -7630,7 +7630,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lian1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lian1.mp3').play(); return false;"
                         type='button'
                       >
                         liān
@@ -7639,7 +7639,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lian2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lian2.mp3').play(); return false;"
                         type='button'
                       >
                         lián
@@ -7648,7 +7648,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lian3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lian3.mp3').play(); return false;"
                         type='button'
                       >
                         liǎn
@@ -7657,7 +7657,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lian4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lian4.mp3').play(); return false;"
                         type='button'
                       >
                         liàn
@@ -7674,7 +7674,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/liang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/liang1.mp3').play(); return false;"
                         type='button'
                       >
                         liāng
@@ -7683,7 +7683,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/liang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/liang2.mp3').play(); return false;"
                         type='button'
                       >
                         liáng
@@ -7692,7 +7692,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/liang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/liang3.mp3').play(); return false;"
                         type='button'
                       >
                         liǎng
@@ -7701,7 +7701,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/liang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/liang4.mp3').play(); return false;"
                         type='button'
                       >
                         liàng
@@ -7718,7 +7718,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lin1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lin1.mp3').play(); return false;"
                         type='button'
                       >
                         līn
@@ -7727,7 +7727,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lin2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lin2.mp3').play(); return false;"
                         type='button'
                       >
                         lín
@@ -7736,7 +7736,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lin3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lin3.mp3').play(); return false;"
                         type='button'
                       >
                         lǐn
@@ -7745,7 +7745,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lin4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lin4.mp3').play(); return false;"
                         type='button'
                       >
                         lìn
@@ -7767,7 +7767,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ling2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ling2.mp3').play(); return false;"
                         type='button'
                       >
                         líng
@@ -7776,7 +7776,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ling3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ling3.mp3').play(); return false;"
                         type='button'
                       >
                         lǐng
@@ -7785,7 +7785,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ling4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ling4.mp3').play(); return false;"
                         type='button'
                       >
                         lìng
@@ -7803,7 +7803,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lu1.mp3').play(); return false;"
                         type='button'
                       >
                         lū
@@ -7812,7 +7812,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lu2.mp3').play(); return false;"
                         type='button'
                       >
                         lú
@@ -7821,7 +7821,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lu3.mp3').play(); return false;"
                         type='button'
                       >
                         lǔ
@@ -7830,7 +7830,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lu4.mp3').play(); return false;"
                         type='button'
                       >
                         lù
@@ -7848,7 +7848,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/luo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/luo1.mp3').play(); return false;"
                         type='button'
                       >
                         luō
@@ -7857,7 +7857,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/luo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/luo2.mp3').play(); return false;"
                         type='button'
                       >
                         luó
@@ -7866,7 +7866,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/luo3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/luo3.mp3').play(); return false;"
                         type='button'
                       >
                         luǒ
@@ -7875,7 +7875,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/luo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/luo4.mp3').play(); return false;"
                         type='button'
                       >
                         luò
@@ -7894,7 +7894,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/luan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/luan1.mp3').play(); return false;"
                         type='button'
                       >
                         luān
@@ -7903,7 +7903,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/luan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/luan2.mp3').play(); return false;"
                         type='button'
                       >
                         luán
@@ -7917,7 +7917,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/luan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/luan4.mp3').play(); return false;"
                         type='button'
                       >
                         luàn
@@ -7934,7 +7934,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lun1.mp3').play(); return false;"
                         type='button'
                       >
                         lūn
@@ -7943,7 +7943,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lun2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lun2.mp3').play(); return false;"
                         type='button'
                       >
                         lún
@@ -7957,7 +7957,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lun4.mp3').play(); return false;"
                         type='button'
                       >
                         lùn
@@ -7981,7 +7981,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lv2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lv2.mp3').play(); return false;"
                         type='button'
                       >
                         lǘ
@@ -7990,7 +7990,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lv3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lv3.mp3').play(); return false;"
                         type='button'
                       >
                         lǚ
@@ -7999,7 +7999,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lv4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lv4.mp3').play(); return false;"
                         type='button'
                       >
                         lǜ
@@ -8031,7 +8031,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/lve4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/lve4.mp3').play(); return false;"
                         type='button'
                       >
                         lüè
@@ -8055,7 +8055,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/za1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/za1.mp3').play(); return false;"
                         type='button'
                       >
                         zā
@@ -8064,7 +8064,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/za2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/za2.mp3').play(); return false;"
                         type='button'
                       >
                         zá
@@ -8073,7 +8073,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/za3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/za3.mp3').play(); return false;"
                         type='button'
                       >
                         zǎ
@@ -8095,7 +8095,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zai1.mp3').play(); return false;"
                         type='button'
                       >
                         zāi
@@ -8109,7 +8109,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zai3.mp3').play(); return false;"
                         type='button'
                       >
                         zǎi
@@ -8118,7 +8118,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zai4.mp3').play(); return false;"
                         type='button'
                       >
                         zài
@@ -8135,7 +8135,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zao1.mp3').play(); return false;"
                         type='button'
                       >
                         zāo
@@ -8144,7 +8144,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zao2.mp3').play(); return false;"
                         type='button'
                       >
                         záo
@@ -8153,7 +8153,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zao3.mp3').play(); return false;"
                         type='button'
                       >
                         zǎo
@@ -8162,7 +8162,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zao4.mp3').play(); return false;"
                         type='button'
                       >
                         zào
@@ -8179,7 +8179,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zan1.mp3').play(); return false;"
                         type='button'
                       >
                         zān
@@ -8188,7 +8188,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zan2.mp3').play(); return false;"
                         type='button'
                       >
                         zán
@@ -8197,7 +8197,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zan3.mp3').play(); return false;"
                         type='button'
                       >
                         zǎn
@@ -8206,7 +8206,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zan4.mp3').play(); return false;"
                         type='button'
                       >
                         zàn
@@ -8223,7 +8223,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zang1.mp3').play(); return false;"
                         type='button'
                       >
                         zāng
@@ -8237,7 +8237,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zang3.mp3').play(); return false;"
                         type='button'
                       >
                         zǎng
@@ -8246,7 +8246,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zang4.mp3').play(); return false;"
                         type='button'
                       >
                         zàng
@@ -8264,7 +8264,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zong1.mp3').play(); return false;"
                         type='button'
                       >
                         zōng
@@ -8278,7 +8278,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zong3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zong3.mp3').play(); return false;"
                         type='button'
                       >
                         zǒng
@@ -8287,7 +8287,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zong4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zong4.mp3').play(); return false;"
                         type='button'
                       >
                         zòng
@@ -8304,7 +8304,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zou1.mp3').play(); return false;"
                         type='button'
                       >
                         zōu
@@ -8318,7 +8318,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zou3.mp3').play(); return false;"
                         type='button'
                       >
                         zǒu
@@ -8327,7 +8327,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zou4.mp3').play(); return false;"
                         type='button'
                       >
                         zòu
@@ -8349,7 +8349,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ze2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ze2.mp3').play(); return false;"
                         type='button'
                       >
                         zé
@@ -8363,7 +8363,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ze4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ze4.mp3').play(); return false;"
                         type='button'
                       >
                         zè
@@ -8385,7 +8385,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zei2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zei2.mp3').play(); return false;"
                         type='button'
                       >
                         zéi
@@ -8412,7 +8412,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zen1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zen1.mp3').play(); return false;"
                         type='button'
                       >
                         zēn
@@ -8426,7 +8426,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zen3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zen3.mp3').play(); return false;"
                         type='button'
                       >
                         zěn
@@ -8435,7 +8435,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zen4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zen4.mp3').play(); return false;"
                         type='button'
                       >
                         zèn
@@ -8452,7 +8452,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zeng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zeng1.mp3').play(); return false;"
                         type='button'
                       >
                         zēng
@@ -8466,7 +8466,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zeng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zeng3.mp3').play(); return false;"
                         type='button'
                       >
                         zěng
@@ -8475,7 +8475,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zeng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zeng4.mp3').play(); return false;"
                         type='button'
                       >
                         zèng
@@ -8493,7 +8493,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zi1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zi1.mp3').play(); return false;"
                         type='button'
                       >
                         zī
@@ -8502,7 +8502,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zi2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zi2.mp3').play(); return false;"
                         type='button'
                       >
                         zí
@@ -8511,7 +8511,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zi3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zi3.mp3').play(); return false;"
                         type='button'
                       >
                         zǐ
@@ -8520,7 +8520,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zi4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zi4.mp3').play(); return false;"
                         type='button'
                       >
                         zì
@@ -8546,7 +8546,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zu1.mp3').play(); return false;"
                         type='button'
                       >
                         zū
@@ -8555,7 +8555,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zu2.mp3').play(); return false;"
                         type='button'
                       >
                         zú
@@ -8564,7 +8564,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zu3.mp3').play(); return false;"
                         type='button'
                       >
                         zǔ
@@ -8573,7 +8573,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zu4.mp3').play(); return false;"
                         type='button'
                       >
                         zù
@@ -8591,7 +8591,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zuo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zuo1.mp3').play(); return false;"
                         type='button'
                       >
                         zuō
@@ -8600,7 +8600,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zuo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zuo2.mp3').play(); return false;"
                         type='button'
                       >
                         zuó
@@ -8609,7 +8609,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zuo3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zuo3.mp3').play(); return false;"
                         type='button'
                       >
                         zuǒ
@@ -8618,7 +8618,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zuo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zuo4.mp3').play(); return false;"
                         type='button'
                       >
                         zuò
@@ -8635,7 +8635,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zui1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zui1.mp3').play(); return false;"
                         type='button'
                       >
                         zuī
@@ -8649,7 +8649,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zui3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zui3.mp3').play(); return false;"
                         type='button'
                       >
                         zuǐ
@@ -8658,7 +8658,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zui4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zui4.mp3').play(); return false;"
                         type='button'
                       >
                         zuì
@@ -8676,7 +8676,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zuan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zuan1.mp3').play(); return false;"
                         type='button'
                       >
                         zuān
@@ -8690,7 +8690,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zuan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zuan3.mp3').play(); return false;"
                         type='button'
                       >
                         zuǎn
@@ -8699,7 +8699,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zuan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zuan4.mp3').play(); return false;"
                         type='button'
                       >
                         zuàn
@@ -8716,7 +8716,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zun1.mp3').play(); return false;"
                         type='button'
                       >
                         zūn
@@ -8730,7 +8730,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zun3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zun3.mp3').play(); return false;"
                         type='button'
                       >
                         zǔn
@@ -8739,7 +8739,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zun4.mp3').play(); return false;"
                         type='button'
                       >
                         zùn
@@ -8767,7 +8767,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ca1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ca1.mp3').play(); return false;"
                         type='button'
                       >
                         cā
@@ -8781,7 +8781,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ca3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ca3.mp3').play(); return false;"
                         type='button'
                       >
                         cǎ
@@ -8803,7 +8803,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cai1.mp3').play(); return false;"
                         type='button'
                       >
                         cāi
@@ -8812,7 +8812,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cai2.mp3').play(); return false;"
                         type='button'
                       >
                         cái
@@ -8821,7 +8821,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cai3.mp3').play(); return false;"
                         type='button'
                       >
                         cǎi
@@ -8830,7 +8830,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cai4.mp3').play(); return false;"
                         type='button'
                       >
                         cài
@@ -8847,7 +8847,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cao1.mp3').play(); return false;"
                         type='button'
                       >
                         cāo
@@ -8856,7 +8856,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cao2.mp3').play(); return false;"
                         type='button'
                       >
                         cáo
@@ -8865,7 +8865,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cao3.mp3').play(); return false;"
                         type='button'
                       >
                         cǎo
@@ -8874,7 +8874,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cao4.mp3').play(); return false;"
                         type='button'
                       >
                         cào
@@ -8891,7 +8891,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/can1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/can1.mp3').play(); return false;"
                         type='button'
                       >
                         cān
@@ -8900,7 +8900,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/can2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/can2.mp3').play(); return false;"
                         type='button'
                       >
                         cán
@@ -8909,7 +8909,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/can3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/can3.mp3').play(); return false;"
                         type='button'
                       >
                         cǎn
@@ -8918,7 +8918,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/can4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/can4.mp3').play(); return false;"
                         type='button'
                       >
                         càn
@@ -8935,7 +8935,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cang1.mp3').play(); return false;"
                         type='button'
                       >
                         cāng
@@ -8944,7 +8944,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cang2.mp3').play(); return false;"
                         type='button'
                       >
                         cáng
@@ -8972,7 +8972,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cong1.mp3').play(); return false;"
                         type='button'
                       >
                         cōng
@@ -8981,7 +8981,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cong2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cong2.mp3').play(); return false;"
                         type='button'
                       >
                         cóng
@@ -9023,7 +9023,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cou4.mp3').play(); return false;"
                         type='button'
                       >
                         còu
@@ -9055,7 +9055,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ce4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ce4.mp3').play(); return false;"
                         type='button'
                       >
                         cè
@@ -9073,7 +9073,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cen1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cen1.mp3').play(); return false;"
                         type='button'
                       >
                         cēn
@@ -9082,7 +9082,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cen2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cen2.mp3').play(); return false;"
                         type='button'
                       >
                         cén
@@ -9109,7 +9109,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ceng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ceng1.mp3').play(); return false;"
                         type='button'
                       >
                         cēng
@@ -9118,7 +9118,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ceng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ceng2.mp3').play(); return false;"
                         type='button'
                       >
                         céng
@@ -9132,7 +9132,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ceng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ceng4.mp3').play(); return false;"
                         type='button'
                       >
                         cèng
@@ -9150,7 +9150,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ci1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ci1.mp3').play(); return false;"
                         type='button'
                       >
                         cī
@@ -9159,7 +9159,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ci2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ci2.mp3').play(); return false;"
                         type='button'
                       >
                         cí
@@ -9168,7 +9168,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ci3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ci3.mp3').play(); return false;"
                         type='button'
                       >
                         cǐ
@@ -9177,7 +9177,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ci4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ci4.mp3').play(); return false;"
                         type='button'
                       >
                         cì
@@ -9203,7 +9203,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cu1.mp3').play(); return false;"
                         type='button'
                       >
                         cū
@@ -9212,7 +9212,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cu2.mp3').play(); return false;"
                         type='button'
                       >
                         cú
@@ -9226,7 +9226,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cu4.mp3').play(); return false;"
                         type='button'
                       >
                         cù
@@ -9244,7 +9244,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cuo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cuo1.mp3').play(); return false;"
                         type='button'
                       >
                         cuō
@@ -9253,7 +9253,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cuo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cuo2.mp3').play(); return false;"
                         type='button'
                       >
                         cuó
@@ -9262,7 +9262,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cuo3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cuo3.mp3').play(); return false;"
                         type='button'
                       >
                         cuǒ
@@ -9271,7 +9271,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cuo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cuo4.mp3').play(); return false;"
                         type='button'
                       >
                         cuò
@@ -9288,7 +9288,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cui1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cui1.mp3').play(); return false;"
                         type='button'
                       >
                         cuī
@@ -9297,7 +9297,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cui2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cui2.mp3').play(); return false;"
                         type='button'
                       >
                         cuí
@@ -9306,7 +9306,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cui3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cui3.mp3').play(); return false;"
                         type='button'
                       >
                         cuǐ
@@ -9315,7 +9315,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cui4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cui4.mp3').play(); return false;"
                         type='button'
                       >
                         cuì
@@ -9333,7 +9333,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cuan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cuan1.mp3').play(); return false;"
                         type='button'
                       >
                         cuān
@@ -9342,7 +9342,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cuan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cuan2.mp3').play(); return false;"
                         type='button'
                       >
                         cuán
@@ -9356,7 +9356,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cuan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cuan4.mp3').play(); return false;"
                         type='button'
                       >
                         cuàn
@@ -9373,7 +9373,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cun1.mp3').play(); return false;"
                         type='button'
                       >
                         cūn
@@ -9382,7 +9382,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cun2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cun2.mp3').play(); return false;"
                         type='button'
                       >
                         cún
@@ -9391,7 +9391,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cun3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cun3.mp3').play(); return false;"
                         type='button'
                       >
                         cǔn
@@ -9400,7 +9400,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cun4.mp3').play(); return false;"
                         type='button'
                       >
                         cùn
@@ -9428,7 +9428,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sa1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sa1.mp3').play(); return false;"
                         type='button'
                       >
                         sā
@@ -9442,7 +9442,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sa3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sa3.mp3').play(); return false;"
                         type='button'
                       >
                         sǎ
@@ -9451,7 +9451,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sa4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sa4.mp3').play(); return false;"
                         type='button'
                       >
                         sà
@@ -9468,7 +9468,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sai1.mp3').play(); return false;"
                         type='button'
                       >
                         sāi
@@ -9487,7 +9487,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sai4.mp3').play(); return false;"
                         type='button'
                       >
                         sài
@@ -9504,7 +9504,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sao1.mp3').play(); return false;"
                         type='button'
                       >
                         sāo
@@ -9518,7 +9518,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sao3.mp3').play(); return false;"
                         type='button'
                       >
                         sǎo
@@ -9527,7 +9527,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sao4.mp3').play(); return false;"
                         type='button'
                       >
                         sào
@@ -9544,7 +9544,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/san1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/san1.mp3').play(); return false;"
                         type='button'
                       >
                         sān
@@ -9558,7 +9558,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/san3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/san3.mp3').play(); return false;"
                         type='button'
                       >
                         sǎn
@@ -9567,7 +9567,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/san4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/san4.mp3').play(); return false;"
                         type='button'
                       >
                         sàn
@@ -9584,7 +9584,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sang1.mp3').play(); return false;"
                         type='button'
                       >
                         sāng
@@ -9598,7 +9598,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sang3.mp3').play(); return false;"
                         type='button'
                       >
                         sǎng
@@ -9607,7 +9607,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sang4.mp3').play(); return false;"
                         type='button'
                       >
                         sàng
@@ -9625,7 +9625,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/song1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/song1.mp3').play(); return false;"
                         type='button'
                       >
                         sōng
@@ -9639,7 +9639,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/song3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/song3.mp3').play(); return false;"
                         type='button'
                       >
                         sǒng
@@ -9648,7 +9648,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/song4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/song4.mp3').play(); return false;"
                         type='button'
                       >
                         sòng
@@ -9665,7 +9665,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sou1.mp3').play(); return false;"
                         type='button'
                       >
                         sōu
@@ -9679,7 +9679,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sou3.mp3').play(); return false;"
                         type='button'
                       >
                         sǒu
@@ -9688,7 +9688,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sou4.mp3').play(); return false;"
                         type='button'
                       >
                         sòu
@@ -9720,7 +9720,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/se4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/se4.mp3').play(); return false;"
                         type='button'
                       >
                         sè
@@ -9738,7 +9738,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sen1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sen1.mp3').play(); return false;"
                         type='button'
                       >
                         sēn
@@ -9770,7 +9770,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/seng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/seng1.mp3').play(); return false;"
                         type='button'
                       >
                         sēng
@@ -9803,7 +9803,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/si1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/si1.mp3').play(); return false;"
                         type='button'
                       >
                         sī
@@ -9817,7 +9817,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/si3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/si3.mp3').play(); return false;"
                         type='button'
                       >
                         sǐ
@@ -9826,7 +9826,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/si4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/si4.mp3').play(); return false;"
                         type='button'
                       >
                         sì
@@ -9852,7 +9852,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/su1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/su1.mp3').play(); return false;"
                         type='button'
                       >
                         sū
@@ -9861,7 +9861,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/su2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/su2.mp3').play(); return false;"
                         type='button'
                       >
                         sú
@@ -9875,7 +9875,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/su4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/su4.mp3').play(); return false;"
                         type='button'
                       >
                         sù
@@ -9893,7 +9893,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/suo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/suo1.mp3').play(); return false;"
                         type='button'
                       >
                         suō
@@ -9907,7 +9907,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/suo3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/suo3.mp3').play(); return false;"
                         type='button'
                       >
                         suǒ
@@ -9929,7 +9929,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sui1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sui1.mp3').play(); return false;"
                         type='button'
                       >
                         suī
@@ -9938,7 +9938,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sui2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sui2.mp3').play(); return false;"
                         type='button'
                       >
                         suí
@@ -9947,7 +9947,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sui3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sui3.mp3').play(); return false;"
                         type='button'
                       >
                         suǐ
@@ -9956,7 +9956,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sui4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sui4.mp3').play(); return false;"
                         type='button'
                       >
                         suì
@@ -9974,7 +9974,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/suan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/suan1.mp3').play(); return false;"
                         type='button'
                       >
                         suān
@@ -9993,7 +9993,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/suan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/suan4.mp3').play(); return false;"
                         type='button'
                       >
                         suàn
@@ -10010,7 +10010,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sun1.mp3').play(); return false;"
                         type='button'
                       >
                         sūn
@@ -10019,7 +10019,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sun2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sun2.mp3').play(); return false;"
                         type='button'
                       >
                         sún
@@ -10028,7 +10028,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sun3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sun3.mp3').play(); return false;"
                         type='button'
                       >
                         sǔn
@@ -10037,7 +10037,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sun4.mp3').play(); return false;"
                         type='button'
                       >
                         sùn
@@ -10065,7 +10065,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zha1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zha1.mp3').play(); return false;"
                         type='button'
                       >
                         zhā
@@ -10074,7 +10074,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zha2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zha2.mp3').play(); return false;"
                         type='button'
                       >
                         zhá
@@ -10083,7 +10083,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zha3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zha3.mp3').play(); return false;"
                         type='button'
                       >
                         zhǎ
@@ -10092,7 +10092,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zha4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zha4.mp3').play(); return false;"
                         type='button'
                       >
                         zhà
@@ -10109,7 +10109,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhai1.mp3').play(); return false;"
                         type='button'
                       >
                         zhāi
@@ -10118,7 +10118,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhai2.mp3').play(); return false;"
                         type='button'
                       >
                         zhái
@@ -10127,7 +10127,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhai3.mp3').play(); return false;"
                         type='button'
                       >
                         zhǎi
@@ -10136,7 +10136,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhai4.mp3').play(); return false;"
                         type='button'
                       >
                         zhài
@@ -10153,7 +10153,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhao1.mp3').play(); return false;"
                         type='button'
                       >
                         zhāo
@@ -10162,7 +10162,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhao2.mp3').play(); return false;"
                         type='button'
                       >
                         zháo
@@ -10171,7 +10171,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhao3.mp3').play(); return false;"
                         type='button'
                       >
                         zhǎo
@@ -10180,7 +10180,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhao4.mp3').play(); return false;"
                         type='button'
                       >
                         zhào
@@ -10197,7 +10197,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhan1.mp3').play(); return false;"
                         type='button'
                       >
                         zhān
@@ -10206,7 +10206,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhan2.mp3').play(); return false;"
                         type='button'
                       >
                         zhán
@@ -10215,7 +10215,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhan3.mp3').play(); return false;"
                         type='button'
                       >
                         zhǎn
@@ -10224,7 +10224,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhan4.mp3').play(); return false;"
                         type='button'
                       >
                         zhàn
@@ -10241,7 +10241,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhang1.mp3').play(); return false;"
                         type='button'
                       >
                         zhāng
@@ -10255,7 +10255,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhang3.mp3').play(); return false;"
                         type='button'
                       >
                         zhǎng
@@ -10264,7 +10264,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhang4.mp3').play(); return false;"
                         type='button'
                       >
                         zhàng
@@ -10282,7 +10282,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhong1.mp3').play(); return false;"
                         type='button'
                       >
                         zhōng
@@ -10296,7 +10296,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhong3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhong3.mp3').play(); return false;"
                         type='button'
                       >
                         zhǒng
@@ -10305,7 +10305,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhong4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhong4.mp3').play(); return false;"
                         type='button'
                       >
                         zhòng
@@ -10322,7 +10322,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhou1.mp3').play(); return false;"
                         type='button'
                       >
                         zhōu
@@ -10331,7 +10331,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhou2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhou2.mp3').play(); return false;"
                         type='button'
                       >
                         zhóu
@@ -10340,7 +10340,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhou3.mp3').play(); return false;"
                         type='button'
                       >
                         zhǒu
@@ -10349,7 +10349,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhou4.mp3').play(); return false;"
                         type='button'
                       >
                         zhòu
@@ -10366,7 +10366,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhe1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhe1.mp3').play(); return false;"
                         type='button'
                       >
                         zhē
@@ -10375,7 +10375,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhe2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhe2.mp3').play(); return false;"
                         type='button'
                       >
                         zhé
@@ -10384,7 +10384,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhe3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhe3.mp3').play(); return false;"
                         type='button'
                       >
                         zhě
@@ -10393,7 +10393,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhe4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhe4.mp3').play(); return false;"
                         type='button'
                       >
                         zhè
@@ -10425,7 +10425,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhei4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhei4.mp3').play(); return false;"
                         type='button'
                       >
                         zhèi
@@ -10442,7 +10442,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhen1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhen1.mp3').play(); return false;"
                         type='button'
                       >
                         zhēn
@@ -10456,7 +10456,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhen3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhen3.mp3').play(); return false;"
                         type='button'
                       >
                         zhěn
@@ -10465,7 +10465,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhen4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhen4.mp3').play(); return false;"
                         type='button'
                       >
                         zhèn
@@ -10482,7 +10482,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zheng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zheng1.mp3').play(); return false;"
                         type='button'
                       >
                         zhēng
@@ -10496,7 +10496,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zheng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zheng3.mp3').play(); return false;"
                         type='button'
                       >
                         zhěng
@@ -10505,7 +10505,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zheng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zheng4.mp3').play(); return false;"
                         type='button'
                       >
                         zhèng
@@ -10523,7 +10523,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhi1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhi1.mp3').play(); return false;"
                         type='button'
                       >
                         zhī
@@ -10532,7 +10532,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhi2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhi2.mp3').play(); return false;"
                         type='button'
                       >
                         zhí
@@ -10541,7 +10541,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhi3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhi3.mp3').play(); return false;"
                         type='button'
                       >
                         zhǐ
@@ -10550,7 +10550,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhi4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhi4.mp3').play(); return false;"
                         type='button'
                       >
                         zhì
@@ -10576,7 +10576,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhu1.mp3').play(); return false;"
                         type='button'
                       >
                         zhū
@@ -10585,7 +10585,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhu2.mp3').play(); return false;"
                         type='button'
                       >
                         zhú
@@ -10594,7 +10594,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhu3.mp3').play(); return false;"
                         type='button'
                       >
                         zhǔ
@@ -10603,7 +10603,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhu4.mp3').play(); return false;"
                         type='button'
                       >
                         zhù
@@ -10620,7 +10620,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhua1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhua1.mp3').play(); return false;"
                         type='button'
                       >
                         zhuā
@@ -10634,7 +10634,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhua3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhua3.mp3').play(); return false;"
                         type='button'
                       >
                         zhuǎ
@@ -10656,7 +10656,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuo1.mp3').play(); return false;"
                         type='button'
                       >
                         zhuō
@@ -10665,7 +10665,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuo2.mp3').play(); return false;"
                         type='button'
                       >
                         zhuó
@@ -10674,7 +10674,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuo3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuo3.mp3').play(); return false;"
                         type='button'
                       >
                         zhuǒ
@@ -10683,7 +10683,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuo4.mp3').play(); return false;"
                         type='button'
                       >
                         zhuò
@@ -10700,7 +10700,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhui1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhui1.mp3').play(); return false;"
                         type='button'
                       >
                         zhuī
@@ -10714,7 +10714,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhui3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhui3.mp3').play(); return false;"
                         type='button'
                       >
                         zhuǐ
@@ -10723,7 +10723,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhui4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhui4.mp3').play(); return false;"
                         type='button'
                       >
                         zhuì
@@ -10740,7 +10740,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuai1.mp3').play(); return false;"
                         type='button'
                       >
                         zhuāi
@@ -10749,7 +10749,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuai2.mp3').play(); return false;"
                         type='button'
                       >
                         zhuái
@@ -10758,7 +10758,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuai3.mp3').play(); return false;"
                         type='button'
                       >
                         zhuǎi
@@ -10767,7 +10767,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuai4.mp3').play(); return false;"
                         type='button'
                       >
                         zhuài
@@ -10784,7 +10784,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuan1.mp3').play(); return false;"
                         type='button'
                       >
                         zhuān
@@ -10798,7 +10798,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuan3.mp3').play(); return false;"
                         type='button'
                       >
                         zhuǎn
@@ -10807,7 +10807,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuan4.mp3').play(); return false;"
                         type='button'
                       >
                         zhuàn
@@ -10824,7 +10824,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhun1.mp3').play(); return false;"
                         type='button'
                       >
                         zhūn
@@ -10838,7 +10838,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhun3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhun3.mp3').play(); return false;"
                         type='button'
                       >
                         zhǔn
@@ -10847,7 +10847,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhun4.mp3').play(); return false;"
                         type='button'
                       >
                         zhùn
@@ -10864,7 +10864,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuang1.mp3').play(); return false;"
                         type='button'
                       >
                         zhuāng
@@ -10878,7 +10878,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuang3.mp3').play(); return false;"
                         type='button'
                       >
                         zhuǎng
@@ -10887,7 +10887,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/zhuang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/zhuang4.mp3').play(); return false;"
                         type='button'
                       >
                         zhuàng
@@ -10914,7 +10914,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cha1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cha1.mp3').play(); return false;"
                         type='button'
                       >
                         chā
@@ -10923,7 +10923,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cha2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cha2.mp3').play(); return false;"
                         type='button'
                       >
                         chá
@@ -10932,7 +10932,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cha3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cha3.mp3').play(); return false;"
                         type='button'
                       >
                         chǎ
@@ -10941,7 +10941,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cha4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cha4.mp3').play(); return false;"
                         type='button'
                       >
                         chà
@@ -10958,7 +10958,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chai1.mp3').play(); return false;"
                         type='button'
                       >
                         chāi
@@ -10967,7 +10967,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chai2.mp3').play(); return false;"
                         type='button'
                       >
                         chái
@@ -10976,7 +10976,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chai3.mp3').play(); return false;"
                         type='button'
                       >
                         chǎi
@@ -10985,7 +10985,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chai4.mp3').play(); return false;"
                         type='button'
                       >
                         chài
@@ -11002,7 +11002,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chao1.mp3').play(); return false;"
                         type='button'
                       >
                         chāo
@@ -11011,7 +11011,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chao2.mp3').play(); return false;"
                         type='button'
                       >
                         cháo
@@ -11020,7 +11020,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chao3.mp3').play(); return false;"
                         type='button'
                       >
                         chǎo
@@ -11029,7 +11029,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chao4.mp3').play(); return false;"
                         type='button'
                       >
                         chào
@@ -11046,7 +11046,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chan1.mp3').play(); return false;"
                         type='button'
                       >
                         chān
@@ -11055,7 +11055,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chan2.mp3').play(); return false;"
                         type='button'
                       >
                         chán
@@ -11064,7 +11064,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chan3.mp3').play(); return false;"
                         type='button'
                       >
                         chǎn
@@ -11073,7 +11073,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chan4.mp3').play(); return false;"
                         type='button'
                       >
                         chàn
@@ -11090,7 +11090,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chang1.mp3').play(); return false;"
                         type='button'
                       >
                         chāng
@@ -11099,7 +11099,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chang2.mp3').play(); return false;"
                         type='button'
                       >
                         cháng
@@ -11108,7 +11108,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chang3.mp3').play(); return false;"
                         type='button'
                       >
                         chǎng
@@ -11117,7 +11117,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chang4.mp3').play(); return false;"
                         type='button'
                       >
                         chàng
@@ -11135,7 +11135,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chong1.mp3').play(); return false;"
                         type='button'
                       >
                         chōng
@@ -11144,7 +11144,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chong2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chong2.mp3').play(); return false;"
                         type='button'
                       >
                         chóng
@@ -11153,7 +11153,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chong3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chong3.mp3').play(); return false;"
                         type='button'
                       >
                         chǒng
@@ -11162,7 +11162,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chong4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chong4.mp3').play(); return false;"
                         type='button'
                       >
                         chòng
@@ -11179,7 +11179,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chou1.mp3').play(); return false;"
                         type='button'
                       >
                         chōu
@@ -11188,7 +11188,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chou2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chou2.mp3').play(); return false;"
                         type='button'
                       >
                         chóu
@@ -11197,7 +11197,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chou3.mp3').play(); return false;"
                         type='button'
                       >
                         chǒu
@@ -11206,7 +11206,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chou4.mp3').play(); return false;"
                         type='button'
                       >
                         chòu
@@ -11223,7 +11223,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/che1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/che1.mp3').play(); return false;"
                         type='button'
                       >
                         chē
@@ -11237,7 +11237,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/che3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/che3.mp3').play(); return false;"
                         type='button'
                       >
                         chě
@@ -11246,7 +11246,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/che4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/che4.mp3').play(); return false;"
                         type='button'
                       >
                         chè
@@ -11264,7 +11264,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chen1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chen1.mp3').play(); return false;"
                         type='button'
                       >
                         chēn
@@ -11273,7 +11273,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chen2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chen2.mp3').play(); return false;"
                         type='button'
                       >
                         chén
@@ -11282,7 +11282,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chen3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chen3.mp3').play(); return false;"
                         type='button'
                       >
                         chěn
@@ -11291,7 +11291,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chen4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chen4.mp3').play(); return false;"
                         type='button'
                       >
                         chèn
@@ -11308,7 +11308,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cheng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cheng1.mp3').play(); return false;"
                         type='button'
                       >
                         chēng
@@ -11317,7 +11317,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cheng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cheng2.mp3').play(); return false;"
                         type='button'
                       >
                         chéng
@@ -11326,7 +11326,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cheng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cheng3.mp3').play(); return false;"
                         type='button'
                       >
                         chěng
@@ -11335,7 +11335,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/cheng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/cheng4.mp3').play(); return false;"
                         type='button'
                       >
                         chèng
@@ -11353,7 +11353,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chi1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chi1.mp3').play(); return false;"
                         type='button'
                       >
                         chī
@@ -11362,7 +11362,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chi2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chi2.mp3').play(); return false;"
                         type='button'
                       >
                         chí
@@ -11371,7 +11371,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chi3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chi3.mp3').play(); return false;"
                         type='button'
                       >
                         chǐ
@@ -11380,7 +11380,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chi4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chi4.mp3').play(); return false;"
                         type='button'
                       >
                         chì
@@ -11406,7 +11406,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chu1.mp3').play(); return false;"
                         type='button'
                       >
                         chū
@@ -11415,7 +11415,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chu2.mp3').play(); return false;"
                         type='button'
                       >
                         chú
@@ -11424,7 +11424,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chu3.mp3').play(); return false;"
                         type='button'
                       >
                         chǔ
@@ -11433,7 +11433,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chu4.mp3').play(); return false;"
                         type='button'
                       >
                         chù
@@ -11450,7 +11450,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chua1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chua1.mp3').play(); return false;"
                         type='button'
                       >
                         chuā
@@ -11459,7 +11459,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chua2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chua2.mp3').play(); return false;"
                         type='button'
                       >
                         chuá
@@ -11468,7 +11468,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chua3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chua3.mp3').play(); return false;"
                         type='button'
                       >
                         chuǎ
@@ -11477,7 +11477,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chua4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chua4.mp3').play(); return false;"
                         type='button'
                       >
                         chuà
@@ -11494,7 +11494,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuo1.mp3').play(); return false;"
                         type='button'
                       >
                         chuō
@@ -11513,7 +11513,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuo4.mp3').play(); return false;"
                         type='button'
                       >
                         chuò
@@ -11530,7 +11530,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chui1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chui1.mp3').play(); return false;"
                         type='button'
                       >
                         chuī
@@ -11539,7 +11539,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chui2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chui2.mp3').play(); return false;"
                         type='button'
                       >
                         chuí
@@ -11566,7 +11566,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuai1.mp3').play(); return false;"
                         type='button'
                       >
                         chuāi
@@ -11575,7 +11575,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuai2.mp3').play(); return false;"
                         type='button'
                       >
                         chuái
@@ -11584,7 +11584,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuai3.mp3').play(); return false;"
                         type='button'
                       >
                         chuǎi
@@ -11593,7 +11593,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuai4.mp3').play(); return false;"
                         type='button'
                       >
                         chuài
@@ -11610,7 +11610,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuan1.mp3').play(); return false;"
                         type='button'
                       >
                         chuān
@@ -11619,7 +11619,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuan2.mp3').play(); return false;"
                         type='button'
                       >
                         chuán
@@ -11628,7 +11628,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuan3.mp3').play(); return false;"
                         type='button'
                       >
                         chuǎn
@@ -11637,7 +11637,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuan4.mp3').play(); return false;"
                         type='button'
                       >
                         chuàn
@@ -11654,7 +11654,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chun1.mp3').play(); return false;"
                         type='button'
                       >
                         chūn
@@ -11663,7 +11663,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chun2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chun2.mp3').play(); return false;"
                         type='button'
                       >
                         chún
@@ -11672,7 +11672,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chun3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chun3.mp3').play(); return false;"
                         type='button'
                       >
                         chǔn
@@ -11694,7 +11694,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuang1.mp3').play(); return false;"
                         type='button'
                       >
                         chuāng
@@ -11703,7 +11703,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuang2.mp3').play(); return false;"
                         type='button'
                       >
                         chuáng
@@ -11712,7 +11712,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuang3.mp3').play(); return false;"
                         type='button'
                       >
                         chuǎng
@@ -11721,7 +11721,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/chuang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/chuang4.mp3').play(); return false;"
                         type='button'
                       >
                         chuàng
@@ -11748,7 +11748,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sha1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sha1.mp3').play(); return false;"
                         type='button'
                       >
                         shā
@@ -11757,7 +11757,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sha2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sha2.mp3').play(); return false;"
                         type='button'
                       >
                         shá
@@ -11766,7 +11766,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sha3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sha3.mp3').play(); return false;"
                         type='button'
                       >
                         shǎ
@@ -11775,7 +11775,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sha4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sha4.mp3').play(); return false;"
                         type='button'
                       >
                         shà
@@ -11792,7 +11792,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shai1.mp3').play(); return false;"
                         type='button'
                       >
                         shāi
@@ -11806,7 +11806,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shai3.mp3').play(); return false;"
                         type='button'
                       >
                         shǎi
@@ -11815,7 +11815,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shai4.mp3').play(); return false;"
                         type='button'
                       >
                         shài
@@ -11832,7 +11832,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shao1.mp3').play(); return false;"
                         type='button'
                       >
                         shāo
@@ -11841,7 +11841,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shao2.mp3').play(); return false;"
                         type='button'
                       >
                         sháo
@@ -11850,7 +11850,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shao3.mp3').play(); return false;"
                         type='button'
                       >
                         shǎo
@@ -11859,7 +11859,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shao4.mp3').play(); return false;"
                         type='button'
                       >
                         shào
@@ -11876,7 +11876,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shan1.mp3').play(); return false;"
                         type='button'
                       >
                         shān
@@ -11890,7 +11890,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shan3.mp3').play(); return false;"
                         type='button'
                       >
                         shǎn
@@ -11899,7 +11899,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shan4.mp3').play(); return false;"
                         type='button'
                       >
                         shàn
@@ -11916,7 +11916,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shang1.mp3').play(); return false;"
                         type='button'
                       >
                         shāng
@@ -11930,7 +11930,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shang3.mp3').play(); return false;"
                         type='button'
                       >
                         shǎng
@@ -11939,7 +11939,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shang4.mp3').play(); return false;"
                         type='button'
                       >
                         shàng
@@ -11958,7 +11958,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shou1.mp3').play(); return false;"
                         type='button'
                       >
                         shōu
@@ -11967,7 +11967,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shou2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shou2.mp3').play(); return false;"
                         type='button'
                       >
                         shóu
@@ -11976,7 +11976,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shou3.mp3').play(); return false;"
                         type='button'
                       >
                         shǒu
@@ -11985,7 +11985,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shou4.mp3').play(); return false;"
                         type='button'
                       >
                         shòu
@@ -12002,7 +12002,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/she1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/she1.mp3').play(); return false;"
                         type='button'
                       >
                         shē
@@ -12011,7 +12011,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/she2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/she2.mp3').play(); return false;"
                         type='button'
                       >
                         shé
@@ -12020,7 +12020,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/she3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/she3.mp3').play(); return false;"
                         type='button'
                       >
                         shě
@@ -12029,7 +12029,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/she4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/she4.mp3').play(); return false;"
                         type='button'
                       >
                         shè
@@ -12051,7 +12051,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shei2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shei2.mp3').play(); return false;"
                         type='button'
                       >
                         shéi
@@ -12078,7 +12078,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shen1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shen1.mp3').play(); return false;"
                         type='button'
                       >
                         shēn
@@ -12087,7 +12087,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shen2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shen2.mp3').play(); return false;"
                         type='button'
                       >
                         shén
@@ -12096,7 +12096,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shen3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shen3.mp3').play(); return false;"
                         type='button'
                       >
                         shěn
@@ -12105,7 +12105,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shen4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shen4.mp3').play(); return false;"
                         type='button'
                       >
                         shèn
@@ -12122,7 +12122,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sheng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sheng1.mp3').play(); return false;"
                         type='button'
                       >
                         shēng
@@ -12131,7 +12131,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sheng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sheng2.mp3').play(); return false;"
                         type='button'
                       >
                         shéng
@@ -12140,7 +12140,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sheng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sheng3.mp3').play(); return false;"
                         type='button'
                       >
                         shěng
@@ -12149,7 +12149,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/sheng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/sheng4.mp3').play(); return false;"
                         type='button'
                       >
                         shèng
@@ -12167,7 +12167,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shi1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shi1.mp3').play(); return false;"
                         type='button'
                       >
                         shī
@@ -12176,7 +12176,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shi2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shi2.mp3').play(); return false;"
                         type='button'
                       >
                         shí
@@ -12185,7 +12185,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shi3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shi3.mp3').play(); return false;"
                         type='button'
                       >
                         shǐ
@@ -12194,7 +12194,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shi4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shi4.mp3').play(); return false;"
                         type='button'
                       >
                         shì
@@ -12220,7 +12220,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shu1.mp3').play(); return false;"
                         type='button'
                       >
                         shū
@@ -12229,7 +12229,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shu2.mp3').play(); return false;"
                         type='button'
                       >
                         shú
@@ -12238,7 +12238,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shu3.mp3').play(); return false;"
                         type='button'
                       >
                         shǔ
@@ -12247,7 +12247,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shu4.mp3').play(); return false;"
                         type='button'
                       >
                         shù
@@ -12264,7 +12264,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shua1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shua1.mp3').play(); return false;"
                         type='button'
                       >
                         shuā
@@ -12278,7 +12278,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shua3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shua3.mp3').play(); return false;"
                         type='button'
                       >
                         shuǎ
@@ -12287,7 +12287,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shua4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shua4.mp3').play(); return false;"
                         type='button'
                       >
                         shuà
@@ -12304,7 +12304,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shuo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shuo1.mp3').play(); return false;"
                         type='button'
                       >
                         shuō
@@ -12323,7 +12323,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shuo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shuo4.mp3').play(); return false;"
                         type='button'
                       >
                         shuò
@@ -12340,7 +12340,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shui1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shui1.mp3').play(); return false;"
                         type='button'
                       >
                         shuī
@@ -12349,7 +12349,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shui2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shui2.mp3').play(); return false;"
                         type='button'
                       >
                         shuí
@@ -12358,7 +12358,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shui3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shui3.mp3').play(); return false;"
                         type='button'
                       >
                         shuǐ
@@ -12367,7 +12367,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shui4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shui4.mp3').play(); return false;"
                         type='button'
                       >
                         shuì
@@ -12384,7 +12384,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shuai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shuai1.mp3').play(); return false;"
                         type='button'
                       >
                         shuāi
@@ -12398,7 +12398,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shuai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shuai3.mp3').play(); return false;"
                         type='button'
                       >
                         shuǎi
@@ -12407,7 +12407,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shuai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shuai4.mp3').play(); return false;"
                         type='button'
                       >
                         shuài
@@ -12424,7 +12424,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shuan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shuan1.mp3').play(); return false;"
                         type='button'
                       >
                         shuān
@@ -12443,7 +12443,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shuan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shuan4.mp3').play(); return false;"
                         type='button'
                       >
                         shuàn
@@ -12470,7 +12470,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shun3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shun3.mp3').play(); return false;"
                         type='button'
                       >
                         shǔn
@@ -12479,7 +12479,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shun4.mp3').play(); return false;"
                         type='button'
                       >
                         shùn
@@ -12496,7 +12496,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shuang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shuang1.mp3').play(); return false;"
                         type='button'
                       >
                         shuāng
@@ -12510,7 +12510,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/shuang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/shuang3.mp3').play(); return false;"
                         type='button'
                       >
                         shuǎng
@@ -12549,7 +12549,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rao2.mp3').play(); return false;"
                         type='button'
                       >
                         ráo
@@ -12558,7 +12558,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rao3.mp3').play(); return false;"
                         type='button'
                       >
                         rǎo
@@ -12567,7 +12567,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rao4.mp3').play(); return false;"
                         type='button'
                       >
                         rào
@@ -12589,7 +12589,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ran2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ran2.mp3').play(); return false;"
                         type='button'
                       >
                         rán
@@ -12598,7 +12598,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ran3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ran3.mp3').play(); return false;"
                         type='button'
                       >
                         rǎn
@@ -12620,7 +12620,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rang1.mp3').play(); return false;"
                         type='button'
                       >
                         rāng
@@ -12629,7 +12629,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rang2.mp3').play(); return false;"
                         type='button'
                       >
                         ráng
@@ -12638,7 +12638,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rang3.mp3').play(); return false;"
                         type='button'
                       >
                         rǎng
@@ -12647,7 +12647,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rang4.mp3').play(); return false;"
                         type='button'
                       >
                         ràng
@@ -12670,7 +12670,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rong2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rong2.mp3').play(); return false;"
                         type='button'
                       >
                         róng
@@ -12679,7 +12679,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rong3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rong3.mp3').play(); return false;"
                         type='button'
                       >
                         rǒng
@@ -12706,7 +12706,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rou2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rou2.mp3').play(); return false;"
                         type='button'
                       >
                         róu
@@ -12720,7 +12720,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rou4.mp3').play(); return false;"
                         type='button'
                       >
                         ròu
@@ -12747,7 +12747,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/re3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/re3.mp3').play(); return false;"
                         type='button'
                       >
                         rě
@@ -12756,7 +12756,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/re4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/re4.mp3').play(); return false;"
                         type='button'
                       >
                         rè
@@ -12779,7 +12779,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ren2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ren2.mp3').play(); return false;"
                         type='button'
                       >
                         rén
@@ -12788,7 +12788,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ren3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ren3.mp3').play(); return false;"
                         type='button'
                       >
                         rěn
@@ -12797,7 +12797,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ren4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ren4.mp3').play(); return false;"
                         type='button'
                       >
                         rèn
@@ -12814,7 +12814,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/reng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/reng1.mp3').play(); return false;"
                         type='button'
                       >
                         rēng
@@ -12823,7 +12823,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/reng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/reng2.mp3').play(); return false;"
                         type='button'
                       >
                         réng
@@ -12837,7 +12837,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/reng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/reng4.mp3').play(); return false;"
                         type='button'
                       >
                         rèng
@@ -12870,7 +12870,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ri4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ri4.mp3').play(); return false;"
                         type='button'
                       >
                         rì
@@ -12901,7 +12901,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ru2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ru2.mp3').play(); return false;"
                         type='button'
                       >
                         rú
@@ -12910,7 +12910,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ru3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ru3.mp3').play(); return false;"
                         type='button'
                       >
                         rǔ
@@ -12919,7 +12919,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ru4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ru4.mp3').play(); return false;"
                         type='button'
                       >
                         rù
@@ -12952,7 +12952,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ruo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ruo4.mp3').play(); return false;"
                         type='button'
                       >
                         ruò
@@ -12974,7 +12974,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rui2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rui2.mp3').play(); return false;"
                         type='button'
                       >
                         ruí
@@ -12983,7 +12983,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rui3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rui3.mp3').play(); return false;"
                         type='button'
                       >
                         ruǐ
@@ -12992,7 +12992,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/rui4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/rui4.mp3').play(); return false;"
                         type='button'
                       >
                         ruì
@@ -13020,7 +13020,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ruan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ruan3.mp3').play(); return false;"
                         type='button'
                       >
                         ruǎn
@@ -13057,7 +13057,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/run4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/run4.mp3').play(); return false;"
                         type='button'
                       >
                         rùn
@@ -13098,7 +13098,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ji1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ji1.mp3').play(); return false;"
                         type='button'
                       >
                         jī
@@ -13107,7 +13107,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ji2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ji2.mp3').play(); return false;"
                         type='button'
                       >
                         jí
@@ -13116,7 +13116,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ji3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ji3.mp3').play(); return false;"
                         type='button'
                       >
                         jǐ
@@ -13125,7 +13125,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ji4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ji4.mp3').play(); return false;"
                         type='button'
                       >
                         jì
@@ -13142,7 +13142,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jia1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jia1.mp3').play(); return false;"
                         type='button'
                       >
                         jīa
@@ -13151,7 +13151,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jia2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jia2.mp3').play(); return false;"
                         type='button'
                       >
                         jía
@@ -13160,7 +13160,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jia3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jia3.mp3').play(); return false;"
                         type='button'
                       >
                         jǐa
@@ -13169,7 +13169,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jia4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jia4.mp3').play(); return false;"
                         type='button'
                       >
                         jìa
@@ -13186,7 +13186,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiao1.mp3').play(); return false;"
                         type='button'
                       >
                         jiāo
@@ -13195,7 +13195,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiao2.mp3').play(); return false;"
                         type='button'
                       >
                         jiáo
@@ -13204,7 +13204,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiao3.mp3').play(); return false;"
                         type='button'
                       >
                         jiǎo
@@ -13213,7 +13213,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiao4.mp3').play(); return false;"
                         type='button'
                       >
                         jiào
@@ -13230,7 +13230,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jie1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jie1.mp3').play(); return false;"
                         type='button'
                       >
                         jiē
@@ -13239,7 +13239,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jie2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jie2.mp3').play(); return false;"
                         type='button'
                       >
                         jié
@@ -13248,7 +13248,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jie3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jie3.mp3').play(); return false;"
                         type='button'
                       >
                         jiě
@@ -13257,7 +13257,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jie4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jie4.mp3').play(); return false;"
                         type='button'
                       >
                         jiè
@@ -13274,7 +13274,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiu1.mp3').play(); return false;"
                         type='button'
                       >
                         jiū
@@ -13283,7 +13283,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiu2.mp3').play(); return false;"
                         type='button'
                       >
                         jiú
@@ -13292,7 +13292,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiu3.mp3').play(); return false;"
                         type='button'
                       >
                         jiǔ
@@ -13301,7 +13301,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiu4.mp3').play(); return false;"
                         type='button'
                       >
                         jiù
@@ -13318,7 +13318,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jian1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jian1.mp3').play(); return false;"
                         type='button'
                       >
                         jiān
@@ -13332,7 +13332,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jian3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jian3.mp3').play(); return false;"
                         type='button'
                       >
                         jiǎn
@@ -13341,7 +13341,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jian4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jian4.mp3').play(); return false;"
                         type='button'
                       >
                         jiàn
@@ -13358,7 +13358,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiang1.mp3').play(); return false;"
                         type='button'
                       >
                         jiāng
@@ -13372,7 +13372,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiang3.mp3').play(); return false;"
                         type='button'
                       >
                         jiǎng
@@ -13381,7 +13381,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiang4.mp3').play(); return false;"
                         type='button'
                       >
                         jiàng
@@ -13398,7 +13398,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jin1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jin1.mp3').play(); return false;"
                         type='button'
                       >
                         jīn
@@ -13412,7 +13412,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jin3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jin3.mp3').play(); return false;"
                         type='button'
                       >
                         jǐn
@@ -13421,7 +13421,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jin4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jin4.mp3').play(); return false;"
                         type='button'
                       >
                         jìn
@@ -13438,7 +13438,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jing1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jing1.mp3').play(); return false;"
                         type='button'
                       >
                         jīng
@@ -13452,7 +13452,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jing3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jing3.mp3').play(); return false;"
                         type='button'
                       >
                         jǐng
@@ -13461,7 +13461,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jing4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jing4.mp3').play(); return false;"
                         type='button'
                       >
                         jìng
@@ -13478,7 +13478,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiong1.mp3').play(); return false;"
                         type='button'
                       >
                         jiōng
@@ -13492,7 +13492,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jiong3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jiong3.mp3').play(); return false;"
                         type='button'
                       >
                         jiǒng
@@ -13523,7 +13523,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ju1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ju1.mp3').play(); return false;"
                         type='button'
                       >
                         jū
@@ -13532,7 +13532,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ju2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ju2.mp3').play(); return false;"
                         type='button'
                       >
                         jú
@@ -13541,7 +13541,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ju3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ju3.mp3').play(); return false;"
                         type='button'
                       >
                         jǔ
@@ -13550,7 +13550,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ju4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ju4.mp3').play(); return false;"
                         type='button'
                       >
                         jù
@@ -13567,7 +13567,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jue1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jue1.mp3').play(); return false;"
                         type='button'
                       >
                         juē
@@ -13576,7 +13576,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jue2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jue2.mp3').play(); return false;"
                         type='button'
                       >
                         jué
@@ -13585,7 +13585,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jue3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jue3.mp3').play(); return false;"
                         type='button'
                       >
                         juě
@@ -13594,7 +13594,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jue4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jue4.mp3').play(); return false;"
                         type='button'
                       >
                         juè
@@ -13611,7 +13611,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/juan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/juan1.mp3').play(); return false;"
                         type='button'
                       >
                         juān
@@ -13625,7 +13625,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/juan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/juan3.mp3').play(); return false;"
                         type='button'
                       >
                         juǎn
@@ -13634,7 +13634,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/juan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/juan4.mp3').play(); return false;"
                         type='button'
                       >
                         juàn
@@ -13651,7 +13651,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jun1.mp3').play(); return false;"
                         type='button'
                       >
                         jūn
@@ -13670,7 +13670,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/jun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/jun4.mp3').play(); return false;"
                         type='button'
                       >
                         jùn
@@ -13705,7 +13705,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qi1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qi1.mp3').play(); return false;"
                         type='button'
                       >
                         qī
@@ -13714,7 +13714,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qi2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qi2.mp3').play(); return false;"
                         type='button'
                       >
                         qí
@@ -13723,7 +13723,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qi3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qi3.mp3').play(); return false;"
                         type='button'
                       >
                         qǐ
@@ -13732,7 +13732,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qi4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qi4.mp3').play(); return false;"
                         type='button'
                       >
                         qì
@@ -13749,7 +13749,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qia1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qia1.mp3').play(); return false;"
                         type='button'
                       >
                         qīa
@@ -13758,7 +13758,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qia2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qia2.mp3').play(); return false;"
                         type='button'
                       >
                         qía
@@ -13767,7 +13767,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qia3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qia3.mp3').play(); return false;"
                         type='button'
                       >
                         qǐa
@@ -13776,7 +13776,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qia4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qia4.mp3').play(); return false;"
                         type='button'
                       >
                         qìa
@@ -13793,7 +13793,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qiao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qiao1.mp3').play(); return false;"
                         type='button'
                       >
                         qiāo
@@ -13802,7 +13802,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qiao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qiao2.mp3').play(); return false;"
                         type='button'
                       >
                         qiáo
@@ -13811,7 +13811,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qiao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qiao3.mp3').play(); return false;"
                         type='button'
                       >
                         qiǎo
@@ -13820,7 +13820,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qiao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qiao4.mp3').play(); return false;"
                         type='button'
                       >
                         qiào
@@ -13837,7 +13837,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qie1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qie1.mp3').play(); return false;"
                         type='button'
                       >
                         qiē
@@ -13846,7 +13846,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qie2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qie2.mp3').play(); return false;"
                         type='button'
                       >
                         qié
@@ -13855,7 +13855,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qie3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qie3.mp3').play(); return false;"
                         type='button'
                       >
                         qiě
@@ -13864,7 +13864,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qie4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qie4.mp3').play(); return false;"
                         type='button'
                       >
                         qiè
@@ -13881,7 +13881,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qiu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qiu1.mp3').play(); return false;"
                         type='button'
                       >
                         qiū
@@ -13890,7 +13890,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qiu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qiu2.mp3').play(); return false;"
                         type='button'
                       >
                         qiú
@@ -13899,7 +13899,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qiu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qiu3.mp3').play(); return false;"
                         type='button'
                       >
                         qiǔ
@@ -13921,7 +13921,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qian1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qian1.mp3').play(); return false;"
                         type='button'
                       >
                         qiān
@@ -13930,7 +13930,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qian2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qian2.mp3').play(); return false;"
                         type='button'
                       >
                         qián
@@ -13939,7 +13939,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qian3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qian3.mp3').play(); return false;"
                         type='button'
                       >
                         qiǎn
@@ -13948,7 +13948,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qian4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qian4.mp3').play(); return false;"
                         type='button'
                       >
                         qiàn
@@ -13965,7 +13965,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qiang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qiang1.mp3').play(); return false;"
                         type='button'
                       >
                         qiāng
@@ -13974,7 +13974,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qiang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qiang2.mp3').play(); return false;"
                         type='button'
                       >
                         qiáng
@@ -13983,7 +13983,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qiang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qiang3.mp3').play(); return false;"
                         type='button'
                       >
                         qiǎng
@@ -13992,7 +13992,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qiang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qiang4.mp3').play(); return false;"
                         type='button'
                       >
                         qiàng
@@ -14009,7 +14009,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qin1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qin1.mp3').play(); return false;"
                         type='button'
                       >
                         qīn
@@ -14018,7 +14018,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qin2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qin2.mp3').play(); return false;"
                         type='button'
                       >
                         qín
@@ -14027,7 +14027,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qin3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qin3.mp3').play(); return false;"
                         type='button'
                       >
                         qǐn
@@ -14036,7 +14036,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qin4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qin4.mp3').play(); return false;"
                         type='button'
                       >
                         qìn
@@ -14053,7 +14053,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qing1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qing1.mp3').play(); return false;"
                         type='button'
                       >
                         qīng
@@ -14062,7 +14062,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qing2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qing2.mp3').play(); return false;"
                         type='button'
                       >
                         qíng
@@ -14071,7 +14071,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qing3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qing3.mp3').play(); return false;"
                         type='button'
                       >
                         qǐng
@@ -14080,7 +14080,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qing4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qing4.mp3').play(); return false;"
                         type='button'
                       >
                         qìng
@@ -14102,7 +14102,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qiong2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qiong2.mp3').play(); return false;"
                         type='button'
                       >
                         qióng
@@ -14138,7 +14138,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qu1.mp3').play(); return false;"
                         type='button'
                       >
                         qū
@@ -14147,7 +14147,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qu2.mp3').play(); return false;"
                         type='button'
                       >
                         qú
@@ -14156,7 +14156,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qu3.mp3').play(); return false;"
                         type='button'
                       >
                         qǔ
@@ -14165,7 +14165,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qu4.mp3').play(); return false;"
                         type='button'
                       >
                         qù
@@ -14182,7 +14182,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/que1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/que1.mp3').play(); return false;"
                         type='button'
                       >
                         quē
@@ -14191,7 +14191,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/que2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/que2.mp3').play(); return false;"
                         type='button'
                       >
                         qué
@@ -14205,7 +14205,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/que4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/que4.mp3').play(); return false;"
                         type='button'
                       >
                         què
@@ -14222,7 +14222,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/quan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/quan1.mp3').play(); return false;"
                         type='button'
                       >
                         quān
@@ -14231,7 +14231,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/quan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/quan2.mp3').play(); return false;"
                         type='button'
                       >
                         quán
@@ -14240,7 +14240,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/quan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/quan3.mp3').play(); return false;"
                         type='button'
                       >
                         quǎn
@@ -14249,7 +14249,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/quan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/quan4.mp3').play(); return false;"
                         type='button'
                       >
                         quàn
@@ -14266,7 +14266,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qun1.mp3').play(); return false;"
                         type='button'
                       >
                         qūn
@@ -14275,7 +14275,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/qun2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/qun2.mp3').play(); return false;"
                         type='button'
                       >
                         qún
@@ -14320,7 +14320,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xi1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xi1.mp3').play(); return false;"
                         type='button'
                       >
                         xī
@@ -14329,7 +14329,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xi2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xi2.mp3').play(); return false;"
                         type='button'
                       >
                         xí
@@ -14338,7 +14338,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xi3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xi3.mp3').play(); return false;"
                         type='button'
                       >
                         xǐ
@@ -14347,7 +14347,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xi4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xi4.mp3').play(); return false;"
                         type='button'
                       >
                         xì
@@ -14364,7 +14364,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xia1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xia1.mp3').play(); return false;"
                         type='button'
                       >
                         xīa
@@ -14373,7 +14373,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xia2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xia2.mp3').play(); return false;"
                         type='button'
                       >
                         xía
@@ -14387,7 +14387,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xia4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xia4.mp3').play(); return false;"
                         type='button'
                       >
                         xìa
@@ -14404,7 +14404,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiao1.mp3').play(); return false;"
                         type='button'
                       >
                         xiāo
@@ -14413,7 +14413,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiao2.mp3').play(); return false;"
                         type='button'
                       >
                         xiáo
@@ -14422,7 +14422,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiao3.mp3').play(); return false;"
                         type='button'
                       >
                         xiǎo
@@ -14431,7 +14431,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiao4.mp3').play(); return false;"
                         type='button'
                       >
                         xiào
@@ -14448,7 +14448,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xie1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xie1.mp3').play(); return false;"
                         type='button'
                       >
                         xiē
@@ -14457,7 +14457,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xie2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xie2.mp3').play(); return false;"
                         type='button'
                       >
                         xié
@@ -14466,7 +14466,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xie3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xie3.mp3').play(); return false;"
                         type='button'
                       >
                         xiě
@@ -14475,7 +14475,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xie4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xie4.mp3').play(); return false;"
                         type='button'
                       >
                         xiè
@@ -14492,7 +14492,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiu1.mp3').play(); return false;"
                         type='button'
                       >
                         xiū
@@ -14506,7 +14506,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiu3.mp3').play(); return false;"
                         type='button'
                       >
                         xiǔ
@@ -14515,7 +14515,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiu4.mp3').play(); return false;"
                         type='button'
                       >
                         xiù
@@ -14532,7 +14532,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xian1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xian1.mp3').play(); return false;"
                         type='button'
                       >
                         xiān
@@ -14541,7 +14541,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xian2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xian2.mp3').play(); return false;"
                         type='button'
                       >
                         xián
@@ -14550,7 +14550,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xian3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xian3.mp3').play(); return false;"
                         type='button'
                       >
                         xiǎn
@@ -14559,7 +14559,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xian4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xian4.mp3').play(); return false;"
                         type='button'
                       >
                         xiàn
@@ -14576,7 +14576,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiang1.mp3').play(); return false;"
                         type='button'
                       >
                         xiāng
@@ -14585,7 +14585,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiang2.mp3').play(); return false;"
                         type='button'
                       >
                         xiáng
@@ -14594,7 +14594,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiang3.mp3').play(); return false;"
                         type='button'
                       >
                         xiǎng
@@ -14603,7 +14603,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiang4.mp3').play(); return false;"
                         type='button'
                       >
                         xiàng
@@ -14620,7 +14620,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xin1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xin1.mp3').play(); return false;"
                         type='button'
                       >
                         xīn
@@ -14629,7 +14629,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xin2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xin2.mp3').play(); return false;"
                         type='button'
                       >
                         xín
@@ -14638,7 +14638,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xin3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xin3.mp3').play(); return false;"
                         type='button'
                       >
                         xǐn
@@ -14647,7 +14647,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xin4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xin4.mp3').play(); return false;"
                         type='button'
                       >
                         xìn
@@ -14664,7 +14664,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xing1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xing1.mp3').play(); return false;"
                         type='button'
                       >
                         xīng
@@ -14673,7 +14673,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xing2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xing2.mp3').play(); return false;"
                         type='button'
                       >
                         xíng
@@ -14682,7 +14682,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xing3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xing3.mp3').play(); return false;"
                         type='button'
                       >
                         xǐng
@@ -14691,7 +14691,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xing4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xing4.mp3').play(); return false;"
                         type='button'
                       >
                         xìng
@@ -14708,7 +14708,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiong1.mp3').play(); return false;"
                         type='button'
                       >
                         xiōng
@@ -14717,7 +14717,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xiong2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xiong2.mp3').play(); return false;"
                         type='button'
                       >
                         xióng
@@ -14753,7 +14753,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xu1.mp3').play(); return false;"
                         type='button'
                       >
                         xū
@@ -14762,7 +14762,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xu2.mp3').play(); return false;"
                         type='button'
                       >
                         xú
@@ -14771,7 +14771,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xu3.mp3').play(); return false;"
                         type='button'
                       >
                         xǔ
@@ -14780,7 +14780,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xu4.mp3').play(); return false;"
                         type='button'
                       >
                         xù
@@ -14797,7 +14797,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xue1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xue1.mp3').play(); return false;"
                         type='button'
                       >
                         xuē
@@ -14806,7 +14806,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xue2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xue2.mp3').play(); return false;"
                         type='button'
                       >
                         xué
@@ -14815,7 +14815,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xue3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xue3.mp3').play(); return false;"
                         type='button'
                       >
                         xuě
@@ -14824,7 +14824,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xue4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xue4.mp3').play(); return false;"
                         type='button'
                       >
                         xuè
@@ -14841,7 +14841,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xuan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xuan1.mp3').play(); return false;"
                         type='button'
                       >
                         xuān
@@ -14850,7 +14850,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xuan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xuan2.mp3').play(); return false;"
                         type='button'
                       >
                         xuán
@@ -14859,7 +14859,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xuan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xuan3.mp3').play(); return false;"
                         type='button'
                       >
                         xuǎn
@@ -14868,7 +14868,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xuan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xuan4.mp3').play(); return false;"
                         type='button'
                       >
                         xuàn
@@ -14885,7 +14885,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xun1.mp3').play(); return false;"
                         type='button'
                       >
                         xūn
@@ -14894,7 +14894,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xun2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xun2.mp3').play(); return false;"
                         type='button'
                       >
                         xún
@@ -14908,7 +14908,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/xun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/xun4.mp3').play(); return false;"
                         type='button'
                       >
                         xùn
@@ -14930,7 +14930,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ga1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ga1.mp3').play(); return false;"
                         type='button'
                       >
                         gā
@@ -14939,7 +14939,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ga2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ga2.mp3').play(); return false;"
                         type='button'
                       >
                         gá
@@ -14948,7 +14948,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ga3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ga3.mp3').play(); return false;"
                         type='button'
                       >
                         gǎ
@@ -14957,7 +14957,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ga4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ga4.mp3').play(); return false;"
                         type='button'
                       >
                         gà
@@ -14974,7 +14974,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gai1.mp3').play(); return false;"
                         type='button'
                       >
                         gāi
@@ -14988,7 +14988,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gai3.mp3').play(); return false;"
                         type='button'
                       >
                         gǎi
@@ -14997,7 +14997,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gai4.mp3').play(); return false;"
                         type='button'
                       >
                         gài
@@ -15014,7 +15014,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gao1.mp3').play(); return false;"
                         type='button'
                       >
                         gāo
@@ -15028,7 +15028,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gao3.mp3').play(); return false;"
                         type='button'
                       >
                         gǎo
@@ -15037,7 +15037,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gao4.mp3').play(); return false;"
                         type='button'
                       >
                         gào
@@ -15054,7 +15054,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gan1.mp3').play(); return false;"
                         type='button'
                       >
                         gān
@@ -15068,7 +15068,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gan3.mp3').play(); return false;"
                         type='button'
                       >
                         gǎn
@@ -15077,7 +15077,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gan4.mp3').play(); return false;"
                         type='button'
                       >
                         gàn
@@ -15094,7 +15094,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gang1.mp3').play(); return false;"
                         type='button'
                       >
                         gāng
@@ -15108,7 +15108,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gang3.mp3').play(); return false;"
                         type='button'
                       >
                         gǎng
@@ -15117,7 +15117,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gang4.mp3').play(); return false;"
                         type='button'
                       >
                         gàng
@@ -15135,7 +15135,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gong1.mp3').play(); return false;"
                         type='button'
                       >
                         gōng
@@ -15149,7 +15149,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gong3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gong3.mp3').play(); return false;"
                         type='button'
                       >
                         gǒng
@@ -15158,7 +15158,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gong4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gong4.mp3').play(); return false;"
                         type='button'
                       >
                         gòng
@@ -15175,7 +15175,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gou1.mp3').play(); return false;"
                         type='button'
                       >
                         gōu
@@ -15189,7 +15189,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gou3.mp3').play(); return false;"
                         type='button'
                       >
                         gǒu
@@ -15198,7 +15198,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gou4.mp3').play(); return false;"
                         type='button'
                       >
                         gòu
@@ -15215,7 +15215,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ge1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ge1.mp3').play(); return false;"
                         type='button'
                       >
                         gē
@@ -15224,7 +15224,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ge2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ge2.mp3').play(); return false;"
                         type='button'
                       >
                         gé
@@ -15233,7 +15233,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ge3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ge3.mp3').play(); return false;"
                         type='button'
                       >
                         gě
@@ -15242,7 +15242,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ge4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ge4.mp3').play(); return false;"
                         type='button'
                       >
                         gè
@@ -15269,7 +15269,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gei3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gei3.mp3').play(); return false;"
                         type='button'
                       >
                         gěi
@@ -15291,7 +15291,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gen1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gen1.mp3').play(); return false;"
                         type='button'
                       >
                         gēn
@@ -15300,7 +15300,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gen2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gen2.mp3').play(); return false;"
                         type='button'
                       >
                         gén
@@ -15309,7 +15309,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gen3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gen3.mp3').play(); return false;"
                         type='button'
                       >
                         gěn
@@ -15318,7 +15318,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gen4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gen4.mp3').play(); return false;"
                         type='button'
                       >
                         gèn
@@ -15335,7 +15335,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/geng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/geng1.mp3').play(); return false;"
                         type='button'
                       >
                         gēng
@@ -15344,7 +15344,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/geng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/geng2.mp3').play(); return false;"
                         type='button'
                       >
                         géng
@@ -15353,7 +15353,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/geng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/geng3.mp3').play(); return false;"
                         type='button'
                       >
                         gěng
@@ -15362,7 +15362,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/geng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/geng4.mp3').play(); return false;"
                         type='button'
                       >
                         gèng
@@ -15390,7 +15390,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gu1.mp3').play(); return false;"
                         type='button'
                       >
                         gū
@@ -15404,7 +15404,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gu3.mp3').play(); return false;"
                         type='button'
                       >
                         gǔ
@@ -15413,7 +15413,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gu4.mp3').play(); return false;"
                         type='button'
                       >
                         gù
@@ -15430,7 +15430,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gua1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gua1.mp3').play(); return false;"
                         type='button'
                       >
                         guā
@@ -15444,7 +15444,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gua3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gua3.mp3').play(); return false;"
                         type='button'
                       >
                         guǎ
@@ -15453,7 +15453,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gua4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gua4.mp3').play(); return false;"
                         type='button'
                       >
                         guà
@@ -15470,7 +15470,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guo1.mp3').play(); return false;"
                         type='button'
                       >
                         guō
@@ -15479,7 +15479,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guo2.mp3').play(); return false;"
                         type='button'
                       >
                         guó
@@ -15488,7 +15488,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guo3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guo3.mp3').play(); return false;"
                         type='button'
                       >
                         guǒ
@@ -15497,7 +15497,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guo4.mp3').play(); return false;"
                         type='button'
                       >
                         guò
@@ -15514,7 +15514,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gui1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gui1.mp3').play(); return false;"
                         type='button'
                       >
                         guī
@@ -15528,7 +15528,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gui3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gui3.mp3').play(); return false;"
                         type='button'
                       >
                         guǐ
@@ -15537,7 +15537,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gui4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gui4.mp3').play(); return false;"
                         type='button'
                       >
                         guì
@@ -15554,7 +15554,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guai1.mp3').play(); return false;"
                         type='button'
                       >
                         guāi
@@ -15568,7 +15568,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guai3.mp3').play(); return false;"
                         type='button'
                       >
                         guǎi
@@ -15577,7 +15577,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guai4.mp3').play(); return false;"
                         type='button'
                       >
                         guài
@@ -15594,7 +15594,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guan1.mp3').play(); return false;"
                         type='button'
                       >
                         guān
@@ -15608,7 +15608,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guan3.mp3').play(); return false;"
                         type='button'
                       >
                         guǎn
@@ -15617,7 +15617,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guan4.mp3').play(); return false;"
                         type='button'
                       >
                         guàn
@@ -15644,7 +15644,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gun3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gun3.mp3').play(); return false;"
                         type='button'
                       >
                         gǔn
@@ -15653,7 +15653,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/gun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/gun4.mp3').play(); return false;"
                         type='button'
                       >
                         gùn
@@ -15670,7 +15670,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guang1.mp3').play(); return false;"
                         type='button'
                       >
                         guāng
@@ -15684,7 +15684,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guang3.mp3').play(); return false;"
                         type='button'
                       >
                         guǎng
@@ -15693,7 +15693,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/guang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/guang4.mp3').play(); return false;"
                         type='button'
                       >
                         guàng
@@ -15720,7 +15720,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ka1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ka1.mp3').play(); return false;"
                         type='button'
                       >
                         kā
@@ -15734,7 +15734,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ka3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ka3.mp3').play(); return false;"
                         type='button'
                       >
                         kǎ
@@ -15756,7 +15756,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kai1.mp3').play(); return false;"
                         type='button'
                       >
                         kāi
@@ -15765,7 +15765,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kai2.mp3').play(); return false;"
                         type='button'
                       >
                         kái
@@ -15779,7 +15779,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kai4.mp3').play(); return false;"
                         type='button'
                       >
                         kài
@@ -15796,7 +15796,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kao1.mp3').play(); return false;"
                         type='button'
                       >
                         kāo
@@ -15810,7 +15810,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kao3.mp3').play(); return false;"
                         type='button'
                       >
                         kǎo
@@ -15819,7 +15819,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kao4.mp3').play(); return false;"
                         type='button'
                       >
                         kào
@@ -15836,7 +15836,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kan1.mp3').play(); return false;"
                         type='button'
                       >
                         kān
@@ -15850,7 +15850,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kan3.mp3').play(); return false;"
                         type='button'
                       >
                         kǎn
@@ -15859,7 +15859,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kan4.mp3').play(); return false;"
                         type='button'
                       >
                         kàn
@@ -15876,7 +15876,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kang1.mp3').play(); return false;"
                         type='button'
                       >
                         kāng
@@ -15890,7 +15890,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kang3.mp3').play(); return false;"
                         type='button'
                       >
                         kǎng
@@ -15899,7 +15899,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kang4.mp3').play(); return false;"
                         type='button'
                       >
                         kàng
@@ -15917,7 +15917,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kong1.mp3').play(); return false;"
                         type='button'
                       >
                         kōng
@@ -15931,7 +15931,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kong3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kong3.mp3').play(); return false;"
                         type='button'
                       >
                         kǒng
@@ -15940,7 +15940,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kong4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kong4.mp3').play(); return false;"
                         type='button'
                       >
                         kòng
@@ -15957,7 +15957,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kou1.mp3').play(); return false;"
                         type='button'
                       >
                         kōu
@@ -15971,7 +15971,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kou3.mp3').play(); return false;"
                         type='button'
                       >
                         kǒu
@@ -15980,7 +15980,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kou4.mp3').play(); return false;"
                         type='button'
                       >
                         kòu
@@ -15997,7 +15997,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ke1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ke1.mp3').play(); return false;"
                         type='button'
                       >
                         kē
@@ -16006,7 +16006,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ke2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ke2.mp3').play(); return false;"
                         type='button'
                       >
                         ké
@@ -16015,7 +16015,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ke3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ke3.mp3').play(); return false;"
                         type='button'
                       >
                         kě
@@ -16024,7 +16024,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ke4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ke4.mp3').play(); return false;"
                         type='button'
                       >
                         kè
@@ -16052,7 +16052,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ken3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ken3.mp3').play(); return false;"
                         type='button'
                       >
                         kěn
@@ -16061,7 +16061,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ken4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ken4.mp3').play(); return false;"
                         type='button'
                       >
                         kèn
@@ -16078,7 +16078,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/keng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/keng1.mp3').play(); return false;"
                         type='button'
                       >
                         kēng
@@ -16087,7 +16087,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/keng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/keng2.mp3').play(); return false;"
                         type='button'
                       >
                         kéng
@@ -16096,7 +16096,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/keng3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/keng3.mp3').play(); return false;"
                         type='button'
                       >
                         kěng
@@ -16105,7 +16105,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/keng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/keng4.mp3').play(); return false;"
                         type='button'
                       >
                         kèng
@@ -16133,7 +16133,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ku1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ku1.mp3').play(); return false;"
                         type='button'
                       >
                         kū
@@ -16147,7 +16147,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ku3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ku3.mp3').play(); return false;"
                         type='button'
                       >
                         kǔ
@@ -16156,7 +16156,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ku4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ku4.mp3').play(); return false;"
                         type='button'
                       >
                         kù
@@ -16173,7 +16173,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kua1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kua1.mp3').play(); return false;"
                         type='button'
                       >
                         kuā
@@ -16187,7 +16187,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kua3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kua3.mp3').play(); return false;"
                         type='button'
                       >
                         kuǎ
@@ -16196,7 +16196,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kua4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kua4.mp3').play(); return false;"
                         type='button'
                       >
                         kuà
@@ -16228,7 +16228,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kuo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kuo4.mp3').play(); return false;"
                         type='button'
                       >
                         kuò
@@ -16245,7 +16245,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kui1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kui1.mp3').play(); return false;"
                         type='button'
                       >
                         kuī
@@ -16254,7 +16254,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kui2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kui2.mp3').play(); return false;"
                         type='button'
                       >
                         kuí
@@ -16263,7 +16263,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kui3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kui3.mp3').play(); return false;"
                         type='button'
                       >
                         kuǐ
@@ -16272,7 +16272,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kui4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kui4.mp3').play(); return false;"
                         type='button'
                       >
                         kuì
@@ -16299,7 +16299,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kuai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kuai3.mp3').play(); return false;"
                         type='button'
                       >
                         kuǎi
@@ -16308,7 +16308,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kuai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kuai4.mp3').play(); return false;"
                         type='button'
                       >
                         kuài
@@ -16325,7 +16325,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kuan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kuan1.mp3').play(); return false;"
                         type='button'
                       >
                         kuān
@@ -16339,7 +16339,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kuan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kuan3.mp3').play(); return false;"
                         type='button'
                       >
                         kuǎn
@@ -16361,7 +16361,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kun1.mp3').play(); return false;"
                         type='button'
                       >
                         kūn
@@ -16375,7 +16375,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kun3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kun3.mp3').play(); return false;"
                         type='button'
                       >
                         kǔn
@@ -16384,7 +16384,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kun4.mp3').play(); return false;"
                         type='button'
                       >
                         kùn
@@ -16401,7 +16401,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kuang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kuang1.mp3').play(); return false;"
                         type='button'
                       >
                         kuāng
@@ -16410,7 +16410,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kuang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kuang2.mp3').play(); return false;"
                         type='button'
                       >
                         kuáng
@@ -16419,7 +16419,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kuang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kuang3.mp3').play(); return false;"
                         type='button'
                       >
                         kuǎng
@@ -16428,7 +16428,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/kuang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/kuang4.mp3').play(); return false;"
                         type='button'
                       >
                         kuàng
@@ -16455,7 +16455,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ha1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ha1.mp3').play(); return false;"
                         type='button'
                       >
                         hā
@@ -16464,7 +16464,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ha2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ha2.mp3').play(); return false;"
                         type='button'
                       >
                         há
@@ -16473,7 +16473,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ha3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ha3.mp3').play(); return false;"
                         type='button'
                       >
                         hǎ
@@ -16482,7 +16482,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/ha4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/ha4.mp3').play(); return false;"
                         type='button'
                       >
                         hà
@@ -16499,7 +16499,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hai1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hai1.mp3').play(); return false;"
                         type='button'
                       >
                         hāi
@@ -16508,7 +16508,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hai2.mp3').play(); return false;"
                         type='button'
                       >
                         hái
@@ -16517,7 +16517,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hai3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hai3.mp3').play(); return false;"
                         type='button'
                       >
                         hǎi
@@ -16526,7 +16526,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hai4.mp3').play(); return false;"
                         type='button'
                       >
                         hài
@@ -16543,7 +16543,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hao1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hao1.mp3').play(); return false;"
                         type='button'
                       >
                         hāo
@@ -16552,7 +16552,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hao2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hao2.mp3').play(); return false;"
                         type='button'
                       >
                         háo
@@ -16561,7 +16561,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hao3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hao3.mp3').play(); return false;"
                         type='button'
                       >
                         hǎo
@@ -16570,7 +16570,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hao4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hao4.mp3').play(); return false;"
                         type='button'
                       >
                         hào
@@ -16587,7 +16587,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/han1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/han1.mp3').play(); return false;"
                         type='button'
                       >
                         hān
@@ -16596,7 +16596,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/han2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/han2.mp3').play(); return false;"
                         type='button'
                       >
                         hán
@@ -16605,7 +16605,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/han3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/han3.mp3').play(); return false;"
                         type='button'
                       >
                         hǎn
@@ -16614,7 +16614,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/han4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/han4.mp3').play(); return false;"
                         type='button'
                       >
                         hàn
@@ -16631,7 +16631,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hang1.mp3').play(); return false;"
                         type='button'
                       >
                         hāng
@@ -16640,7 +16640,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hang2.mp3').play(); return false;"
                         type='button'
                       >
                         háng
@@ -16649,7 +16649,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hang3.mp3').play(); return false;"
                         type='button'
                       >
                         hǎng
@@ -16658,7 +16658,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hang4.mp3').play(); return false;"
                         type='button'
                       >
                         hàng
@@ -16676,7 +16676,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hong1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hong1.mp3').play(); return false;"
                         type='button'
                       >
                         hōng
@@ -16685,7 +16685,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hong2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hong2.mp3').play(); return false;"
                         type='button'
                       >
                         hóng
@@ -16694,7 +16694,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hong3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hong3.mp3').play(); return false;"
                         type='button'
                       >
                         hǒng
@@ -16703,7 +16703,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hong4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hong4.mp3').play(); return false;"
                         type='button'
                       >
                         hòng
@@ -16720,7 +16720,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hou1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hou1.mp3').play(); return false;"
                         type='button'
                       >
                         hōu
@@ -16729,7 +16729,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hou2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hou2.mp3').play(); return false;"
                         type='button'
                       >
                         hóu
@@ -16738,7 +16738,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hou3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hou3.mp3').play(); return false;"
                         type='button'
                       >
                         hǒu
@@ -16747,7 +16747,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hou4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hou4.mp3').play(); return false;"
                         type='button'
                       >
                         hòu
@@ -16764,7 +16764,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/he1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/he1.mp3').play(); return false;"
                         type='button'
                       >
                         hē
@@ -16773,7 +16773,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/he2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/he2.mp3').play(); return false;"
                         type='button'
                       >
                         hé
@@ -16787,7 +16787,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/he4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/he4.mp3').play(); return false;"
                         type='button'
                       >
                         hè
@@ -16804,7 +16804,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hei1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hei1.mp3').play(); return false;"
                         type='button'
                       >
                         hēi
@@ -16813,7 +16813,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hei2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hei2.mp3').play(); return false;"
                         type='button'
                       >
                         héi
@@ -16840,7 +16840,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hen1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hen1.mp3').play(); return false;"
                         type='button'
                       >
                         hēn
@@ -16854,7 +16854,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hen3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hen3.mp3').play(); return false;"
                         type='button'
                       >
                         hěn
@@ -16863,7 +16863,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hen4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hen4.mp3').play(); return false;"
                         type='button'
                       >
                         hèn
@@ -16880,7 +16880,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/heng1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/heng1.mp3').play(); return false;"
                         type='button'
                       >
                         hēng
@@ -16889,7 +16889,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/heng2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/heng2.mp3').play(); return false;"
                         type='button'
                       >
                         héng
@@ -16903,7 +16903,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/heng4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/heng4.mp3').play(); return false;"
                         type='button'
                       >
                         hèng
@@ -16931,7 +16931,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hu1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hu1.mp3').play(); return false;"
                         type='button'
                       >
                         hū
@@ -16940,7 +16940,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hu2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hu2.mp3').play(); return false;"
                         type='button'
                       >
                         hú
@@ -16949,7 +16949,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hu3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hu3.mp3').play(); return false;"
                         type='button'
                       >
                         hǔ
@@ -16958,7 +16958,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hu4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hu4.mp3').play(); return false;"
                         type='button'
                       >
                         hù
@@ -16975,7 +16975,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hua1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hua1.mp3').play(); return false;"
                         type='button'
                       >
                         huā
@@ -16984,7 +16984,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hua2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hua2.mp3').play(); return false;"
                         type='button'
                       >
                         huá
@@ -16998,7 +16998,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hua4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hua4.mp3').play(); return false;"
                         type='button'
                       >
                         huà
@@ -17015,7 +17015,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huo1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huo1.mp3').play(); return false;"
                         type='button'
                       >
                         huō
@@ -17024,7 +17024,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huo2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huo2.mp3').play(); return false;"
                         type='button'
                       >
                         huó
@@ -17033,7 +17033,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huo3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huo3.mp3').play(); return false;"
                         type='button'
                       >
                         huǒ
@@ -17042,7 +17042,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huo4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huo4.mp3').play(); return false;"
                         type='button'
                       >
                         huò
@@ -17059,7 +17059,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hui1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hui1.mp3').play(); return false;"
                         type='button'
                       >
                         huī
@@ -17068,7 +17068,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hui2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hui2.mp3').play(); return false;"
                         type='button'
                       >
                         huí
@@ -17077,7 +17077,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hui3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hui3.mp3').play(); return false;"
                         type='button'
                       >
                         huǐ
@@ -17086,7 +17086,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hui4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hui4.mp3').play(); return false;"
                         type='button'
                       >
                         huì
@@ -17108,7 +17108,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huai2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huai2.mp3').play(); return false;"
                         type='button'
                       >
                         huái
@@ -17122,7 +17122,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huai4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huai4.mp3').play(); return false;"
                         type='button'
                       >
                         huài
@@ -17139,7 +17139,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huan1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huan1.mp3').play(); return false;"
                         type='button'
                       >
                         huān
@@ -17148,7 +17148,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huan2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huan2.mp3').play(); return false;"
                         type='button'
                       >
                         huán
@@ -17157,7 +17157,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huan3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huan3.mp3').play(); return false;"
                         type='button'
                       >
                         huǎn
@@ -17166,7 +17166,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huan4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huan4.mp3').play(); return false;"
                         type='button'
                       >
                         huàn
@@ -17183,7 +17183,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hun1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hun1.mp3').play(); return false;"
                         type='button'
                       >
                         hūn
@@ -17192,7 +17192,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hun2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hun2.mp3').play(); return false;"
                         type='button'
                       >
                         hún
@@ -17206,7 +17206,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/hun4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/hun4.mp3').play(); return false;"
                         type='button'
                       >
                         hùn
@@ -17223,7 +17223,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huang1.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huang1.mp3').play(); return false;"
                         type='button'
                       >
                         huāng
@@ -17232,7 +17232,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huang2.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huang2.mp3').play(); return false;"
                         type='button'
                       >
                         huáng
@@ -17241,7 +17241,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huang3.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huang3.mp3').play(); return false;"
                         type='button'
                       >
                         huǎng
@@ -17250,7 +17250,7 @@ const PinyinTable = () => {
                     <li>
                       <button
                         className='btn btn-outline-info'
-                        data-pinyin="new Audio('../audio/pinyin/huang4.mp3').play(); return false;"
+                        data-pinyin="new Audio('http://kislov.chineseplus.ru/audio/pinyin/huang4.mp3').play(); return false;"
                         type='button'
                       >
                         huàng
