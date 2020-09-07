@@ -6,10 +6,12 @@ import { v4 as uuid } from "uuid";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router-dom";
 import WordModal from "../translation/WordModal";
+import { loadUserWords } from "../../actions/userWords";
 
-const TextPage = ({ text, loadText, match, loading }) => {
+const TextPage = ({ text, loadText, match, loading, loadUserWords }) => {
   useEffect(() => {
     loadText(match.params.id);
+    loadUserWords();
   }, [loadText]);
 
   const [hideFlag, setHideFlag] = useState(false);
@@ -88,4 +90,4 @@ const mapStateToProps = state => ({
   loading: state.texts.loading
 });
 
-export default connect(mapStateToProps, { loadText })(TextPage);
+export default connect(mapStateToProps, { loadText, loadUserWords })(TextPage);
