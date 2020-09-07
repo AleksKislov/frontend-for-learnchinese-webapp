@@ -9,14 +9,14 @@ const TextCard = ({ text }) => {
   Moment.locale("ru");
   return (
     <div className='card my-2'>
-      <div className='card-body' style={customStyle}>
+      <div className='card-body row'>
         <Link to={`/texts/${_id}`}>
-          <div style={{ position: "relative" }}>
+          <div style={{ position: "relative" }} className='col-md-3'>
             <img className='mr-3' src={`${pic_url}`} style={imgStyle} alt='Picture' />
             <div style={imgText}>蝴蝶</div>
           </div>
         </Link>
-        <div>
+        <div className='col-md-6'>
           <Link to={`/texts/${_id}`}>
             <h4 className='card-title'>{title}</h4>
           </Link>
@@ -59,7 +59,7 @@ const TextCard = ({ text }) => {
 };
 
 const imgStyle = {
-  width: "150px",
+  // width: "100%",
   borderRadius: "8px",
   opacity: "0.7"
 };
@@ -70,15 +70,12 @@ const imgText = {
   fontWeight: "bold",
   textShadow: "1px 1px 1px white, 2px 2px 1px white",
   position: "absolute",
+  width: "5rem",
   // top: "85%",
   // left: "25%",
   // transform: "translate(-50%, -50%)"
   marginTop: "-3.5rem",
   marginLeft: "1rem"
-};
-
-const customStyle = {
-  display: "flex"
 };
 
 export default TextCard;

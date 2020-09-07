@@ -11,7 +11,7 @@ const Texts = ({ loadTexts, texts, loading }) => {
 
   return (
     <div className='row'>
-      <div className='col-sm-3'>
+      <div className='col-md-3'>
         <div className='card bg-light mb-3'>
           <div className='card-body'>
             <p className='card-text'>
@@ -22,7 +22,7 @@ const Texts = ({ loadTexts, texts, loading }) => {
         </div>
       </div>
 
-      <div className='col-sm-9'>
+      <div className='col-md-9'>
         <h2>Чтение Текстов</h2>
 
         {loading ? <Spinner /> : texts.map(text => <TextCard key={text._id} text={text} />)}
