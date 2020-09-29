@@ -39,3 +39,17 @@
 #showCharDiv {
   margin-bottom: 0.8rem;
 }
+
+@media screen and (max-width: 800px) {
+  .rcw-widget-container {
+    /* height: 100%;
+    height: 80vh;  */
+    margin: 0;
+    max-width: none;
+    width: 100%;
+  }
+  .rcw-conversation-container {
+    height: 100%;
+    height: 90vh;
+  }
+}

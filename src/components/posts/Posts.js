@@ -204,16 +204,20 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
       <div className='col-sm-6'>
         <div className='my-3' id='tagButtons' onClick={e => displayTags(e)}>
           <strong>Фильтр:</strong>
-          <button type='button' className='btn btn-outline-info btn-sm mx-1 active' id='all-btn'>
+          <button
+            type='button'
+            className='btn btn-outline-info btn-sm mx-1 active mb-1'
+            id='all-btn'
+          >
             Все
           </button>
-          <button type='button' className='btn btn-outline-info btn-sm mx-1' id='wish-btn'>
+          <button type='button' className='btn btn-outline-info btn-sm mx-1 mb-1' id='wish-btn'>
             Пожелания
           </button>
-          <button type='button' className='btn btn-outline-info btn-sm mx-1' id='bug-btn'>
+          <button type='button' className='btn btn-outline-info btn-sm mx-1 mb-1' id='bug-btn'>
             Баги
           </button>
-          <button type='button' className='btn btn-outline-info btn-sm mx-1' id='news-btn'>
+          <button type='button' className='btn btn-outline-info btn-sm mx-1 mb-1' id='news-btn'>
             Новости
           </button>
         </div>

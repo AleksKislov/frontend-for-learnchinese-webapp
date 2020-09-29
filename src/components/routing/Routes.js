@@ -17,6 +17,7 @@ import CreateProfile from "../profile/CreateProfile";
 import EditProfile from "../profile/EditProfile";
 import TranslateForm from "../translation/TranslateForm";
 import NotFound from "../layout/NotFound";
+import Contacts from "../layout/Contacts";
 import Search from "../translation/Search";
 import Posts from "../posts/Posts";
 import PostPage from "../posts/PostPage";
@@ -35,7 +36,7 @@ const Routes = () => {
     <Fragment>
       <section
         className={pathname === "/pinyin" ? "container-fluid" : "container"}
-        style={{ marginTop: "2rem" }}
+        style={{ marginTop: "2rem", marginBottom: "3rem" }}
       >
         <div
           style={{
@@ -69,6 +70,7 @@ const Routes = () => {
           <PrivateRoute exact path='/create-text' component={TextForm} />
           <Route exact path='/texts' component={Texts} />
           <Route exact path='/texts/:id' component={TextPage} />
+          <Route exact path='/contacts' component={Contacts} />
 
           <NotFound />
         </Switch>
