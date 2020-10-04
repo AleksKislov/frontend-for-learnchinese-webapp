@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Moment from "moment";
-import "moment/locale/ru";
 import { connect } from "react-redux";
 import { addLike, addDislike, loadPost } from "../../actions/posts";
 
@@ -13,9 +11,9 @@ const Post = ({ post, addLike, addDislike }) => {
     news: "Новости Проекта"
   };
 
+  const dateAndTime = dateToStr(date);
   const badgeColor = tag === "news" ? "info" : tag === "bug" ? "danger" : "success";
 
-  Moment.locale("ru");
   return (
     <div className='card my-2'>
       <div className='card-body' style={customStyle}>
@@ -28,7 +26,7 @@ const Post = ({ post, addLike, addDislike }) => {
             <span className={`mx-2 badge badge-${badgeColor}`}>{tagTheme[tag]}</span>
           </div>
           <h6 className='card-subtitle mb-2 text-muted'>
-            {name} | <em>{Moment(date).format("lll")}</em>
+            {name} | <em>{dateAndTime}</em>
           </h6>
           <p className='card-text' dangerouslySetInnerHTML={{ __html: text }}></p>
           <div className=''>
@@ -49,6 +47,13 @@ const Post = ({ post, addLike, addDislike }) => {
       </div>
     </div>
   );
+};
+
+const dateToStr = date => {
+  const str = new Date(date);
+  const options = { year: "numeric", month: "short", day: "numeric" };
+  const rusDate = str.toLocaleDateString("ru-RU", options); // 22 авг. 2020 г.
+  return `${rusDate}, ${date.slice(11, 16)}`;
 };
 
 const imgStyle = {

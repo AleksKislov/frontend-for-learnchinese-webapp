@@ -174,8 +174,8 @@ const Navbar = ({
   return (
     <nav className='navbar navbar-expand-lg navbar-dark bg-primary'>
       <NavLink className='navbar-brand' to='/'>
-        <i className='fas fa-yin-yang'></i> Chinese+ Club{" "}
-        <span style={{ fontSize: "50%" }}>1.0.1</span>
+        <i className='fas fa-yin-yang'></i> Chinese+Club{" "}
+        <span style={{ fontSize: "50%" }}>1.0.2</span>
       </NavLink>
       <button
         className='navbar-toggler'

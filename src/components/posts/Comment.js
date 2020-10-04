@@ -1,10 +1,12 @@
 import React from "react";
-import Moment from "moment";
 import { connect } from "react-redux";
 import { deleteComment } from "../../actions/posts";
 
 const Comment = ({ comment, currentUser, isAuthenticated, deleteComment }) => {
   const { avatar, text, name, date, user, post_id, _id } = comment;
+
+  const dateAndTime = dateToStr(date);
+
   return (
     <div className='card my-2'>
       <div className='card-body' style={customStyle}>
@@ -23,12 +25,19 @@ const Comment = ({ comment, currentUser, isAuthenticated, deleteComment }) => {
 
           <p className='card-text' dangerouslySetInnerHTML={{ __html: text }}></p>
           <h6 className='card-subtitle mb-2 text-muted'>
-            {name} | <em>{Moment(date).format("lll")}</em>
+            {name} | <em>{dateAndTime}</em>
           </h6>
         </div>
       </div>
     </div>
   );
+};
+
+const dateToStr = date => {
+  const str = new Date(date);
+  const options = { year: "numeric", month: "short", day: "numeric" };
+  const rusDate = str.toLocaleDateString("ru-RU", options); // 22 авг. 2020 г.
+  return `${rusDate}, ${date.slice(11, 16)}`;
 };
 
 const imgStyle = {

@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Moment from "moment";
-import "moment/locale/ru";
 
 const TextCard = ({ text }) => {
   const { title, pic_url, tags, length, description, level, date, name, comments_id, _id } = text;
 
-  Moment.locale("ru");
+  const dateAndTime = dateToStr(date);
   return (
     <div className='card my-2'>
       <div className='card-body row'>
@@ -21,7 +19,7 @@ const TextCard = ({ text }) => {
             <h4 className='card-title'>{title}</h4>
           </Link>
           <h6 className='card-subtitle mb-1 text-muted'>
-            <em>{Moment(date).format("lll")}</em>
+            <em>{dateAndTime}</em>
           </h6>
           <div className='mb-2'>
             <span className='text-muted'>Тэги: </span>
@@ -56,6 +54,13 @@ const TextCard = ({ text }) => {
       </div>
     </div>
   );
+};
+
+const dateToStr = date => {
+  const str = new Date(date);
+  const options = { year: "numeric", month: "short", day: "numeric" };
+  const rusDate = str.toLocaleDateString("ru-RU", options); // 22 авг. 2020 г.
+  return `${rusDate}, ${date.slice(11, 16)}`;
 };
 
 const imgStyle = {
