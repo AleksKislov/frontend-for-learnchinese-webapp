@@ -9,12 +9,35 @@ import { loadUserWords } from "../../actions/userWords";
 import Paragraph from "./Paragraph";
 import { v4 as uuid } from "uuid";
 import { unsplash } from "../../apikeys.json";
+import "./style.css";
 
-const TextForm = ({ loadUserWords, user }) => {
+const TextForm = ({ loadUserWords, user, textToEdit }) => {
   useEffect(() => {
     loadUserWords();
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      // console.log(textToEdit);
+      if (textToEdit) {
+        setIsToEdit(true);
+        const { level, origintext, tags, title, description, translation, _id } = textToEdit;
+        document.getElementById("description").value = description;
+        document.getElementById("level").value = level;
+        document.getElementById("tags").value = tags.join(", ");
+        document.getElementById("title").value = title;
+        document.getElementById("textArea").value = origintext.join("\n");
+        document.getElementById("translationArea").value = translation.join("\n");
+
+        setFormData({
+          ...formData,
+          textId: _id
+        });
+      }
+    }, 0);
+  }, [textToEdit]);
+
+  const [isToEdit, setIsToEdit] = useState(false);
   const [textLen, setTextLen] = useState(0);
   const [formData, setFormData] = useState({
     chineseChunkedWords: [],
@@ -24,7 +47,9 @@ const TextForm = ({ loadUserWords, user }) => {
     level: 1,
     chunkedOriginText: [],
     tags: [],
-    length: 0
+    length: 0,
+    allwords: [],
+    textId: ""
   });
 
   const onSubmit = async e => {
@@ -75,7 +100,8 @@ const TextForm = ({ loadUserWords, user }) => {
         title,
         description,
         level,
-        length
+        length,
+        allwords
       });
     }
 
@@ -94,16 +120,21 @@ const TextForm = ({ loadUserWords, user }) => {
         config
       );
 
-      console.log(data.results[1].urls.small);
+      // console.log(data.results[1].urls.small);
 
       data.results.forEach(el => {
         const img = document.createElement("img");
-        img.src = el.urls.thumb;
+        img.src = el.urls.small;
         photosDiv.appendChild(img);
+        img.classList.add("imgToChoose");
       });
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const choosePicUrl = e => {
+    console.log(e.target.src);
   };
 
   const chunkArrayFunc = arr => {
@@ -179,7 +210,8 @@ const TextForm = ({ loadUserWords, user }) => {
       title,
       description,
       level,
-      length
+      length,
+      allwords
     } = formdata;
 
     const body = JSON.stringify({
@@ -190,6 +222,7 @@ const TextForm = ({ loadUserWords, user }) => {
       tags,
       translation: chunkedTranslation,
       wordsarr: chineseChunkedWords,
+      chinese_arr: allwords,
       length
     });
 
@@ -197,6 +230,47 @@ const TextForm = ({ loadUserWords, user }) => {
       const { data } = await axios.post(`/api/texts`, body, config);
 
       alert("Текст опубликован!");
+      // console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const editText = async formdata => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+
+    const {
+      chunkedTranslation,
+      tags,
+      chunkedOriginText,
+      title,
+      description,
+      level,
+      length,
+      allwords,
+      textId
+    } = formdata;
+
+    const body = JSON.stringify({
+      textId,
+      origintext: chunkedOriginText,
+      title,
+      description,
+      level,
+      tags,
+      translation: chunkedTranslation,
+      chinese_arr: allwords,
+      length
+    });
+
+    try {
+      const { data } = await axios.post(`/api/texts`, body, config);
+
+      alert("Текст успешно изменен!");
       // console.log(data);
     } catch (err) {
       console.log(err);
@@ -268,7 +342,11 @@ const TextForm = ({ loadUserWords, user }) => {
                   </div>
                 </div>
                 <div className='form-row'>
-                  <div className='form-group col-md-12' id='photosDiv'></div>
+                  <div
+                    className='form-group col-md-12'
+                    id='photosDiv'
+                    onClick={e => choosePicUrl(e)}
+                  ></div>
                 </div>
                 <div className='form-row'>
                   <div className='form-group col-md-6'>
@@ -306,6 +384,12 @@ const TextForm = ({ loadUserWords, user }) => {
           <button className='btn btn-primary mx-1' onClick={e => publishText(formData)}>
             Опубликовать
           </button>
+          {isToEdit && (
+            <button className='btn btn-primary mx-1' onClick={e => editText(formData)}>
+              Изменить текст
+            </button>
+          )}
+
           <hr />
 
           <div className='row'>
@@ -332,7 +416,8 @@ TextForm.propTypes = {
 const mapStateToProps = state => ({
   userwords: state.userwords.userwords,
   wordsLoading: state.userwords.loading,
-  user: state.auth.user
+  user: state.auth.user,
+  textToEdit: state.texts.text
 });
 
 export default connect(mapStateToProps, { loadUserWords })(TextForm);

@@ -8,12 +8,12 @@ const TextCard = ({ text }) => {
   return (
     <div className='card my-2'>
       <div className='card-body row'>
-        <Link to={`/texts/${_id}`}>
-          <div style={{ position: "relative" }} className='col-md-3'>
-            <img className='mr-3' src={`${pic_url}`} style={imgStyle} alt='Picture' />
+        <div style={{ position: "relative" }} className='col-md-3'>
+          <Link to={`/texts/${_id}`}>
+            <img className='mr-3 textCardImg' src={`${pic_url}`} alt='Picture' />
             <div style={imgText}>蝴蝶</div>
-          </div>
-        </Link>
+          </Link>
+        </div>
         <div className='col-md-6'>
           <Link to={`/texts/${_id}`}>
             <h4 className='card-title'>{title}</h4>
@@ -45,7 +45,7 @@ const TextCard = ({ text }) => {
 
           <div className=''>
             <Link to={`/texts/${_id}`}>
-              <button className='btn btn-outline-info'>
+              <button className='btn btn-sm btn-outline-info'>
                 Комментарии {comments_id.length > 0 && <span>{comments_id.length}</span>}
               </button>
             </Link>
@@ -61,12 +61,6 @@ const dateToStr = date => {
   const options = { year: "numeric", month: "short", day: "numeric" };
   const rusDate = str.toLocaleDateString("ru-RU", options); // 22 авг. 2020 г.
   return `${rusDate}, ${date.slice(11, 16)}`;
-};
-
-const imgStyle = {
-  // width: "100%",
-  borderRadius: "8px",
-  opacity: "0.7"
 };
 
 const imgText = {
