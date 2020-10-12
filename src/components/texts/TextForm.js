@@ -21,13 +21,23 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       // console.log(textToEdit);
       if (textToEdit) {
         setIsToEdit(true);
-        const { level, origintext, tags, title, description, translation, _id } = textToEdit;
+        const {
+          level,
+          origintext,
+          tags,
+          title,
+          description,
+          translation,
+          _id,
+          theme_word
+        } = textToEdit;
         document.getElementById("description").value = description;
         document.getElementById("level").value = level;
         document.getElementById("tags").value = tags.join(", ");
         document.getElementById("title").value = title;
         document.getElementById("textArea").value = origintext.join("\n");
         document.getElementById("translationArea").value = translation.join("\n");
+        document.getElementById("theme_word").value = theme_word;
 
         setFormData({
           ...formData,
@@ -49,7 +59,9 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     tags: [],
     length: 0,
     allwords: [],
-    textId: ""
+    textId: "",
+    pic_url: "",
+    theme_word: ""
   });
 
   const onSubmit = async e => {
@@ -88,6 +100,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       const description = document.getElementById("description").value; // string
       const level = parseInt(document.getElementById("level").value); // number
       const pic_theme = document.getElementById("pic_theme").value;
+      const theme_word = document.getElementById("theme_word").value;
 
       getPhotos(pic_theme);
 
@@ -101,7 +114,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         description,
         level,
         length,
-        allwords
+        allwords,
+        theme_word
       });
     }
 
@@ -134,7 +148,18 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
   };
 
   const choosePicUrl = e => {
-    console.log(e.target.src);
+    console.log(e.target);
+    if (e.target.className === "imgToChoose") {
+      const selectedImg = document.getElementsByClassName("imgToChooseActive");
+      if (selectedImg[0]) selectedImg[0].classList.remove("imgToChooseActive");
+      document.getElementById("pic_theme_url").value = e.target.src;
+      e.target.className += " imgToChooseActive";
+
+      setFormData({
+        ...formData,
+        pic_url: e.target.src
+      });
+    }
   };
 
   const chunkArrayFunc = arr => {
@@ -211,7 +236,9 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       description,
       level,
       length,
-      allwords
+      allwords,
+      pic_url,
+      theme_word
     } = formdata;
 
     const body = JSON.stringify({
@@ -223,7 +250,9 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       translation: chunkedTranslation,
       wordsarr: chineseChunkedWords,
       chinese_arr: allwords,
-      length
+      length,
+      pic_url,
+      theme_word
     });
 
     try {
@@ -252,7 +281,9 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       level,
       length,
       allwords,
-      textId
+      textId,
+      pic_url,
+      theme_word
     } = formdata;
 
     const body = JSON.stringify({
@@ -264,7 +295,9 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       tags,
       translation: chunkedTranslation,
       chinese_arr: allwords,
-      length
+      length,
+      pic_url,
+      theme_word
     });
 
     try {
@@ -330,7 +363,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   </div>
                 </div>
                 <div className='form-row'>
-                  <div className='form-group col-md-6'>
+                  <div className='form-group col-md-3'>
                     <label htmlFor='pic_theme'>Тема для картинки</label>
                     <input
                       type='text'
@@ -338,6 +371,27 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                       id='pic_theme'
                       placeholder='На английском'
                       autoComplete='off'
+                    />
+                  </div>
+                  <div className='form-group col-md-3'>
+                    <label htmlFor='pic_theme'>Тема для картинки</label>
+                    <input
+                      type='text'
+                      className='form-control'
+                      id='theme_word'
+                      placeholder='На китайском'
+                      autoComplete='off'
+                    />
+                  </div>
+                  <div className='form-group col-md-6'>
+                    <label htmlFor='pic_theme'>URL для картинки</label>
+                    <input
+                      type='text'
+                      className='form-control'
+                      id='pic_theme_url'
+                      placeholder='Кликните картинку ниже'
+                      autoComplete='off'
+                      disabled
                     />
                   </div>
                 </div>

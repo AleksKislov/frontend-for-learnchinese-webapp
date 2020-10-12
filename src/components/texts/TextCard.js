@@ -2,7 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const TextCard = ({ text }) => {
-  const { title, pic_url, tags, length, description, level, date, name, comments_id, _id } = text;
+  const {
+    title,
+    pic_url,
+    tags,
+    length,
+    description,
+    level,
+    date,
+    name,
+    comments_id,
+    _id,
+    theme_word
+  } = text;
 
   const dateAndTime = dateToStr(date);
   return (
@@ -11,10 +23,10 @@ const TextCard = ({ text }) => {
         <div style={{ position: "relative" }} className='col-md-3'>
           <Link to={`/texts/${_id}`}>
             <img className='mr-3 textCardImg' src={`${pic_url}`} alt='Picture' />
-            <div style={imgText}>蝴蝶</div>
+            <div style={imgText}>{theme_word}</div>
           </Link>
         </div>
-        <div className='col-md-6'>
+        <div className='col-md-9'>
           <Link to={`/texts/${_id}`}>
             <h4 className='card-title'>{title}</h4>
           </Link>
