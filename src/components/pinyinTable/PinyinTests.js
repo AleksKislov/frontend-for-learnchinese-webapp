@@ -1401,7 +1401,7 @@ const PinyinTests = () => {
 
   function checkAnswers() {
     for (let i = 0; i < answerInput.length; i++) {
-      if (answerInput[i].value.trim() === answers[i]) {
+      if (answerInput[i].value.trim().toLowerCase() === answers[i]) {
         answerInput[i].value = answerInput[i].value.trim();
         audioButtons[i].style.backgroundColor = "#2bad7e";
         audioButtons[i].style.color = "white";
