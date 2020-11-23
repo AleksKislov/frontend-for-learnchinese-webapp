@@ -127,6 +127,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     const config = { headers: { Authorization: unsplash } };
 
     const photosDiv = document.getElementById("photosDiv");
+    photosDiv.innerHTML = "";
 
     try {
       const { data } = await axios.get(
@@ -374,7 +375,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                     />
                   </div>
                   <div className='form-group col-md-3'>
-                    <label htmlFor='pic_theme'>Тема для картинки</label>
+                    <label htmlFor='theme_word'>Тема для картинки</label>
                     <input
                       type='text'
                       className='form-control'
@@ -384,7 +385,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                     />
                   </div>
                   <div className='form-group col-md-6'>
-                    <label htmlFor='pic_theme'>URL для картинки</label>
+                    <label htmlFor='pic_theme_url'>URL для картинки</label>
                     <input
                       type='text'
                       className='form-control'
