@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { removeWord, loadLengths } from "../../actions/hskTable";
+import { myAudioURL } from "../../apikeys.json";
 
 const WordsItem = ({ removeWord, lexicon, loadLengths, hideFlag }) => {
   let { word_id, chinese, pinyin, translation, level } = lexicon;
@@ -42,7 +43,7 @@ const WordsItem = ({ removeWord, lexicon, loadLengths, hideFlag }) => {
         break;
     }
 
-    new Audio(`http://kislov.chineseplus.ru/audio/hsk${level}/${word_id}.mp3`).play();
+    new Audio(`${myAudioURL}hsk${level}/${word_id}.mp3`).play();
     return false;
   };
 

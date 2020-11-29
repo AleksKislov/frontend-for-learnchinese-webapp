@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { loadTestLexicon } from "../../actions/hskTable";
 import PropTypes from "prop-types";
+import { myAudioURL } from "../../apikeys.json";
 
 const HskTests = ({ lexicons, loadTestLexicon, loading }) => {
   const [level, setLevel] = useState("hsk1");
@@ -143,9 +144,7 @@ const HskTests = ({ lexicons, loadTestLexicon, loading }) => {
         // console.log("in view" + level);
         //add random audio to buttons
         audioButtons[i].addEventListener("click", () => {
-          const audio = new Audio(
-            "http://kislov.chineseplus.ru/audio/" + level + "/" + randInd + ".mp3"
-          );
+          const audio = new Audio(myAudioURL + level + "/" + randInd + ".mp3");
           audio.play();
         });
 
