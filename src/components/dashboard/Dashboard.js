@@ -33,6 +33,37 @@ const Dashboard = ({
         </p>
         <p className='lead'>Роль: {user && user.role}</p>
 
+        <div className='card bg-light mb-3'>
+          <div className='card-body'>
+            <h4 className='card-title'>Мой HSK</h4>
+            <h6 className='card-subtitle mb-2 text-muted'>Личный список слов HSK</h6>
+            <p className='card-text'>
+              Сейчас для повторения вы отобрали столько слов:{" "}
+              <span className='badge badge-pill badge-warning'>{allWordsLen}</span>
+            </p>
+            <Link to='/hsk-table' className='card-link'>
+              Весь HSK
+            </Link>
+            <Link to='/hsk-words' className='card-link'>
+              Мой HSK
+            </Link>
+          </div>
+        </div>
+
+        <div className='card bg-light mb-3'>
+          <div className='card-body'>
+            <h4 className='card-title'>Мой Вокабуляр</h4>
+            <h6 className='card-subtitle mb-2 text-muted'>Список слов из текстов</h6>
+            <p className='card-text'>
+              Сейчас для повторения вы отобрали столько слов:{" "}
+              <span className='badge badge-pill badge-warning'>{userWordsLen}</span>
+            </p>
+            <Link to='/userwords' className='card-link'>
+              Мой Вокабуляр
+            </Link>
+          </div>
+        </div>
+
         {/*
 
       {profile ? (
@@ -54,82 +85,49 @@ const Dashboard = ({
       */}
       </div>
 
-      <div className='col-sm-3'>
-        <div className='card bg-light mb-3'>
-          <div className='card-body'>
-            <h4 className='card-title'>Мой HSK</h4>
-            <h6 className='card-subtitle mb-2 text-muted'>Личный список слов HSK</h6>
-            <p className='card-text'>
-              Сейчас для повторения вы отобрали столько слов:{" "}
-              <span className='badge badge-pill badge-warning'>{allWordsLen}</span>
-            </p>
-            <Link to='/hsk-table' className='card-link'>
-              Весь HSK
-            </Link>
-            <Link to='/hsk-words' className='card-link'>
-              Мой HSK
-            </Link>
-          </div>
-        </div>
-      </div>
-      <div className='col-sm-3'>
-        <div className='card bg-light mb-3'>
-          <div className='card-body'>
-            <h4 className='card-title'>Мой Вокабуляр</h4>
-            <h6 className='card-subtitle mb-2 text-muted'>Список слов из текстов</h6>
-            <p className='card-text'>
-              Сейчас для повторения вы отобрали столько слов:{" "}
-              <span className='badge badge-pill badge-warning'>{userWordsLen}</span>
-            </p>
-            <Link to='/userwords' className='card-link'>
-              Мой Вокабуляр
-            </Link>
-          </div>
-        </div>
-
-        {
-          // {dictStats.all ? (
-          //   <div className='card bg-light mb-3'>
-          //     <div className='card-body'>
-          //       <h4 className='card-title'>Статистика</h4>
-          //       <h6 className='card-subtitle mb-2 text-muted'>словаря БКРС</h6>
-          //       <p className='card-text'>
-          //         Всего слов:{" "}
-          //         <span className='badge badge-pill badge-warning'>
-          //           {new Intl.NumberFormat("ru-RU").format(dictStats.all)}
-          //         </span>
-          //       </p>
-          //       <p className='card-text'>
-          //         Слов без пиньиня:{" "}
-          //         <span className='badge badge-pill badge-warning'>
-          //           {new Intl.NumberFormat("ru-RU").format(dictStats.pinyin)}
-          //         </span>
-          //       </p>
-          //       <p className='card-text'>
-          //         Слов, где вместо русского перевода указан английский:{" "}
-          //         <span className='badge badge-pill badge-warning'>
-          //           {new Intl.NumberFormat("ru-RU").format(dictStats.eng)}
-          //         </span>
-          //       </p>
-          //       <p className='card-text'>
-          //         Слов, где вместо перевода указана ссылка:{" "}
-          //         <span className='badge badge-pill badge-warning'>
-          //           {new Intl.NumberFormat("ru-RU").format(dictStats.ref)}
-          //         </span>
-          //       </p>
-          //       <Link to='/search' className='card-link'>
-          //         К словарю
-          //       </Link>
-          //     </div>
-          //   </div>
-          // ) : (
-          //   <Spinner />
-          // )}
-        }
-      </div>
       <div className='col-sm-6'>
         <CommentsCard />
       </div>
+
+      {
+        // {dictStats.all ? (
+        //   <div className='card bg-light mb-3'>
+        //     <div className='card-body'>
+        //       <h4 className='card-title'>Статистика</h4>
+        //       <h6 className='card-subtitle mb-2 text-muted'>словаря БКРС</h6>
+        //       <p className='card-text'>
+        //         Всего слов:{" "}
+        //         <span className='badge badge-pill badge-warning'>
+        //           {new Intl.NumberFormat("ru-RU").format(dictStats.all)}
+        //         </span>
+        //       </p>
+        //       <p className='card-text'>
+        //         Слов без пиньиня:{" "}
+        //         <span className='badge badge-pill badge-warning'>
+        //           {new Intl.NumberFormat("ru-RU").format(dictStats.pinyin)}
+        //         </span>
+        //       </p>
+        //       <p className='card-text'>
+        //         Слов, где вместо русского перевода указан английский:{" "}
+        //         <span className='badge badge-pill badge-warning'>
+        //           {new Intl.NumberFormat("ru-RU").format(dictStats.eng)}
+        //         </span>
+        //       </p>
+        //       <p className='card-text'>
+        //         Слов, где вместо перевода указана ссылка:{" "}
+        //         <span className='badge badge-pill badge-warning'>
+        //           {new Intl.NumberFormat("ru-RU").format(dictStats.ref)}
+        //         </span>
+        //       </p>
+        //       <Link to='/search' className='card-link'>
+        //         К словарю
+        //       </Link>
+        //     </div>
+        //   </div>
+        // ) : (
+        //   <Spinner />
+        // )}
+      }
     </div>
   );
 };
