@@ -55,3 +55,4 @@ export const LOAD_TEXTS = "LOAD_TEXTS";
 export const LOAD_TEXTS_ERR = "LOAD_TEXTS_ERR";
 export const LOAD_TEXT = "LOAD_TEXT";
 export const LOAD_TEXT_ERR = "LOAD_TEXT_ERR";
+export const CLEAR_TEXT = "CLEAR_TEXT";

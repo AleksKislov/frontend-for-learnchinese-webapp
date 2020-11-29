@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { loadTexts } from "../../actions/texts";
+import { loadTexts, clearText } from "../../actions/texts";
 import Spinner from "../layout/Spinner";
 import TextCard from "./TextCard";
 
 const Texts = ({ loadTexts, texts, loading }) => {
   useEffect(() => {
+    clearText();
     loadTexts();
   }, [loadTexts]);
 
@@ -36,4 +37,4 @@ const mapStateToProps = state => ({
   loading: state.texts.loading
 });
 
-export default connect(mapStateToProps, { loadTexts })(Texts);
+export default connect(mapStateToProps, { loadTexts, clearText })(Texts);

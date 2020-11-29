@@ -3,7 +3,8 @@ import {
   LOAD_TEXT,
   LOAD_TEXTS_ERR,
   LOAD_TEXT_ERR,
-  SET_LOADING
+  SET_LOADING,
+  CLEAR_TEXT
 } from "../actions/types";
 
 const initialState = {
@@ -19,12 +20,19 @@ export default function(state = initialState, action) {
     case LOAD_TEXTS:
       return {
         ...state,
+        text: null,
         loading: false,
         texts: payload
+      };
+    case CLEAR_TEXT:
+      return {
+        ...state,
+        text: null
       };
     case SET_LOADING:
       return {
         ...state,
+        text: null,
         loading: payload
       };
     case LOAD_TEXTS_ERR:
