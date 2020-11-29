@@ -49,6 +49,7 @@ export const ADD_LIKE = "ADD_LIKE";
 export const ADD_DISLIKE = "ADD_DISLIKE";
 export const GET_COMMENTS = "GET_COMMENTS";
 export const ADD_COMMENT = "ADD_COMMENT";
+export const ADD_COMMENT_ERR = "ADD_COMMENT_ERR";
 export const GET_10COMMENTS = "GET_10COMMENTS";
 
 export const LOAD_TEXTS = "LOAD_TEXTS";

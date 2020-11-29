@@ -39,7 +39,7 @@ const PostPage = ({
         // id, text
         addComment(post._id, newtext);
       } else {
-        store.dispatch(setAlert("Сообщение и заголовок не должны превышать лимит", "danger"));
+        store.dispatch(setAlert("Сообщение не должно превышать лимит", "danger"));
       }
     } else {
       store.dispatch(setAlert("Авторизуйтесь, чтобы оставлять комментарии.", "danger"));
@@ -50,6 +50,7 @@ const PostPage = ({
     setText("");
     getComments(post._id);
   };
+
   return (
     post && (
       <div className='row'>

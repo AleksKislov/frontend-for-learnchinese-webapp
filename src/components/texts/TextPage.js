@@ -1,6 +1,6 @@
 import React, { useEffect, Fragment, useState } from "react";
 import { connect } from "react-redux";
-import { loadText, setLoading } from "../../actions/texts";
+import { loadText, setLoading, getComments } from "../../actions/texts";
 import Spinner from "../layout/Spinner";
 import { v4 as uuid } from "uuid";
 import Paragraph from "./Paragraph";
@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import WordModal from "../translation/WordModal";
 import { loadUserWords } from "../../actions/userWords";
 import axios from "axios";
+import Comment from "../posts/Comment";
+import LeaveComment from "./LeaveComment";
 
 const TextPage = ({
   text,
@@ -17,12 +19,15 @@ const TextPage = ({
   setLoading,
   loadUserWords,
   isAuthenticated,
-  currentUser
+  currentUser,
+  getComments,
+  comments
 }) => {
   useEffect(() => {
     setLoading();
     loadText(match.params.id);
-  }, [loadText, setLoading]);
+    getComments(match.params.id);
+  }, [loadText, setLoading, getComments]);
 
   useEffect(() => {
     if (text) {
@@ -159,6 +164,13 @@ const TextPage = ({
                 />
               ))}
             </div>
+
+            <div className='my-2 mx-2'>
+              <LeaveComment _id={text._id} />
+              <h4>Комментарии:</h4>
+              {comments.length > 0 &&
+                comments.map(comment => <Comment key={comment._id} comment={comment} />)}
+            </div>
           </div>
         </div>
       )}
@@ -176,7 +188,10 @@ const mapStateToProps = state => ({
   text: state.texts.text,
   loading: state.texts.loading,
   isAuthenticated: state.auth.isAuthenticated,
-  currentUser: state.auth.user
+  currentUser: state.auth.user,
+  comments: state.texts.currentComments
 });
 
-export default connect(mapStateToProps, { loadText, loadUserWords, setLoading })(TextPage);
+export default connect(mapStateToProps, { loadText, loadUserWords, setLoading, getComments })(
+  TextPage
+);
