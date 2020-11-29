@@ -7,16 +7,13 @@ import { myAudioURL } from "../../apikeys.json";
 const WordsItem = ({ removeWord, lexicon, loadLengths, hideFlag }) => {
   let { word_id, chinese, pinyin, translation, level } = lexicon;
 
-  const onClick = e => {
-    const tagName = e.target.tagName;
+  const onClick = () => {
+    // console.log(word_id);
 
-    if (tagName !== "BUTTON" && tagName !== "I") {
-      removeWord(word_id);
-
-      setTimeout(() => {
-        loadLengths();
-      }, 100);
-    }
+    removeWord(word_id);
+    setTimeout(() => {
+      loadLengths();
+    }, 10);
   };
 
   const playIt = (word_id, level) => {
@@ -48,7 +45,7 @@ const WordsItem = ({ removeWord, lexicon, loadLengths, hideFlag }) => {
   };
 
   return (
-    <tr onClick={e => onClick(e)}>
+    <tr>
       <td>{word_id}</td>
       <td>
         <h4>{!hideFlag.chinese && chinese}</h4>
@@ -56,8 +53,13 @@ const WordsItem = ({ removeWord, lexicon, loadLengths, hideFlag }) => {
       <td>{!hideFlag.pinyin && pinyin}</td>
       <td>{!hideFlag.translation && translation}</td>
       <td>
-        <button className='btn btn-info' onClick={() => playIt(word_id, level)}>
+        <button className='btn btn-sm btn-info' onClick={() => playIt(word_id, level)}>
           <i className='fas fa-play'></i>
+        </button>
+      </td>
+      <td>
+        <button className='btn btn-sm btn-warning' onClick={() => onClick()}>
+          <i className='fas fa-trash-alt'></i>
         </button>
       </td>
     </tr>

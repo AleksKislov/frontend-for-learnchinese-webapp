@@ -126,7 +126,11 @@ const HskTable = ({ loadLexicon, lexicons, loading, words, loadWords, pagesNumbe
                     Перевод
                   </button>
                 </th>
-                <th>Аудио</th>
+                <th>
+                  <div className='text-center'>
+                    <i className='fas fa-headphones'></i>
+                  </div>
+                </th>
               </tr>
             </thead>
             <tbody>

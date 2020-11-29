@@ -88,6 +88,7 @@ const UserWords = ({ loadUserWords, words, wordsLoading }) => {
                 </button>
               </th>
               <th>Примеры</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>

@@ -23,17 +23,17 @@ const WordsItem = ({
   const [clicked, setClicked] = useState(false);
 
   const onClick = e => {
-    if (!fromSearch) {
-      const tagName = e.target.tagName;
+    // if (!fromSearch) {
+    // const tagName = e.target.tagName;
 
-      if (tagName !== "BUTTON") {
-        removeWord(chinese);
+    // if (tagName !== "BUTTON") {
+    removeWord(chinese);
 
-        setTimeout(() => {
-          loadUserWordsLen();
-        }, 100);
-      }
-    }
+    setTimeout(() => {
+      loadUserWordsLen();
+    }, 100);
+    // }
+    // }
   };
 
   let russian = translation
@@ -80,7 +80,7 @@ const WordsItem = ({
 
   const moreButton = (
     <button
-      className='btn btn-sm btn-warning'
+      className='btn btn-sm btn-info'
       onClick={e => showModal(e)}
       data-toggle='modal'
       data-target='#exampleModal'
@@ -90,20 +90,27 @@ const WordsItem = ({
   );
 
   return (
-    <tr onClick={e => onClick(e)}>
+    <tr>
       <td>
         <h4>{!hideFlag.chinese && chinese}</h4>
       </td>
       <td>{!hideFlag.pinyin && pinyin}</td>
       <td dangerouslySetInnerHTML={{ __html: !hideFlag.translation ? russian : "" }}></td>
       <td>{moreButton}</td>
-      {fromSearch && (
-        <td>
-          <button className='btn btn-sm btn-info' onClick={e => updateVocabulary(e)}>
-            {clicked ? <i className='fas fa-minus'></i> : <i className='fas fa-plus'></i>}
-          </button>
-        </td>
-      )}
+      {
+        //   fromSearch && (
+        //   <td>
+        //     <button className='btn btn-sm btn-info' onClick={e => updateVocabulary(e)}>
+        //       {clicked ? <i className='fas fa-minus'></i> : <i className='fas fa-plus'></i>}
+        //     </button>
+        //   </td>
+        // )
+      }
+      <td>
+        <button className='btn btn-sm btn-warning' onClick={e => onClick(e)}>
+          <i className='fas fa-trash-alt'></i>
+        </button>
+      </td>
     </tr>
   );
 };

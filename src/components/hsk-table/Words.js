@@ -77,7 +77,12 @@ const Words = ({ loadWords, words, wordsLoading }) => {
                   Перевод
                 </button>
               </th>
-              <th>Аудио</th>
+              <th>
+                <div className='text-center'>
+                  <i className='fas fa-headphones'></i>
+                </div>
+              </th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
