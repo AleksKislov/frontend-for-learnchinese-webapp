@@ -49,6 +49,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
       const newtext = text.replace(/\n/g, "<br />");
 
       if (user.role === "admin") {
+        title = emoji + " " + title;
         addPost(title, newtext, postTag);
         return;
       }
