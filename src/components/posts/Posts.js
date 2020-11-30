@@ -18,12 +18,14 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
     text: "",
     title: ""
   });
+  const [emoji, setEmoji] = useState("");
+
   const [hideFlag, setHideFlag] = useState({
     wish: true,
     bug: true,
     news: true
   });
-  const { title, text } = formData;
+  let { title, text } = formData;
   const [postTag, setPostTag] = useState("wish");
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -53,6 +55,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
 
       if (formData.text.length < 281 && formData.title.length < 91) {
         // title, text, theme
+        title = emoji + " " + title;
         addPost(title, newtext, postTag);
       } else {
         store.dispatch(setAlert("Сообщение и заголовок не должны превышать лимит", "danger"));
@@ -69,6 +72,8 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
       text: "",
       title: ""
     });
+    document.getElementById("inputEmo").selectedIndex = 0;
+    setEmoji("");
   };
 
   const displayTags = e => {
@@ -113,6 +118,12 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
     }
   };
 
+  const onSelect = e => {
+    const selectedEmo = e.target.options[e.target.options.selectedIndex].innerHTML;
+    // setFormData({ ...formData, title: `${emoji} ${title}` });
+    setEmoji(selectedEmo);
+  };
+
   return (
     <div className='row'>
       <div className='col-sm-12'>
@@ -148,7 +159,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
                 onClick={e => onClick(e)}
                 style={badgeStyle}
               >
-                Недочет на Сайте
+                Баг
               </span>
               {user && user.role === "admin" && (
                 <span
@@ -163,22 +174,35 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
             </div>
 
             <form onSubmit={e => onSubmit(e)}>
-              <div className='form-group'>
-                <input
-                  type='text'
-                  id='titleForm'
-                  className='form-control'
-                  placeholder='Тема сообщения'
-                  onChange={e => onChange(e)}
-                  name='title'
-                  value={title}
-                  autoComplete='off'
-                  required
-                />
-                <small className={`text-${formData.title.length < 91 ? "mute" : "danger"}`}>
-                  {formData.title.length}/90
-                </small>
+              <div class='form-row'>
+                <div className='form-group col-md-2'>
+                  <select id='inputEmo' class='form-control' onChange={e => onSelect(e)}>
+                    <option selected>..</option>
+                    <option>🔥</option>
+                    <option>🙏🏻</option>
+                    <option>👍</option>
+                    <option>💩</option>
+                  </select>
+                  <small className='mute'>эмо</small>
+                </div>
+                <div className='form-group col-md-10'>
+                  <input
+                    type='text'
+                    id='titleForm'
+                    className='form-control'
+                    placeholder='Тема сообщения'
+                    onChange={e => onChange(e)}
+                    name='title'
+                    value={title}
+                    autoComplete='off'
+                    required
+                  />
+                  <small className={`text-${formData.title.length < 91 ? "mute" : "danger"}`}>
+                    {formData.title.length}/90
+                  </small>
+                </div>
               </div>
+
               <div className='form-group'>
                 <textarea
                   className='form-control'

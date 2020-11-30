@@ -7,7 +7,7 @@ const Post = ({ post, addLike, addDislike }) => {
   const { text, name, avatar, date, title, _id, tag, comments_id, likes, dislikes } = post;
   const tagTheme = {
     wish: "Пожелание",
-    bug: "Недочет на Сайте",
+    bug: "Баг",
     news: "Новости Проекта"
   };
 
