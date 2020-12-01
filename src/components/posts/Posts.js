@@ -175,10 +175,10 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
             </div>
 
             <form onSubmit={e => onSubmit(e)}>
-              <div class='form-row'>
+              <div className='form-row'>
                 <div className='form-group col-md-2'>
-                  <select id='inputEmo' class='form-control' onChange={e => onSelect(e)}>
-                    <option selected>..</option>
+                  <select id='inputEmo' className='form-control' onChange={e => onSelect(e)}>
+                    <option>..</option>
                     <option>🔥</option>
                     <option>🙏🏻</option>
                     <option>👍</option>

@@ -5,6 +5,7 @@ import WordsItem from "./WordsItem";
 import PropTypes from "prop-types";
 import Spinner from "../layout/Spinner";
 import WordModal from "../translation/WordModal";
+import { Link } from "react-router-dom";
 // import WordsCard from "./WordsCard";
 
 const UserWords = ({ loadUserWords, words, wordsLoading }) => {
@@ -58,7 +59,9 @@ const UserWords = ({ loadUserWords, words, wordsLoading }) => {
             <h4 className='card-title'>Мой Вокабуляр</h4>
             <h6 className='card-subtitle mb-2 text-muted'>слова для повторения</h6>
             <p className='card-text'>
-              Чтобы убрать слово из списка - <span className='text-danger'>кликните на него</span>.
+              Добавляйте сюда любые китайские слова из <Link to='/texts'>читалки</Link>,{" "}
+              <Link to='/search'>словаря</Link> и просто любых отрывков текстов, которые захотите{" "}
+              <Link to='/translate'>перевести</Link>.
             </p>
           </div>
         </div>

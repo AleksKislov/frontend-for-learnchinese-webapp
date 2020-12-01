@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import WordModal from "../translation/WordModal";
 import { loadUserWords } from "../../actions/userWords";
 import axios from "axios";
-import Comment from "../posts/Comment";
+import Comment from "./Comment";
 import LeaveComment from "./LeaveComment";
 
 const TextPage = ({

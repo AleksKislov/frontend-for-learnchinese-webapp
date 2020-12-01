@@ -149,7 +149,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
   };
 
   const choosePicUrl = e => {
-    console.log(e.target);
+    // console.log(e.target);
     if (e.target.className === "imgToChoose") {
       const selectedImg = document.getElementsByClassName("imgToChooseActive");
       if (selectedImg[0]) selectedImg[0].classList.remove("imgToChooseActive");

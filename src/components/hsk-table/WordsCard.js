@@ -36,7 +36,8 @@ const WordsCard = ({ loadWords, loadWordsByLevel, allWordsLen, hskLen }) => {
         <h4 className='card-title'>Мой HSK</h4>
         <h6 className='card-subtitle mb-2 text-muted'>лексика HSK для повторения</h6>
         <p className='card-text'>
-          Чтобы убрать слово из списка - <span className='text-danger'>кликните на него</span>.
+          Добавляйте сюда любые слова из <Link to='/hsk-table'>списков</Link> HSK, чтобы повторить
+          их отдельно.
         </p>
       </div>
       <ul className='list-group list-group-flush'>

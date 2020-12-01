@@ -85,7 +85,7 @@ export const getComments = id => async dispatch => {
   try {
     const { data } = await axios.get(`/api/comments?where=text&id=${id}`);
 
-    console.log(data);
+    // console.log(data);
     dispatch({
       type: GET_COMMENTS,
       payload: data
@@ -94,5 +94,26 @@ export const getComments = id => async dispatch => {
     dispatch({
       type: LOAD_TEXT_ERR
     });
+  }
+};
+
+export const deleteComment = (text_id, id) => async dispatch => {
+  try {
+    await axios.delete(`/api/texts/comment/${text_id}/${id}`);
+    const { data } = await axios.get(`/api/comments?where=text&id=${text_id}`);
+
+    dispatch({
+      type: GET_COMMENTS,
+      payload: data
+    });
+  } catch (err) {
+    const errors = err.response.data.errors;
+
+    console.log(err);
+    if (errors) {
+      errors.forEach(error => dispatch(setAlert(error.msg, "danger")));
+    } else {
+    }
+    dispatch({ type: ADD_COMMENT_ERR });
   }
 };
