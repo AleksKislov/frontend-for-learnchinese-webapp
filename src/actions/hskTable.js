@@ -15,6 +15,7 @@ import {
 } from "./types";
 import axios from "axios";
 import { setAlert } from "./alert";
+import setAuthToken from "../utils/setAuthToken";
 
 // load all HSK lexicon at hsk-table
 export const loadLexicon = (hsk_level, limit) => async dispatch => {
@@ -140,7 +141,22 @@ export const loadLengths = () => async dispatch => {
 export const addWord = ({ chinese, translation, pinyin, level, word_id }) => async dispatch => {
   loadLengths();
 
-  if (allWordsLen < 50) {
+  let maxWordsNum = 50;
+
+  if (localStorage.token) {
+    setAuthToken(localStorage.token);
+  }
+
+  try {
+    const { data } = await axios.get("/api/auth"); // user object
+    // console.log(data);
+
+    if (data && data.moreWords) maxWordsNum += 100;
+  } catch (err) {
+    console.log(err);
+  }
+
+  if (allWordsLen < maxWordsNum) {
     const config = {
       headers: {
         "Content-Type": "application/json"
@@ -173,7 +189,7 @@ export const addWord = ({ chinese, translation, pinyin, level, word_id }) => asy
     dispatch({
       type: ADD_WORD_ERR
     });
-    dispatch(setAlert("Можно добавлять не больше 50 слов в свой вокабуляр", "danger"));
+    dispatch(setAlert(`Можно добавлять не больше ${maxWordsNum} слов в свой вокабуляр`, "danger"));
   }
 };
 
