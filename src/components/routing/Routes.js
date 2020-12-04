@@ -64,6 +64,7 @@ const Routes = () => {
           <PrivateRoute exact path='/edit-profile' component={EditProfile} />
           <PrivateRoute exact path='/translate' component={TranslateForm} />
           <Route exact path='/pinyin' component={PinyinTable} />
+          <Route exact path='/search/:chinese' component={Search} />
           <Route exact path='/search' component={Search} />
           <Route exact path='/posts' component={Posts} />
           <Route exact path='/posts/:id' component={PostPage} />

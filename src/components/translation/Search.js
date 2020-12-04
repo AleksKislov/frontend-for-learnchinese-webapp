@@ -17,6 +17,8 @@ import HanziWriter from "hanzi-writer";
 import Tippy from "@tippyjs/react";
 
 const Search = ({
+  history,
+  match,
   loading,
   addWord,
   loadUserWords,
@@ -25,6 +27,10 @@ const Search = ({
   puppeteerFunc
 }) => {
   useEffect(() => {
+    if (match.params.chinese) {
+      document.getElementById("searchInput").value = match.params.chinese;
+      showSearchResult();
+    }
     console.log("汉语是世界上最难学的一个语言");
     loadUserWords();
   }, []);
@@ -55,11 +61,16 @@ const Search = ({
     return res.data;
   };
 
-  const onSubmit = async e => {
-    e.preventDefault();
+  const showSearchResult = async () => {
     const searchedWords = document.getElementById("searchInput");
 
     let words = searchedWords.value.trim();
+    if (words.length === 0) {
+      history.push(`/search`);
+    } else {
+      history.push(`/search/${words}`);
+    }
+
     const showCharDiv = document.getElementById("showCharDiv");
     showCharDiv.innerHTML = "";
 
@@ -93,7 +104,7 @@ const Search = ({
       }
     } else {
       showCharDiv.innerHTML =
-        "<p class='text-danger'>Пока только поддерживается китайско-русский перевод, приносим извинения за неудобства.</p>";
+        "<p class='text-danger'>Пока поддерживается только китайско-русский перевод, приносим извинения за неудобства.</p>";
       return;
     }
 
@@ -125,6 +136,11 @@ const Search = ({
     }
 
     // console.log(newArr);
+  };
+
+  const onSubmit = async e => {
+    e.preventDefault();
+    showSearchResult();
   };
 
   const markUpRussianText = text => {
@@ -224,6 +240,7 @@ const Search = ({
                   className='form-control'
                   id='searchInput'
                   placeholder='汉字。。。'
+                  autoComplete='off'
                 />
                 <div className='input-group-append' id='searchButton'>
                   <button className='btn btn-primary' type='submit'>
