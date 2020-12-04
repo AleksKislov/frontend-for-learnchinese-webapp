@@ -10,7 +10,7 @@ const CommentsCard = ({ getLastComments, comments, loading }) => {
 
   return (
     <div className=''>
-      <h4 className=''>Последние Комментарии</h4>
+      <h4 className=''>Последние 10 комментариев:</h4>
       <ul className='list-group'>
         {!loading &&
           comments.map(comment => (
