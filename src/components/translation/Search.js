@@ -5,7 +5,7 @@ import axios from "axios";
 import WordsItem from "../texts/WordsItem";
 import WordModal from "../translation/WordModal";
 import {
-  puppeteerFunc,
+  // puppeteerFunc,
   addWord,
   // removeWord,
   loadUserWords,
@@ -13,7 +13,7 @@ import {
 } from "../../actions/userWords";
 import "./style.css";
 import HanziWriter from "hanzi-writer";
-// import Spinner from "../layout/Spinner";
+import Spinner from "../layout/Spinner";
 import Tippy from "@tippyjs/react";
 
 const Search = ({
@@ -22,9 +22,9 @@ const Search = ({
   loading,
   addWord,
   loadUserWords,
-  loadUserWordsLen,
-  dictResponse,
-  puppeteerFunc
+  loadUserWordsLen
+  // dictResponse
+  // puppeteerFunc
 }) => {
   useEffect(() => {
     if (match.params.chinese) {
@@ -36,6 +36,7 @@ const Search = ({
   }, []);
 
   const [clicked, setClicked] = useState(false);
+  const [searchLoading, setSearchLoading] = useState(false);
   const [wordFromSearch, setWordFromSearch] = useState(null);
   const [wordsFromSearch, setWordsFromSearch] = useState(null);
   const [showExamples, setShowExamples] = useState(true);
@@ -62,6 +63,8 @@ const Search = ({
   };
 
   const showSearchResult = async () => {
+    setSearchLoading(true);
+
     const searchedWords = document.getElementById("searchInput");
 
     let words = searchedWords.value.trim();
@@ -126,16 +129,15 @@ const Search = ({
     });
 
     if (newArr.length === 1) {
-      setWordsFromSearch(null);
       setWordFromSearch(newArr[0]);
-      await puppeteerFunc(newArr[0].chinese);
+      setWordsFromSearch(null);
+      // await puppeteerFunc(newArr[0].chinese);
       // console.log(dictResponse);
     } else {
       setWordFromSearch(null);
       setWordsFromSearch(newArr);
     }
-
-    // console.log(newArr);
+    setSearchLoading(false);
   };
 
   const onSubmit = async e => {
@@ -255,100 +257,111 @@ const Search = ({
 
       <div id='showCharDiv'></div>
 
-      {wordFromSearch && (
-        <Fragment>
-          <Fragment>
-            <Tippy content={<span>{showExamples ? "Скрыть примеры" : "Показать примеры"}</span>}>
-              <button
-                className='btn btn-sm btn-warning'
-                id='showMoreButton'
-                onClick={showMoreButton}
-              >
-                {showExamples ? "Меньше" : "Больше"}
-              </button>
-            </Tippy>
-            <Tippy content={<span>Добавить слово в вокабуляр</span>}>
-              <button
-                className='btn btn-sm btn-info'
-                onClick={() => updateVocabulary(wordFromSearch)}
-              >
-                {clicked ? <i className='fas fa-minus'></i> : <i className='fas fa-plus'></i>}
-              </button>
-            </Tippy>
+      {!searchLoading ? (
+        <div id='searchResultDiv'>
+          {wordFromSearch && (
+            <Fragment>
+              <Fragment>
+                <Tippy
+                  content={<span>{showExamples ? "Скрыть примеры" : "Показать примеры"}</span>}
+                >
+                  <button
+                    className='btn btn-sm btn-warning'
+                    id='showMoreButton'
+                    onClick={showMoreButton}
+                  >
+                    {showExamples ? "Меньше" : "Больше"}
+                  </button>
+                </Tippy>
+                <Tippy content={<span>Добавить слово в вокабуляр</span>}>
+                  <button
+                    className='btn btn-sm btn-info'
+                    onClick={() => updateVocabulary(wordFromSearch)}
+                  >
+                    {clicked ? <i className='fas fa-minus'></i> : <i className='fas fa-plus'></i>}
+                  </button>
+                </Tippy>
 
-            {dictResponse && (
-              <button
-                className='btn btn-sm btn-warning ml-2'
+                {
+                  // for pulling audio using puppeteer from another site
+                  //   dictResponse && (
+                  //   <button
+                  //     className='btn btn-sm btn-warning ml-2'
+                  //     dangerouslySetInnerHTML={{
+                  //       __html: dictResponse
+                  //     }}
+                  //   ></button>
+                  // )
+                }
+              </Fragment>
+
+              <h4 className='mt-2'>{wordFromSearch && wordFromSearch.pinyin}</h4>
+              <div
+                className='mb-3'
                 dangerouslySetInnerHTML={{
-                  __html: dictResponse
+                  __html: wordFromSearch && markUpRussianText(wordFromSearch.russian)
                 }}
-              ></button>
-            )}
-          </Fragment>
+              ></div>
+            </Fragment>
+          )}
 
-          <h4 className='mt-2'>{wordFromSearch && wordFromSearch.pinyin}</h4>
-          <div
-            className='mb-3'
-            dangerouslySetInnerHTML={{
-              __html: wordFromSearch && markUpRussianText(wordFromSearch.russian)
-            }}
-          ></div>
-        </Fragment>
-      )}
-
-      {wordsFromSearch && (
-        <Fragment>
-          <WordModal />
-          <table className='table table-hover mb-3'>
-            <thead>
-              <tr className='table-info'>
-                <th>
-                  <button
-                    type='button'
-                    className='btn btn-light btn-sm'
-                    onClick={e => hideChinese(e)}
-                  >
-                    Иероглифы
-                  </button>
-                </th>
-                <th>
-                  <button
-                    type='button'
-                    className='btn btn-light btn-sm'
-                    onClick={e => hidePinyin(e)}
-                  >
-                    Пиньинь
-                  </button>
-                </th>
-                <th style={{ width: "60%" }}>
-                  <button
-                    type='button'
-                    className='btn btn-light btn-sm'
-                    onClick={e => hideFanyi(e)}
-                  >
-                    Перевод
-                  </button>
-                </th>
-                <th>Примеры</th>
-                <th>Изучать</th>
-              </tr>
-            </thead>
-            <tbody>
-              {wordsFromSearch.map(word => (
-                <WordsItem
-                  key={word._id}
-                  lexicon={{
-                    chinese: word.chinese,
-                    pinyin: word.pinyin,
-                    translation: word.russian,
-                    fromSearch: true
-                  }}
-                  hideFlag={hideFlag}
-                />
-              ))}
-            </tbody>
-          </table>
-        </Fragment>
+          {wordsFromSearch && (
+            <Fragment>
+              <WordModal />
+              <table className='table table-hover mb-3'>
+                <thead>
+                  <tr className='table-info'>
+                    <th>
+                      <button
+                        type='button'
+                        className='btn btn-light btn-sm'
+                        onClick={e => hideChinese(e)}
+                      >
+                        Иероглифы
+                      </button>
+                    </th>
+                    <th>
+                      <button
+                        type='button'
+                        className='btn btn-light btn-sm'
+                        onClick={e => hidePinyin(e)}
+                      >
+                        Пиньинь
+                      </button>
+                    </th>
+                    <th style={{ width: "60%" }}>
+                      <button
+                        type='button'
+                        className='btn btn-light btn-sm'
+                        onClick={e => hideFanyi(e)}
+                      >
+                        Перевод
+                      </button>
+                    </th>
+                    <th>Примеры</th>
+                    <th>Изучать</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {wordsFromSearch.map(word => (
+                    <WordsItem
+                      key={word._id}
+                      lexicon={{
+                        chinese: word.chinese,
+                        pinyin: word.pinyin,
+                        translation: word.russian,
+                        fromSearch: true
+                      }}
+                      hideFlag={hideFlag}
+                    />
+                  ))}
+                </tbody>
+              </table>
+            </Fragment>
+          )}
+        </div>
+      ) : (
+        <Spinner />
       )}
     </Fragment>
   );
@@ -357,13 +370,13 @@ const Search = ({
 Search.propTypes = {};
 
 const mapStateToProps = state => ({
-  loading: state.userwords.loading,
-  dictResponse: state.userwords.dictResponse
+  loading: state.userwords.loading
+  // dictResponse: state.userwords.dictResponse
 });
 
 export default connect(mapStateToProps, {
   loadUserWords,
   loadUserWordsLen,
-  addWord,
-  puppeteerFunc
+  addWord
+  // puppeteerFunc
 })(Search);

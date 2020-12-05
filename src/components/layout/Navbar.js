@@ -175,7 +175,7 @@ const Navbar = ({
     <nav className='navbar navbar-expand-lg navbar-dark bg-primary'>
       <NavLink className='navbar-brand' to='/'>
         <i className='fas fa-yin-yang'></i> Chinese+Club{" "}
-        <span style={{ fontSize: "50%" }}>1.1.1</span>
+        <span style={{ fontSize: "50%" }}>{appVersion}</span>
       </NavLink>
       <button
         className='navbar-toggler'
@@ -195,6 +195,8 @@ const Navbar = ({
     </nav>
   );
 };
+
+const appVersion = "1.1.2";
 
 const activeNavLink = {
   color: "#18BC9C"
