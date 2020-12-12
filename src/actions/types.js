@@ -57,3 +57,9 @@ export const LOAD_TEXTS_ERR = "LOAD_TEXTS_ERR";
 export const LOAD_TEXT = "LOAD_TEXT";
 export const LOAD_TEXT_ERR = "LOAD_TEXT_ERR";
 export const CLEAR_TEXT = "CLEAR_TEXT";
+
+export const LOAD_BOOKS = "LOAD_BOOKS";
+export const LOAD_BOOK = "LOAD_BOOK";
+export const LOAD_BOOKS_ERR = "LOAD_BOOKS_ERR";
+export const LOAD_BOOK_ERR = "LOAD_BOOK_ERR";
+export const CLEAR_BOOK = "CLEAR_BOOK";

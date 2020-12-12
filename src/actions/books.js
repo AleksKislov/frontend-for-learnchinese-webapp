@@ -1,53 +1,57 @@
 import {
-  LOAD_TEXTS,
-  LOAD_TEXT,
-  LOAD_TEXTS_ERR,
-  LOAD_TEXT_ERR,
-  SET_LOADING,
-  CLEAR_TEXT,
+  LOAD_BOOKS,
+  LOAD_BOOK,
+  LOAD_BOOKS_ERR,
+  LOAD_BOOK_ERR,
+  CLEAR_BOOK,
   GET_COMMENTS,
-  ADD_COMMENT_ERR
+  ADD_COMMENT_ERR,
+  SET_LOADING
 } from "./types";
 import axios from "axios";
 import { setAlert } from "./alert";
 
-export const loadTexts = () => async dispatch => {
+export const loadBooks = () => async dispatch => {
   try {
-    const { data } = await axios.get("/api/texts");
+    const { data } = await axios.get("/api/books/allbooks");
     dispatch({
-      type: LOAD_TEXTS,
+      type: LOAD_BOOKS,
       payload: data
     });
   } catch (err) {
     console.log(err);
     dispatch({
-      type: LOAD_TEXTS_ERR
+      type: LOAD_BOOKS_ERR
     });
   }
 };
 
-export const loadText = id => async dispatch => {
+export const loadBook = id => async dispatch => {
+  setLoading();
+
   try {
-    const { data } = await axios.get(`/api/texts/${id}`);
+    const { data } = await axios.get(`/api/books/get_book/${id}`);
+
     dispatch({
-      type: LOAD_TEXT,
+      type: LOAD_BOOK,
       payload: data
     });
   } catch (err) {
     dispatch({
-      type: LOAD_TEXT_ERR
+      type: LOAD_BOOK_ERR
     });
   }
+};
+
+export const clearBook = _ => async dispatch => {
+  dispatch({ type: CLEAR_BOOK });
 };
 
 export const setLoading = _ => async dispatch => {
   dispatch({ type: SET_LOADING, payload: true });
 };
 
-export const clearText = _ => async dispatch => {
-  dispatch({ type: CLEAR_TEXT });
-};
-
+// TODO
 export const addComment = (id, text) => async dispatch => {
   const config = {
     headers: {
@@ -90,7 +94,7 @@ export const getComments = id => async dispatch => {
     });
   } catch (err) {
     dispatch({
-      type: LOAD_TEXT_ERR
+      type: LOAD_BOOK_ERR
     });
   }
 };

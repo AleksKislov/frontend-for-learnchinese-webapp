@@ -1,24 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { loadBooks, clearBook } from "../../actions/books";
 import BookCard from "./BookCard";
 import Spinner from "../layout/Spinner";
-import axios from "axios";
 
-const Books = () => {
+const Books = ({ loadBooks, books, loading }) => {
   useEffect(() => {
+    clearBook();
     loadBooks();
-  }, []);
-  const [loading, setLoading] = useState(true);
-  const [books, setBooks] = useState(null);
+  }, [loadBooks]);
 
-  const loadBooks = async () => {
-    try {
-      const { data } = await axios.get("/api/books/allbooks");
-      setBooks(data);
-    } catch (err) {
-      console.log(err);
-    }
-    setLoading(false);
-  };
   return (
     <div className='row'>
       <div className='col-md-3'>
@@ -41,4 +32,9 @@ const Books = () => {
   );
 };
 
-export default Books;
+const mapStateToProps = state => ({
+  books: state.books.books,
+  loading: state.books.loading
+});
+
+export default connect(mapStateToProps, { loadBooks, clearBook })(Books);

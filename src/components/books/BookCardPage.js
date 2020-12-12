@@ -1,31 +1,20 @@
-import React, { useEffect, Fragment, useState } from "react";
+import React, { useEffect, Fragment } from "react";
 import Spinner from "../layout/Spinner";
 import ChapterItem from "./ChapterItem";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import { connect } from "react-redux";
+import { loadBook, setLoading, getComments } from "../../actions/books";
 
-const BookCardPage = ({ match }) => {
+const BookCardPage = ({ match, loadBook, loading, setLoading, book }) => {
   useEffect(() => {
-    getBook(match.params.id);
-  }, []);
-
-  const [book, setBook] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  const getBook = async id => {
-    try {
-      const { data } = await axios.get(`/api/books/get_book/${id}`);
-      setBook(data);
-      console.log(data);
-    } catch (err) {
-      console.log(err);
-    }
-    setLoading(false);
-  };
+    setLoading();
+    loadBook(match.params.id);
+    // getComments(match.params.id);
+  }, [loadBook, setLoading]);
 
   return (
     <Fragment>
-      {loading ? (
+      {loading || !book ? (
         <Spinner />
       ) : (
         <div className='row'>
@@ -112,4 +101,12 @@ const imgStyle = {
   // opacity: "0.6"
 };
 
-export default BookCardPage;
+const mapStateToProps = state => ({
+  book: state.books.book,
+  loading: state.books.loading,
+  isAuthenticated: state.auth.isAuthenticated,
+  currentUser: state.auth.user
+  // comments: state.texts.currentComments
+});
+
+export default connect(mapStateToProps, { loadBook, setLoading })(BookCardPage);
