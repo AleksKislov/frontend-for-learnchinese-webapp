@@ -26,6 +26,7 @@ import Texts from "../texts/Texts";
 import TextPage from "../texts/TextPage";
 import Books from "../books/Books";
 import BookCardPage from "../books/BookCardPage";
+import PageForm from "../books/PageForm";
 
 const Routes = () => {
   useEffect(() => {
@@ -71,6 +72,7 @@ const Routes = () => {
           <Route exact path='/posts' component={Posts} />
           <Route exact path='/posts/:id' component={PostPage} />
           <PrivateRoute exact path='/create-text' component={TextForm} />
+          <PrivateRoute exact path='/create-bookpage' component={PageForm} />
           <Route exact path='/texts' component={Texts} />
           <Route exact path='/books' component={Books} />
           <Route exact path='/texts/:id' component={TextPage} />
