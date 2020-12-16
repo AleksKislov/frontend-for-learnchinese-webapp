@@ -191,14 +191,14 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
       chinese_arr: allwords,
       length,
       chapter,
-      pageNumber
+      page_number: pageNumber
     });
 
     try {
-      const { data } = await axios.post(`/api/texts`, body, config);
+      const { data } = await axios.post(`/api/books/new_chapterpage`, body, config);
 
       alert("Страница опубликована!");
-      // console.log(data);
+      console.log(data);
     } catch (err) {
       console.log(err);
     }
