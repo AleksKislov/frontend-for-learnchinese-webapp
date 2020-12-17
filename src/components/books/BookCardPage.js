@@ -77,16 +77,15 @@ const BookCardPage = ({ match, loadBook, loading, setLoading, book }) => {
                 <tbody>
                   {book.contents &&
                     book.contents.map((chapter, ind) => (
-                      <ChapterItem key={chapter.id} chapter={chapter} ind={ind} />
+                      <ChapterItem
+                        key={chapter.id}
+                        chapter={chapter}
+                        ind={ind}
+                        bookId={match.params.id}
+                      />
                     ))}
                 </tbody>
               </table>
-            </div>
-
-            <hr />
-
-            <div className='my-2'>
-              <h4>Комментарии:</h4>
             </div>
           </div>
         </div>

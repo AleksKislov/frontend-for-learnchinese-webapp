@@ -229,7 +229,6 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     };
 
     const {
-      chineseChunkedWords,
       chunkedTranslation,
       tags,
       chunkedOriginText,
@@ -249,7 +248,6 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       level,
       tags,
       translation: chunkedTranslation,
-      wordsarr: chineseChunkedWords,
       chinese_arr: allwords,
       length,
       pic_url,

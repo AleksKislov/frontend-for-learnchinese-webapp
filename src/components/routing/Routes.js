@@ -27,6 +27,7 @@ import TextPage from "../texts/TextPage";
 import Books from "../books/Books";
 import BookCardPage from "../books/BookCardPage";
 import PageForm from "../books/PageForm";
+import ChapterPage from "../books/ChapterPage";
 
 const Routes = () => {
   useEffect(() => {
@@ -78,6 +79,7 @@ const Routes = () => {
           <Route exact path='/texts/:id' component={TextPage} />
           <Route exact path='/books/:id' component={BookCardPage} />
           <Route exact path='/contacts' component={Contacts} />
+          <Route exact path='/books/:bookId/:chapterId' component={ChapterPage} />
 
           <NotFound />
         </Switch>

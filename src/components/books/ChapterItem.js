@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ChapterItem = ({ chapter, ind }) => {
+const ChapterItem = ({ chapter, ind, bookId }) => {
   const {
     chineseTitle,
     russianTitle,
@@ -14,7 +14,9 @@ const ChapterItem = ({ chapter, ind }) => {
     <tr onClick={e => onClick(e)}>
       <td>{ind + 1}</td>
       <td>{chineseTitle}</td>
-      <td>{russianTitle}</td>
+      <td>
+        <Link to={`/books/${bookId}/${id}`}>{russianTitle}</Link>
+      </td>
     </tr>
   );
 };

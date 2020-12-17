@@ -175,7 +175,6 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
     };
 
     const {
-      chineseChunkedWords,
       chunkedTranslation,
       chunkedOriginText,
       length,
@@ -187,7 +186,6 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
     const body = JSON.stringify({
       origintext: chunkedOriginText,
       translation: chunkedTranslation,
-      wordsarr: chineseChunkedWords,
       chinese_arr: allwords,
       length,
       chapter,
@@ -195,10 +193,10 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
     });
 
     try {
-      const { data } = await axios.post(`/api/books/new_chapterpage`, body, config);
-
+      // const { data } =
+      await axios.post(`/api/books/new_chapterpage`, body, config);
       alert("Страница опубликована!");
-      console.log(data);
+      // console.log(data);
     } catch (err) {
       console.log(err);
     }
