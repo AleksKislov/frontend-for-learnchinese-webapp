@@ -6,12 +6,15 @@ import {
   SET_LOADING,
   CLEAR_BOOK,
   GET_COMMENTS,
-  ADD_COMMENT
+  ADD_COMMENT,
+  LOAD_CHAPTER,
+  CLEAR_CHAPTER
 } from "../actions/types";
 
 const initialState = {
   books: [],
   book: null,
+  chapter: null,
   loading: true,
   currentComments: []
 };
@@ -43,6 +46,12 @@ export default function(state = initialState, action) {
         book: null,
         currentComments: []
       };
+    case CLEAR_BOOK:
+      return {
+        ...state,
+        chapter: null,
+        currentComments: []
+      };
     case SET_LOADING:
       return {
         ...state,
@@ -60,6 +69,12 @@ export default function(state = initialState, action) {
       return {
         ...state,
         book: payload,
+        loading: false
+      };
+    case LOAD_CHAPTER:
+      return {
+        ...state,
+        chapter: payload,
         loading: false
       };
     default:

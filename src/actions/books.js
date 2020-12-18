@@ -6,7 +6,9 @@ import {
   CLEAR_BOOK,
   GET_COMMENTS,
   ADD_COMMENT_ERR,
-  SET_LOADING
+  SET_LOADING,
+  LOAD_CHAPTER,
+  CLEAR_CHAPTER
 } from "./types";
 import axios from "axios";
 import { setAlert } from "./alert";
@@ -43,8 +45,29 @@ export const loadBook = id => async dispatch => {
   }
 };
 
+export const loadChapter = id => async dispatch => {
+  setLoading();
+
+  try {
+    const { data } = await axios.get(`/api/books/get_chapter/${id}`);
+
+    dispatch({
+      type: LOAD_CHAPTER,
+      payload: data
+    });
+  } catch (err) {
+    dispatch({
+      type: LOAD_BOOK_ERR
+    });
+  }
+};
+
 export const clearBook = _ => async dispatch => {
   dispatch({ type: CLEAR_BOOK });
+};
+
+export const clearChapter = _ => async dispatch => {
+  dispatch({ type: CLEAR_CHAPTER });
 };
 
 export const setLoading = _ => async dispatch => {

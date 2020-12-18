@@ -9,7 +9,6 @@ const BookCardPage = ({ match, loadBook, loading, setLoading, book }) => {
   useEffect(() => {
     setLoading();
     loadBook(match.params.id);
-    // getComments(match.params.id);
   }, [loadBook, setLoading]);
 
   return (
@@ -31,15 +30,6 @@ const BookCardPage = ({ match, loadBook, loading, setLoading, book }) => {
                   <span className='text-muted'>Кол-во знаков: </span>
                   {book.length}
                 </h6>
-                {
-                  // for editing
-                  // isAuthenticated &&
-                  // (currentUser._id === text.user || currentUser.role === "admin") && (
-                  //   <Link to='/create-book'>
-                  //     <button className='btn btn-sm btn-outline-warning'>Edit</button>
-                  //   </Link>
-                  // )
-                }
               </div>
             </div>
           </div>
@@ -97,15 +87,11 @@ const BookCardPage = ({ match, loadBook, loading, setLoading, book }) => {
 const imgStyle = {
   width: "100%",
   borderRadius: "0.20rem 0.20rem 0 0"
-  // opacity: "0.6"
 };
 
 const mapStateToProps = state => ({
   book: state.books.book,
-  loading: state.books.loading,
-  isAuthenticated: state.auth.isAuthenticated,
-  currentUser: state.auth.user
-  // comments: state.texts.currentComments
+  loading: state.books.loading
 });
 
 export default connect(mapStateToProps, { loadBook, setLoading })(BookCardPage);

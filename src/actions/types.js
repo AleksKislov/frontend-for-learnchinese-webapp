@@ -63,3 +63,5 @@ export const LOAD_BOOK = "LOAD_BOOK";
 export const LOAD_BOOKS_ERR = "LOAD_BOOKS_ERR";
 export const LOAD_BOOK_ERR = "LOAD_BOOK_ERR";
 export const CLEAR_BOOK = "CLEAR_BOOK";
+export const LOAD_CHAPTER = "LOAD_CHAPTER";
+export const CLEAR_CHAPTER = "CLEAR_CHAPTER";
