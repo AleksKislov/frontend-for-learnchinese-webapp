@@ -15,11 +15,7 @@ const CommentsCard = ({ getLastComments, comments, loading }) => {
         {!loading &&
           comments.map(comment => (
             <Link
-              to={`/${
-                comment.destination
-                  ? `${comment.destination}s/${comment.post_id}`
-                  : `posts/${comment.post_id}`
-              }`}
+              to={`/${comment.destination}s/${comment.post_id}`}
               className='list-group-item list-group-item-action'
               key={comment._id}
             >
