@@ -4,7 +4,7 @@ import { loadTexts, clearText } from "../../actions/texts";
 import Spinner from "../layout/Spinner";
 import TextCard from "./TextCard";
 
-const Texts = ({ loadTexts, texts, loading }) => {
+const Texts = ({ loadTexts, texts, loading, clearText }) => {
   useEffect(() => {
     clearText();
     loadTexts();

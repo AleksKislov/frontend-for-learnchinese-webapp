@@ -79,7 +79,7 @@ const Routes = () => {
           <Route exact path='/texts/:id' component={TextPage} />
           <Route exact path='/books/:id' component={BookCardPage} />
           <Route exact path='/contacts' component={Contacts} />
-          <Route exact path='/books/:bookId/:chapterId' component={ChapterPage} />
+          <Route exact path='/books/:bookId/:chapterId/:pageInd' component={ChapterPage} />
 
           <NotFound />
         </Switch>

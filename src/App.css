@@ -11122,6 +11122,16 @@
 
 .textPadding {
   padding: 8px;
+  margin-bottom: 0
+}
+
+.paragraphNum {
+  padding-right: 4px;
+  color: grey;
+  position: absolute;
+  z-index: 1;
+  font-size: 12px;
+  right: 0;
 }
 
 .tippyPinyin {

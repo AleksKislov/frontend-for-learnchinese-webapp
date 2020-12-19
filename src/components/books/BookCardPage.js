@@ -3,11 +3,12 @@ import Spinner from "../layout/Spinner";
 import ChapterItem from "./ChapterItem";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { loadBook, setLoading, getComments } from "../../actions/books";
+import { loadBook, setLoading, clearPage } from "../../actions/books";
 
-const BookCardPage = ({ match, loadBook, loading, setLoading, book }) => {
+const BookCardPage = ({ match, loadBook, loading, setLoading, book, clearPage }) => {
   useEffect(() => {
     setLoading();
+    clearPage();
     loadBook(match.params.id);
   }, [loadBook, setLoading]);
 
@@ -62,13 +63,13 @@ const BookCardPage = ({ match, loadBook, loading, setLoading, book }) => {
                 <span className='text-muted'>Аннотация: </span>
                 {book.annotation}
               </p>
-              <h4>Содержание:</h4>
+              <h4>Содержание</h4>
               <table className='table table-hover'>
                 <tbody>
                   {book.contents &&
                     book.contents.map((chapter, ind) => (
                       <ChapterItem
-                        key={chapter.id}
+                        key={chapter.chapterId}
                         chapter={chapter}
                         ind={ind}
                         bookId={match.params.id}
@@ -94,4 +95,4 @@ const mapStateToProps = state => ({
   loading: state.books.loading
 });
 
-export default connect(mapStateToProps, { loadBook, setLoading })(BookCardPage);
+export default connect(mapStateToProps, { loadBook, setLoading, clearPage })(BookCardPage);

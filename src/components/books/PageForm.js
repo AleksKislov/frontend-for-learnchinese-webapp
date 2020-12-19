@@ -64,6 +64,7 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
     length: 0,
     allwords: [],
     chapter: "",
+    bookId: "",
     pageNumber: 0
   });
 
@@ -106,6 +107,7 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
         length,
         allwords,
         chapter: chapterId,
+        book: bookId,
         pageNumber
       });
     }
@@ -175,6 +177,7 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
     };
 
     const {
+      book,
       chunkedTranslation,
       chunkedOriginText,
       length,
@@ -189,6 +192,7 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
       chinese_arr: allwords,
       length,
       chapter,
+      book,
       page_number: pageNumber
     });
 
@@ -278,7 +282,7 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
                       {book &&
                         book.contents &&
                         book.contents.map(chapter => (
-                          <option value={chapter.id} key={chapter.id}>
+                          <option value={chapter.chapterId} key={chapter.chapterId}>
                             {chapter.chineseTitle}
                           </option>
                         ))}
@@ -306,7 +310,7 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
                       rows='3'
                       placeholder='汉字。。。'
                     ></textarea>
-                    <small className='text-muted'>{textLen}/800</small>
+                    <small className='text-muted'>{textLen}/2000</small>
                   </div>
                   <div className='form-group col-md-6'>
                     <label htmlFor='translationArea'>Вставьте перевод:</label>
