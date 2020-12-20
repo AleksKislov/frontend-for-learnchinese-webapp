@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -14,6 +14,20 @@ const Navbar = ({
   loadUserWordsLen,
   userWordsLen
 }) => {
+  const [readPath, setReadPath] = useState("/texts");
+  const [testPath, setTestPath] = useState("/pinyin-tests");
+
+  useEffect(() => {
+    const url = window.location.pathname;
+    if (url === "/books" || url === "texts") {
+      setReadPath(url);
+      setTestPath("/pinyin-tests");
+    } else if (url === "/pinyin-tests" || url === "/hsk-tests") {
+      setReadPath("texts");
+      setTestPath(url);
+    }
+  }, []);
+
   if (isAuthenticated) {
     loadLengths();
     loadUserWordsLen();
@@ -49,17 +63,27 @@ const Navbar = ({
           <NavLink
             className='nav-link dropdown-toggle'
             data-toggle='dropdown'
-            to='/pinyin-tests'
+            to={testPath}
             activeStyle={activeNavLink}
           >
             Тесты
           </NavLink>
 
           <div className='dropdown-menu'>
-            <NavLink className='dropdown-item' to='/pinyin-tests' activeStyle={activeNavLink}>
+            <NavLink
+              className='dropdown-item'
+              to='/pinyin-tests'
+              activeStyle={activeNavLink}
+              onClick={() => setTestPath("/pinyin-tests")}
+            >
               Пиньинь
             </NavLink>
-            <NavLink className='dropdown-item' to='/hsk-tests' activeStyle={activeNavLink}>
+            <NavLink
+              className='dropdown-item'
+              to='/hsk-tests'
+              activeStyle={activeNavLink}
+              onClick={() => setTestPath("/hsk-tests")}
+            >
               Лексика HSK
             </NavLink>
           </div>
@@ -67,7 +91,7 @@ const Navbar = ({
 
         <li className='nav-item'>
           <NavLink className='nav-link' to='/userwords' activeStyle={activeNavLink}>
-            <span className='badge badge-pill badge-warning'>{userWordsLen}</span> Мой Вокабуляр
+            <span className='badge badge-pill badge-warning'>{userWordsLen}</span> Мой Лексикон
           </NavLink>
         </li>
         <li className='nav-item'>
@@ -80,10 +104,35 @@ const Navbar = ({
             Словарь
           </NavLink>
         </li>
-        <li className='nav-item'>
-          <NavLink className='nav-link' to='/texts' activeStyle={activeNavLink}>
+
+        <li className='nav-item dropdown'>
+          <NavLink
+            className='nav-link dropdown-toggle'
+            data-toggle='dropdown'
+            to={readPath}
+            activeStyle={activeNavLink}
+          >
             Читалка
           </NavLink>
+
+          <div className='dropdown-menu'>
+            <NavLink
+              className='dropdown-item'
+              to='/texts'
+              activeStyle={activeNavLink}
+              onClick={() => setReadPath("/texts")}
+            >
+              Тексты
+            </NavLink>
+            <NavLink
+              className='dropdown-item'
+              to='/books'
+              activeStyle={activeNavLink}
+              onClick={() => setReadPath("/books")}
+            >
+              Книги
+            </NavLink>
+          </div>
         </li>
         <li className='nav-item'>
           <NavLink className='nav-link' to='/posts' activeStyle={activeNavLink}>
@@ -120,17 +169,27 @@ const Navbar = ({
           <NavLink
             className='nav-link dropdown-toggle'
             data-toggle='dropdown'
-            to='/pinyin-tests'
+            to={testPath}
             activeStyle={activeNavLink}
           >
             Тесты
           </NavLink>
 
           <div className='dropdown-menu'>
-            <NavLink className='dropdown-item' to='/pinyin-tests' activeStyle={activeNavLink}>
+            <NavLink
+              className='dropdown-item'
+              to='/pinyin-tests'
+              activeStyle={activeNavLink}
+              onClick={() => setTestPath("/pinyin-tests")}
+            >
               Пиньинь
             </NavLink>
-            <NavLink className='dropdown-item' to='/hsk-tests' activeStyle={activeNavLink}>
+            <NavLink
+              className='dropdown-item'
+              to='/hsk-tests'
+              activeStyle={activeNavLink}
+              onClick={() => setTestPath("/hsk-tests")}
+            >
               Лексика HSK
             </NavLink>
           </div>
@@ -145,10 +204,34 @@ const Navbar = ({
             Словарь
           </NavLink>
         </li>
-        <li className='nav-item'>
-          <NavLink className='nav-link' to='/texts' activeStyle={activeNavLink}>
+        <li className='nav-item dropdown'>
+          <NavLink
+            className='nav-link dropdown-toggle'
+            data-toggle='dropdown'
+            to={readPath}
+            activeStyle={activeNavLink}
+          >
             Читалка
           </NavLink>
+
+          <div className='dropdown-menu'>
+            <NavLink
+              className='dropdown-item'
+              to='/texts'
+              activeStyle={activeNavLink}
+              onClick={() => setReadPath("/texts")}
+            >
+              Тексты
+            </NavLink>
+            <NavLink
+              className='dropdown-item'
+              to='/books'
+              activeStyle={activeNavLink}
+              onClick={() => setReadPath("/books")}
+            >
+              Книги
+            </NavLink>
+          </div>
         </li>
         <li className='nav-item'>
           <NavLink className='nav-link' to='/posts' activeStyle={activeNavLink}>
