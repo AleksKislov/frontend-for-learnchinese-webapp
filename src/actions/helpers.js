@@ -1,4 +1,21 @@
 import axios from "axios";
+import { unsplash } from "../apikeys.json";
+
+/**
+ *
+ * @param {array} allwords
+ * @param {array} wordsFromDB
+ */
+export const itirateWordsFromDB = (allwords, wordsFromDB) => {
+  return allwords.map(word => {
+    for (let i = 0; i < wordsFromDB.length; i++) {
+      if (word === wordsFromDB[i].chinese) {
+        return wordsFromDB[i];
+      }
+    }
+    return word;
+  });
+};
 
 export const chunkArrayFunc = arr => {
   // get indexes for \n in the array of words
@@ -45,15 +62,47 @@ export const getWords = async words => {
  */
 export const parseChineseWords = async obj => {
   const wordsFromDB = await getWords(obj.chinese_arr);
-  // console.log(wordsFromDB);
-  const newArr = obj.chinese_arr.map(word => {
-    for (let i = 0; i < wordsFromDB.length; i++) {
-      if (word === wordsFromDB[i].chinese) {
-        return wordsFromDB[i];
-      }
-    }
-    return word;
-  });
-
+  const newArr = itirateWordsFromDB(obj.chinese_arr, wordsFromDB);
   return chunkArrayFunc(newArr); // array of object arrays
+};
+
+export const segmenter = async text => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  };
+
+  let res;
+  try {
+    res = await axios.post("/api/dictionary/segmenter", { text }, config);
+  } catch (err) {
+    console.log(err);
+  }
+  return res.data;
+};
+
+export const getPhotos = async pic_theme => {
+  const config = { headers: { Authorization: unsplash } };
+
+  const photosDiv = document.getElementById("photosDiv");
+  photosDiv.innerHTML = "";
+
+  try {
+    const { data } = await axios.get(
+      `https://api.unsplash.com/search/photos?query=${pic_theme}&per_page=5&orientation=portrait`,
+      config
+    );
+
+    // console.log(data.results[1].urls.small);
+
+    data.results.forEach(el => {
+      const img = document.createElement("img");
+      img.src = el.urls.small;
+      photosDiv.appendChild(img);
+      img.classList.add("imgToChoose");
+    });
+  } catch (err) {
+    console.log(err);
+  }
 };

@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import WordModal from "../translation/WordModal";
 import { setAlert } from "../../actions/alert";
 import { loadBooks, loadBook } from "../../actions/books";
+import { getWords, chunkArrayFunc, segmenter, itirateWordsFromDB } from "../../actions/helpers";
 import { loadUserWords } from "../../actions/userWords";
 import Paragraph from "../texts/Paragraph";
 import { v4 as uuid } from "uuid";
@@ -17,36 +18,23 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
     loadUserWords();
   }, []);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     // console.log(textToEdit);
-  //     if (textToEdit) {
-  //       setIsToEdit(true);
-  //       const {
-  //         level,
-  //         origintext,
-  //         tags,
-  //         title,
-  //         description,
-  //         translation,
-  //         _id,
-  //         theme_word
-  //       } = textToEdit;
-  //       document.getElementById("description").value = description;
-  //       document.getElementById("level").value = level;
-  //       document.getElementById("tags").value = tags.join(", ");
-  //       document.getElementById("title").value = title;
-  //       document.getElementById("textArea").value = origintext.join("\n");
-  //       document.getElementById("translationArea").value = translation.join("\n");
-  //       document.getElementById("theme_word").value = theme_word;
+  useEffect(() => {
+    setTimeout(() => {
+      // console.log(textToEdit);
+      if (textToEdit) {
+        setIsToEdit(true);
+        const { origintext, translation, _id } = textToEdit;
 
-  //       setFormData({
-  //         ...formData,
-  //         textId: _id
-  //       });
-  //     }
-  //   }, 0);
-  // }, [textToEdit]);
+        document.getElementById("textArea").value = origintext.join("\n");
+        document.getElementById("translationArea").value = translation.join("\n");
+
+        setFormData({
+          ...formData,
+          pageId: _id
+        });
+      }
+    }, 0);
+  }, [textToEdit]);
 
   const [bookId, setBookId] = useState("");
   const [chapterId, setChapterId] = useState("");
@@ -65,7 +53,8 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
     allwords: [],
     chapter: "",
     bookId: "",
-    pageNumber: 0
+    pageNumber: 0,
+    pageId: ""
   });
 
   const onSubmit = async e => {
@@ -84,14 +73,7 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
       const wordsFromDB = await getWords(allwords);
 
       // console.log(wordsFromDB);
-      let newArr = allwords.map(word => {
-        for (let i = 0; i < wordsFromDB.length; i++) {
-          if (word === wordsFromDB[i].chinese) {
-            return wordsFromDB[i];
-          }
-        }
-        return word;
-      });
+      let newArr = itirateWordsFromDB(allwords, wordsFromDB);
 
       const length = originText.length;
       const chineseChunkedWords = chunkArrayFunc(newArr); // array of object arrays
@@ -111,62 +93,6 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
         pageNumber
       });
     }
-  };
-
-  const chunkArrayFunc = arr => {
-    // get indexes for \n in the array of words
-    let inds = [];
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] === "\n") {
-        inds.push(i);
-      }
-    }
-    // console.log(inds);
-
-    let chunkedArr = [];
-
-    for (let i = 0; i < inds.length; i++) {
-      if (i === 0) {
-        chunkedArr.push(arr.slice(0, inds[i]));
-      } else {
-        chunkedArr.push(arr.slice(inds[i - 1] + 1, inds[i]));
-      }
-    }
-    chunkedArr.push(arr.slice(inds[inds.length - 1] + 1));
-
-    return chunkedArr;
-  };
-
-  const segmenter = async text => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    };
-
-    let res;
-    try {
-      res = await axios.post("/api/dictionary/segmenter", { text }, config);
-    } catch (err) {
-      console.log(err);
-    }
-    return res.data;
-  };
-
-  const getWords = async words => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    };
-
-    let res;
-    try {
-      res = await axios.post("/api/dictionary/allwords", words, config);
-    } catch (err) {
-      console.log(err);
-    }
-    return res.data;
   };
 
   const publishText = async formdata => {
@@ -213,39 +139,19 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
       }
     };
 
-    const {
-      chunkedTranslation,
-      tags,
-      chunkedOriginText,
-      title,
-      description,
-      level,
-      length,
-      allwords,
-      textId,
-      pic_url,
-      theme_word
-    } = formdata;
+    const { chunkedTranslation, chunkedOriginText, length, pageId, allwords } = formdata;
 
     const body = JSON.stringify({
-      textId,
+      pageId,
       origintext: chunkedOriginText,
-      title,
-      description,
-      level,
-      tags,
       translation: chunkedTranslation,
       chinese_arr: allwords,
-      length,
-      pic_url,
-      theme_word
+      length
     });
 
     try {
-      const { data } = await axios.post(`/api/texts`, body, config);
-
-      alert("Текст успешно изменен!");
-      // console.log(data);
+      await axios.post(`/api/books/new_chapterpage`, body, config);
+      alert("Текст страницы успешно изменен!");
     } catch (err) {
       console.log(err);
     }
@@ -370,8 +276,8 @@ const mapStateToProps = state => ({
   wordsLoading: state.userwords.loading,
   user: state.auth.user,
   books: state.books.books,
-  book: state.books.book
-  // textToEdit: state.texts.text
+  book: state.books.book,
+  textToEdit: state.books.page
 });
 
 export default connect(mapStateToProps, { loadUserWords, loadBooks, loadBook })(PageForm);

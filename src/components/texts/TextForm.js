@@ -6,9 +6,15 @@ import PropTypes from "prop-types";
 import WordModal from "../translation/WordModal";
 import { setAlert } from "../../actions/alert";
 import { loadUserWords } from "../../actions/userWords";
+import {
+  getPhotos,
+  getWords,
+  chunkArrayFunc,
+  segmenter,
+  itirateWordsFromDB
+} from "../../actions/helpers";
 import Paragraph from "./Paragraph";
 import { v4 as uuid } from "uuid";
-import { unsplash } from "../../apikeys.json";
 import "./style.css";
 
 const TextForm = ({ loadUserWords, user, textToEdit }) => {
@@ -81,15 +87,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       const wordsFromDB = await getWords(allwords);
 
       // console.log(wordsFromDB);
-      let newArr = allwords.map(word => {
-        for (let i = 0; i < wordsFromDB.length; i++) {
-          if (word === wordsFromDB[i].chinese) {
-            return wordsFromDB[i];
-          }
-        }
-        return word;
-      });
-
+      const newArr = itirateWordsFromDB(allwords, wordsFromDB);
       const length = originText.length;
       let tags = tagsId.value.split(",");
       tags = tags.map(tag => tag.trim()); // array of words
@@ -118,34 +116,6 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         theme_word
       });
     }
-
-    // textArea.value = "";
-    // setTextLen(0);
-  };
-
-  const getPhotos = async pic_theme => {
-    const config = { headers: { Authorization: unsplash } };
-
-    const photosDiv = document.getElementById("photosDiv");
-    photosDiv.innerHTML = "";
-
-    try {
-      const { data } = await axios.get(
-        `https://api.unsplash.com/search/photos?query=${pic_theme}&per_page=5&orientation=portrait`,
-        config
-      );
-
-      // console.log(data.results[1].urls.small);
-
-      data.results.forEach(el => {
-        const img = document.createElement("img");
-        img.src = el.urls.small;
-        photosDiv.appendChild(img);
-        img.classList.add("imgToChoose");
-      });
-    } catch (err) {
-      console.log(err);
-    }
   };
 
   const choosePicUrl = e => {
@@ -161,62 +131,6 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         pic_url: e.target.src
       });
     }
-  };
-
-  const chunkArrayFunc = arr => {
-    // get indexes for \n in the array of words
-    let inds = [];
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] === "\n") {
-        inds.push(i);
-      }
-    }
-    // console.log(inds);
-
-    let chunkedArr = [];
-
-    for (let i = 0; i < inds.length; i++) {
-      if (i === 0) {
-        chunkedArr.push(arr.slice(0, inds[i]));
-      } else {
-        chunkedArr.push(arr.slice(inds[i - 1] + 1, inds[i]));
-      }
-    }
-    chunkedArr.push(arr.slice(inds[inds.length - 1] + 1));
-
-    return chunkedArr;
-  };
-
-  const segmenter = async text => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    };
-
-    let res;
-    try {
-      res = await axios.post("/api/dictionary/segmenter", { text }, config);
-    } catch (err) {
-      console.log(err);
-    }
-    return res.data;
-  };
-
-  const getWords = async words => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    };
-
-    let res;
-    try {
-      res = await axios.post("/api/dictionary/allwords", words, config);
-    } catch (err) {
-      console.log(err);
-    }
-    return res.data;
   };
 
   const onChange = e => setTextLen(e.target.value.length);
@@ -300,10 +214,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     });
 
     try {
-      const { data } = await axios.post(`/api/texts`, body, config);
-
+      await axios.post(`/api/texts`, body, config);
       alert("Текст успешно изменен!");
-      // console.log(data);
     } catch (err) {
       console.log(err);
     }

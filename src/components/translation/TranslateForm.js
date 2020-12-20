@@ -19,7 +19,6 @@ const TranslateForm = ({ loadUserWords }) => {
   }, []);
 
   const [textLen, setTextLen] = useState(0);
-
   const [wordsFromText, setWordsFromText] = useState([]);
 
   const onSubmit = async e => {
