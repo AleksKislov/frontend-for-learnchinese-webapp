@@ -107,7 +107,7 @@ const TextPage = ({
 
           <div className='col-sm-3'>
             <div className='card bg-light mb-3'>
-              <img className='mr-3' src={`${text.pic_url}`} style={imgStyle} alt='Picture' />
+              <img className='mr-3 cardImageStyle' src={`${text.pic_url}`} alt='Picture' />
               <div className='card-body'>
                 <p className='card-text text-center'>
                   {text.tags.map((tag, ind) => (
@@ -117,7 +117,7 @@ const TextPage = ({
                   ))}
                 </p>
                 <h6 className='card-subtitle mb-2'>
-                  <span className='text-muted'>Автор: </span>
+                  <span className='text-muted'>Опубликовал: </span>
                   {text.name}
                 </h6>
                 <h6 className='card-subtitle mb-2'>
@@ -171,12 +171,6 @@ const TextPage = ({
       )}
     </Fragment>
   );
-};
-
-const imgStyle = {
-  width: "100%",
-  borderRadius: "0.20rem 0.20rem 0 0"
-  // opacity: "0.6"
 };
 
 const mapStateToProps = state => ({

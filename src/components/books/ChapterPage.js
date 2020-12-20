@@ -8,6 +8,7 @@ import { loadUserWords } from "../../actions/userWords";
 import axios from "axios";
 import { v4 as uuid } from "uuid";
 import Paragraph from "../texts/Paragraph";
+import ImageCard from "./ImageCard";
 
 const ChapterPage = ({
   match,
@@ -104,59 +105,52 @@ const ChapterPage = ({
       {loading || !book ? (
         <Spinner />
       ) : (
-        <div className='row'>
-          <WordModal />
+        <Fragment>
+          <div className='row'>
+            <div className='col-sm-3 my-auto'>
+              <Link to={`/books/${match.params.bookId}`}>
+                <div className='btn btn-sm btn-outline-info'>Назад</div>
+              </Link>
+            </div>
+            <div className='col-sm-9'>
+              <h2>{book.russianTitle}</h2>
+            </div>
+          </div>
 
-          <div className='col-sm-3'>
-            <div className='card bg-light mb-3'>
-              <img className='mr-3' src={`${book.pictureUrl}`} style={imgStyle} alt='Picture' />
-              <div className='card-body'>
-                <h6 className='card-subtitle mb-2'>
-                  <span className='text-muted'>Автор: </span>
-                  {book.authorName.nameRus}
-                </h6>
+          <div className='row'>
+            <WordModal />
 
-                <h6 className='card-subtitle mb-2'>
-                  <span className='text-muted'>Кол-во знаков: </span>
-                  {book.length}
-                </h6>
-                {isAuthenticated && currentUser.role === "admin" && (
-                  <Link to='/create-book'>
-                    <button className='btn btn-sm btn-outline-warning'>Edit</button>
-                  </Link>
+            <ImageCard book={book} />
+
+            <div className='col-sm-9'>
+              <div className='clearfix'>
+                <div className='float-left'>
+                  <h4>{book.contents[parseInt(match.params.chapterId)].russianTitle}</h4>
+                </div>
+
+                <div className='btn btn-sm btn-outline-info float-right' onClick={onClick}>
+                  {hideFlag ? "Показать Перевод" : "Скрыть Перевод"}
+                </div>
+              </div>
+
+              <div className='row'>
+                {!chineseChunkedArr.length ? (
+                  <Spinner />
+                ) : (
+                  chineseChunkedArr.map((chunk, index) => (
+                    <Paragraph
+                      chunk={chunk}
+                      index={index}
+                      key={uuid()}
+                      translation={page.translation[index]}
+                      hideFlag={hideFlag}
+                    />
+                  ))
                 )}
               </div>
             </div>
           </div>
-
-          <div className='col-sm-9'>
-            <h2>{book.russianTitle}</h2>
-            <h4>{book.contents[parseInt(match.params.chapterId)].russianTitle}</h4>
-
-            <Link to={`/books/${match.params.bookId}`}>
-              <div className='btn btn-sm btn-outline-info'>Назад</div>
-            </Link>
-
-            <div className='btn btn-sm btn-outline-info float-right' onClick={onClick}>
-              {hideFlag ? "Показать Перевод" : "Скрыть Перевод"}
-            </div>
-            <div className='row'>
-              {!chineseChunkedArr.length ? (
-                <Spinner />
-              ) : (
-                chineseChunkedArr.map((chunk, index) => (
-                  <Paragraph
-                    chunk={chunk}
-                    index={index}
-                    key={uuid()}
-                    translation={page.translation[index]}
-                    hideFlag={hideFlag}
-                  />
-                ))
-              )}
-            </div>
-          </div>
-        </div>
+        </Fragment>
       )}
     </Fragment>
   );

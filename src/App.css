@@ -11236,3 +11236,8 @@
   justify-content: center;
   font-size: 1.2rem
 }
+
+.cardImageStyle {
+  width: 100%;
+  border-radius: 0.20rem 0.20rem 0 0
+}

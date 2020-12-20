@@ -4,6 +4,7 @@ import ChapterItem from "./ChapterItem";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { loadBook, setLoading, clearPage } from "../../actions/books";
+import ImageCard from "./ImageCard";
 
 const BookCardPage = ({ match, loadBook, loading, setLoading, book, clearPage }) => {
   useEffect(() => {
@@ -17,69 +18,50 @@ const BookCardPage = ({ match, loadBook, loading, setLoading, book, clearPage })
       {loading || !book ? (
         <Spinner />
       ) : (
-        <div className='row'>
-          <div className='col-sm-3'>
-            <div className='card bg-light mb-3'>
-              <img className='mr-3' src={`${book.pictureUrl}`} style={imgStyle} alt='Picture' />
-              <div className='card-body'>
-                <h6 className='card-subtitle mb-2'>
-                  <span className='text-muted'>Автор: </span>
-                  {book.authorName.nameRus}
-                </h6>
+        <Fragment>
+          <div className='row'>
+            <div className='col-sm-3 my-auto'>
+              <Link to='/books'>
+                <div className='btn btn-sm btn-outline-info'>Назад</div>
+              </Link>
+            </div>
+            <div className='col-sm-9'>
+              <h2>{book.russianTitle}</h2>
+            </div>
+          </div>
+          <div className='row'>
+            <ImageCard book={book} />
 
-                <h6 className='card-subtitle mb-2'>
-                  <span className='text-muted'>Кол-во знаков: </span>
-                  {book.length}
-                </h6>
+            <div className='col-sm-9'>
+              <div>
+                <p className='card-text'>
+                  <span className='text-muted'>Аннотация: </span>
+                  {book.annotation}
+                </p>
+                <table className='table table-hover'>
+                  <thead>
+                    <tr>
+                      <th colSpan='2'>Содержание</th>
+                      <th scope='col'>字数</th>
+                      <th scope='col'>Страницы</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {book.contents &&
+                      book.contents.map((chapter, ind) => (
+                        <ChapterItem
+                          key={chapter.chapterId}
+                          chapter={chapter}
+                          ind={ind}
+                          bookId={match.params.id}
+                        />
+                      ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
-
-          <div className='col-sm-9'>
-            <h2>{book.russianTitle}</h2>
-
-            <Link to='/books'>
-              <div className='btn btn-sm btn-outline-info'>Назад</div>
-            </Link>
-
-            <div>
-              <div className='mb-2'>
-                <span className='text-muted'>Жанр: </span>
-                {book.genre.map((genreName, ind) => (
-                  <span key={ind} className='badge badge-pill badge-info ml-1'>
-                    {genreName}
-                  </span>
-                ))}
-              </div>
-              <h6 className='card-subtitle mb-2'>
-                <span className='text-muted'>Автор: </span>
-                {book.authorName.nameRus}
-              </h6>
-              <h6 className='card-subtitle mb-2'>
-                <span className='text-muted'>Кол-во знаков: </span>
-                {book.length}
-              </h6>
-              <p className='card-text'>
-                <span className='text-muted'>Аннотация: </span>
-                {book.annotation}
-              </p>
-              <h4>Содержание</h4>
-              <table className='table table-hover'>
-                <tbody>
-                  {book.contents &&
-                    book.contents.map((chapter, ind) => (
-                      <ChapterItem
-                        key={chapter.chapterId}
-                        chapter={chapter}
-                        ind={ind}
-                        bookId={match.params.id}
-                      />
-                    ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+        </Fragment>
       )}
     </Fragment>
   );

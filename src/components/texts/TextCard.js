@@ -42,7 +42,7 @@ const TextCard = ({ text }) => {
             ))}
           </div>
           <h6 className='card-subtitle mb-2'>
-            <span className='text-muted'>Автор: </span>
+            <span className='text-muted'>Опубликовал: </span>
             {name}
           </h6>
           <h6 className='card-subtitle mb-2'>
