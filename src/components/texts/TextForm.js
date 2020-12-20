@@ -133,8 +133,6 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     }
   };
 
-  const onChange = e => setTextLen(e.target.value.length);
-
   const publishText = async formdata => {
     const config = {
       headers: {
@@ -317,7 +315,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   <div className='form-group col-md-6'>
                     <label htmlFor='textArea'>Вставьте китайский текст для обработки:</label>
                     <textarea
-                      onChange={e => onChange(e)}
+                      onChange={e => setTextLen(e.target.value.length)}
                       className='form-control'
                       id='textArea'
                       rows='3'
@@ -362,6 +360,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
               formData.chineseChunkedWords.map((chunk, index) => (
                 <Paragraph
                   chunk={chunk}
+                  index={index}
                   key={uuid()}
                   translation={formData.chunkedTranslation[index]}
                 />

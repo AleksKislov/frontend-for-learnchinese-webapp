@@ -15,7 +15,6 @@ import "./style.css";
 
 const TranslateForm = ({ loadUserWords }) => {
   useEffect(() => {
-    // console.log("汉语是世界上最难学的一个语言");
     loadUserWords();
   }, []);
 

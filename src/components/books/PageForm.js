@@ -255,6 +255,7 @@ const PageForm = ({ loadUserWords, user, textToEdit, loadBooks, loadBook, book, 
               formData.chineseChunkedWords.map((chunk, index) => (
                 <Paragraph
                   chunk={chunk}
+                  index={index}
                   key={uuid()}
                   translation={formData.chunkedTranslation[index]}
                 />
