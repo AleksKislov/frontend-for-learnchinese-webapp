@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-const ImageCard = ({ book }) => {
+const ImageCard = ({ book, isAuthenticated, currentUser }) => {
   const { genre, pictureUrl, authorName, length } = book;
 
   return (
@@ -24,10 +26,20 @@ const ImageCard = ({ book }) => {
             <span className='text-muted'>Кол-во знаков: </span>
             {length}
           </h6>
+          {isAuthenticated && currentUser.role === "admin" && (
+            <Link to='/create-bookpage'>
+              <button className='btn btn-sm btn-outline-warning'>Edit</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
   );
 };
 
-export default ImageCard;
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  currentUser: state.auth.user
+});
+
+export default connect(mapStateToProps, {})(ImageCard);

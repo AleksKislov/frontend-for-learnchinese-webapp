@@ -10,17 +10,7 @@ import { v4 as uuid } from "uuid";
 import Paragraph from "../texts/Paragraph";
 import ImageCard from "./ImageCard";
 
-const ChapterPage = ({
-  match,
-  loadBook,
-  loading,
-  setLoading,
-  book,
-  loadPage,
-  page,
-  isAuthenticated,
-  currentUser
-}) => {
+const ChapterPage = ({ match, loadBook, loading, setLoading, book, loadPage, page }) => {
   useEffect(() => {
     const { chapterId, pageInd, bookId } = match.params;
     if (!book) {
@@ -154,12 +144,6 @@ const ChapterPage = ({
       )}
     </Fragment>
   );
-};
-
-const imgStyle = {
-  width: "100%",
-  borderRadius: "0.20rem 0.20rem 0 0"
-  // opacity: "0.6"
 };
 
 const mapStateToProps = state => ({
