@@ -16,8 +16,8 @@ const ChapterItem = ({ chapter, ind, bookId }) => {
       <td>{length}</td>
       <td>
         {pages.map((page, pageInd) => (
-          <Link to={`/books/${bookId}/${chapterId}/${pageInd}`}>
-            <button type='button' class='btn btn-info btn-sm mx-1'>
+          <Link to={`/books/${bookId}/${chapterId}/${pageInd}`} key={pageInd}>
+            <button type='button' className='btn btn-info btn-sm mx-1'>
               {pageInd + 1}
             </button>
           </Link>

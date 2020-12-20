@@ -1,13 +1,13 @@
 import React, { useEffect, Fragment, useState } from "react";
 import { connect } from "react-redux";
 import { loadText, setLoading, getComments } from "../../actions/texts";
+import { parseChineseWords } from "../../actions/helpers";
 import Spinner from "../layout/Spinner";
 import { v4 as uuid } from "uuid";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router-dom";
 import WordModal from "../translation/WordModal";
 import { loadUserWords } from "../../actions/userWords";
-import axios from "axios";
 import Comment from "./Comment";
 import LeaveComment from "./LeaveComment";
 
@@ -32,18 +32,7 @@ const TextPage = ({
   useEffect(() => {
     if (text) {
       setTimeout(async () => {
-        const wordsFromDB = await getWords(text.chinese_arr);
-        // console.log(wordsFromDB);
-        let newArr = text.chinese_arr.map(word => {
-          for (let i = 0; i < wordsFromDB.length; i++) {
-            if (word === wordsFromDB[i].chinese) {
-              return wordsFromDB[i];
-            }
-          }
-          return word;
-        });
-
-        const chineseChunkedWords = chunkArrayFunc(newArr); // array of object arrays
+        const chineseChunkedWords = await parseChineseWords(text);
         setChineseChunkedArr(chineseChunkedWords);
 
         loadUserWords();
@@ -51,50 +40,8 @@ const TextPage = ({
     }
   }, [text]);
 
-  const chunkArrayFunc = arr => {
-    // get indexes for \n in the array of words
-    let inds = [];
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] === "\n") {
-        inds.push(i);
-      }
-    }
-    // console.log(inds);
-
-    let chunkedArr = [];
-
-    for (let i = 0; i < inds.length; i++) {
-      if (i === 0) {
-        chunkedArr.push(arr.slice(0, inds[i]));
-      } else {
-        chunkedArr.push(arr.slice(inds[i - 1] + 1, inds[i]));
-      }
-    }
-    chunkedArr.push(arr.slice(inds[inds.length - 1] + 1));
-
-    return chunkedArr;
-  };
-
-  const getWords = async words => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    };
-
-    let res;
-    try {
-      res = await axios.post("/api/dictionary/allwords", words, config);
-    } catch (err) {
-      console.log(err);
-    }
-    return res.data;
-  };
-
   const [chineseChunkedArr, setChineseChunkedArr] = useState([]);
-
   const [hideFlag, setHideFlag] = useState(false);
-
   const onClick = () => setHideFlag(!hideFlag);
 
   return (

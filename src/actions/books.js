@@ -48,11 +48,8 @@ export const loadBook = id => async dispatch => {
 export const loadPage = id => async dispatch => {
   setLoading();
 
-  console.log("HERE");
   try {
     const { data } = await axios.get(`/api/books/get_page/${id}`);
-
-    console.log(data);
 
     dispatch({
       type: LOAD_PAGE,
