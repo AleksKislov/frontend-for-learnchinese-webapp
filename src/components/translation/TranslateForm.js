@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import WordModal from "./WordModal";
 import { setAlert } from "../../actions/alert";
 import { loadUserWords } from "../../actions/userWords";
+import { getWords, segmenter, itirateWordsFromDB } from "../../actions/helpers";
 import TippyTooltip from "./TippyTooltip";
 import { v4 as uuid } from "uuid";
 import { Widget, addResponseMessage } from "react-chat-widget";
@@ -29,61 +30,15 @@ const TranslateForm = ({ loadUserWords }) => {
       store.dispatch(setAlert("Максимум 350 знаков, удалите лишние", "danger"));
     } else {
       let originText = textArea.value.trim();
-      // let allwords = hanzi.segment(originText);
-
       let allwords = await segmenter(originText);
-      // console.log(allwords);
       allwords = allwords.filter(word => word !== " ");
       const wordsFromDB = await getWords(allwords);
-
-      // console.log(wordsFromDB);
-      let newArr = allwords.map(word => {
-        for (let i = 0; i < wordsFromDB.length; i++) {
-          if (word === wordsFromDB[i].chinese) {
-            return wordsFromDB[i];
-          }
-        }
-        return word;
-      });
-
-      console.log(newArr);
+      const newArr = itirateWordsFromDB(allwords, wordsFromDB);
       setWordsFromText(newArr);
     }
 
     textArea.value = "";
     setTextLen(0);
-  };
-
-  const segmenter = async text => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    };
-
-    let res;
-    try {
-      res = await axios.post("/api/dictionary/segmenter", { text }, config);
-    } catch (err) {
-      console.log(err);
-    }
-    return res.data;
-  };
-
-  const getWords = async words => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    };
-
-    let res;
-    try {
-      res = await axios.post("/api/dictionary/allwords", words, config);
-    } catch (err) {
-      console.log(err);
-    }
-    return res.data;
   };
 
   const handleNewUserMessage = async newMessage => {
