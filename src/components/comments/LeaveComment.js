@@ -7,8 +7,6 @@ import { setAlert } from "../../actions/alert";
 const LeaveComment = ({ addComment, getComments, isAuthenticated, _id }) => {
   const [text, setText] = useState("");
 
-  const onChange = e => setText(e.target.value);
-
   const onSubmit = e => {
     e.preventDefault();
 
@@ -42,7 +40,7 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id }) => {
               className='form-control'
               rows='3'
               id='textForm'
-              onChange={e => onChange(e)}
+              onChange={e => setText(e.target.value)}
               placeholder='Текст'
               name='text'
               value={text}

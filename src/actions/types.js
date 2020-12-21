@@ -52,6 +52,8 @@ export const ADD_COMMENT = "ADD_COMMENT";
 export const ADD_COMMENT_ERR = "ADD_COMMENT_ERR";
 export const GET_10COMMENTS = "GET_10COMMENTS";
 
+export const GET_COMMENTS_ERR = "GET_COMMENTS_ERR";
+
 export const LOAD_TEXTS = "LOAD_TEXTS";
 export const LOAD_TEXTS_ERR = "LOAD_TEXTS_ERR";
 export const LOAD_TEXT = "LOAD_TEXT";

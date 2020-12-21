@@ -9,8 +9,10 @@ import { loadUserWords } from "../../actions/userWords";
 import { v4 as uuid } from "uuid";
 import Paragraph from "../texts/Paragraph";
 import ImageCard from "./ImageCard";
+import LeaveComment from "../comments/LeaveComment";
+import Comment from "../comments/Comment";
 
-const ChapterPage = ({ match, loadBook, loading, setLoading, book, loadPage, page }) => {
+const ChapterPage = ({ match, loadBook, loading, setLoading, book, loadPage, page, comments }) => {
   useEffect(() => {
     const { chapterId, pageInd, bookId } = match.params;
     if (!book) {
@@ -84,6 +86,15 @@ const ChapterPage = ({ match, loadBook, loading, setLoading, book, loadPage, pag
                   ))
                 )}
               </div>
+
+              {page && (
+                <div className='my-2 mx-2'>
+                  <LeaveComment _id={page._id} />
+                  <h4>Комментарии:</h4>
+                  {comments.length > 0 &&
+                    comments.map(comment => <Comment key={comment._id} comment={comment} />)}
+                </div>
+              )}
             </div>
           </div>
         </Fragment>
@@ -97,8 +108,8 @@ const mapStateToProps = state => ({
   loading: state.books.loading,
   isAuthenticated: state.auth.isAuthenticated,
   currentUser: state.auth.user,
-  page: state.books.page
-  // comments: state.texts.currentComments
+  page: state.books.page,
+  comments: state.books.currentComments
 });
 
 export default connect(mapStateToProps, { loadBook, setLoading, loadPage })(ChapterPage);

@@ -8,8 +8,8 @@ import Paragraph from "./Paragraph";
 import { Link } from "react-router-dom";
 import WordModal from "../translation/WordModal";
 import { loadUserWords } from "../../actions/userWords";
-import Comment from "./Comment";
-import LeaveComment from "./LeaveComment";
+import Comment from "../comments/Comment";
+import LeaveComment from "../comments/LeaveComment";
 
 const TextPage = ({
   text,
