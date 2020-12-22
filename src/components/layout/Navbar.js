@@ -12,7 +12,8 @@ const Navbar = ({
   loadLengths,
   allWordsLen,
   loadUserWordsLen,
-  userWordsLen
+  userWordsLen,
+  user
 }) => {
   const [readPath, setReadPath] = useState("/texts");
   const [testPath, setTestPath] = useState("/pinyin-tests");
@@ -32,22 +33,20 @@ const Navbar = ({
     loadLengths();
     loadUserWordsLen();
   }
+  // <li className='nav-item'>
+  //   <NavLink className='nav-link' to='/dashboard' activeStyle={activeNavLink}>
+  //     <i className='fas fa-user'></i> ЛК
+  //   </NavLink>
+  // </li>
 
   const authLinks = (
     <Fragment>
       <ul className='navbar-nav mr-auto' style={{ textAlign: "center" }}>
         <li className='nav-item'>
-          <NavLink className='nav-link' to='/dashboard' activeStyle={activeNavLink}>
-            <i className='fas fa-user'></i> ЛК
-          </NavLink>
-        </li>
-
-        <li className='nav-item'>
           <NavLink className='nav-link' to='/pinyin' activeStyle={activeNavLink}>
             Таблица Пиньиня
           </NavLink>
         </li>
-
         <li className='nav-item'>
           <NavLink className='nav-link' to='/hsk-table' activeStyle={activeNavLink}>
             Слова HSK
@@ -94,6 +93,7 @@ const Navbar = ({
             <span className='badge badge-pill badge-warning'>{userWordsLen}</span> Мой Лексикон
           </NavLink>
         </li>
+
         <li className='nav-item'>
           <NavLink className='nav-link' to='/translate' activeStyle={activeNavLink}>
             Перевод
@@ -141,12 +141,41 @@ const Navbar = ({
         </li>
       </ul>
       <ul className='navbar-nav float-right'>
-        <li className='nav-item'>
-          <a onClick={logout} className='nav-link' href='#!'>
-            <i className='fas fa-sign-out-alt'></i>
-            <span className='hide-sm'> Logout</span>
-          </a>
+        <li className='nav-item dropdown'>
+          <NavLink
+            className='nav-link dropdown-toggle my-auto'
+            data-toggle='dropdown'
+            to='/dashboard'
+            activeStyle={activeNavLink}
+          >
+            {user && (
+              <img className='' src={`https:${user.avatar}`} style={imgStyle} alt='Avatar' />
+            )}
+          </NavLink>
+          <div className='dropdown-menu dropdown-menu-right'>
+            <NavLink className='dropdown-item' to='/dashboard'>
+              ЛК
+            </NavLink>
+            <li className='nav-item'>
+              <a onClick={logout} className='nav-link text-primary' href='#!'>
+                <i className='fas fa-sign-out-alt'></i>
+                <span className='hide-sm'> Logout</span>
+              </a>
+            </li>
+          </div>
         </li>
+        {
+          // <NavLink className='dropdown-item' to='/#!' onClick={logout}>
+          //   <i className='fas fa-sign-out-alt'></i>
+          //   <span className='hide-sm'> Logout</span>
+          // </NavLink>
+          //  <li className='nav-item'>
+          //    <a onClick={logout} className='nav-link' href='#!'>
+          //      <i className='fas fa-sign-out-alt'></i>
+          //      <span className='hide-sm'> Logout</span>
+          //    </a>
+          //  </li>
+        }
       </ul>
     </Fragment>
   );
@@ -279,10 +308,15 @@ const Navbar = ({
   );
 };
 
-const appVersion = "1.1.2";
+const appVersion = "1.2.0";
 
 const activeNavLink = {
   color: "#18BC9C"
+};
+
+const imgStyle = {
+  width: "3vh",
+  borderRadius: "50%"
 };
 
 Navbar.propTypes = {
@@ -292,6 +326,7 @@ Navbar.propTypes = {
 
 const mapStateToProps = state => ({
   auth: state.auth,
+  user: state.auth.user,
   allWordsLen: state.hskTable.allWordsLen,
   userWordsLen: state.userwords.userWordsLen
 });
