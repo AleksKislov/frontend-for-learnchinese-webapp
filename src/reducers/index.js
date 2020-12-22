@@ -7,5 +7,16 @@ import userwords from "./userwords";
 import posts from "./posts";
 import texts from "./texts";
 import books from "./books";
+import comments from "./comments";
 
-export default combineReducers({ alert, auth, hskTable, profile, userwords, posts, texts, books });
+export default combineReducers({
+  alert,
+  auth,
+  hskTable,
+  profile,
+  userwords,
+  posts,
+  texts,
+  books,
+  comments
+});

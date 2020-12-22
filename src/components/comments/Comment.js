@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { deleteComment } from "../../actions/texts";
+import { deleteComment } from "../../actions/comments";
 
 const Comment = ({ comment, currentUser, isAuthenticated, deleteComment }) => {
-  const { avatar, text, name, date, user, post_id, _id } = comment;
+  const { avatar, text, name, date, user, post_id, _id, destination } = comment;
 
   const dateAndTime = dateToStr(date);
 
@@ -17,7 +17,7 @@ const Comment = ({ comment, currentUser, isAuthenticated, deleteComment }) => {
           {isAuthenticated && (currentUser._id === user || currentUser.role === "admin") && (
             <button
               className='btn btn-sm btn-danger float-right'
-              onClick={e => deleteComment(post_id, _id)}
+              onClick={e => deleteComment(destination, post_id, _id)}
             >
               <i className='fas fa-trash-alt'></i>
             </button>

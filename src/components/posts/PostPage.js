@@ -4,9 +4,11 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import store from "../../store";
 import { setAlert } from "../../actions/alert";
-import { loadPost, getComments, addComment } from "../../actions/posts";
+import { loadPost } from "../../actions/posts";
+import { getComments, addComment } from "../../actions/comments";
 import Post from "./Post";
-import Comment from "./Comment";
+import Comment from "../comments/Comment";
+import LeaveComment from "../comments/LeaveComment";
 
 const PostPage = ({
   loadPost,
@@ -21,13 +23,11 @@ const PostPage = ({
   useEffect(() => {
     setTimeout(() => {
       loadPost(match.params.id);
-      getComments(match.params.id);
+      getComments("post", match.params.id);
     }, 100);
   }, [loadPost, loading, getComments]);
 
   const [text, setText] = useState("");
-
-  const onChange = e => setText(e.target.value);
 
   const onSubmit = e => {
     e.preventDefault();
@@ -37,7 +37,7 @@ const PostPage = ({
 
       if (text.length < 281) {
         // id, text
-        addComment(post._id, newtext);
+        addComment("post", post._id, newtext);
       } else {
         store.dispatch(setAlert("Сообщение не должно превышать лимит", "danger"));
       }
@@ -48,7 +48,7 @@ const PostPage = ({
     const textForm = document.getElementById("textForm");
     textForm.value = "";
     setText("");
-    getComments(post._id);
+    getComments("post", post._id);
   };
 
   return (
@@ -60,34 +60,7 @@ const PostPage = ({
           </Link>
           <Post post={post} />
 
-          <div className='card my-2'>
-            <div className='card-body'>
-              <h4 className='card-title'>Ваш Комментарий</h4>
-
-              <form onSubmit={e => onSubmit(e)}>
-                <div className='form-group'>
-                  <textarea
-                    className='form-control'
-                    rows='3'
-                    id='textForm'
-                    onChange={e => onChange(e)}
-                    placeholder='Текст'
-                    name='text'
-                    value={text}
-                    required
-                  ></textarea>
-
-                  <small className={`text-${text.length < 281 ? "mute" : "danger"}`}>
-                    {text.length}/280
-                  </small>
-
-                  <button type='submit' className='btn btn-primary float-right mt-3'>
-                    Опубликовать
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
+          <LeaveComment _id={post._id} where={"post"} />
         </div>
         <div className='col-sm-6'>
           <div className='my-2 mx-2'>
@@ -109,7 +82,7 @@ PostPage.propTypes = {
 const mapStateToProps = state => ({
   post: state.posts.post,
   loading: state.posts.loading,
-  comments: state.posts.currentComments,
+  comments: state.comments.currentComments,
   isAuthenticated: state.auth.isAuthenticated
 });
 

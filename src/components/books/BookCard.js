@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Length from "./info/Length";
+import AuthorRus from "./info/AuthorRus";
 
 const BookCard = ({ book }) => {
   const {
@@ -7,7 +9,7 @@ const BookCard = ({ book }) => {
     russianTitle,
     pictureUrl,
     year,
-    authorName: { nameRus, nameChinese },
+    authorName,
     genre, // array
     length,
     annotation,
@@ -33,14 +35,9 @@ const BookCard = ({ book }) => {
               </span>
             ))}
           </div>
-          <h6 className='card-subtitle mb-2'>
-            <span className='text-muted'>Автор: </span>
-            {nameRus}
-          </h6>
-          <h6 className='card-subtitle mb-2'>
-            <span className='text-muted'>Кол-во знаков: </span>
-            {length}
-          </h6>
+
+          <AuthorRus authorName={authorName} />
+          <Length length={length} />
           <p className='card-text'>{annotation}</p>
 
           <div className=''>

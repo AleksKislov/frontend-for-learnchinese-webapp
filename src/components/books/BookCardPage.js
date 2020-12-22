@@ -4,7 +4,7 @@ import ChapterItem from "./ChapterItem";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { loadBook, setLoading, clearPage } from "../../actions/books";
-import ImageCard from "./ImageCard";
+import ImageCard from "./info/ImageCard";
 
 const BookCardPage = ({ match, loadBook, loading, setLoading, book, clearPage }) => {
   useEffect(() => {
@@ -65,11 +65,6 @@ const BookCardPage = ({ match, loadBook, loading, setLoading, book, clearPage })
       )}
     </Fragment>
   );
-};
-
-const imgStyle = {
-  width: "100%",
-  borderRadius: "0.20rem 0.20rem 0 0"
 };
 
 const mapStateToProps = state => ({

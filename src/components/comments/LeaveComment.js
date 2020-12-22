@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { addComment, getComments } from "../../actions/texts";
+import { addComment, getComments } from "../../actions/comments";
 import { connect } from "react-redux";
 import store from "../../store";
 import { setAlert } from "../../actions/alert";
 
-const LeaveComment = ({ addComment, getComments, isAuthenticated, _id }) => {
+// path is from/for book Chapterpage
+const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, path }) => {
   const [text, setText] = useState("");
 
   const onSubmit = e => {
@@ -15,7 +16,7 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id }) => {
 
       if (text.length < 281) {
         // id, text
-        addComment(_id, newtext);
+        addComment(where, _id, newtext, path);
       } else {
         store.dispatch(setAlert("Сообщение не должно превышать лимит", "danger"));
       }
@@ -26,7 +27,7 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id }) => {
     const textForm = document.getElementById("textForm");
     textForm.value = "";
     setText("");
-    getComments(_id);
+    getComments(where, _id);
   };
 
   return (

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getLastComments } from "../../actions/posts";
+import { getLastComments } from "../../actions/comments";
 import { Link } from "react-router-dom";
 
 const CommentsCard = ({ getLastComments, comments, loading }) => {
@@ -15,7 +15,7 @@ const CommentsCard = ({ getLastComments, comments, loading }) => {
         {!loading &&
           comments.map(comment => (
             <Link
-              to={`/${comment.destination}s/${comment.post_id}`}
+              to={`/${comment.destination}s/${comment.path || comment.post_id}`}
               className='list-group-item list-group-item-action'
               key={comment._id}
             >
@@ -51,7 +51,7 @@ const fromNow = date => {
 };
 
 const mapStateTioProps = state => ({
-  comments: state.posts.lastComments,
+  comments: state.comments.lastComments,
   loading: state.posts.loading
 });
 

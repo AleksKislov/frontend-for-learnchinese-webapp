@@ -9,7 +9,8 @@ import {
   ADD_LIKE,
   GET_COMMENTS,
   ADD_COMMENT,
-  GET_10COMMENTS
+  GET_10COMMENTS,
+  GET_COMMENTS_ERR
 } from "../actions/types";
 
 const initialState = {
@@ -68,6 +69,7 @@ export default function(state = initialState, action) {
       };
     case ADD_POST_ERR:
     case LOAD_POSTS_ERR:
+    case GET_COMMENTS_ERR:
     case LOAD_POST_ERR:
       return {
         ...state,

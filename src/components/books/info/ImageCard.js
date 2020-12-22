@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import Length from "./Length";
+import AuthorRus from "./AuthorRus";
 
 const ImageCard = ({ book, isAuthenticated, currentUser }) => {
   const { genre, pictureUrl, authorName, length } = book;
@@ -17,15 +19,10 @@ const ImageCard = ({ book, isAuthenticated, currentUser }) => {
               </span>
             ))}
           </p>
-          <h6 className='card-subtitle mb-2'>
-            <span className='text-muted'>Автор: </span>
-            {authorName.nameRus}
-          </h6>
 
-          <h6 className='card-subtitle mb-2'>
-            <span className='text-muted'>Кол-во знаков: </span>
-            {length}
-          </h6>
+          <AuthorRus authorName={authorName} />
+          <Length length={length} />
+
           {isAuthenticated && currentUser.role === "admin" && (
             <Link to='/create-bookpage'>
               <button className='btn btn-sm btn-outline-warning'>Edit</button>

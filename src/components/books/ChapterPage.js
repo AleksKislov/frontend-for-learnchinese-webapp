@@ -2,17 +2,28 @@ import React, { useEffect, Fragment, useState } from "react";
 import Spinner from "../layout/Spinner";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { loadBook, setLoading, getComments, loadPage } from "../../actions/books";
+import { loadBook, setLoading, loadPage } from "../../actions/books";
+import { getComments } from "../../actions/comments";
 import { parseChineseWords } from "../../actions/helpers";
 import WordModal from "../translation/WordModal";
 import { loadUserWords } from "../../actions/userWords";
 import { v4 as uuid } from "uuid";
 import Paragraph from "../texts/Paragraph";
-import ImageCard from "./ImageCard";
+import ImageCard from "./info/ImageCard";
 import LeaveComment from "../comments/LeaveComment";
 import Comment from "../comments/Comment";
 
-const ChapterPage = ({ match, loadBook, loading, setLoading, book, loadPage, page, comments }) => {
+const ChapterPage = ({
+  match,
+  loadBook,
+  loading,
+  setLoading,
+  book,
+  loadPage,
+  page,
+  comments,
+  getComments
+}) => {
   useEffect(() => {
     const { chapterId, pageInd, bookId } = match.params;
     if (!book) {
@@ -21,7 +32,6 @@ const ChapterPage = ({ match, loadBook, loading, setLoading, book, loadPage, pag
     } else {
       loadPage(book.contents[parseInt(chapterId)].pages[parseInt(pageInd)]);
     }
-    // getComments(match.params.id);
   }, [loadBook, setLoading, book]);
 
   useEffect(() => {
@@ -31,6 +41,7 @@ const ChapterPage = ({ match, loadBook, loading, setLoading, book, loadPage, pag
         setChineseChunkedArr(chineseChunkedWords);
         loadUserWords();
       }, 0);
+      getComments("book", page._id);
     }
   }, [page]);
 
@@ -89,7 +100,11 @@ const ChapterPage = ({ match, loadBook, loading, setLoading, book, loadPage, pag
 
               {page && (
                 <div className='my-2 mx-2'>
-                  <LeaveComment _id={page._id} />
+                  <LeaveComment
+                    _id={page._id}
+                    where={"book"}
+                    path={window.location.pathname.slice(7)}
+                  />
                   <h4>Комментарии:</h4>
                   {comments.length > 0 &&
                     comments.map(comment => <Comment key={comment._id} comment={comment} />)}
@@ -109,7 +124,9 @@ const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated,
   currentUser: state.auth.user,
   page: state.books.page,
-  comments: state.books.currentComments
+  comments: state.comments.currentComments
 });
 
-export default connect(mapStateToProps, { loadBook, setLoading, loadPage })(ChapterPage);
+export default connect(mapStateToProps, { loadBook, setLoading, loadPage, getComments })(
+  ChapterPage
+);

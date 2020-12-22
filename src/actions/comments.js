@@ -4,10 +4,10 @@ import { setAlert } from "./alert";
 
 /**
  *
- * @param {string} id       - of destination page
  * @param {string} where    - destination: post, text or book (Chapterpage)
+ * @param {string} id       - of destination page
  */
-export const getComments = (id, where) => async dispatch => {
+export const getComments = (where, id) => async dispatch => {
   try {
     const { data } = await axios.get(`/api/comments?where=${where}&id=${id}`);
 
@@ -24,18 +24,19 @@ export const getComments = (id, where) => async dispatch => {
 
 /**
  *
- * @param {string} id       - of destination page
  * @param {string} where    - destination: post, text or book (Chapterpage)
+ * @param {string} id       - of destination page
  * @param {string} text     - text of a comment
+ * @param {string} path     - relative path to book page (only)
  */
-export const addComment = (id, text) => async dispatch => {
+export const addComment = (where, id, text, path) => async dispatch => {
   const config = {
     headers: {
       "Content-Type": "application/json"
     }
   };
 
-  const body = JSON.stringify({ text });
+  const body = JSON.stringify({ text, path });
 
   try {
     await axios.post(`/api/comments?where=${where}&id=${id}`, body, config);
@@ -59,11 +60,11 @@ export const addComment = (id, text) => async dispatch => {
 
 /**
  *
+ * @param {string} where        - destination: post, text or a book (page)
  * @param {string} where_id     - id of destination: post, text or a book (page)
  * @param {string} comment_id   - comment id
- * @param {string} where        - destination: post, text or a book (page)
  */
-export const deleteComment = (where_id, comment_id, where) => async dispatch => {
+export const deleteComment = (where, where_id, comment_id) => async dispatch => {
   try {
     await axios.delete(`/api/${where}s/comment/${where_id}/${comment_id}`);
     const { data } = await axios.get(`/api/comments?where=${where}&id=${where_id}`);

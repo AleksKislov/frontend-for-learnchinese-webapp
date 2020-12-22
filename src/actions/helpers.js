@@ -106,3 +106,14 @@ export const getPhotos = async pic_theme => {
     console.log(err);
   }
 };
+
+export const numberToStr = num => {
+  let arr = num.toString().split("");
+  const length = arr.length;
+  if (length < 4) {
+    return arr.join("");
+  } else {
+    arr.splice(length - 3, 0, " ");
+    return arr.join("");
+  }
+};

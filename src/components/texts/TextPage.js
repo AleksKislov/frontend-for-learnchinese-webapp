@@ -1,6 +1,7 @@
 import React, { useEffect, Fragment, useState } from "react";
 import { connect } from "react-redux";
-import { loadText, setLoading, getComments } from "../../actions/texts";
+import { loadText, setLoading } from "../../actions/texts";
+import { getComments } from "../../actions/comments";
 import { parseChineseWords } from "../../actions/helpers";
 import Spinner from "../layout/Spinner";
 import { v4 as uuid } from "uuid";
@@ -26,7 +27,7 @@ const TextPage = ({
   useEffect(() => {
     setLoading();
     loadText(match.params.id);
-    getComments(match.params.id);
+    getComments("text", match.params.id);
   }, [loadText, setLoading, getComments]);
 
   useEffect(() => {
@@ -108,7 +109,7 @@ const TextPage = ({
             </div>
 
             <div className='my-2 mx-2'>
-              <LeaveComment _id={text._id} />
+              <LeaveComment _id={text._id} where={"text"} />
               <h4>Комментарии:</h4>
               {comments.length > 0 &&
                 comments.map(comment => <Comment key={comment._id} comment={comment} />)}
@@ -125,7 +126,7 @@ const mapStateToProps = state => ({
   loading: state.texts.loading,
   isAuthenticated: state.auth.isAuthenticated,
   currentUser: state.auth.user,
-  comments: state.texts.currentComments
+  comments: state.comments.currentComments
 });
 
 export default connect(mapStateToProps, { loadText, loadUserWords, setLoading, getComments })(
