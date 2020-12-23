@@ -15,25 +15,53 @@ const Navbar = ({
   userWordsLen,
   user
 }) => {
-  const [readPath, setReadPath] = useState("/texts");
-  const [testPath, setTestPath] = useState("/pinyin-tests");
+  const [paths, setPaths] = useState({
+    tests: "/pinyin-tests",
+    reading: "/texts",
+    login: "/register",
+    private: "/dashboard"
+  });
+
+  const privateLinks = ["/dashboard", "/hsk-words", "userwords"];
+
   const [totalWordsLen, setTotalWordsLen] = useState(0);
 
   useEffect(() => {
     const url = window.location.pathname;
     if (url.includes("/books") || url.includes("/texts")) {
-      setReadPath(url);
-      setTestPath("/pinyin-tests");
+      setPaths({
+        tests: "/pinyin-tests",
+        reading: url,
+        login: "/register",
+        private: "/dashboard"
+      });
     } else if (url.includes("/pinyin-tests") || url.includes("/hsk-tests")) {
-      setReadPath("/texts");
-      setTestPath(url);
+      setPaths({
+        tests: url,
+        reading: "/texts",
+        login: "/register",
+        private: "/dashboard"
+      });
+    } else if (url === "/register" || url === "/login") {
+      setPaths({
+        tests: "/pinyin-tests",
+        reading: "/texts",
+        login: url,
+        private: "/dashboard"
+      });
+    } else if (privateLinks.includes(url)) {
+      setPaths({
+        tests: "/pinyin-tests",
+        reading: "/texts",
+        login: "/register",
+        private: url
+      });
     }
   }, []);
 
   useEffect(() => {
     setTimeout(() => {
       if (isAuthenticated) {
-        // console.log("here");
         loadLengths();
         loadUserWordsLen();
         if ((userWordsLen && allWordsLen) || userWordsLen === 0 || allWordsLen === 0)
@@ -42,44 +70,95 @@ const Navbar = ({
     }, 500);
   }, [isAuthenticated, allWordsLen, userWordsLen]);
 
+  const noAuthLinks = (
+    <ul className='navbar-nav loginNavbar text-center'>
+      <li className='nav-item dropdown'>
+        <NavLink
+          className='nav-link dropdown-toggle'
+          data-toggle='dropdown'
+          to={paths.login}
+          activeStyle={activeNavLink}
+        >
+          <i className='fas fa-door-open'></i> Вход
+        </NavLink>
+        <div className='dropdown-menu dropdown-menu-right'>
+          <NavLink
+            className='dropdown-item'
+            to='/register'
+            activeStyle={activeNavLink}
+            onClick={() => setPaths({ ...paths, login: "/register" })}
+          >
+            Регистрация
+          </NavLink>
+          <NavLink
+            className='dropdown-item'
+            to='/login'
+            activeStyle={activeNavLink}
+            onClick={() => setPaths({ ...paths, login: "/login" })}
+          >
+            Войти
+          </NavLink>
+        </div>
+      </li>
+    </ul>
+  );
+
   const authLinks = (
+    <ul className='navbar-nav loginNavbar text-center'>
+      <li className='nav-item dropdown'>
+        <NavLink
+          className='nav-link dropdown-toggle my-auto'
+          data-toggle='dropdown'
+          to={paths.private}
+          activeStyle={activeNavLink}
+        >
+          {user && (
+            <Fragment>
+              <span className='badge badge-pill badge-warning'>{totalWordsLen}</span>{" "}
+              <img className='' src={`https:${user.avatar}`} style={imgStyle} alt='Avatar' />
+            </Fragment>
+          )}
+        </NavLink>
+        <div className='dropdown-menu dropdown-menu-right'>
+          <NavLink
+            className='dropdown-item'
+            to='/dashboard'
+            activeStyle={activeNavLink}
+            onClick={() => setPaths({ ...paths, private: "/dashboard" })}
+          >
+            ЛК
+          </NavLink>
+
+          <NavLink
+            className='dropdown-item'
+            to='/hsk-words'
+            activeStyle={activeNavLink}
+            onClick={() => setPaths({ ...paths, private: "/hsk-words" })}
+          >
+            Мой HSK <span className='badge badge-pill badge-warning'>{allWordsLen}</span>
+          </NavLink>
+
+          <NavLink
+            className='dropdown-item'
+            to='/userwords'
+            activeStyle={activeNavLink}
+            onClick={() => setPaths({ ...paths, private: "/userwords" })}
+          >
+            Мои Слова <span className='badge badge-pill badge-warning'>{userWordsLen}</span>
+          </NavLink>
+
+          <NavLink onClick={logout} className='dropdown-item' to='/#' exact={true}>
+            <i className='fas fa-sign-out-alt'></i>
+            <span className='hide-sm'> Выйти</span>
+          </NavLink>
+        </div>
+      </li>
+    </ul>
+  );
+
+  const mainMenu = (
     <Fragment>
-      <ul className='navbar-nav mr-auto' style={{ textAlign: "center" }}>
-        {isAuthenticated && (
-          <li className='nav-item dropdown'>
-            <NavLink
-              className='nav-link dropdown-toggle my-auto'
-              data-toggle='dropdown'
-              to='/dashboard'
-              activeStyle={activeNavLink}
-            >
-              {user && (
-                <Fragment>
-                  <span className='badge badge-pill badge-warning'>{totalWordsLen}</span>{" "}
-                  <img className='' src={`https:${user.avatar}`} style={imgStyle} alt='Avatar' />
-                </Fragment>
-              )}
-            </NavLink>
-            <div className='dropdown-menu dropdown-menu-right'>
-              <NavLink className='dropdown-item' to='/dashboard'>
-                ЛК
-              </NavLink>
-
-              <NavLink className='dropdown-item' to='/hsk-words' activeStyle={activeNavLink}>
-                Мой HSK <span className='badge badge-pill badge-warning'>{allWordsLen}</span>
-              </NavLink>
-
-              <NavLink className='dropdown-item' to='/userwords' activeStyle={activeNavLink}>
-                Мои Слова <span className='badge badge-pill badge-warning'>{userWordsLen}</span>
-              </NavLink>
-
-              <NavLink onClick={logout} className='dropdown-item' to='/#' exact={true}>
-                <i className='fas fa-sign-out-alt'></i>
-                <span className='hide-sm'> Выйти</span>
-              </NavLink>
-            </div>
-          </li>
-        )}
+      <ul className='navbar-nav text-center mr-auto'>
         <li className='nav-item'>
           <NavLink className='nav-link' to='/pinyin' activeStyle={activeNavLink}>
             Таблица Пиньиня
@@ -94,7 +173,7 @@ const Navbar = ({
           <NavLink
             className='nav-link dropdown-toggle'
             data-toggle='dropdown'
-            to={testPath}
+            to={paths.tests}
             activeStyle={activeNavLink}
           >
             Тесты
@@ -105,7 +184,7 @@ const Navbar = ({
               className='dropdown-item'
               to='/pinyin-tests'
               activeStyle={activeNavLink}
-              onClick={() => setTestPath("/pinyin-tests")}
+              onClick={() => setPaths({ ...paths, tests: "/pinyin-tests" })}
             >
               Пиньинь
             </NavLink>
@@ -113,7 +192,7 @@ const Navbar = ({
               className='dropdown-item'
               to='/hsk-tests'
               activeStyle={activeNavLink}
-              onClick={() => setTestPath("/hsk-tests")}
+              onClick={() => setPaths({ ...paths, tests: "/hsk-tests" })}
             >
               Лексика HSK
             </NavLink>
@@ -133,7 +212,7 @@ const Navbar = ({
           <NavLink
             className='nav-link dropdown-toggle'
             data-toggle='dropdown'
-            to={readPath}
+            to={paths.reading}
             activeStyle={activeNavLink}
           >
             Читалка
@@ -144,7 +223,7 @@ const Navbar = ({
               className='dropdown-item'
               to='/texts'
               activeStyle={activeNavLink}
-              onClick={() => setReadPath("/texts")}
+              onClick={() => setPaths({ ...paths, reading: "/texts" })}
             >
               Тексты
             </NavLink>
@@ -152,7 +231,7 @@ const Navbar = ({
               className='dropdown-item'
               to='/books'
               activeStyle={activeNavLink}
-              onClick={() => setReadPath("/books")}
+              onClick={() => setPaths({ ...paths, reading: "/books" })}
             >
               Книги
             </NavLink>
@@ -165,20 +244,9 @@ const Navbar = ({
         </li>
       </ul>
 
-      {!isAuthenticated && (
-        <ul className='navbar-nav float-right'>
-          <li className='nav-item'>
-            <NavLink className='nav-link' to='/register' activeStyle={activeNavLink}>
-              Register
-            </NavLink>
-          </li>
-          <li className='nav-item'>
-            <NavLink className='nav-link' to='/login' activeStyle={activeNavLink}>
-              Login
-            </NavLink>
-          </li>
-        </ul>
-      )}
+      {isAuthenticated && authLinks}
+
+      {!isAuthenticated && noAuthLinks}
     </Fragment>
   );
 
@@ -192,16 +260,16 @@ const Navbar = ({
         className='navbar-toggler'
         type='button'
         data-toggle='collapse'
-        data-target='#navbarColor01'
-        aria-controls='navbarColor01'
+        data-target='#navbarId'
+        aria-controls='navbarId'
         aria-expanded='false'
         aria-label='Toggle navigation'
       >
         <span className='navbar-toggler-icon'></span>
       </button>
 
-      <div className='collapse navbar-collapse' id='navbarColor01'>
-        {!loading && <Fragment>{authLinks}</Fragment>}
+      <div className='collapse navbar-collapse' id='navbarId'>
+        {!loading && <Fragment>{mainMenu}</Fragment>}
       </div>
     </nav>
   );
@@ -215,7 +283,9 @@ const activeNavLink = {
 
 const imgStyle = {
   width: "3vh",
-  borderRadius: "50%"
+  borderRadius: "50%",
+  border: "2px solid #18BC9C",
+  marginLeft: "0.3rem"
 };
 
 Navbar.propTypes = {
