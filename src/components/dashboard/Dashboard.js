@@ -52,14 +52,14 @@ const Dashboard = ({
 
         <div className='card bg-light mb-3'>
           <div className='card-body'>
-            <h4 className='card-title'>Мой Вокабуляр</h4>
+            <h4 className='card-title'>Мои Слова</h4>
             <h6 className='card-subtitle mb-2 text-muted'>Список слов из текстов</h6>
             <p className='card-text'>
               Сейчас для повторения вы отобрали столько слов:{" "}
               <span className='badge badge-pill badge-warning'>{userWordsLen}</span>
             </p>
             <Link to='/userwords' className='card-link'>
-              Мой Вокабуляр
+              Мои Слова
             </Link>
           </div>
         </div>

@@ -111,30 +111,22 @@ let allWordsLen;
 
 // load lengths
 export const loadLengths = () => async dispatch => {
+  let hskLen = [];
   try {
-    const res = await axios.get("/api/words");
+    const { data } = await axios.get("/api/words");
 
-    allWordsLen = res.data.length;
-    const hskLen = [];
+    allWordsLen = data.length;
     for (let i = 1; i <= 6; i++) {
-      hskLen.push(res.data.filter(word => word.level === i).length);
+      hskLen.push(data.filter(word => word.level === i).length);
     }
-
-    dispatch({
-      type: WORDS_LENGTHS_LOADED,
-      payload: { allWordsLen, hskLen }
-    });
   } catch (err) {
+    console.log(err);
     allWordsLen = [].length;
-    let hskLen = [];
-    // for (let i = 1; i <= 6; i++) {
-    //   hskLen.push([].filter(word => word.level === i).length);
-    // }
-    dispatch({
-      type: WORDS_LENGTHS_LOADED,
-      payload: { allWordsLen, hskLen }
-    });
   }
+  dispatch({
+    type: WORDS_LENGTHS_LOADED,
+    payload: { allWordsLen, hskLen }
+  });
 };
 
 // add a word from hsk table to user

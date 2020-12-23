@@ -116,21 +116,15 @@ export const setModalWord = word => async dispatch => {
 export const loadUserWordsLen = () => async dispatch => {
   try {
     const res = await axios.get("/api/userwords");
-
     allWordsLen = res.data.length;
-
-    dispatch({
-      type: USER_WORDS_LEN_LOADED,
-      payload: allWordsLen
-    });
   } catch (err) {
+    console.log(err);
     allWordsLen = [].length;
-
-    dispatch({
-      type: USER_WORDS_LEN_LOADED,
-      payload: allWordsLen
-    });
   }
+  dispatch({
+    type: USER_WORDS_LEN_LOADED,
+    payload: allWordsLen
+  });
 };
 
 export const puppeteerFunc = word => async dispatch => {
