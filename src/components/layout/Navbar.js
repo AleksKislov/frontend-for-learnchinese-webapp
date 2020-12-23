@@ -21,11 +21,11 @@ const Navbar = ({
 
   useEffect(() => {
     const url = window.location.pathname;
-    if (url === "/books" || url === "texts") {
+    if (url.includes("/books") || url.includes("/texts")) {
       setReadPath(url);
       setTestPath("/pinyin-tests");
-    } else if (url === "/pinyin-tests" || url === "/hsk-tests") {
-      setReadPath("texts");
+    } else if (url.includes("/pinyin-tests") || url.includes("/hsk-tests")) {
+      setReadPath("/texts");
       setTestPath(url);
     }
   }, []);

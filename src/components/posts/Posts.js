@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
 import Post from "./Post";
 import store from "../../store";
 import { loadPosts, addPost } from "../../actions/posts";
@@ -177,7 +176,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
             <form onSubmit={e => onSubmit(e)}>
               <div className='form-row'>
                 <div className='form-group col-md-2'>
-                  <select id='inputEmo' className='form-control' onChange={e => onSelect(e)}>
+                  <select id='inputEmo' className='custom-select' onChange={e => onSelect(e)}>
                     <option>..</option>
                     <option>🔥</option>
                     <option>🙏🏻</option>

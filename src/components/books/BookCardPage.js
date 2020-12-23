@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { loadBook, setLoading, clearPage } from "../../actions/books";
 import ImageCard from "./info/ImageCard";
+import Annotation from "./info/Annotation";
+import BookTitle from "./info/BookTitle";
 
 const BookCardPage = ({ match, loadBook, loading, setLoading, book, clearPage }) => {
   useEffect(() => {
@@ -26,7 +28,9 @@ const BookCardPage = ({ match, loadBook, loading, setLoading, book, clearPage })
               </Link>
             </div>
             <div className='col-sm-9'>
-              <h2>{book.russianTitle}</h2>
+              <h2>
+                <BookTitle russianTitle={book.russianTitle} chineseTitle={book.chineseTitle} />
+              </h2>
             </div>
           </div>
           <div className='row'>
@@ -34,10 +38,8 @@ const BookCardPage = ({ match, loadBook, loading, setLoading, book, clearPage })
 
             <div className='col-sm-9'>
               <div>
-                <p className='card-text'>
-                  <span className='text-muted'>Аннотация: </span>
-                  {book.annotation}
-                </p>
+                <Annotation annotation={book.annotation} />
+
                 <table className='table table-hover'>
                   <thead>
                     <tr>

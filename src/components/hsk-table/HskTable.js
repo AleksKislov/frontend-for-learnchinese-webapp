@@ -95,7 +95,7 @@ const HskTable = ({ loadLexicon, lexicons, loading, words, loadWords, pagesNumbe
         {loading && lexicons ? (
           <Spinner />
         ) : (
-          <table className='table table-hover'>
+          <table className='table table-hover table-responsive'>
             <thead>
               <tr className='table-info'>
                 <th>#</th>

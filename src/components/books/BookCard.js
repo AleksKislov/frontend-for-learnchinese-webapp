@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Length from "./info/Length";
 import AuthorRus from "./info/AuthorRus";
+import Annotation from "./info/Annotation";
+import BookTitle from "./info/BookTitle";
 
 const BookCard = ({ book }) => {
   const {
@@ -25,20 +27,22 @@ const BookCard = ({ book }) => {
         </div>
         <div className='col-md-9'>
           <Link to={`/books/${_id}`}>
-            <h4 className='card-title'>{russianTitle}</h4>
+            <h4 className='card-title'>
+              <BookTitle russianTitle={russianTitle} chineseTitle={chineseTitle} />
+            </h4>
           </Link>
-          <div className='mb-2'>
+          <h6 className='card-subtitle mb-2'>
             <span className='text-muted'>Жанр: </span>
             {genre.map((genreName, ind) => (
               <span key={ind} className='badge badge-pill badge-info ml-1'>
                 {genreName}
               </span>
             ))}
-          </div>
+          </h6>
 
           <AuthorRus authorName={authorName} />
           <Length length={length} />
-          <p className='card-text'>{annotation}</p>
+          <Annotation annotation={annotation} />
 
           <div className=''>
             <Link to={`/books/${_id}`}></Link>

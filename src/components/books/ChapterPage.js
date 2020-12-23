@@ -12,6 +12,7 @@ import Paragraph from "../texts/Paragraph";
 import ImageCard from "./info/ImageCard";
 import LeaveComment from "../comments/LeaveComment";
 import Comment from "../comments/Comment";
+import BookTitle from "./info/BookTitle";
 
 const ChapterPage = ({
   match,
@@ -62,7 +63,9 @@ const ChapterPage = ({
               </Link>
             </div>
             <div className='col-sm-9'>
-              <h2>{book.russianTitle}</h2>
+              <h2>
+                <BookTitle russianTitle={book.russianTitle} chineseTitle={book.chineseTitle} />
+              </h2>
             </div>
           </div>
 

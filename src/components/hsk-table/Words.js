@@ -54,7 +54,7 @@ const Words = ({ loadWords, words, wordsLoading }) => {
       </div>
 
       <div className='col-sm-9'>
-        <table className='table table-hover'>
+        <table className='table table-hover table-responsive'>
           <thead>
             <tr className='table-info'>
               <th>#</th>
