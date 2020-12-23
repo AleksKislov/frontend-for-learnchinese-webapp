@@ -23,7 +23,9 @@ const ChapterPage = ({
   loadPage,
   page,
   comments,
-  getComments
+  getComments,
+  loadUserWords,
+  isAuthenticated
 }) => {
   useEffect(() => {
     const { chapterId, pageInd, bookId } = match.params;
@@ -40,7 +42,7 @@ const ChapterPage = ({
       setTimeout(async () => {
         const chineseChunkedWords = await parseChineseWords(page);
         setChineseChunkedArr(chineseChunkedWords);
-        loadUserWords();
+        if (isAuthenticated) loadUserWords();
       }, 0);
       getComments("book", page._id);
     }
@@ -130,6 +132,10 @@ const mapStateToProps = state => ({
   comments: state.comments.currentComments
 });
 
-export default connect(mapStateToProps, { loadBook, setLoading, loadPage, getComments })(
-  ChapterPage
-);
+export default connect(mapStateToProps, {
+  loadBook,
+  setLoading,
+  loadPage,
+  getComments,
+  loadUserWords
+})(ChapterPage);

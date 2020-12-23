@@ -7,10 +7,18 @@ import Spinner from "../layout/Spinner";
 import Pagination from "./Pagination";
 import TableCard from "./TableCard";
 
-const HskTable = ({ loadLexicon, lexicons, loading, words, loadWords, pagesNumber }) => {
+const HskTable = ({
+  loadLexicon,
+  lexicons,
+  loading,
+  words,
+  loadWords,
+  pagesNumber,
+  isAuthenticated
+}) => {
   useEffect(() => {
     loadLexicon(1, 0);
-    loadWords();
+    if (isAuthenticated) loadWords();
     // eslint-disable-next-line
   }, []);
 
@@ -162,7 +170,8 @@ const mapPropsToState = state => ({
   lexicons: state.hskTable.lexicons,
   loading: state.hskTable.loading,
   words: state.hskTable.words,
-  pagesNumber: state.hskTable.pagesNumber
+  pagesNumber: state.hskTable.pagesNumber,
+  isAuthenticated: state.auth.isAuthenticated
 });
 
 export default connect(mapPropsToState, { loadLexicon, loadWords })(HskTable);

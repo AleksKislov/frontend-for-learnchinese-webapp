@@ -48,7 +48,7 @@ export const addWord = ({ chinese, russian: translation, pinyin }) => async disp
 
     if (data && data.moreWords) maxWordsNum += 100;
   } catch (err) {
-    console.log(err);
+    // console.log(err);
   }
 
   if (allWordsLen < maxWordsNum) {
@@ -118,7 +118,7 @@ export const loadUserWordsLen = () => async dispatch => {
     const res = await axios.get("/api/userwords");
     allWordsLen = res.data.length;
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     allWordsLen = [].length;
   }
   dispatch({

@@ -13,9 +13,9 @@ import { Widget, addResponseMessage } from "react-chat-widget";
 import "react-chat-widget/lib/styles.css";
 import "./style.css";
 
-const TranslateForm = ({ loadUserWords }) => {
+const TranslateForm = ({ loadUserWords, isAuthenticated }) => {
   useEffect(() => {
-    loadUserWords();
+    if (isAuthenticated) loadUserWords();
   }, []);
 
   const [textLen, setTextLen] = useState(0);
@@ -141,7 +141,8 @@ TranslateForm.propTypes = {
 
 const mapStateToProps = state => ({
   userwords: state.userwords.userwords,
-  wordsLoading: state.userwords.loading
+  wordsLoading: state.userwords.loading,
+  isAuthenticated: state.auth.isAuthenticated
 });
 
 export default connect(mapStateToProps, { loadUserWords })(TranslateForm);

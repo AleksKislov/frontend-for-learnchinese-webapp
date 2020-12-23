@@ -22,7 +22,9 @@ const Search = ({
   loading,
   addWord,
   loadUserWords,
-  loadUserWordsLen
+  loadUserWordsLen,
+  isAuthenticated
+
   // dictResponse
   // puppeteerFunc
 }) => {
@@ -32,7 +34,7 @@ const Search = ({
       showSearchResult();
     }
     console.log("汉语是世界上最难学的一个语言");
-    loadUserWords();
+    if (isAuthenticated) loadUserWords();
   }, []);
 
   const [clicked, setClicked] = useState(false);
@@ -370,7 +372,8 @@ const Search = ({
 Search.propTypes = {};
 
 const mapStateToProps = state => ({
-  loading: state.userwords.loading
+  loading: state.userwords.loading,
+  isAuthenticated: state.auth.isAuthenticated
   // dictResponse: state.userwords.dictResponse
 });
 

@@ -36,7 +36,7 @@ const TextPage = ({
         const chineseChunkedWords = await parseChineseWords(text);
         setChineseChunkedArr(chineseChunkedWords);
 
-        loadUserWords();
+        if (isAuthenticated) loadUserWords();
       }, 0);
     }
   }, [text]);
