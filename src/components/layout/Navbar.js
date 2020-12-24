@@ -87,6 +87,7 @@ const Navbar = ({
             to='/register'
             activeStyle={activeNavLink}
             onClick={() => setPaths({ ...paths, login: "/register" })}
+            exact={true}
           >
             Регистрация
           </NavLink>
@@ -95,6 +96,7 @@ const Navbar = ({
             to='/login'
             activeStyle={activeNavLink}
             onClick={() => setPaths({ ...paths, login: "/login" })}
+            exact={true}
           >
             Войти
           </NavLink>
@@ -148,8 +150,7 @@ const Navbar = ({
           </NavLink>
 
           <NavLink onClick={logout} className='dropdown-item' to='/#' exact={true}>
-            <i className='fas fa-sign-out-alt'></i>
-            <span className='hide-sm'> Выйти</span>
+            Выйти <i className='fas fa-sign-out-alt'></i>
           </NavLink>
         </div>
       </li>

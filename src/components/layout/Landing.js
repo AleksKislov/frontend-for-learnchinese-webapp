@@ -7,17 +7,17 @@ const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) return <Redirect to='/dashboard' />;
 
   return (
-    <section className='landing' style={{ marginBottom: "-2rem" }}>
+    <section className='landing'>
       <div className='dark-overlay'>
         <div className='landing-inner'>
-          <h1 className='x-large'>Welcome to BUYILEHU</h1>
-          <p className='lead'>Web-приложение для изучающих китайский язык от ChinesePlus.ru</p>
+          <h1 className='x-large'>Добро пожаловать в клуб Chinese+</h1>
+          <p className='lead'>Web-приложение для изучающих китайский язык от ChinesePlus</p>
           <div className='buttons'>
             <Link to='/register' className='btn btn-dark'>
-              Sign Up
+              Регистрация
             </Link>
             <Link to='/login' className='btn btn-light'>
-              Login
+              Войти
             </Link>
           </div>
         </div>

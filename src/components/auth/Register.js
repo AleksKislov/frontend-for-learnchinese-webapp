@@ -32,15 +32,15 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   return (
     <Fragment>
       <div style={{ textAlign: "center", margin: "0 80px 0 80px" }}>
-        <h1 className='large text-primary'>Sign Up</h1>
+        <h1 className='large text-primary'>Регистрация</h1>
         <p className='lead'>
-          <i className='fas fa-user'></i> Create Your Account
+          <i className='fas fa-user'></i> Создайте свой аккаунт
         </p>
         <form className='form' onSubmit={e => onSubmit(e)}>
           <div className='form-group'>
             <input
               type='text'
-              placeholder='Name'
+              placeholder='Имя / Ник'
               name='name'
               className='form-control'
               value={name}
@@ -50,20 +50,20 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           <div className='form-group'>
             <input
               type='email'
-              placeholder='Email Address'
+              placeholder='Адрес Email'
               name='email'
               value={email}
               onChange={e => onChange(e)}
               className='form-control'
             />
             <small className='form-text'>
-              This site uses Gravatar so if you want a profile image, use a Gravatar email
+              Сайт использует Gravatar: если хотите аватарку, то используйте Gravatar email
             </small>
           </div>
           <div className='form-group'>
             <input
               type='password'
-              placeholder='Password'
+              placeholder='Пароль'
               name='password'
               minLength='6'
               value={password}
@@ -74,7 +74,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           <div className='form-group'>
             <input
               type='password'
-              placeholder='Confirm Password'
+              placeholder='Повторите Пароль'
               name='password2'
               value={password2}
               onChange={e => onChange(e)}
@@ -82,10 +82,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               className='form-control'
             />
           </div>
-          <input type='submit' className='btn btn-primary' value='Register' />
+          <input type='submit' className='btn btn-primary' value='Регистрация' />
         </form>
         <p className='my-1'>
-          Already have an account? <Link to='/login'>Sign In</Link>
+          Уже есть аккаунт? Просто <Link to='/login'>Войдите</Link>
         </p>
       </div>
     </Fragment>
