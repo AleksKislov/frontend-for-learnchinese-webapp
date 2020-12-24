@@ -21,7 +21,7 @@ const Landing = ({ isAuthenticated }) => {
             </Link>
           </div>
 
-          <div className='card text-primary bg-light mt-3'>
+          <div className='card text-primary bg-light mt-4'>
             <div className='card-header'>
               <h5>Место, где вы сможете</h5>
             </div>
