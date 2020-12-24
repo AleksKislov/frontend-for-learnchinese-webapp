@@ -10,7 +10,8 @@ import {
   GET_COMMENTS,
   ADD_COMMENT,
   GET_10COMMENTS,
-  GET_COMMENTS_ERR
+  GET_COMMENTS_ERR,
+  CLEAR_POSTS
 } from "../actions/types";
 
 const initialState = {
@@ -29,6 +30,12 @@ export default function(state = initialState, action) {
         ...state,
         posts: [...state.posts, ...payload],
         loading: false
+      };
+    case CLEAR_POSTS:
+      return {
+        ...state,
+        posts: [],
+        loading: true
       };
     case GET_10COMMENTS:
       return {

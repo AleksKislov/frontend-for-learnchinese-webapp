@@ -6,12 +6,15 @@ import {
   LOAD_POSTS_ERR,
   LOAD_POST_ERR,
   ADD_LIKE,
-  ADD_DISLIKE
+  ADD_DISLIKE,
+  CLEAR_POSTS
 } from "./types";
 import axios from "axios";
 import { setAlert } from "./alert";
 
 export const addPost = (title, text, tag) => async dispatch => {
+  dispatch({ type: CLEAR_POSTS });
+
   const config = {
     headers: {
       "Content-Type": "application/json"
@@ -39,6 +42,10 @@ export const addPost = (title, text, tag) => async dispatch => {
     }
     dispatch({ type: ADD_POST_ERR });
   }
+};
+
+export const clearPosts = _ => async dispatch => {
+  dispatch({ type: CLEAR_POSTS });
 };
 
 /**

@@ -44,6 +44,7 @@ export const ADD_POST_ERR = "ADD_POST_ERR";
 export const LOAD_POSTS_ERR = "LOAD_POSTS_ERR";
 export const LOAD_POST_ERR = "LOAD_POST_ERR";
 export const LOAD_POSTS = "LOAD_POSTS";
+export const CLEAR_POSTS = "CLEAR_POSTS";
 export const LOAD_POST = "LOAD_POST";
 export const ADD_LIKE = "ADD_LIKE";
 export const ADD_DISLIKE = "ADD_DISLIKE";

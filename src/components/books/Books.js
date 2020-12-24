@@ -4,7 +4,7 @@ import { loadBooks, clearBook } from "../../actions/books";
 import BookCard from "./BookCard";
 import Spinner from "../layout/Spinner";
 
-const Books = ({ loadBooks, books, loading }) => {
+const Books = ({ loadBooks, books, loading, clearBook }) => {
   useEffect(() => {
     clearBook();
     loadBooks();
@@ -26,7 +26,11 @@ const Books = ({ loadBooks, books, loading }) => {
       <div className='col-md-9'>
         <h2>Книги на китайском языке</h2>
 
-        {loading ? <Spinner /> : books.map(book => <BookCard key={book._id} book={book} />)}
+        {loading && !books.length ? (
+          <Spinner />
+        ) : (
+          books.map(book => <BookCard key={book._id} book={book} />)
+        )}
       </div>
     </div>
   );

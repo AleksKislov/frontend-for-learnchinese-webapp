@@ -51,6 +51,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
       if (user.role === "admin") {
         title = emoji + " " + title;
         addPost(title, newtext, postTag);
+        setSkip(0);
         return;
       }
 
@@ -58,6 +59,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
         // title, text, theme
         title = emoji + " " + title;
         addPost(title, newtext, postTag);
+        setSkip(0);
       } else {
         store.dispatch(setAlert("Сообщение и заголовок не должны превышать лимит", "danger"));
       }
@@ -121,7 +123,6 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
 
   const onSelect = e => {
     const selectedEmo = e.target.options[e.target.options.selectedIndex].innerHTML;
-    // setFormData({ ...formData, title: `${emoji} ${title}` });
     setEmoji(selectedEmo);
   };
 

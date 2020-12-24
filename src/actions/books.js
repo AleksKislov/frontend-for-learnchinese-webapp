@@ -9,7 +9,6 @@ import {
   CLEAR_PAGE
 } from "./types";
 import axios from "axios";
-import { setAlert } from "./alert";
 
 export const loadBooks = () => async dispatch => {
   try {
