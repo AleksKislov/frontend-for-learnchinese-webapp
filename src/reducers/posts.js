@@ -27,7 +27,7 @@ export default function(state = initialState, action) {
     case LOAD_POSTS:
       return {
         ...state,
-        posts: payload,
+        posts: [...state.posts, ...payload],
         loading: false
       };
     case GET_10COMMENTS:

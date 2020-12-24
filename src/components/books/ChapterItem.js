@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PageButtons from "./info/PageButtons";
 
 const ChapterItem = ({ chapter, ind, bookId }) => {
   const { chineseTitle, russianTitle, chapterId, length, pages } = chapter;
@@ -15,13 +16,7 @@ const ChapterItem = ({ chapter, ind, bookId }) => {
       </td>
       <td>{length}</td>
       <td>
-        {pages.map((page, pageInd) => (
-          <Link to={`/books/${bookId}/${chapterId}/${pageInd}`} key={pageInd}>
-            <button type='button' className='btn btn-info btn-sm mx-1'>
-              {pageInd + 1}
-            </button>
-          </Link>
-        ))}
+        <PageButtons pages={pages} bookId={bookId} chapterId={chapterId} />
       </td>
     </tr>
   );

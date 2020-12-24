@@ -96,8 +96,7 @@ const TextPage = ({
               {hideFlag ? "Показать Перевод" : "Скрыть Перевод"}
             </div>
             <div className='row'>
-              {//text.wordsarr.map((chunk, index) => (
-              chineseChunkedArr.map((chunk, index) => (
+              {chineseChunkedArr.map((chunk, index) => (
                 <Paragraph
                   chunk={chunk}
                   index={index}

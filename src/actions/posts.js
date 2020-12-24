@@ -41,9 +41,14 @@ export const addPost = (title, text, tag) => async dispatch => {
   }
 };
 
-export const loadPosts = () => async dispatch => {
+/**
+ *
+ * @param {number} len  - current length of posts array
+ */
+export const loadPosts = len => async dispatch => {
+  let skip = len || "0";
   try {
-    const { data } = await axios.get("/api/posts");
+    const { data } = await axios.get(`/api/posts/infinite?skip=${skip}`);
     dispatch({
       type: LOAD_POSTS,
       payload: data

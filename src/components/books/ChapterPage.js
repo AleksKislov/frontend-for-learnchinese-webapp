@@ -13,6 +13,7 @@ import ImageCard from "./info/ImageCard";
 import LeaveComment from "../comments/LeaveComment";
 import Comment from "../comments/Comment";
 import BookTitle from "./info/BookTitle";
+import PageButtons from "./info/PageButtons";
 
 const ChapterPage = ({
   match,
@@ -61,7 +62,7 @@ const ChapterPage = ({
           <div className='row'>
             <div className='col-sm-3 my-auto'>
               <Link to={`/books/${match.params.bookId}`}>
-                <div className='btn btn-sm btn-outline-info'>Назад</div>
+                <div className='btn btn-sm btn-outline-info'>К оглавлению</div>
               </Link>
             </div>
             <div className='col-sm-9'>
@@ -78,9 +79,10 @@ const ChapterPage = ({
 
             <div className='col-sm-9'>
               <div className='clearfix'>
-                <div className='float-left'>
-                  <h4>{book.contents[parseInt(match.params.chapterId)].russianTitle}</h4>
-                </div>
+                <h4>
+                  {book.contents[parseInt(match.params.chapterId)].russianTitle}, стр.{" "}
+                  {parseInt(match.params.pageInd) + 1}
+                </h4>
 
                 <div className='btn btn-sm btn-outline-info float-right' onClick={onClick}>
                   {hideFlag ? "Показать Перевод" : "Скрыть Перевод"}
@@ -88,7 +90,7 @@ const ChapterPage = ({
               </div>
 
               <div className='row'>
-                {!chineseChunkedArr.length ? (
+                {!page || !chineseChunkedArr.length ? (
                   <Spinner />
                 ) : (
                   chineseChunkedArr.map((chunk, index) => (

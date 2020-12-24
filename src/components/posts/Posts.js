@@ -7,11 +7,12 @@ import { setAlert } from "../../actions/alert";
 import Spinner from "../layout/Spinner";
 
 const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) => {
+  const [skip, setSkip] = useState(0);
   useEffect(() => {
     setTimeout(() => {
-      loadPosts();
+      loadPosts(skip);
     }, 100);
-  }, [loadPosts]);
+  }, [skip]);
 
   const [formData, setFormData] = useState({
     text: "",
@@ -249,7 +250,19 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
           {loading ? (
             <Spinner />
           ) : (
-            posts.map(post => hideFlag[post.tag] && <Post key={post._id} post={post} />)
+            <div className=''>
+              {posts.map(post => hideFlag[post.tag] && <Post key={post._id} post={post} />)}
+
+              <div className='text-center'>
+                <button
+                  type='button'
+                  className='btn btn-outline-info btn-sm mx-1 mb-1'
+                  onClick={() => setSkip(posts.length)}
+                >
+                  Загрузить Ещё
+                </button>
+              </div>
+            </div>
           )}
         </div>
       </div>
@@ -269,4 +282,5 @@ const mapPropsToState = state => ({
   loading: state.posts.loading,
   user: state.auth.user
 });
+
 export default connect(mapPropsToState, { loadPosts, addPost })(Posts);
