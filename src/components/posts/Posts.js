@@ -256,7 +256,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
               <div className='text-center'>
                 <button
                   type='button'
-                  className='btn btn-outline-info btn-sm mx-1 mb-1'
+                  className='btn btn-info btn-sm mb-1'
                   onClick={() => setSkip(posts.length)}
                 >
                   Загрузить Ещё

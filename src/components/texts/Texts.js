@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { loadTexts, clearText } from "../../actions/texts";
 import Spinner from "../layout/Spinner";
@@ -9,6 +9,33 @@ const Texts = ({ loadTexts, texts, loading, clearText }) => {
     clearText();
     loadTexts();
   }, [loadTexts]);
+
+  const levelFilter = [
+    {
+      1: true,
+      2: true,
+      3: true
+    },
+    {
+      1: true,
+      2: false,
+      3: false
+    },
+    {
+      1: false,
+      2: true,
+      3: false
+    },
+    {
+      1: false,
+      2: false,
+      3: true
+    }
+  ];
+
+  const [hideFlag, setHideFlag] = useState(levelFilter[0]);
+  const onSelect = e =>
+    setHideFlag(levelFilter[parseInt(e.target.options[e.target.options.selectedIndex].value)]);
 
   return (
     <div className='row'>
@@ -26,7 +53,22 @@ const Texts = ({ loadTexts, texts, loading, clearText }) => {
       <div className='col-md-9'>
         <h2>Чтение Текстов</h2>
 
-        {loading ? <Spinner /> : texts.map(text => <TextCard key={text._id} text={text} />)}
+        <div className='form-group'>
+          <select className='custom-select' onChange={e => onSelect(e)}>
+            <option defaultValue='0' value='0'>
+              Все Уровни
+            </option>
+            <option value='1'>1 Простой</option>
+            <option value='2'>2 Средний</option>
+            <option value='3'>3 Сложный</option>
+          </select>
+        </div>
+
+        {loading ? (
+          <Spinner />
+        ) : (
+          texts.map(text => hideFlag[text.level] && <TextCard key={text._id} text={text} />)
+        )}
       </div>
     </div>
   );
