@@ -117,3 +117,9 @@ export const numberToStr = num => {
     return arr.join("");
   }
 };
+
+/**
+ * @param {string} str  - Chinese text
+ * @returns {number}    - number of Chinese chars in str w/o spaces
+ */
+export const countZnChars = str => str.replaceAll(" ", "").length;

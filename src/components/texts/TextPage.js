@@ -96,12 +96,13 @@ const TextPage = ({
               {hideFlag ? "Показать Перевод" : "Скрыть Перевод"}
             </div>
             <div className='row'>
-              {chineseChunkedArr.map((chunk, index) => (
+              {chineseChunkedArr.map((chunk, ind) => (
                 <Paragraph
                   chunk={chunk}
-                  index={index}
+                  originTxt={text.origintext[ind]}
+                  index={ind}
                   key={uuid()}
-                  translation={text.translation[index]}
+                  translation={text.translation[ind]}
                   hideFlag={hideFlag}
                 />
               ))}

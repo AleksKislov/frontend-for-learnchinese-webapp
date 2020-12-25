@@ -7,7 +7,6 @@ import {
   CLEAR_TEXT
 } from "./types";
 import axios from "axios";
-import { setAlert } from "./alert";
 
 export const loadTexts = () => async dispatch => {
   try {

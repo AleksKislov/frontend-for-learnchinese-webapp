@@ -11134,6 +11134,20 @@
   right: 0;
 }
 
+.paragraphPlus {
+  padding-right: 4px;
+  color: var(--success);
+  position: absolute;
+  z-index: 1;
+  font-size: 16px;
+  right: 0;
+  bottom: 0;
+}
+
+.alreadyRead {
+  background-color: rgba(75, 57, 238, 0.1);
+}
+
 .tippyPinyin {
   font-size: 1.6em;
   /* background-color: #149a80; */
