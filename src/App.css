@@ -11134,9 +11134,8 @@
   right: 0;
 }
 
-.paragraphPlus {
+.paragraphToRead {
   padding-right: 4px;
-  color: var(--success);
   position: absolute;
   z-index: 1;
   font-size: 16px;
@@ -11144,8 +11143,17 @@
   bottom: 0;
 }
 
+.paragraph-plus{
+  color: var(--info);
+}
+
+.paragraph-minus {
+  color: var(--red);
+}
+
 .alreadyRead {
-  background-color: rgba(75, 57, 238, 0.1);
+  /* background-color: rgba(152, 153, 153, 0.2); */
+  background-color: var(--light)
 }
 
 .tippyPinyin {
