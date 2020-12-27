@@ -167,10 +167,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     });
 
     try {
-      const { data } = await axios.post(`/api/texts`, body, config);
-
+      await axios.post(`/api/texts`, body, config);
       alert("Текст опубликован!");
-      // console.log(data);
     } catch (err) {
       console.log(err);
     }

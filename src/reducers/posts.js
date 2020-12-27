@@ -1,5 +1,4 @@
 import {
-  ADD_POST,
   ADD_POST_ERR,
   LOAD_POSTS,
   LOAD_POST,

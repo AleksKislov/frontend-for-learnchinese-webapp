@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { addLike, addDislike, loadPost } from "../../actions/posts";
+import { addLike, addDislike } from "../../actions/posts";
 
 const Post = ({ post, addLike, addDislike }) => {
   const { text, name, avatar, date, title, _id, tag, comments_id, likes, dislikes } = post;

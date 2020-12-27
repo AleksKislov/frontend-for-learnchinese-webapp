@@ -22,7 +22,7 @@ const TextCard = ({ text }) => {
       <div className='card-body row'>
         <div style={{ position: "relative" }} className='col-md-3'>
           <Link to={`/texts/${_id}`}>
-            <img className='mr-3 textCardImg' src={`${pic_url}`} alt='Picture' />
+            <img className='mr-3 textCardImg' src={`${pic_url}`} alt='text pic' />
             <div style={imgText}>{theme_word}</div>
           </Link>
         </div>

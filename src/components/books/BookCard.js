@@ -22,7 +22,7 @@ const BookCard = ({ book }) => {
       <div className='card-body row'>
         <div style={{ position: "relative" }} className='col-md-3'>
           <Link to={`/books/${_id}`}>
-            <img className='mr-3 textCardImg' src={`${pictureUrl}`} alt='Picture' />
+            <img className='mr-3 textCardImg' src={`${pictureUrl}`} alt='book pic' />
           </Link>
         </div>
         <div className='col-md-9'>
@@ -40,6 +40,10 @@ const BookCard = ({ book }) => {
             ))}
           </h6>
 
+          <h6 className='card-subtitle mb-2'>
+            <span className='text-muted'>Год: </span>
+            {year}
+          </h6>
           <AuthorRus authorName={authorName} />
           <Length length={length} />
           <Annotation annotation={annotation} />

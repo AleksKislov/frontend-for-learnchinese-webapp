@@ -232,7 +232,7 @@ const Search = ({
             <label>
               <i>
                 база данных{" "}
-                <a href='https://bkrs.info/' target='_blank'>
+                <a href='https://bkrs.info/' target='_blank' rel='noopener noreferrer'>
                   БКРС
                 </a>
               </i>
