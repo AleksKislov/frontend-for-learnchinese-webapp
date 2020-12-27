@@ -8,7 +8,9 @@ import {
   LOGIN_FAIL,
   LOGIN_SUCCESS,
   LOGOUT,
-  CLEAR_PROFILE
+  CLEAR_PROFILE,
+  SET_GOAL_SUCCESS,
+  SET_GOAL_FAIL
 } from "./types";
 import setAuthToken from "../utils/setAuthToken";
 
@@ -94,4 +96,29 @@ export const login = (email, password) => async dispatch => {
 export const logout = () => dispatch => {
   dispatch({ type: CLEAR_PROFILE });
   dispatch({ type: LOGOUT });
+};
+
+/**
+ *
+ * @param {number} num - of Chinese chars to read per day
+ */
+export const setReadGoal = num => async dispatch => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  };
+
+  try {
+    const { data } = await axios.post(`/api/users/daily_reading_goal/${num}`, {}, config);
+
+    dispatch({
+      type: SET_GOAL_SUCCESS,
+      payload: data
+    });
+
+    dispatch(loadUser());
+  } catch (err) {
+    dispatch({ type: SET_GOAL_FAIL });
+  }
 };

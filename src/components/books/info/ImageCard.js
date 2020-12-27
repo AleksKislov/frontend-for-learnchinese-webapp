@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import Length from "./Length";
 import AuthorRus from "./AuthorRus";
+import ReadingCard from "../../dashboard/ReadingCard";
 
 const ImageCard = ({ book, isAuthenticated, currentUser }) => {
   const { genre, pictureUrl, authorName, length } = book;
@@ -30,6 +31,8 @@ const ImageCard = ({ book, isAuthenticated, currentUser }) => {
           )}
         </div>
       </div>
+
+      <ReadingCard />
     </div>
   );
 };

@@ -11,6 +11,7 @@ import WordModal from "../translation/WordModal";
 import { loadUserWords } from "../../actions/userWords";
 import Comment from "../comments/Comment";
 import LeaveComment from "../comments/LeaveComment";
+import ReadingCard from "../dashboard/ReadingCard";
 
 const TextPage = ({
   text,
@@ -84,6 +85,8 @@ const TextPage = ({
                   )}
               </div>
             </div>
+
+            <ReadingCard />
           </div>
 
           <div className='col-sm-9'>

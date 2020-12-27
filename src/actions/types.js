@@ -68,3 +68,6 @@ export const LOAD_BOOK_ERR = "LOAD_BOOK_ERR";
 export const CLEAR_BOOK = "CLEAR_BOOK";
 export const LOAD_PAGE = "LOAD_PAGE";
 export const CLEAR_PAGE = "CLEAR_PAGE";
+
+export const SET_GOAL_SUCCESS = "SET_GOAL_SUCCESS";
+export const SET_GOAL_FAIL = "SET_GOAL_FAIL";

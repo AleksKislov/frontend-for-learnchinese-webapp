@@ -13,7 +13,7 @@ import ImageCard from "./info/ImageCard";
 import LeaveComment from "../comments/LeaveComment";
 import Comment from "../comments/Comment";
 import BookTitle from "./info/BookTitle";
-import PageButtons from "./info/PageButtons";
+// import PageButtons from "./info/PageButtons";
 
 const ChapterPage = ({
   match,
@@ -93,12 +93,13 @@ const ChapterPage = ({
                 {!page || !chineseChunkedArr.length ? (
                   <Spinner />
                 ) : (
-                  chineseChunkedArr.map((chunk, index) => (
+                  chineseChunkedArr.map((chunk, ind) => (
                     <Paragraph
                       chunk={chunk}
-                      index={index}
+                      originTxt={page.origintext[ind]}
+                      index={ind}
                       key={uuid()}
-                      translation={page.translation[index]}
+                      translation={page.translation[ind]}
                       hideFlag={hideFlag}
                     />
                   ))

@@ -6,6 +6,7 @@ import { getCurrentProfile } from "../../actions/profile";
 import Spinner from "../layout/Spinner";
 import CommentsCard from "./CommentsCard";
 // import DashboardActions from "./DashboardActions";
+import ReadingCard from "./ReadingCard";
 
 const Dashboard = ({
   getCurrentProfile,
@@ -31,7 +32,9 @@ const Dashboard = ({
         <p className='lead'>
           <i className='fas fa-user'></i> Добро пожаловать{user && ", " + user.name}
         </p>
-        <p className='lead'>Роль: {user && user.role}</p>
+        <p className='lead'>Роль: {(user && user.role) || "Изучающий"}</p>
+
+        <ReadingCard />
 
         <div className='card bg-light mb-3'>
           <div className='card-body'>

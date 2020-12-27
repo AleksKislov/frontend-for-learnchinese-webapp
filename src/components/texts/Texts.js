@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { loadTexts, clearText } from "../../actions/texts";
 import Spinner from "../layout/Spinner";
 import TextCard from "./TextCard";
+import ReadingCard from "../dashboard/ReadingCard";
 
 const Texts = ({ loadTexts, texts, loading, clearText }) => {
   useEffect(() => {
@@ -48,6 +49,7 @@ const Texts = ({ loadTexts, texts, loading, clearText }) => {
             </p>
           </div>
         </div>
+        <ReadingCard />
       </div>
 
       <div className='col-md-9'>

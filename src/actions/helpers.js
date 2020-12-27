@@ -119,6 +119,7 @@ export const numberToStr = num => {
 };
 
 /**
+ * for counting Chinese characters in Paragraph component
  * @param {string} str  - Chinese text
  * @returns {number}    - number of Chinese chars in str w/o spaces
  */

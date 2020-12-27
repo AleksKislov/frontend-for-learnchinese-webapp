@@ -9,13 +9,13 @@ const Paragraph = ({ chunk, translation, hideFlag, index, originTxt }) => {
   const [alreadyRead, setAlreadyRead] = useState(false);
 
   const paragraphNum = (
-    <Tippy content={<span>{"Параграф №"}</span>}>
+    <Tippy content='Параграф №'>
       <div className='paragraphNum'>{index + 1}</div>
     </Tippy>
   );
 
   const paragraphPlus = (
-    <Tippy content={<span>{`Прочитано ${numOfChars} 字`}</span>}>
+    <Tippy content={`Прочитано ${numOfChars}字`}>
       <div
         className={`paragraphToRead paragraph-${alreadyRead ? "minus" : "plus"}`}
         onClick={() => setAlreadyRead(!alreadyRead)}

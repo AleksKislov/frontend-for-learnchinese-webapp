@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { loadBooks, clearBook } from "../../actions/books";
 import BookCard from "./BookCard";
 import Spinner from "../layout/Spinner";
+import ReadingCard from "../dashboard/ReadingCard";
 
 const Books = ({ loadBooks, books, loading, clearBook }) => {
   useEffect(() => {
@@ -21,6 +22,7 @@ const Books = ({ loadBooks, books, loading, clearBook }) => {
             </p>
           </div>
         </div>
+        <ReadingCard />
       </div>
 
       <div className='col-md-9'>
