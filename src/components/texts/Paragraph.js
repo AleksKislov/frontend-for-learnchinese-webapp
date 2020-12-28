@@ -1,12 +1,38 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import TippyTooltip from "../translation/TippyTooltip";
 import { v4 as uuid } from "uuid";
 import Tippy from "@tippyjs/react";
 import { countZnChars } from "../../actions/helpers";
+import { connect } from "react-redux";
+import { readToday, unreadToday } from "../../actions/auth";
 
-const Paragraph = ({ chunk, translation, hideFlag, index, originTxt }) => {
+const Paragraph = ({
+  chunk,
+  translation,
+  hideFlag,
+  index,
+  originTxt,
+  user,
+  readToday,
+  unreadToday
+}) => {
   const numOfChars = countZnChars(originTxt);
   const [alreadyRead, setAlreadyRead] = useState(false);
+
+  useEffect(() => {
+    if (user && user.read_today_arr[window.location.pathname]) {
+      if (user.read_today_arr[window.location.pathname].includes(index)) setAlreadyRead(true);
+    }
+  }, [user]);
+
+  const readOrUnread = async () => {
+    if (alreadyRead) {
+      unreadToday({ num: numOfChars, path: window.location.pathname, ind: index });
+    } else {
+      readToday({ num: numOfChars, path: window.location.pathname, ind: index });
+    }
+    setAlreadyRead(!alreadyRead);
+  };
 
   const paragraphNum = (
     <Tippy content='Параграф №'>
@@ -18,7 +44,7 @@ const Paragraph = ({ chunk, translation, hideFlag, index, originTxt }) => {
     <Tippy content={`Прочитано ${numOfChars}字`}>
       <div
         className={`paragraphToRead paragraph-${alreadyRead ? "minus" : "plus"}`}
-        onClick={() => setAlreadyRead(!alreadyRead)}
+        onClick={() => readOrUnread()}
       >
         <i className={`fas fa-${alreadyRead ? "minus" : "plus"}-square`}></i>
       </div>
@@ -55,4 +81,8 @@ const hidden = {
   display: "none"
 };
 
-export default Paragraph;
+const mapStateToProps = state => ({
+  user: state.auth.user
+});
+
+export default connect(mapStateToProps, { readToday, unreadToday })(Paragraph);

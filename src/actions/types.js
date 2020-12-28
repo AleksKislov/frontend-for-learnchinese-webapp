@@ -71,3 +71,5 @@ export const CLEAR_PAGE = "CLEAR_PAGE";
 
 export const SET_GOAL_SUCCESS = "SET_GOAL_SUCCESS";
 export const SET_GOAL_FAIL = "SET_GOAL_FAIL";
+export const READ_TODAY = "READ_TODAY";
+export const READ_TODAY_ERR = "READ_TODAY_ERR";
