@@ -16,6 +16,7 @@ import {
 import Paragraph from "./Paragraph";
 import { v4 as uuid } from "uuid";
 import "./style.css";
+import { countZnChars } from "../../actions/helpers";
 
 const TextForm = ({ loadUserWords, user, textToEdit }) => {
   useEffect(() => {
@@ -88,7 +89,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
 
       // console.log(wordsFromDB);
       const newArr = itirateWordsFromDB(allwords, wordsFromDB);
-      const length = originText.length;
+      const length = countZnChars(originText);
       let tags = tagsId.value.split(",");
       tags = tags.map(tag => tag.trim()); // array of words
       const chineseChunkedWords = chunkArrayFunc(newArr); // array of object arrays
@@ -355,12 +356,14 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
 
           <div className='row'>
             {formData &&
-              formData.chineseChunkedWords.map((chunk, index) => (
+              formData.chineseChunkedWords.map((chunk, ind) => (
                 <Paragraph
                   chunk={chunk}
-                  index={index}
+                  originTxt={formData.chunkedOriginText[ind]}
+                  index={ind}
                   key={uuid()}
-                  translation={formData.chunkedTranslation[index]}
+                  translation={formData.chunkedTranslation[ind]}
+                  toEdit={true}
                 />
               ))}
           </div>

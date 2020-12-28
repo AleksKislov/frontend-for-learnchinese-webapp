@@ -14,14 +14,17 @@ const Paragraph = ({
   originTxt,
   user,
   readToday,
-  unreadToday
+  unreadToday,
+  toEdit
 }) => {
   const numOfChars = countZnChars(originTxt);
   const [alreadyRead, setAlreadyRead] = useState(false);
 
   useEffect(() => {
-    if (user && user.read_today_arr[window.location.pathname]) {
-      if (user.read_today_arr[window.location.pathname].includes(index)) setAlreadyRead(true);
+    if (user && !toEdit) {
+      if (user.read_today_arr && user.read_today_arr[window.location.pathname]) {
+        if (user.read_today_arr[window.location.pathname].includes(index)) setAlreadyRead(true);
+      }
     }
   }, [user]);
 
@@ -41,7 +44,7 @@ const Paragraph = ({
   );
 
   const paragraphPlus = (
-    <Tippy content={`Прочитано ${numOfChars}字`}>
+    <Tippy content={`Прочитано ${numOfChars} 字`}>
       <div
         className={`paragraphToRead paragraph-${alreadyRead ? "minus" : "plus"}`}
         onClick={() => readOrUnread()}
