@@ -5796,7 +5796,8 @@
    overflow: hidden;
    line-height: 0;
    font-size: 0.703125rem;
-   background-color: #ecf0f1;
+   background-color: var(--white);
+   border: 1px solid rgba(129, 127, 127, 0.5);
    border-radius: 0.25rem;
  }
  
@@ -11340,4 +11341,15 @@
   h4, .h4 {
     font-size: 1.40625rem;
   }
+ }
+
+ .textGoal {
+  position: relative;
+  padding-top:0.15rem;
+ }
+
+ #changeGoalButton {
+    position: absolute;
+    right: 0;
+    top:0;
  }
