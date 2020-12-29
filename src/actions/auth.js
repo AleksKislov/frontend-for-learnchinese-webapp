@@ -126,8 +126,6 @@ export const setReadGoal = num => async dispatch => {
 };
 
 export const readToday = ({ num, path, ind }) => async dispatch => {
-  // let { num, path, ind } = req.body;
-
   const config = {
     headers: {
       "Content-Type": "application/json"
@@ -144,15 +142,13 @@ export const readToday = ({ num, path, ind }) => async dispatch => {
       payload: data
     });
 
-    dispatch(loadUser());
+    // dispatch(loadUser());
   } catch (err) {
     dispatch({ type: READ_TODAY_ERR });
   }
 };
 
 export const unreadToday = ({ num, path, ind }) => async dispatch => {
-  // let { num, path, ind } = req.body;
-
   const config = {
     headers: {
       "Content-Type": "application/json"
@@ -169,7 +165,7 @@ export const unreadToday = ({ num, path, ind }) => async dispatch => {
       payload: data
     });
 
-    dispatch(loadUser());
+    // dispatch(loadUser());
   } catch (err) {
     dispatch({ type: READ_TODAY_ERR });
   }

@@ -30,11 +30,12 @@ const Paragraph = ({
 
   const readOrUnread = async () => {
     if (alreadyRead) {
-      unreadToday({ num: numOfChars, path: window.location.pathname, ind: index });
+      setAlreadyRead(!alreadyRead);
+      if (user) unreadToday({ num: numOfChars, path: window.location.pathname, ind: index });
     } else {
-      readToday({ num: numOfChars, path: window.location.pathname, ind: index });
+      setAlreadyRead(!alreadyRead);
+      if (user) readToday({ num: numOfChars, path: window.location.pathname, ind: index });
     }
-    setAlreadyRead(!alreadyRead);
   };
 
   const paragraphNum = (
