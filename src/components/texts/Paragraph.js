@@ -32,10 +32,11 @@ const Paragraph = ({
   const readOrUnread = () => {
     if (alreadyRead) {
       setAlreadyRead(!alreadyRead);
-      if (user) unreadToday({ num: numOfChars, path: window.location.pathname, ind: index });
+      if (user && user.daily_reading_goal)
+        unreadToday({ num: numOfChars, path: window.location.pathname, ind: index });
     } else {
       setAlreadyRead(!alreadyRead);
-      if (user) changeTeam();
+      if (user && user.daily_reading_goal) changeTeam();
     }
   };
 
