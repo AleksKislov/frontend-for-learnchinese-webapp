@@ -11354,13 +11354,30 @@
     top:0;
  }
 
- .box{
+ .box, .box1, .box2, .box3 {
   display: none;
   position: absolute;
-  width: 14rem;
-  height: 14rem;
   border-radius: 50%;
   background-color: var(--success);
   z-index: 100;
 }
 
+.box{
+  width: 14rem;
+  height: 14rem;
+}
+
+.box1{
+  width: 12rem;
+  height: 12rem;
+}
+
+.box2{
+  width: 10rem;
+  height: 10rem;
+}
+
+.box3{
+  width: 8rem;
+  height: 8rem;
+}

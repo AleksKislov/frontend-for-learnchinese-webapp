@@ -41,12 +41,18 @@ const Paragraph = ({
 
   function changeTeam() {
     const box = document.querySelector("#box" + index);
-    box.style.display = "block";
+    const box1 = document.querySelector("#box1" + index);
+    const box2 = document.querySelector("#box2" + index);
     const teamRed = document.querySelector(".progress");
+
+    otherBoxes(teamRed, box1, 1);
+    otherBoxes(teamRed, box2, 2);
+
+    box.style.display = "block";
     const rect = box.getBoundingClientRect();
     teamRed.appendChild(box);
     TweenMax.set(box, { x: 0, y: 0 });
-    TweenMax.to(box, 1.2, { width: "0.9rem", height: "0.9rem", color: "#18BC9C", opacity: "0" });
+    TweenMax.to(box, 1.2, { width: "0.9rem", height: "0.9rem", color: "#18BC9C", opacity: "0.5" });
     const newRect = box.getBoundingClientRect();
 
     TweenMax.from(box, 1, {
@@ -59,10 +65,35 @@ const Paragraph = ({
     function fadeIt() {
       setTimeout(() => {
         teamRed.removeChild(box);
+        readToday({ num: numOfChars, path: window.location.pathname, ind: index });
       }, 500);
-      readToday({ num: numOfChars, path: window.location.pathname, ind: index });
     }
   }
+
+  const otherBoxes = (teamRed, box, n) => {
+    box.style.display = "block";
+    const rect = box.getBoundingClientRect();
+    teamRed.appendChild(box);
+    TweenMax.set(box, { x: 0, y: 0 });
+    TweenMax.to(box, 1.2 + n * 0.3, {
+      width: "0.9rem",
+      height: "0.9rem",
+      color: "#18BC9C",
+      opacity: "0.5"
+    });
+    const newRect = box.getBoundingClientRect();
+
+    TweenMax.from(box, 1.2 + n * 0.3, {
+      x: rect.left - newRect.left,
+      y: rect.top - newRect.top,
+      ease: Back.easeOut,
+      onComplete: fadeOthers
+    });
+
+    function fadeOthers() {
+      teamRed.removeChild(box);
+    }
+  };
 
   const paragraphNum = (
     <Tippy content='Параграф №'>
@@ -77,6 +108,10 @@ const Paragraph = ({
         onClick={() => readOrUnread()}
       >
         <div className='box align-middle center' id={"box" + index}></div>
+        <div className='box1 align-middle center' id={"box1" + index}></div>
+        <div className='box2 align-middle center' id={"box2" + index}></div>
+        <div className='box3 align-middle center' id={"box3" + index}></div>
+
         <i className={`fas fa-${alreadyRead ? "minus" : "plus"}-square`}></i>
       </div>
     </Tippy>
