@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "@tippyjs/react": "^4.0.2",
     "axios": "^0.19.2",
+    "gsap": "^3.5.1",
     "hanzi": "^2.1.5",
     "hanzi-writer": "^2.2.2",
     "puppeteer": "^5.0.0",

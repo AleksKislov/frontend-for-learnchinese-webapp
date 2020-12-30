@@ -11353,3 +11353,14 @@
     right: 0;
     top:0;
  }
+
+ .box{
+  display: none;
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  background-color: var(--success);
+  z-index: 100;
+}
+
