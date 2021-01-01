@@ -28,6 +28,7 @@ const Login = ({ login, isAuthenticated }) => {
         <p className='lead'>
           <i className='fas fa-user'></i> Залогиньтесь в свой аккаунт
         </p>
+        <button className='btn btn-success'>Войти с Google</button>
         <form className='form' onSubmit={e => onSubmit(e)}>
           <div className='form-group'>
             <input
