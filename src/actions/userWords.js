@@ -13,7 +13,7 @@ import {
 } from "./types";
 import axios from "axios";
 import { setAlert } from "./alert";
-import setAuthToken from "../utils/setAuthToken";
+import { setAuthToken, setGoogleAuth } from "../utils/setAuthToken";
 
 let allWordsLen;
 
@@ -40,6 +40,8 @@ export const addWord = ({ chinese, russian: translation, pinyin }) => async disp
 
   if (localStorage.token) {
     setAuthToken(localStorage.token);
+  } else if (localStorage.userid) {
+    setGoogleAuth(localStorage.userid);
   }
 
   try {

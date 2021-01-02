@@ -12,14 +12,17 @@ import {
   SET_GOAL_SUCCESS,
   SET_GOAL_FAIL,
   READ_TODAY,
-  READ_TODAY_ERR
+  READ_TODAY_ERR,
+  GOOGLE_LOGIN_SUCCESS
 } from "./types";
-import setAuthToken from "../utils/setAuthToken";
+import { setAuthToken, setGoogleAuth } from "../utils/setAuthToken";
 
 //load user
 export const loadUser = () => async dispatch => {
   if (localStorage.token) {
     setAuthToken(localStorage.token);
+  } else if (localStorage.userid) {
+    setGoogleAuth(localStorage.userid);
   }
 
   try {
@@ -82,6 +85,34 @@ export const login = (email, password) => async dispatch => {
       payload: data
     });
 
+    dispatch(loadUser());
+  } catch (err) {
+    const errors = err.response.data.errors;
+
+    if (errors) {
+      errors.forEach(error => dispatch(setAlert(error.msg, "danger")));
+    } else {
+    }
+    dispatch({ type: LOGIN_FAIL });
+  }
+};
+
+export const googleLogin = id => async dispatch => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  };
+
+  const body = JSON.stringify({ id });
+
+  try {
+    const { data } = await axios.post("/api/auth/google_success", body, config);
+
+    dispatch({
+      type: GOOGLE_LOGIN_SUCCESS,
+      payload: data
+    });
     dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;

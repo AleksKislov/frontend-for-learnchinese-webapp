@@ -10,7 +10,8 @@ import {
   SET_GOAL_SUCCESS,
   SET_GOAL_FAIL,
   READ_TODAY,
-  READ_TODAY_ERR
+  READ_TODAY_ERR,
+  GOOGLE_LOGIN_SUCCESS
 } from "../actions/types";
 
 const initialState = {
@@ -37,6 +38,7 @@ export default function(state = initialState, action) {
     case AUTH_ERROR:
     case LOGOUT:
       localStorage.removeItem("token");
+      localStorage.removeItem("userid");
       return {
         ...state,
         token: null,
@@ -50,6 +52,14 @@ export default function(state = initialState, action) {
     case USER_LOADED:
     case READ_TODAY:
     case SET_GOAL_SUCCESS:
+      return {
+        ...state,
+        isAuthenticated: true,
+        loading: false,
+        user: payload
+      };
+    case GOOGLE_LOGIN_SUCCESS:
+      localStorage.setItem("userid", payload._id);
       return {
         ...state,
         isAuthenticated: true,

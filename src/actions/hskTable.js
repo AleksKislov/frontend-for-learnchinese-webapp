@@ -15,7 +15,7 @@ import {
 } from "./types";
 import axios from "axios";
 import { setAlert } from "./alert";
-import setAuthToken from "../utils/setAuthToken";
+import { setAuthToken, setGoogleAuth } from "../utils/setAuthToken";
 
 // load all HSK lexicon at hsk-table
 export const loadLexicon = (hsk_level, limit) => async dispatch => {
@@ -137,6 +137,8 @@ export const addWord = ({ chinese, translation, pinyin, level, word_id }) => asy
 
   if (localStorage.token) {
     setAuthToken(localStorage.token);
+  } else if (localStorage.userid) {
+    setGoogleAuth(localStorage.userid);
   }
 
   try {
@@ -158,11 +160,11 @@ export const addWord = ({ chinese, translation, pinyin, level, word_id }) => asy
     const body = JSON.stringify({ chinese, translation, pinyin, level, word_id });
 
     try {
-      const res = await axios.post("/api/words", body, config);
+      const { data } = await axios.post("/api/words", body, config);
 
       dispatch({
         type: WORD_ADDED,
-        payload: res.data
+        payload: data
       });
 
       dispatch(setAlert("Личный список HSK пополнен", "success"));

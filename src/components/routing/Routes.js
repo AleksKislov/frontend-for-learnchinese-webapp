@@ -2,6 +2,8 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import Register from "../auth/Register";
 import Login from "../auth/Login";
+import GoogleLoginSuccess from "../auth/GoogleLoginSuccess";
+
 import Alert from "../layout/Alert";
 import HskTable from "../hsk-table/HskTable";
 import Words from "../hsk-table/Words";
@@ -57,6 +59,7 @@ const Routes = () => {
         <Switch>
           <Route exact path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
+          <Route exact path='/login_success/:id' component={GoogleLoginSuccess} />
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
           <PrivateRoute exact path='/hsk-words' component={Words} />
           <PrivateRoute exact path='/userwords' component={UserWords} />

@@ -80,7 +80,8 @@ export default function(state = initialState, action) {
     case WORD_ADDED:
       return {
         ...state,
-        words: [...state.words, payload]
+        words: [...state.words, payload],
+        allWordsLen: [...state.words, payload].length
       };
     case REMOVE_WORD:
       return {
