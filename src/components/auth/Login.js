@@ -3,6 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
+import axios from "axios";
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -13,6 +14,10 @@ const Login = ({ login, isAuthenticated }) => {
   const { email, password } = formData;
 
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onClick = async () => {
+    await axios.get("http://localhost:5000/api/auth/google");
+  };
 
   const onSubmit = e => {
     e.preventDefault();
@@ -28,7 +33,9 @@ const Login = ({ login, isAuthenticated }) => {
         <p className='lead'>
           <i className='fas fa-user'></i> Залогиньтесь в свой аккаунт
         </p>
-        <button className='btn btn-success'>Войти с Google</button>
+        <button className='btn btn-success' onClick={onClick}>
+          Войти с Google
+        </button>
         <form className='form' onSubmit={e => onSubmit(e)}>
           <div className='form-group'>
             <input
