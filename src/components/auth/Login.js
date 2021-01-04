@@ -1,9 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
-import axios from "axios";
+import GoogleButton from "./GoogleButton";
 
 const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -12,12 +12,7 @@ const Login = ({ login, isAuthenticated }) => {
   });
 
   const { email, password } = formData;
-
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
-
-  const onClick = async () => {
-    await axios.get("http://localhost:5000/api/auth/google");
-  };
 
   const onSubmit = e => {
     e.preventDefault();
@@ -27,15 +22,16 @@ const Login = ({ login, isAuthenticated }) => {
   if (isAuthenticated) return <Redirect to='/dashboard' />;
 
   return (
-    <Fragment>
-      <div style={{ textAlign: "center", margin: "0 80px 0 80px" }}>
+    <div className='row'>
+      <div className='col-md-3'></div>
+      <div className='col-md-6 text-center'>
         <h1 className='large text-primary'>Войти</h1>
         <p className='lead'>
           <i className='fas fa-user'></i> Залогиньтесь в свой аккаунт
         </p>
-        <button className='btn btn-success' onClick={onClick}>
-          Войти с Google
-        </button>
+
+        <GoogleButton />
+        <p>или</p>
         <form className='form' onSubmit={e => onSubmit(e)}>
           <div className='form-group'>
             <input
@@ -66,7 +62,8 @@ const Login = ({ login, isAuthenticated }) => {
           Еще нет аккаунта? Самое время <Link to='/register'>зарегистрироваться</Link> :)
         </p>
       </div>
-    </Fragment>
+      <div className='col-md-3'></div>
+    </div>
   );
 };
 

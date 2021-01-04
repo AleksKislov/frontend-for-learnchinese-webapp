@@ -124,3 +124,10 @@ export const numberToStr = num => {
  * @returns {number}    - number of Chinese chars in str w/o spaces
  */
 export const countZnChars = str => str.replaceAll(" ", "").length;
+
+/**
+ *
+ * @param {string} href - window.location.href
+ */
+export const checkBaseUrl = href =>
+  href.includes("localhost") ? "http://localhost:5000" : "https://www.chineseplus.club";

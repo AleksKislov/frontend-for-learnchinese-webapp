@@ -23,16 +23,17 @@ const WordsItem = ({
   const [clicked, setClicked] = useState(false);
 
   const onClick = e => {
+    // console.log(e.target.tagName);
     if (!fromSearch) {
-      const tagName = e.target.tagName;
+      // const tagName = e.target.tagName;
 
-      if (tagName !== "BUTTON") {
-        removeWord(chinese);
+      // if (tagName !== "BUTTON") {
+      removeWord(chinese);
 
-        setTimeout(() => {
-          loadUserWordsLen();
-        }, 100);
-      }
+      setTimeout(() => {
+        loadUserWordsLen();
+      }, 100);
+      // }
     }
   };
 

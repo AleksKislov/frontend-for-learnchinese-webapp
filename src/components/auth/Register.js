@@ -3,7 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
-
+import GoogleButton from "./GoogleButton";
 import PropTypes from "prop-types";
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
@@ -30,12 +30,16 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   if (isAuthenticated) return <Redirect to='/dashboard' />;
 
   return (
-    <Fragment>
-      <div style={{ textAlign: "center", margin: "0 80px 0 80px" }}>
+    <div className='row'>
+      <div className='col-md-3'></div>
+      <div className='col-md-6 text-center'>
         <h1 className='large text-primary'>Регистрация</h1>
         <p className='lead'>
           <i className='fas fa-user'></i> Создайте свой аккаунт
         </p>
+        <GoogleButton />
+        <p>или</p>
+
         <form className='form' onSubmit={e => onSubmit(e)}>
           <div className='form-group'>
             <input
@@ -57,7 +61,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               className='form-control'
             />
             <small className='form-text'>
-              Сайт использует Gravatar: если хотите аватарку, то используйте Gravatar email
+              Сайт также использует Gravatar: если хотите аватарку, то используйте Gravatar email
+              (ну или google account)
             </small>
           </div>
           <div className='form-group'>
@@ -88,7 +93,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
           Уже есть аккаунт? Просто <Link to='/login'>Войдите</Link>
         </p>
       </div>
-    </Fragment>
+      <div className='col-md-3'></div>
+    </div>
   );
 };
 
