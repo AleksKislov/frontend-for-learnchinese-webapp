@@ -6,6 +6,8 @@ import { countZnChars } from "../../actions/helpers";
 import { connect } from "react-redux";
 import { readToday, unreadToday } from "../../actions/auth";
 import { TweenMax, Back } from "gsap";
+import store from "../../store";
+import { setAlert } from "../../actions/alert";
 
 const Paragraph = ({
   chunk,
@@ -36,7 +38,13 @@ const Paragraph = ({
         unreadToday({ num: numOfChars, path: window.location.pathname, ind: index });
     } else {
       setAlreadyRead(!alreadyRead);
-      if (user && user.daily_reading_goal) changeTeam();
+      if (user && user.daily_reading_goal) {
+        changeTeam();
+      } else {
+        store.dispatch(
+          setAlert("Это функционал только для авторизованных пользователей", "danger")
+        );
+      }
     }
   };
 

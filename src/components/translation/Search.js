@@ -107,6 +107,7 @@ const Search = ({
     } else {
       showCharDiv.innerHTML =
         "<p class='text-danger'>Пока поддерживается только китайско-русский перевод, приносим извинения за неудобства.</p>";
+      setSearchLoading(false);
       return;
     }
 

@@ -83,14 +83,14 @@ const TippyTooltip = ({
       setTimeout(() => {
         loadUserWords();
         loadUserWordsLen();
-      }, 100);
+      }, 500);
     } else {
       // setClicked(true);
       addWord(word);
       setTimeout(() => {
         loadUserWords();
         loadUserWordsLen();
-      }, 100);
+      }, 500);
     }
   };
 
@@ -112,7 +112,10 @@ const TippyTooltip = ({
             <div className='tippyPinyin'>
               <span className='onlyPinyin text-info'>{chinese}</span>
               <span className='onlyPinyin'>{pinyin}</span>
-              <button className='btn btn-sm btn-info' onClick={e => onClick(e)}>
+              <button
+                className={`btn btn-sm float-right btn-${clicked ? "danger" : "info"}`}
+                onClick={e => onClick(e)}
+              >
                 {clicked ? <i className='fas fa-minus'></i> : <i className='fas fa-plus'></i>}
               </button>
             </div>

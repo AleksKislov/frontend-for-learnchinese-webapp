@@ -43,11 +43,14 @@ const ChapterPage = ({
       setTimeout(async () => {
         const chineseChunkedWords = await parseChineseWords(page);
         setChineseChunkedArr(chineseChunkedWords);
-        if (isAuthenticated) loadUserWords();
       }, 0);
       getComments("book", page._id);
     }
   }, [page]);
+
+  useEffect(() => {
+    if (isAuthenticated) loadUserWords();
+  }, [isAuthenticated]);
 
   const [chineseChunkedArr, setChineseChunkedArr] = useState([]);
   const [hideFlag, setHideFlag] = useState(false);

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Tippy from "@tippyjs/react";
 import { setReadGoal } from "../../actions/auth";
 import { setAlert } from "../../actions/alert";
+import { Link } from "react-router-dom";
 
 const ReadingCard = ({ user, setReadGoal, setAlert }) => {
   const [change, setChange] = useState(false);
@@ -18,18 +19,6 @@ const ReadingCard = ({ user, setReadGoal, setAlert }) => {
       setAlert("Введите только цифры", "danger");
     }
   };
-
-  // function minutesUntilMidnight() {
-  //   const midnight = new Date();
-  //   console.log(midnight.getTimezoneOffset());
-  //   midnight.setHours(24, 0, 0, 0);
-  //   const offset = midnight.getTimezoneOffset(); // in hours
-  //   const minutesLeft = parseInt((midnight.getTime() - new Date().getTime()) / 1000 / 60 + offset);
-  //   const hours = parseInt(minutesLeft / 60);
-  //   const minutes = minutesLeft % 60;
-
-  //   return `До сброса осталось ${hours + 3}:${minutes}`;
-  // }
 
   const textAboutGoal = (
     <p className='card-text mt-1'>
@@ -90,21 +79,35 @@ const ReadingCard = ({ user, setReadGoal, setAlert }) => {
     </div>
   );
 
-  return (
-    user && (
-      <div className='card bg-light border-primary mb-3'>
-        <div className='card-body'>
-          <h4 className='card-title'>Чтение</h4>
-          <div className='textGoal'>
-            {textAboutGoal}
-            {user.daily_reading_goal ? changeGoalButton : ""}
-          </div>
-
-          {(!user.daily_reading_goal || change) && goalForm}
-          {user.daily_reading_goal && progressBarDiv}
+  return user ? (
+    <div className='card bg-light border-primary mb-3'>
+      <div className='card-body'>
+        <h4 className='card-title'>Чтение</h4>
+        <div className='textGoal'>
+          {textAboutGoal}
+          {user.daily_reading_goal ? changeGoalButton : ""}
         </div>
+
+        {(!user.daily_reading_goal || change) && goalForm}
+        {user.daily_reading_goal && progressBarDiv}
       </div>
-    )
+    </div>
+  ) : (
+    <div className='card bg-light border-primary mb-3'>
+      <div className='card-body'>
+        <h4 className='card-title'>Чтение</h4>
+        <p className='card-text'>
+          Авторизуйтесь, чтобы выставить дневную планку для чтения и вести учет прочитанных
+          иероглифов.
+        </p>
+        <Link to='/login' className='card-link'>
+          Вход
+        </Link>
+        <Link to='/register' className='card-link'>
+          Регистрация
+        </Link>
+      </div>
+    </div>
   );
 };
 

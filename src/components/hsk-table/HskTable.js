@@ -18,9 +18,13 @@ const HskTable = ({
 }) => {
   useEffect(() => {
     loadLexicon(1, 0);
-    if (isAuthenticated) loadWords();
     // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    if (isAuthenticated) loadWords();
+    // eslint-disable-next-line
+  }, [isAuthenticated]);
 
   const [hideFlag, setHideFlag] = useState({
     chinese: false,

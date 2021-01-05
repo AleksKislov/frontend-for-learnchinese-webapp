@@ -36,11 +36,13 @@ const TextPage = ({
       setTimeout(async () => {
         const chineseChunkedWords = await parseChineseWords(text);
         setChineseChunkedArr(chineseChunkedWords);
-
-        if (isAuthenticated) loadUserWords();
       }, 0);
     }
   }, [text]);
+
+  useEffect(() => {
+    if (isAuthenticated) loadUserWords();
+  }, [isAuthenticated]);
 
   const [chineseChunkedArr, setChineseChunkedArr] = useState([]);
   const [hideFlag, setHideFlag] = useState(false);
