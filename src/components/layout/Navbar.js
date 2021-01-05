@@ -276,7 +276,7 @@ const Navbar = ({
   );
 };
 
-const appVersion = "1.3.0";
+const appVersion = "2.0.0";
 
 const activeNavLink = {
   color: "#18BC9C"
