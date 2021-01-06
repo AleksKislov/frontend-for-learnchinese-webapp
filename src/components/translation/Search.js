@@ -30,9 +30,13 @@ const Search = ({
       document.getElementById("searchInput").value = match.params.chinese;
       showSearchResult();
     }
-    console.log("汉语是世界上最难学的一个语言");
-    if (isAuthenticated) loadUserWords();
+    // console.log("汉语是世界上最难学的一个语言");
+    // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    if (isAuthenticated) loadUserWords();
+  }, [isAuthenticated]);
 
   const [clicked, setClicked] = useState(false);
   const [searchLoading, setSearchLoading] = useState(false);

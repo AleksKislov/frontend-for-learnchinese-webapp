@@ -9,7 +9,7 @@ const GoogleButton = () => {
       href={`${baseURL}/api/auth/google`}
       style={{ marginBottom: "0.5rem" }}
     >
-      Via Google <i class='fab fa-google'></i>
+      Via Google <i className='fab fa-google'></i>
     </a>
   );
 };

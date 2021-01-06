@@ -21,9 +21,7 @@ const Navbar = ({
     login: "/register",
     private: "/dashboard"
   });
-
   const privateLinks = ["/dashboard", "/hsk-words", "userwords"];
-
   const [totalWordsLen, setTotalWordsLen] = useState(0);
 
   useEffect(() => {
@@ -57,6 +55,7 @@ const Navbar = ({
         private: url
       });
     }
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -157,16 +156,35 @@ const Navbar = ({
     </ul>
   );
 
+  const navbarId = document.getElementById("navbarId");
+  const collapseIt = () => {
+    if (navbarId.classList.contains("show")) {
+      navbarId.classList.remove("show");
+    } else {
+      navbarId.classList.add("show");
+    }
+  };
+
   const mainMenu = (
     <Fragment>
       <ul className='navbar-nav text-center mr-auto'>
         <li className='nav-item'>
-          <NavLink className='nav-link' to='/pinyin' activeStyle={activeNavLink}>
+          <NavLink
+            onClick={collapseIt}
+            className='nav-link'
+            to='/pinyin'
+            activeStyle={activeNavLink}
+          >
             Таблица Пиньиня
           </NavLink>
         </li>
         <li className='nav-item'>
-          <NavLink className='nav-link' to='/hsk-table' activeStyle={activeNavLink}>
+          <NavLink
+            onClick={collapseIt}
+            className='nav-link'
+            to='/hsk-table'
+            activeStyle={activeNavLink}
+          >
             Слова HSK
           </NavLink>
         </li>
@@ -200,12 +218,22 @@ const Navbar = ({
           </div>
         </li>
         <li className='nav-item'>
-          <NavLink className='nav-link' to='/translate' activeStyle={activeNavLink}>
+          <NavLink
+            onClick={collapseIt}
+            className='nav-link'
+            to='/translate'
+            activeStyle={activeNavLink}
+          >
             Перевод
           </NavLink>
         </li>
         <li className='nav-item'>
-          <NavLink className='nav-link' to='/search' activeStyle={activeNavLink}>
+          <NavLink
+            onClick={collapseIt}
+            className='nav-link'
+            to='/search'
+            activeStyle={activeNavLink}
+          >
             Словарь
           </NavLink>
         </li>
@@ -239,7 +267,12 @@ const Navbar = ({
           </div>
         </li>
         <li className='nav-item'>
-          <NavLink className='nav-link' to='/posts' activeStyle={activeNavLink}>
+          <NavLink
+            onClick={collapseIt}
+            className='nav-link'
+            to='/posts'
+            activeStyle={activeNavLink}
+          >
             Гостевая
           </NavLink>
         </li>

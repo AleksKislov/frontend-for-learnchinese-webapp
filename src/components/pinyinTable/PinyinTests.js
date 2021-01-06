@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 const PinyinTests = () => {
   useEffect(() => {
     init();
+    // eslint-disable-next-line
   }, []);
 
   let [answers, setAnswers] = useState([]);

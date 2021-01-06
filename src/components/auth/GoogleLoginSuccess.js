@@ -6,8 +6,8 @@ import { googleLogin } from "../../actions/auth";
 
 const GoogleLoginSuccess = ({ googleLogin, isAuthenticated, match }) => {
   useEffect(() => {
-    console.log(match.params.id);
     googleLogin(match.params.id);
+    // eslint-disable-next-line
   }, []);
 
   if (isAuthenticated) return <Redirect to='/dashboard' />;
