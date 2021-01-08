@@ -69,6 +69,21 @@ const Navbar = ({
     }, 500);
   }, [isAuthenticated, allWordsLen, userWordsLen]);
 
+  const navbarId = document.getElementById("navbarId");
+  const collapseIt = () => {
+    if (navbarId.classList.contains("show")) {
+      navbarId.classList.remove("show");
+    } else {
+      navbarId.classList.add("show");
+    }
+  };
+
+  // for main menu and dropdown
+  const setPathsAndCollapse = obj => {
+    collapseIt();
+    setPaths(obj);
+  };
+
   const noAuthLinks = (
     <ul className='navbar-nav loginNavbar text-center'>
       <li className='nav-item dropdown'>
@@ -85,7 +100,7 @@ const Navbar = ({
             className='dropdown-item'
             to='/register'
             activeStyle={activeNavLink}
-            onClick={() => setPaths({ ...paths, login: "/register" })}
+            onClick={() => setPathsAndCollapse({ ...paths, login: "/register" })}
             exact={true}
           >
             Регистрация
@@ -94,7 +109,7 @@ const Navbar = ({
             className='dropdown-item'
             to='/login'
             activeStyle={activeNavLink}
-            onClick={() => setPaths({ ...paths, login: "/login" })}
+            onClick={() => setPathsAndCollapse({ ...paths, login: "/login" })}
             exact={true}
           >
             Войти
@@ -125,7 +140,7 @@ const Navbar = ({
             className='dropdown-item'
             to='/dashboard'
             activeStyle={activeNavLink}
-            onClick={() => setPaths({ ...paths, private: "/dashboard" })}
+            onClick={() => setPathsAndCollapse({ ...paths, private: "/dashboard" })}
           >
             ЛК
           </NavLink>
@@ -134,7 +149,7 @@ const Navbar = ({
             className='dropdown-item'
             to='/hsk-words'
             activeStyle={activeNavLink}
-            onClick={() => setPaths({ ...paths, private: "/hsk-words" })}
+            onClick={() => setPathsAndCollapse({ ...paths, private: "/hsk-words" })}
           >
             Мой HSK <span className='badge badge-pill badge-warning'>{allWordsLen}</span>
           </NavLink>
@@ -143,7 +158,7 @@ const Navbar = ({
             className='dropdown-item'
             to='/userwords'
             activeStyle={activeNavLink}
-            onClick={() => setPaths({ ...paths, private: "/userwords" })}
+            onClick={() => setPathsAndCollapse({ ...paths, private: "/userwords" })}
           >
             Мои Слова <span className='badge badge-pill badge-warning'>{userWordsLen}</span>
           </NavLink>
@@ -155,15 +170,6 @@ const Navbar = ({
       </li>
     </ul>
   );
-
-  const navbarId = document.getElementById("navbarId");
-  const collapseIt = () => {
-    if (navbarId.classList.contains("show")) {
-      navbarId.classList.remove("show");
-    } else {
-      navbarId.classList.add("show");
-    }
-  };
 
   const mainMenu = (
     <Fragment>
@@ -203,7 +209,7 @@ const Navbar = ({
               className='dropdown-item'
               to='/pinyin-tests'
               activeStyle={activeNavLink}
-              onClick={() => setPaths({ ...paths, tests: "/pinyin-tests" })}
+              onClick={() => setPathsAndCollapse({ ...paths, tests: "/pinyin-tests" })}
             >
               Пиньинь
             </NavLink>
@@ -211,7 +217,7 @@ const Navbar = ({
               className='dropdown-item'
               to='/hsk-tests'
               activeStyle={activeNavLink}
-              onClick={() => setPaths({ ...paths, tests: "/hsk-tests" })}
+              onClick={() => setPathsAndCollapse({ ...paths, tests: "/hsk-tests" })}
             >
               Лексика HSK
             </NavLink>
@@ -252,7 +258,7 @@ const Navbar = ({
               className='dropdown-item'
               to='/texts'
               activeStyle={activeNavLink}
-              onClick={() => setPaths({ ...paths, reading: "/texts" })}
+              onClick={() => setPathsAndCollapse({ ...paths, reading: "/texts" })}
             >
               Тексты
             </NavLink>
@@ -260,7 +266,7 @@ const Navbar = ({
               className='dropdown-item'
               to='/books'
               activeStyle={activeNavLink}
-              onClick={() => setPaths({ ...paths, reading: "/books" })}
+              onClick={() => setPathsAndCollapse({ ...paths, reading: "/books" })}
             >
               Книги
             </NavLink>
