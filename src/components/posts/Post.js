@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { addLike, addDislike } from "../../actions/posts";
+import { Helmet } from "react-helmet";
 
 const Post = ({ post, addLike, addDislike }) => {
   const { text, name, avatar, date, title, _id, tag, comments_id, likes, dislikes } = post;
@@ -16,6 +17,11 @@ const Post = ({ post, addLike, addDislike }) => {
 
   return (
     <div className='card my-2'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Фидбэк и новости проекта | Chinese+</title>
+      </Helmet>
+
       <div className='card-body' style={customStyle}>
         <div>
           <img className='mr-3' src={`https:${avatar}`} style={imgStyle} alt='Avatar' />

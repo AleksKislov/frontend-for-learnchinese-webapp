@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import Spinner from "../layout/Spinner";
 import Pagination from "./Pagination";
 import TableCard from "./TableCard";
+import { Helmet } from "react-helmet";
 
 const HskTable = ({
   loadLexicon,
@@ -85,6 +86,11 @@ const HskTable = ({
 
   return (
     <div className='row'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Таблица слов HSK с озвучкой | Chinese+</title>
+      </Helmet>
+
       <div className='col-sm-3'>
         <TableCard />
       </div>

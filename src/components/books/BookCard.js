@@ -4,6 +4,7 @@ import Length from "./info/Length";
 import AuthorRus from "./info/AuthorRus";
 import Annotation from "./info/Annotation";
 import BookTitle from "./info/BookTitle";
+import { Helmet } from "react-helmet";
 
 const BookCard = ({ book }) => {
   const {
@@ -19,6 +20,10 @@ const BookCard = ({ book }) => {
   } = book;
   return (
     <div className='card my-2'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Тексты на китайском языке с переводом | Chinese+</title>
+      </Helmet>
       <div className='card-body row'>
         <div style={{ position: "relative" }} className='col-md-3'>
           <Link to={`/books/${_id}`}>

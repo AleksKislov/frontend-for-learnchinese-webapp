@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const PinyinTests = () => {
   useEffect(() => {
@@ -1433,6 +1434,10 @@ const PinyinTests = () => {
 
   return (
     <div className='row'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Тесты на пиньинь | Chinese+</title>
+      </Helmet>
       <div className='col-sm-3'>
         <div className='card bg-light mb-3'>
           <div className='card-body'>

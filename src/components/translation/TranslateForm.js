@@ -12,6 +12,7 @@ import { v4 as uuid } from "uuid";
 import { Widget, addResponseMessage } from "react-chat-widget";
 import "react-chat-widget/lib/styles.css";
 import "./style.css";
+import { Helmet } from "react-helmet";
 
 const TranslateForm = ({ loadUserWords, isAuthenticated }) => {
   useEffect(() => {
@@ -61,6 +62,10 @@ const TranslateForm = ({ loadUserWords, isAuthenticated }) => {
 
   return (
     <div className='row'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Перевод текста | Chinese+</title>
+      </Helmet>
       <WordModal />
 
       <div className='col-sm-3'>

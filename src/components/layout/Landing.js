@@ -2,12 +2,17 @@ import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 
 const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) return <Redirect to='/dashboard' />;
 
   return (
     <section className='landing'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Chinese+ Клуб изучения китайского языка</title>
+      </Helmet>
       <div className='dark-overlay'>
         <div className='landing-inner'>
           <h1 className='x-large'>Добро пожаловать в клуб Chinese+</h1>

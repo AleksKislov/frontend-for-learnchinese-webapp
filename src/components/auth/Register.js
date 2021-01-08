@@ -5,6 +5,7 @@ import { setAlert } from "../../actions/alert";
 import { register } from "../../actions/auth";
 import GoogleButton from "./GoogleButton";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -31,6 +32,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <div className='row'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Войти в Chinese+ Клуб</title>
+      </Helmet>
       <div className='col-md-3'></div>
       <div className='col-md-6 text-center'>
         <h1 className='large text-primary'>Регистрация</h1>

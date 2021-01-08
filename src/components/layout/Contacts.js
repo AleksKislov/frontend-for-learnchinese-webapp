@@ -1,8 +1,13 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const Contacts = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Связь с Chinese+</title>
+      </Helmet>
       <h2>Пойти на Контакт</h2>
       <p>Телеграм: @sinokislov</p>
       <p>Почта: sinokislov@gmail.com</p>

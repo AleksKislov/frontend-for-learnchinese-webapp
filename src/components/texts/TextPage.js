@@ -12,6 +12,7 @@ import { loadUserWords } from "../../actions/userWords";
 import Comment from "../comments/Comment";
 import LeaveComment from "../comments/LeaveComment";
 import ReadingCard from "../dashboard/ReadingCard";
+import { Helmet } from "react-helmet";
 
 const TextPage = ({
   text,
@@ -54,6 +55,11 @@ const TextPage = ({
         <Spinner />
       ) : (
         <div className='row'>
+          <Helmet>
+            <meta charSet='utf-8' />
+            <title>Тексты на китайском языке с переводом | Chinese+</title>
+          </Helmet>
+
           <WordModal />
 
           <div className='col-sm-3'>

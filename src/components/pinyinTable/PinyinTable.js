@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css"; // optional for styling
+import { Helmet } from "react-helmet";
 
 const PinyinTable = () => {
   useEffect(() => {
@@ -76,6 +77,10 @@ const PinyinTable = () => {
 
   return (
     <div className='row justify-content-center'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Таблица Пиньиня с Озвучкой | Chinese+</title>
+      </Helmet>
       <div className='col-auto'>
         <h1 className='text-primary'>Таблица Пиньиня с Озвучкой</h1>
 

@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { loadTestLexicon } from "../../actions/hskTable";
 import PropTypes from "prop-types";
 import { myAudioURL } from "../../apikeys.json";
+import { Helmet } from "react-helmet";
 
 const HskTests = ({ lexicons, loadTestLexicon, loading }) => {
   const [level, setLevel] = useState("hsk1");
@@ -339,6 +340,11 @@ const HskTests = ({ lexicons, loadTestLexicon, loading }) => {
 
   return (
     <div className='row'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Тесты на слова HSK | Chinese+</title>
+      </Helmet>
+
       <div className='col-sm-3'>
         <div className='card bg-light mb-3'>
           <div className='card-body'>

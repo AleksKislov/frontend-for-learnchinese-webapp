@@ -5,6 +5,7 @@ import store from "../../store";
 import { loadPosts, addPost } from "../../actions/posts";
 import { setAlert } from "../../actions/alert";
 import Spinner from "../layout/Spinner";
+import { Helmet } from "react-helmet";
 
 const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) => {
   const [skip, setSkip] = useState(0);
@@ -128,6 +129,11 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
 
   return (
     <div className='row'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Фидбэк и новости проекта | Chinese+</title>
+      </Helmet>
+
       <div className='col-sm-12'>
         <h2>Гостевая и Новости Проекта</h2>
       </div>

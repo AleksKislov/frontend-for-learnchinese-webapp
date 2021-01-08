@@ -4,6 +4,7 @@ import { loadTexts, clearText } from "../../actions/texts";
 import Spinner from "../layout/Spinner";
 import TextCard from "./TextCard";
 import ReadingCard from "../dashboard/ReadingCard";
+import { Helmet } from "react-helmet";
 
 const Texts = ({ loadTexts, texts, loading, clearText }) => {
   useEffect(() => {
@@ -40,6 +41,11 @@ const Texts = ({ loadTexts, texts, loading, clearText }) => {
 
   return (
     <div className='row'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Тексты на китайском языке с переводом | Chinese+</title>
+      </Helmet>
+
       <div className='col-md-3'>
         <div className='card bg-light mb-3'>
           <div className='card-body'>
@@ -53,7 +59,7 @@ const Texts = ({ loadTexts, texts, loading, clearText }) => {
       </div>
 
       <div className='col-md-9'>
-        <h2>Чтение Текстов</h2>
+        <h2>Тексты на китайском языке с переводом</h2>
 
         <div className='form-group'>
           <select className='custom-select' onChange={e => onSelect(e)}>

@@ -7,6 +7,7 @@ import Spinner from "../layout/Spinner";
 import CommentsCard from "./CommentsCard";
 // import DashboardActions from "./DashboardActions";
 import ReadingCard from "./ReadingCard";
+import { Helmet } from "react-helmet";
 
 const Dashboard = ({
   getCurrentProfile,
@@ -27,6 +28,10 @@ const Dashboard = ({
     <Spinner />
   ) : (
     <div className='row'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Личный кабинет | Chinese+</title>
+      </Helmet>
       <div className='col-sm-6'>
         <h1 className='text-primary'>Личный Кабинет</h1>
         <p className='lead'>

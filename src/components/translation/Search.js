@@ -14,6 +14,7 @@ import "./style.css";
 import HanziWriter from "hanzi-writer";
 import Spinner from "../layout/Spinner";
 import Tippy from "@tippyjs/react";
+import { Helmet } from "react-helmet";
 
 const Search = ({
   history,
@@ -227,6 +228,11 @@ const Search = ({
 
   return (
     <Fragment>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Китайско-русский словарь | Chinese+</title>
+      </Helmet>
+
       <div style={{ maxWidth: "500px", margin: "auto" }}>
         <form onSubmit={e => onSubmit(e)}>
           <div className='form-group'>
