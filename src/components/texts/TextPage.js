@@ -13,6 +13,7 @@ import Comment from "../comments/Comment";
 import LeaveComment from "../comments/LeaveComment";
 import ReadingCard from "../dashboard/ReadingCard";
 import { Helmet } from "react-helmet";
+import { levelStars } from "../../actions/helpers";
 
 const TextPage = ({
   text,
@@ -79,7 +80,7 @@ const TextPage = ({
                 </h6>
                 <h6 className='card-subtitle mb-2'>
                   <span className='text-muted'>Уровень: </span>
-                  {text.level}
+                  {levelStars(text.level)}
                 </h6>
                 <h6 className='card-subtitle mb-2'>
                   <span className='text-muted'>Кол-во знаков: </span>

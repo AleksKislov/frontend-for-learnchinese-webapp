@@ -66,9 +66,9 @@ const Texts = ({ loadTexts, texts, loading, clearText }) => {
             <option defaultValue='0' value='0'>
               Все Уровни
             </option>
-            <option value='1'>1 Простой</option>
-            <option value='2'>2 Средний</option>
-            <option value='3'>3 Сложный</option>
+            <option value='1'>1 Простой ⭐</option>
+            <option value='2'>2 Средний ⭐⭐</option>
+            <option value='3'>3 Сложный ⭐⭐⭐</option>
           </select>
         </div>
 

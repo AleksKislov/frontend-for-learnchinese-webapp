@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { levelStars } from "../../actions/helpers";
 
 const TextCard = ({ text }) => {
   const {
@@ -47,7 +48,7 @@ const TextCard = ({ text }) => {
           </h6>
           <h6 className='card-subtitle mb-2'>
             <span className='text-muted'>Уровень: </span>
-            {level}
+            {levelStars(level)}
           </h6>
           <h6 className='card-subtitle mb-2'>
             <span className='text-muted'>Кол-во знаков: </span>

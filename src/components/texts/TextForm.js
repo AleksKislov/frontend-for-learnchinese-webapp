@@ -77,8 +77,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     const translationArea = document.getElementById("translationArea");
     const tagsId = document.getElementById("tags");
 
-    if (textLen > 800) {
-      store.dispatch(setAlert("Максимум 800 знаков в китайском тексте, удалите лишние", "danger"));
+    if (textLen > 1000) {
+      store.dispatch(setAlert("Максимум 1000 знаков в китайском тексте, удалите лишние", "danger"));
     } else {
       let originText = textArea.value.trim();
       let translationTrimed = translationArea.value.trim();
@@ -320,7 +320,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                       rows='3'
                       placeholder='汉字。。。'
                     ></textarea>
-                    <small className='text-muted'>{textLen}/800</small>
+                    <small className='text-muted'>{textLen}/1000</small>
                   </div>
                   <div className='form-group col-md-6'>
                     <label htmlFor='translationArea'>Вставьте перевод:</label>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { unsplash } from "../apikeys.json";
+import React from "react";
 
 /**
  *
@@ -131,3 +132,30 @@ export const countZnChars = str => str.replaceAll(" ", "").length;
  */
 export const checkBaseUrl = href =>
   href.includes("localhost") ? "http://localhost:5000" : "https://www.chineseplus.club";
+
+/**
+ * @param {number} lvl -
+ */
+export const levelStars = lvl => {
+  if (lvl === 3)
+    return (
+      <span className='text-warning'>
+        <i className='fas fa-star'></i>
+        <i className='fas fa-star'></i>
+        <i className='fas fa-star'></i>
+      </span>
+    );
+  if (lvl === 2)
+    return (
+      <span className='text-warning'>
+        <i className='fas fa-star'></i>
+        <i className='fas fa-star'></i>
+      </span>
+    );
+  if (lvl === 1)
+    return (
+      <span className='text-warning'>
+        <i className='fas fa-star'></i>
+      </span>
+    );
+};
