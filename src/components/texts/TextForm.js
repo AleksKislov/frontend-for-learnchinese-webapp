@@ -164,7 +164,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       chinese_arr: allwords,
       length,
       pic_url,
-      theme_word
+      theme_word,
+      name: user.name
     });
 
     try {
