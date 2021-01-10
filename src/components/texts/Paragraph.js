@@ -41,9 +41,7 @@ const Paragraph = ({
       if (user && user.daily_reading_goal) {
         changeTeam();
       } else {
-        store.dispatch(
-          setAlert("Это функционал только для авторизованных пользователей", "danger")
-        );
+        store.dispatch(setAlert("Авторизуйтесь и установите свою цель для чтения!", "danger"));
       }
     }
   };
