@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { deleteComment } from "../../actions/comments";
+import { dateToStr } from "../../actions/helpers";
 
 const Comment = ({ comment, currentUser, isAuthenticated, deleteComment }) => {
   const { avatar, text, name, date, user, post_id, _id, destination } = comment;
@@ -31,13 +32,6 @@ const Comment = ({ comment, currentUser, isAuthenticated, deleteComment }) => {
       </div>
     </div>
   );
-};
-
-const dateToStr = date => {
-  const str = new Date(date);
-  const options = { year: "numeric", month: "short", day: "numeric" };
-  const rusDate = str.toLocaleDateString("ru-RU", options); // 22 авг. 2020 г.
-  return `${rusDate}, ${date.slice(11, 16)}`;
 };
 
 const imgStyle = {

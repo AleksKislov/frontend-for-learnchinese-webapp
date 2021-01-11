@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Chart } from "react-google-charts";
 import axios from "axios";
+import { dateToStr } from "../../actions/helpers";
 
 const Analytics = ({ user }) => {
   const [state, setstate] = useState(null);
@@ -23,7 +24,7 @@ const Analytics = ({ user }) => {
     rows1[0].push(user.daily_reading_goal);
 
     for (let i = 1; i < 30; i++) {
-      today.setDate(today.getDate() - i);
+      today.setDate(today.getDate() - 1);
       // console.log(today.toISOString().slice(0, 10));
       rows1[i] = [today.toISOString().slice(0, 10)];
       rows1[i].push(0);
@@ -46,9 +47,10 @@ const Analytics = ({ user }) => {
       } else {
         rows1[i][2] = previousGoal;
       }
+      rows1[i][0] = dateToStr(rows1[i][0], true);
     }
 
-    // console.log(rows1);
+    console.log(rows1);
     setstate(rows1.reverse());
   };
 
@@ -58,7 +60,7 @@ const Analytics = ({ user }) => {
 
   const options = {
     title: "Статистика по чтению за последний месяц",
-    // hAxis: { title: "Дата", viewWindow: { min: 1 } },
+    hAxis: { title: "Дата", textPosition: "none" },
     vAxis: { title: "Прочитано, 字", viewWindow: { min: 1, max: { maxX } } },
     // legend: "none",
     seriesType: "area",

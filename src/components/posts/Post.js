@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { addLike, addDislike } from "../../actions/posts";
 import { Helmet } from "react-helmet";
+import { dateToStr } from "../../actions/helpers";
 
 const Post = ({ post, addLike, addDislike }) => {
   const { text, name, avatar, date, title, _id, tag, comments_id, likes, dislikes } = post;
@@ -53,13 +54,6 @@ const Post = ({ post, addLike, addDislike }) => {
       </div>
     </div>
   );
-};
-
-const dateToStr = date => {
-  const str = new Date(date);
-  const options = { year: "numeric", month: "short", day: "numeric" };
-  const rusDate = str.toLocaleDateString("ru-RU", options); // 22 авг. 2020 г.
-  return `${rusDate}, ${date.slice(11, 16)}`;
 };
 
 const imgStyle = {

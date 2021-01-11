@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { levelStars } from "../../actions/helpers";
+import { dateToStr } from "../../actions/helpers";
 
 const TextCard = ({ text }) => {
   const {
@@ -67,13 +68,6 @@ const TextCard = ({ text }) => {
       </div>
     </div>
   );
-};
-
-const dateToStr = date => {
-  const str = new Date(date);
-  const options = { year: "numeric", month: "short", day: "numeric" };
-  const rusDate = str.toLocaleDateString("ru-RU", options); // 22 авг. 2020 г.
-  return `${rusDate}, ${date.slice(11, 16)}`;
 };
 
 const imgText = {
