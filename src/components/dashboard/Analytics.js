@@ -4,22 +4,53 @@ import { Chart } from "react-google-charts";
 import axios from "axios";
 
 const Analytics = () => {
+  const [state, setstate] = useState(null);
+  const [maxX, setMaxX] = useState(0);
   const fetchData = async () => {
     const { data } = await axios.get("/api/users/reading_results");
-    console.log(data);
-    setstate(data);
+    // console.log(data);
+
+    // setMaxX
+    const maxGoal = Math.max(...data.map(day => day.daily_goal));
+    const maxResult = Math.max(...data.map(day => day.have_read));
+    if (maxGoal > maxResult) setMaxX(maxGoal + 500);
+    if (maxGoal < maxResult) setMaxX(maxResult + 500);
+
+    let today = new Date();
+    let rows1 = [];
+    rows1[0] = [today.toISOString().slice(0, 10)];
+    rows1[0].push(0);
+    rows1[0].push(0);
+
+    for (let i = 1; i < 30; i++) {
+      today.setDate(today.getDate() - 1);
+      // console.log(today.toISOString().slice(0, 10));
+      rows1[i] = [today.toISOString().slice(0, 10)];
+      rows1[i].push(0);
+      rows1[i].push(0);
+    }
+
+    for (let i = 0; i < rows1.length; i++) {
+      for (let j = 0; j < data.length; j++) {
+        if (rows1[i][0] === data[j].createdAt) {
+          rows1[i][1] = data[j].have_read;
+          rows1[i][2] = data[j].daily_goal;
+        }
+      }
+    }
+
+    // console.log(rows1);
+    setstate(rows1.reverse());
   };
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  const [state, setstate] = useState(null);
-
   const options = {
     // title: "Чтение каждый день",
-    hAxis: { title: "Дата", viewWindow: { min: 1 } },
-    vAxis: { title: "Прочитано, 字", viewWindow: { min: 1, max: 2000 } },
+    // hAxis: { title: "Дата", viewWindow: { min: 1 } },
+    vAxis: { title: "Прочитано, 字", viewWindow: { min: 1, max: { maxX } } },
     legend: "none",
     seriesType: "area",
     series: {
@@ -28,46 +59,34 @@ const Analytics = () => {
     }
   };
 
-  const rows = [
-    [1, 250, 500],
-    [2, 290, 800],
-    [3, 798, 1000],
-    [4, 1200, 1000],
-    [5, 1200, 1000],
-    [6, 684, 1200],
-    [7, 234, 1000],
-    [8, 912, 1000],
-    [9, 662, 1000]
-  ];
-
-  const dataDiv = state ? <div>yes</div> : <div>no</div>;
-
   return (
-    <div className=''>
-      {dataDiv}
-      <Chart
-        columns={[
-          {
-            type: "number",
-            label: "Дата"
-          },
-          {
-            type: "number",
-            label: "Прочитано, 字"
-          },
-          {
-            type: "number",
-            label: "Цель, 字"
-          }
-        ]}
-        chartType='ComboChart'
-        rows={rows}
-        options={options}
-        width='100%'
-        height='400px'
-        legendToggle
-      />
-    </div>
+    state &&
+    maxX && (
+      <div className=''>
+        <Chart
+          columns={[
+            {
+              type: "string",
+              label: "Дата"
+            },
+            {
+              type: "number",
+              label: "Прочитано, 字"
+            },
+            {
+              type: "number",
+              label: "Цель, 字"
+            }
+          ]}
+          chartType='ComboChart'
+          rows={state}
+          options={options}
+          width='100%'
+          height='400px'
+          legendToggle
+        />
+      </div>
+    )
   );
 };
 

@@ -33,7 +33,7 @@ const Dashboard = ({
         <meta charSet='utf-8' />
         <title>Личный кабинет | Chinese+</title>
       </Helmet>
-      <div className='col-sm-6'>
+      <div className='col-sm-12'>
         <Analytics />
       </div>
       <div className='col-sm-6'>
