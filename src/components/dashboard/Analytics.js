@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Chart } from "react-google-charts";
 import axios from "axios";
 
-const Analytics = () => {
+const Analytics = ({ user }) => {
   const [state, setstate] = useState(null);
   const [maxX, setMaxX] = useState(0);
   const fetchData = async () => {
@@ -19,11 +19,11 @@ const Analytics = () => {
     let today = new Date();
     let rows1 = [];
     rows1[0] = [today.toISOString().slice(0, 10)];
-    rows1[0].push(0);
-    rows1[0].push(0);
+    rows1[0].push(user.read_today_num);
+    rows1[0].push(user.daily_reading_goal);
 
     for (let i = 1; i < 30; i++) {
-      today.setDate(today.getDate() - 1);
+      today.setDate(today.getDate() - i);
       // console.log(today.toISOString().slice(0, 10));
       rows1[i] = [today.toISOString().slice(0, 10)];
       rows1[i].push(0);
@@ -39,19 +39,28 @@ const Analytics = () => {
       }
     }
 
+    let previousGoal = 0;
+    for (let i = 0; i < rows1.length; i++) {
+      if (rows1[i][2] !== 0) {
+        previousGoal = rows1[i][2];
+      } else {
+        rows1[i][2] = previousGoal;
+      }
+    }
+
     // console.log(rows1);
     setstate(rows1.reverse());
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    if (user) fetchData();
+  }, [user]);
 
   const options = {
-    // title: "Чтение каждый день",
+    title: "Статистика по чтению за последний месяц",
     // hAxis: { title: "Дата", viewWindow: { min: 1 } },
     vAxis: { title: "Прочитано, 字", viewWindow: { min: 1, max: { maxX } } },
-    legend: "none",
+    // legend: "none",
     seriesType: "area",
     series: {
       0: { pointShape: "circle", pointSize: 8 },
@@ -92,7 +101,8 @@ const Analytics = () => {
 
 const mapStateTioProps = state => ({
   comments: state.comments.lastComments,
-  loading: state.posts.loading
+  loading: state.posts.loading,
+  user: state.auth.user
 });
 
 export default connect(mapStateTioProps, {})(Analytics);

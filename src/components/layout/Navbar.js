@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
 import { loadLengths } from "../../actions/hskTable";
 import { loadUserWordsLen } from "../../actions/userWords";
+import { appVersion } from "../../apikeys.json";
 
 const Navbar = ({
   logout,
@@ -315,7 +316,7 @@ const Navbar = ({
   );
 };
 
-const appVersion = "2.1.0";
+// const appVersion = "2.1.0";
 
 const activeNavLink = {
   color: "#18BC9C"
