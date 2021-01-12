@@ -5,6 +5,7 @@ import BookCard from "./BookCard";
 import Spinner from "../layout/Spinner";
 import ReadingCard from "../dashboard/ReadingCard";
 import { Helmet } from "react-helmet";
+import BooksNotification from "./info/BooksNotification";
 
 const Books = ({ loadBooks, books, loading, clearBook }) => {
   useEffect(() => {
@@ -28,6 +29,7 @@ const Books = ({ loadBooks, books, loading, clearBook }) => {
             </p>
           </div>
         </div>
+        <BooksNotification />
         <ReadingCard />
       </div>
 

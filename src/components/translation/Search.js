@@ -15,6 +15,8 @@ import HanziWriter from "hanzi-writer";
 import Spinner from "../layout/Spinner";
 import Tippy from "@tippyjs/react";
 import { Helmet } from "react-helmet";
+import { Widget, addResponseMessage } from "react-chat-widget";
+import "react-chat-widget/lib/styles.css";
 
 const Search = ({
   history,
@@ -226,6 +228,23 @@ const Search = ({
     }
   };
 
+  const handleNewUserMessage = async newMessage => {
+    // console.log(`New message incoming! ${newMessage}`);
+    // Now send the message throught the backend API
+
+    let res;
+    try {
+      res = await axios.get("/api/dialogflow?text=" + newMessage);
+
+      if (res) {
+        // console.log(res.data.response);
+        addResponseMessage(res.data.response);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <Fragment>
       <Helmet>
@@ -233,36 +252,51 @@ const Search = ({
         <title>Китайско-русский словарь | Chinese+</title>
       </Helmet>
 
-      <div style={{ maxWidth: "500px", margin: "auto" }}>
-        <form onSubmit={e => onSubmit(e)}>
-          <div className='form-group'>
-            <h4 className='control-label'>Китайско-русский словарь</h4>
-            <label>
-              <i>
-                база данных{" "}
-                <a href='https://bkrs.info/' target='_blank' rel='noopener noreferrer'>
-                  БКРС
-                </a>
-              </i>
-            </label>
-            <div className='form-group'>
-              <div className='input-group mb-3'>
-                <input
-                  type='text'
-                  className='form-control'
-                  id='searchInput'
-                  placeholder='汉字。。。'
-                  autoComplete='off'
-                />
-                <div className='input-group-append' id='searchButton'>
-                  <button className='btn btn-primary' type='submit'>
-                    <i className='fas fa-search'></i>
-                  </button>
+      <div className='row'>
+        <div className='col-sm-8'>
+          <div>
+            <form onSubmit={e => onSubmit(e)}>
+              <div className='form-group'>
+                <h3 className='control-label'>Китайско-русский словарь</h3>
+                <label>
+                  <i>
+                    база данных с{" "}
+                    <a href='https://bkrs.info/' target='_blank' rel='noopener noreferrer'>
+                      БКРС
+                    </a>
+                  </i>
+                </label>
+                <div className='form-group'>
+                  <div className='input-group mb-3'>
+                    <input
+                      type='text'
+                      className='form-control'
+                      id='searchInput'
+                      placeholder='汉字。。。'
+                      autoComplete='off'
+                    />
+                    <div className='input-group-append' id='searchButton'>
+                      <button className='btn btn-primary' type='submit'>
+                        <i className='fas fa-search'></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </form>
+          </div>
+        </div>
+
+        <div className='col-sm-4'>
+          <div className='card text-white bg-primary mb-3'>
+            <div className='card-body'>
+              <h4 className='card-title'>Чат с AI</h4>
+              <p className='card-text'>
+                Внизу справа - чат с AI. Поддерживаемые темы будут расширяться.
+              </p>
             </div>
           </div>
-        </form>
+        </div>
       </div>
 
       <div id='showCharDiv'></div>
@@ -373,6 +407,13 @@ const Search = ({
       ) : (
         <Spinner />
       )}
+
+      <Widget
+        handleNewUserMessage={handleNewUserMessage}
+        title='AI-чат Buyilehu'
+        subtitle='Пообщайтесь с AI на китайском'
+        senderPlaceHolder='Ваше сообщение...'
+      />
     </Fragment>
   );
 };

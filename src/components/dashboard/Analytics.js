@@ -6,7 +6,7 @@ import { dateToStr } from "../../actions/helpers";
 
 const Analytics = ({ user }) => {
   const [state, setstate] = useState(null);
-  const [maxX, setMaxX] = useState(0);
+  const [maxX, setMaxX] = useState(1000);
   const fetchData = async () => {
     const { data } = await axios.get("/api/users/reading_results");
     // console.log(data);
@@ -14,8 +14,8 @@ const Analytics = ({ user }) => {
     // setMaxX
     const maxGoal = Math.max(...data.map(day => day.daily_goal));
     const maxResult = Math.max(...data.map(day => day.have_read));
-    if (maxGoal > maxResult) setMaxX(maxGoal + 500);
-    if (maxGoal < maxResult) setMaxX(maxResult + 500);
+    if (maxGoal > maxResult) setMaxX(maxGoal * 2);
+    if (maxGoal < maxResult) setMaxX(maxResult * 2);
 
     let today = new Date();
     let rows1 = [];
@@ -50,7 +50,7 @@ const Analytics = ({ user }) => {
       rows1[i][0] = dateToStr(rows1[i][0], true);
     }
 
-    console.log(rows1);
+    // console.log(rows1);
     setstate(rows1.reverse());
   };
 

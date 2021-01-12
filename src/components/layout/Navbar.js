@@ -228,16 +228,6 @@ const Navbar = ({
           <NavLink
             onClick={collapseIt}
             className='nav-link'
-            to='/translate'
-            activeStyle={activeNavLink}
-          >
-            Перевод
-          </NavLink>
-        </li>
-        <li className='nav-item'>
-          <NavLink
-            onClick={collapseIt}
-            className='nav-link'
             to='/search'
             activeStyle={activeNavLink}
           >

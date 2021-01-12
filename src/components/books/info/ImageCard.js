@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import Length from "./Length";
 import AuthorRus from "./AuthorRus";
 import ReadingCard from "../../dashboard/ReadingCard";
+import BooksNotification from "./BooksNotification";
 
 const ImageCard = ({ book, isAuthenticated, currentUser }) => {
   const { genre, pictureUrl, authorName, length } = book;
@@ -31,6 +32,8 @@ const ImageCard = ({ book, isAuthenticated, currentUser }) => {
           )}
         </div>
       </div>
+
+      <BooksNotification />
 
       <ReadingCard />
     </div>

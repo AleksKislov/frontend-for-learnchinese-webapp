@@ -11,13 +11,11 @@ import UserWords from "../texts/UserWords";
 
 import Dashboard from "../dashboard/Dashboard";
 import PrivateRoute from "../routing/PrivateRoute";
-import TranslationForm from "../translation/TranslateForm";
 import PinyinTable from "../pinyinTable/PinyinTable";
 import PinyinTests from "../pinyinTable/PinyinTests";
 import HskTests from "../hsk-table/HskTests";
 import CreateProfile from "../profile/CreateProfile";
 import EditProfile from "../profile/EditProfile";
-import TranslateForm from "../translation/TranslateForm";
 import NotFound from "../layout/NotFound";
 import Contacts from "../layout/Contacts";
 import Search from "../translation/Search";
@@ -30,6 +28,11 @@ import Books from "../books/Books";
 import BookCardPage from "../books/BookCardPage";
 import PageForm from "../books/PageForm";
 import ChapterPage from "../books/ChapterPage";
+
+// import TranslationForm from "../translation/TranslateForm";
+// <Route exact path='/translate' component={TranslationForm} />
+// import TranslateForm from "../translation/TranslateForm";
+// <PrivateRoute exact path='/translate' component={TranslateForm} />
 
 const Routes = () => {
   useEffect(() => {
@@ -66,10 +69,8 @@ const Routes = () => {
           <Route exact path='/hsk-table' component={HskTable} />
           <Route exact path='/pinyin-tests' component={PinyinTests} />
           <Route exact path='/hsk-tests' component={HskTests} />
-          <Route exact path='/translate' component={TranslationForm} />
           <PrivateRoute exact path='/create-profile' component={CreateProfile} />
           <PrivateRoute exact path='/edit-profile' component={EditProfile} />
-          <PrivateRoute exact path='/translate' component={TranslateForm} />
           <Route exact path='/pinyin' component={PinyinTable} />
           <Route exact path='/search/:chinese' component={Search} />
           <Route exact path='/search' component={Search} />
