@@ -11,6 +11,7 @@ import {
 
 const initialState = {
   texts: [],
+  moreTexts: true,
   text: null,
   loading: true,
   currentComments: []
@@ -24,7 +25,8 @@ export default function(state = initialState, action) {
         ...state,
         text: null,
         loading: false,
-        texts: payload
+        texts: [...state.texts, ...payload],
+        moreTexts: payload.length === 5 ? true : false
       };
     case GET_COMMENTS:
       return {

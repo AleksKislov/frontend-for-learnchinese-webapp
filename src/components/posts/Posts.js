@@ -7,7 +7,7 @@ import { setAlert } from "../../actions/alert";
 import Spinner from "../layout/Spinner";
 import { Helmet } from "react-helmet";
 
-const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) => {
+const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, morePosts }) => {
   useEffect(() => {
     if (posts.length === 0) loadPosts(0);
   }, []);
@@ -258,13 +258,19 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
               {posts.map(post => hideFlag[post.tag] && <Post key={post._id} post={post} />)}
 
               <div className='text-center'>
-                <button
-                  type='button'
-                  className='btn btn-info btn-sm mb-1'
-                  onClick={() => loadPosts(posts.length)}
-                >
-                  Загрузить Ещё
-                </button>
+                {morePosts ? (
+                  <button
+                    type='button'
+                    className='btn btn-info btn-sm mb-1'
+                    onClick={() => loadPosts(posts.length)}
+                  >
+                    Загрузить Ещё
+                  </button>
+                ) : (
+                  <button type='button' className='btn btn-warning btn-sm mb-1' disabled>
+                    Больше нетути
+                  </button>
+                )}
               </div>
             </div>
           )}
@@ -283,6 +289,7 @@ const badgeStyle = {
 const mapPropsToState = state => ({
   isAuthenticated: state.auth.isAuthenticated,
   posts: state.posts.posts,
+  morePosts: state.posts.morePosts,
   loading: state.posts.loading,
   user: state.auth.user
 });

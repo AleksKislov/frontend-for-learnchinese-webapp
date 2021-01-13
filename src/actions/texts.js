@@ -8,9 +8,29 @@ import {
 } from "./types";
 import axios from "axios";
 
-export const loadTexts = () => async dispatch => {
+// export const loadTexts = () => async dispatch => {
+//   try {
+//     const { data } = await axios.get("/api/texts");
+//     dispatch({
+//       type: LOAD_TEXTS,
+//       payload: data
+//     });
+//   } catch (err) {
+//     console.log(err);
+//     dispatch({
+//       type: LOAD_TEXTS_ERR
+//     });
+//   }
+// };
+
+/**
+ *
+ * @param {number} len  - current length of posts array
+ */
+export const loadTexts = len => async dispatch => {
+  let skip = len || "0";
   try {
-    const { data } = await axios.get("/api/texts");
+    const { data } = await axios.get(`/api/texts/infinite?skip=${skip}`);
     dispatch({
       type: LOAD_TEXTS,
       payload: data

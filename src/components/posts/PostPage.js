@@ -1,26 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import store from "../../store";
-import { setAlert } from "../../actions/alert";
 import { loadPost, clearPost } from "../../actions/posts";
-import { getComments, addComment } from "../../actions/comments";
+import { getComments } from "../../actions/comments";
 import Post from "./Post";
 import Comment from "../comments/Comment";
 import LeaveComment from "../comments/LeaveComment";
 
-const PostPage = ({
-  clearPost,
-  loadPost,
-  post,
-  match,
-  loading,
-  comments,
-  getComments,
-  isAuthenticated,
-  addComment
-}) => {
+const PostPage = ({ clearPost, loadPost, post, match, loading, comments, getComments }) => {
   useEffect(() => {
     clearPost();
     setTimeout(() => {
@@ -28,30 +16,6 @@ const PostPage = ({
       getComments("post", match.params.id);
     }, 100);
   }, [loading]);
-
-  const [text, setText] = useState("");
-
-  const onSubmit = e => {
-    e.preventDefault();
-
-    if (isAuthenticated) {
-      const newtext = text.replace(/\n/g, "<br />");
-
-      if (text.length < 281) {
-        // id, text
-        addComment("post", post._id, newtext);
-      } else {
-        store.dispatch(setAlert("Сообщение не должно превышать лимит", "danger"));
-      }
-    } else {
-      store.dispatch(setAlert("Авторизуйтесь, чтобы оставлять комментарии.", "danger"));
-    }
-
-    const textForm = document.getElementById("textForm");
-    textForm.value = "";
-    setText("");
-    getComments("post", post._id);
-  };
 
   return (
     post && (
@@ -88,4 +52,4 @@ const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(mapStateToProps, { loadPost, getComments, addComment, clearPost })(PostPage);
+export default connect(mapStateToProps, { loadPost, getComments, clearPost })(PostPage);

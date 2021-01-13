@@ -16,6 +16,7 @@ import {
 
 const initialState = {
   posts: [],
+  morePosts: true,
   post: null,
   loading: true,
   currentComments: [],
@@ -29,6 +30,7 @@ export default function(state = initialState, action) {
       return {
         ...state,
         posts: [...state.posts, ...payload],
+        morePosts: payload.length === 5 ? true : false,
         loading: false
       };
     case CLEAR_POSTS:

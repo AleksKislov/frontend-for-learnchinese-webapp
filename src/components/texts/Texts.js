@@ -6,11 +6,11 @@ import TextCard from "./TextCard";
 import ReadingCard from "../dashboard/ReadingCard";
 import { Helmet } from "react-helmet";
 
-const Texts = ({ loadTexts, texts, loading, clearText }) => {
+const Texts = ({ loadTexts, texts, loading, clearText, moreTexts }) => {
   useEffect(() => {
     clearText();
-    loadTexts();
-  }, [loadTexts]);
+    if (texts.length === 0) loadTexts(0);
+  }, []);
 
   const levelFilter = [
     {
@@ -75,7 +75,24 @@ const Texts = ({ loadTexts, texts, loading, clearText }) => {
         {loading ? (
           <Spinner />
         ) : (
-          texts.map(text => hideFlag[text.level] && <TextCard key={text._id} text={text} />)
+          <div className=''>
+            {texts.map(text => hideFlag[text.level] && <TextCard key={text._id} text={text} />)}
+            <div className='text-center'>
+              {moreTexts ? (
+                <button
+                  type='button'
+                  className='btn btn-info btn-sm mb-1'
+                  onClick={() => loadTexts(texts.length)}
+                >
+                  Загрузить Ещё
+                </button>
+              ) : (
+                <button type='button' className='btn btn-warning btn-sm mb-1' disabled>
+                  Больше нетути
+                </button>
+              )}
+            </div>
+          </div>
         )}
       </div>
     </div>
@@ -84,7 +101,8 @@ const Texts = ({ loadTexts, texts, loading, clearText }) => {
 
 const mapStateToProps = state => ({
   texts: state.texts.texts,
-  loading: state.texts.loading
+  loading: state.texts.loading,
+  moreTexts: state.texts.moreTexts
 });
 
 export default connect(mapStateToProps, { loadTexts, clearText })(Texts);
