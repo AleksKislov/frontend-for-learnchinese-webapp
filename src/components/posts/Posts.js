@@ -49,7 +49,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
       if (user.role === "admin") {
         title = emoji + " " + title;
         addPost(title, newtext, postTag);
-        loadPosts(0);
+        // loadPosts(0);
         return;
       }
 
@@ -57,7 +57,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
         // title, text, theme
         title = emoji + " " + title;
         addPost(title, newtext, postTag);
-        loadPosts(0);
+        // loadPosts(0);
       } else {
         store.dispatch(setAlert("Сообщение и заголовок не должны превышать лимит", "danger"));
       }

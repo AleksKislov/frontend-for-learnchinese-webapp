@@ -1,4 +1,5 @@
 import {
+  ADD_POST,
   ADD_POST_ERR,
   LOAD_POSTS,
   LOAD_POST,
@@ -32,6 +33,11 @@ export default function(state = initialState, action) {
         posts: [...state.posts, ...payload],
         morePosts: payload.length === 5 ? true : false,
         loading: false
+      };
+    case ADD_POST:
+      return {
+        ...state
+        // posts: [payload, ...state.posts]
       };
     case CLEAR_POSTS:
       return {
