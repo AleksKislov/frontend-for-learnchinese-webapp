@@ -8,12 +8,8 @@ import Spinner from "../layout/Spinner";
 import { Helmet } from "react-helmet";
 
 const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) => {
-  // const [skip, loadPosts] = useState(0);
   useEffect(() => {
-    // setTimeout(() => {
-    // if (posts.length !== skip) loadPosts(skip);
     if (posts.length === 0) loadPosts(0);
-    // }, 100);
   }, []);
 
   const [formData, setFormData] = useState({

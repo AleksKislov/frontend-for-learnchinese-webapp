@@ -7,6 +7,7 @@ import {
   LOAD_POST_ERR,
   ADD_LIKE,
   ADD_DISLIKE,
+  CLEAR_POST,
   CLEAR_POSTS
 } from "./types";
 import axios from "axios";
@@ -44,8 +45,8 @@ export const addPost = (title, text, tag) => async dispatch => {
   }
 };
 
-export const clearPosts = _ => async dispatch => {
-  dispatch({ type: CLEAR_POSTS });
+export const clearPost = _ => async dispatch => {
+  dispatch({ type: CLEAR_POST });
 };
 
 /**

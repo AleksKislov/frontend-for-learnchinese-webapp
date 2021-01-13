@@ -4,13 +4,14 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import store from "../../store";
 import { setAlert } from "../../actions/alert";
-import { loadPost } from "../../actions/posts";
+import { loadPost, clearPost } from "../../actions/posts";
 import { getComments, addComment } from "../../actions/comments";
 import Post from "./Post";
 import Comment from "../comments/Comment";
 import LeaveComment from "../comments/LeaveComment";
 
 const PostPage = ({
+  clearPost,
   loadPost,
   post,
   match,
@@ -21,11 +22,12 @@ const PostPage = ({
   addComment
 }) => {
   useEffect(() => {
+    clearPost();
     setTimeout(() => {
       loadPost(match.params.id);
       getComments("post", match.params.id);
     }, 100);
-  }, [loadPost, loading, getComments]);
+  }, [loading]);
 
   const [text, setText] = useState("");
 
@@ -86,4 +88,4 @@ const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(mapStateToProps, { loadPost, getComments, addComment })(PostPage);
+export default connect(mapStateToProps, { loadPost, getComments, addComment, clearPost })(PostPage);
