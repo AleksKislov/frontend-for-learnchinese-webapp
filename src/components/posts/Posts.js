@@ -8,12 +8,13 @@ import Spinner from "../layout/Spinner";
 import { Helmet } from "react-helmet";
 
 const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) => {
-  const [skip, setSkip] = useState(0);
+  // const [skip, loadPosts] = useState(0);
   useEffect(() => {
-    setTimeout(() => {
-      loadPosts(skip);
-    }, 100);
-  }, [skip]);
+    // setTimeout(() => {
+    // if (posts.length !== skip) loadPosts(skip);
+    if (posts.length === 0) loadPosts(0);
+    // }, 100);
+  }, []);
 
   const [formData, setFormData] = useState({
     text: "",
@@ -52,7 +53,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
       if (user.role === "admin") {
         title = emoji + " " + title;
         addPost(title, newtext, postTag);
-        setSkip(0);
+        loadPosts(0);
         return;
       }
 
@@ -60,7 +61,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
         // title, text, theme
         title = emoji + " " + title;
         addPost(title, newtext, postTag);
-        setSkip(0);
+        loadPosts(0);
       } else {
         store.dispatch(setAlert("Сообщение и заголовок не должны превышать лимит", "danger"));
       }
@@ -264,7 +265,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user }) =>
                 <button
                   type='button'
                   className='btn btn-info btn-sm mb-1'
-                  onClick={() => setSkip(posts.length)}
+                  onClick={() => loadPosts(posts.length)}
                 >
                   Загрузить Ещё
                 </button>
