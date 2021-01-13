@@ -1,6 +1,6 @@
 import axios from "axios";
 import { setAlert } from "./alert";
-import { PROFILE_ERROR, GET_PROFILE, GET_DICTSTATS } from "./types";
+import { PROFILE_ERROR, GET_PROFILE, GET_DICTSTATS, CHANGE_FONTSIZE } from "./types";
 
 //get current user profile
 export const getCurrentProfile = () => async dispatch => {
@@ -66,4 +66,15 @@ export const getDictStats = () => async dispatch => {
       payload: { msg: err.response.statusText, status: err.response.status }
     });
   }
+};
+
+/**
+ * suffix for className for Paragraph
+ * @param {string} size - "-bg" || "-sm" || ""
+ */
+export const changeFontSize = size => async dispatch => {
+  dispatch({
+    type: CHANGE_FONTSIZE,
+    payload: size
+  });
 };

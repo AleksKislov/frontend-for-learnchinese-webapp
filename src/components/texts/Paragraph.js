@@ -18,7 +18,8 @@ const Paragraph = ({
   user,
   readToday,
   unreadToday,
-  toEdit
+  toEdit,
+  fontsize
 }) => {
   const numOfChars = countZnChars(originTxt);
   const [alreadyRead, setAlreadyRead] = useState(false);
@@ -126,7 +127,7 @@ const Paragraph = ({
 
   return (
     <Fragment>
-      <div className={`result col-sm-${hideFlag ? "12" : "6"} my-1`}>
+      <div className={`result${fontsize} col-sm-${hideFlag ? "12" : "6"} my-1`}>
         <div
           className={`card border-primary ${alreadyRead && "alreadyRead"}`}
           style={{ height: "100%" }}
@@ -155,7 +156,8 @@ const hidden = {
 };
 
 const mapStateToProps = state => ({
-  user: state.auth.user
+  user: state.auth.user,
+  fontsize: state.profile.fontsize
 });
 
 export default connect(mapStateToProps, { readToday, unreadToday })(Paragraph);

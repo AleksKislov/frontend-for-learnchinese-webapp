@@ -8,6 +8,7 @@ export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAIL = "LOGIN_FAIL";
 export const LOGOUT = "LOGOUT";
 export const GOOGLE_LOGIN_SUCCESS = "GOOGLE_LOGIN_SUCCESS";
+export const CHANGE_FONTSIZE = "CHANGE_FONTSIZE";
 
 export const SET_LOADING = "SET_LOADING";
 export const HSK_LOADED = "HSK_LOADED";

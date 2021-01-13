@@ -1,11 +1,12 @@
-import { PROFILE_ERROR, GET_PROFILE, GET_DICTSTATS } from "../actions/types";
+import { PROFILE_ERROR, GET_PROFILE, GET_DICTSTATS, CHANGE_FONTSIZE } from "../actions/types";
 
 const initialState = {
   profile: null,
   profiles: [],
   loading: true,
   error: {},
-  dictStats: {}
+  dictStats: {},
+  fontsize: "" // for Chinese text in Paragraph
 };
 
 export default function(state = initialState, action) {
@@ -30,6 +31,11 @@ export default function(state = initialState, action) {
         ...state,
         loading: false,
         dictStats: payload
+      };
+    case CHANGE_FONTSIZE:
+      return {
+        ...state,
+        fontsize: payload
       };
     default:
       return state;

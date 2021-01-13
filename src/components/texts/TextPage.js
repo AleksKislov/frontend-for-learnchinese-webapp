@@ -14,6 +14,7 @@ import LeaveComment from "../comments/LeaveComment";
 import ReadingCard from "../dashboard/ReadingCard";
 import { Helmet } from "react-helmet";
 import { levelStars } from "../../actions/helpers";
+import FontSize from "../common/FontSize";
 
 const TextPage = ({
   text,
@@ -86,6 +87,9 @@ const TextPage = ({
                   <span className='text-muted'>Кол-во знаков: </span>
                   {text.length}
                 </h6>
+
+                <FontSize />
+
                 {isAuthenticated &&
                   (currentUser._id === text.user || currentUser.role === "admin") && (
                     <Link to='/create-text'>

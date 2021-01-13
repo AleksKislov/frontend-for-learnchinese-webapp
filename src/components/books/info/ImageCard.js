@@ -5,6 +5,7 @@ import Length from "./Length";
 import AuthorRus from "./AuthorRus";
 import ReadingCard from "../../dashboard/ReadingCard";
 import BooksNotification from "./BooksNotification";
+import FontSize from "../../common/FontSize";
 
 const ImageCard = ({ book, isAuthenticated, currentUser }) => {
   const { genre, pictureUrl, authorName, length } = book;
@@ -24,6 +25,8 @@ const ImageCard = ({ book, isAuthenticated, currentUser }) => {
 
           <AuthorRus authorName={authorName} />
           <Length length={length} />
+
+          <FontSize />
 
           {isAuthenticated && currentUser.role === "admin" && (
             <Link to='/create-bookpage'>
