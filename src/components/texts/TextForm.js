@@ -11,7 +11,8 @@ import {
   getWords,
   chunkArrayFunc,
   segmenter,
-  itirateWordsFromDB
+  itirateWordsFromDB,
+  getTranslation
 } from "../../actions/helpers";
 import Paragraph from "./Paragraph";
 import { v4 as uuid } from "uuid";
@@ -94,7 +95,12 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       tags = tags.map(tag => tag.trim()); // array of words
       const chineseChunkedWords = chunkArrayFunc(newArr); // array of object arrays
       const chunkedTranslation = translationTrimed.split("\n"); // array of strings
-      const chunkedOriginText = originText.split("\n"); // array of strings
+      let chunkedOriginText = originText.split("\n"); // array of strings
+      chunkedOriginText = chunkedOriginText.filter(chunk => chunk);
+      console.log({ chunkedOriginText });
+      const trans = await getTranslation(chunkedOriginText);
+      console.log(trans);
+
       const title = document.getElementById("title").value; // string
       const description = document.getElementById("description").value; // string
       const level = parseInt(document.getElementById("level").value); // number

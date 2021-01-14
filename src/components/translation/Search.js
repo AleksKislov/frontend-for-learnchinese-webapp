@@ -10,13 +10,13 @@ import {
   loadUserWords,
   loadUserWordsLen
 } from "../../actions/userWords";
-import "./style.css";
 import HanziWriter from "hanzi-writer";
 import Spinner from "../layout/Spinner";
 import Tippy from "@tippyjs/react";
 import { Helmet } from "react-helmet";
 import { Widget, addResponseMessage } from "react-chat-widget";
 import "react-chat-widget/lib/styles.css";
+import "./style.css";
 
 const Search = ({
   history,

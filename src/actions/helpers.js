@@ -58,6 +58,24 @@ export const getWords = async words => {
   return res.data;
 };
 
+export const getTranslation = async text => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  };
+
+  const body = JSON.stringify({ text });
+
+  let res;
+  try {
+    res = await axios.post("/api/translation", body, config);
+  } catch (err) {
+    console.log(err);
+  }
+  return res.data;
+};
+
 /**
  * @param {Object} obj - text from texts or page in books
  */
@@ -124,8 +142,11 @@ export const numberToStr = num => {
  * @param {string} str  - Chinese text
  * @returns {number}    - number of Chinese chars in str w/o spaces
  */
-export const countZnChars = str => str.replaceAll(" ", "").length;
-
+export const countZnChars = str => {
+  console.log({ str });
+  if (str) return str.replaceAll(" ", "").length;
+  return 0;
+};
 /**
  *
  * @param {string} href - window.location.href
