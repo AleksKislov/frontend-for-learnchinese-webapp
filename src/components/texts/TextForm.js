@@ -57,6 +57,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
 
   const [isToEdit, setIsToEdit] = useState(false);
   const [textLen, setTextLen] = useState(0);
+  const [photosUrls, setPhotosUrls] = useState(false);
+  const [isTranslated, setIsTranslated] = useState(false);
   const [formData, setFormData] = useState({
     chineseChunkedWords: [],
     chunkedTranslation: [],
@@ -75,14 +77,30 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
   const onSubmit = async e => {
     e.preventDefault();
     const textArea = document.getElementById("textArea");
-    const translationArea = document.getElementById("translationArea");
     const tagsId = document.getElementById("tags");
 
     if (textLen > 1000) {
       store.dispatch(setAlert("Максимум 1000 знаков в китайском тексте, удалите лишние", "danger"));
     } else {
       let originText = textArea.value.trim();
-      let translationTrimed = translationArea.value.trim();
+
+      const translationArea = document.getElementById("translationArea");
+
+      // console.log(chunkedTranslation);
+      let chunkedOriginText = originText.split("\n"); // array of strings
+      chunkedOriginText = chunkedOriginText.filter(chunk => chunk);
+      let chunkedTranslation;
+      if (!isTranslated) {
+        const { translation } = await getTranslation(chunkedOriginText);
+        setIsTranslated(true);
+        // console.log(translation);
+        translationArea.value = translation.join("\n\n");
+        chunkedTranslation = translation;
+      } else {
+        let translationTrimed = translationArea.value.trim();
+        chunkedTranslation = translationTrimed.split("\n"); // array of strings
+        chunkedTranslation = chunkedTranslation.filter(chunk => chunk.length);
+      }
 
       let allwords = await segmenter(originText);
       allwords = allwords.filter(word => word !== " ");
@@ -91,15 +109,14 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       // console.log(wordsFromDB);
       const newArr = itirateWordsFromDB(allwords, wordsFromDB);
       const length = countZnChars(originText);
-      let tags = tagsId.value.split(",");
-      tags = tags.map(tag => tag.trim()); // array of words
-      const chineseChunkedWords = chunkArrayFunc(newArr); // array of object arrays
-      const chunkedTranslation = translationTrimed.split("\n"); // array of strings
-      let chunkedOriginText = originText.split("\n"); // array of strings
-      chunkedOriginText = chunkedOriginText.filter(chunk => chunk);
-      console.log({ chunkedOriginText });
-      const trans = await getTranslation(chunkedOriginText);
-      console.log(trans);
+      let tags = tagsId.value.replaceAll("，", ",");
+      tags = tags.replaceAll("、", ",");
+      tags = tags.split(",");
+      tags = tags.map(tag => tag.trim().toLowerCase()); // array of words
+
+      let chineseChunkedWords = chunkArrayFunc(newArr); // array of object arrays
+      chineseChunkedWords = chineseChunkedWords.filter(chunk => chunk.length);
+      // console.log({ chineseChunkedWords });
 
       const title = document.getElementById("title").value; // string
       const description = document.getElementById("description").value; // string
@@ -107,7 +124,10 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       const pic_theme = document.getElementById("pic_theme").value;
       const theme_word = document.getElementById("theme_word").value;
 
-      getPhotos(pic_theme);
+      if (!photosUrls && pic_theme) {
+        getPhotos(pic_theme);
+        setPhotosUrls(true);
+      }
 
       setFormData({
         ...formData,

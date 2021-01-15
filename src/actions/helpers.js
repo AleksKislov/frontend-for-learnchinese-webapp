@@ -1,5 +1,4 @@
 import axios from "axios";
-import { unsplash } from "../apikeys.json";
 import React from "react";
 
 /**
@@ -102,17 +101,11 @@ export const segmenter = async text => {
 };
 
 export const getPhotos = async pic_theme => {
-  const config = { headers: { Authorization: unsplash } };
-
   const photosDiv = document.getElementById("photosDiv");
   photosDiv.innerHTML = "";
 
   try {
-    const { data } = await axios.get(
-      `https://api.unsplash.com/search/photos?query=${pic_theme}&per_page=5&orientation=portrait`,
-      config
-    );
-
+    const { data } = await axios.get("/api/translation/unsplash/" + pic_theme);
     // console.log(data.results[1].urls.small);
 
     data.results.forEach(el => {
@@ -143,7 +136,6 @@ export const numberToStr = num => {
  * @returns {number}    - number of Chinese chars in str w/o spaces
  */
 export const countZnChars = str => {
-  console.log({ str });
   if (str) return str.replaceAll(" ", "").length;
   return 0;
 };
