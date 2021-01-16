@@ -55,6 +55,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     }, 0);
   }, [textToEdit]);
 
+  const [okToPublish, setOkToPublish] = useState(false);
   const [isToEdit, setIsToEdit] = useState(false);
   const [textLen, setTextLen] = useState(0);
   const [photosUrls, setPhotosUrls] = useState(false);
@@ -87,6 +88,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
 
       let chunkedOriginText = originText.split("\n"); // array of strings
       chunkedOriginText = chunkedOriginText.filter(chunk => chunk);
+      textArea.value = chunkedOriginText.join("\n\n");
       let chunkedTranslation;
       if (!isTranslated) {
         const { translation } = await getTranslation(chunkedOriginText);
@@ -123,11 +125,6 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       // const level = parseInt(document.getElementById("level").value); // number
       // const theme_word = document.getElementById("theme_word").value;
 
-      if (!photosUrls && formData.pic_theme) {
-        getPhotos(formData.pic_theme);
-        setPhotosUrls(true);
-      }
-
       setFormData({
         ...formData,
         chineseChunkedWords,
@@ -141,6 +138,13 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         allwords
         // theme_word
       });
+    }
+  };
+
+  const loadPictures = () => {
+    if (!photosUrls && formData.pic_theme) {
+      getPhotos(formData.pic_theme);
+      setPhotosUrls(true);
     }
   };
 
@@ -258,8 +262,84 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         "Страница доступна пока только админу"
       ) : (
         <Fragment>
-          <div className='row'>
-            <WordModal />
+          <div className='col-md-12'>
+            <h2>Добавить текст</h2>
+            <div className='card bg-light mb-3'>
+              <div className='card-header'>Следуйте шагам ниже</div>
+              <div className='card-body'>
+                <p className='card-text'>
+                  {!formData.title && <span>
+                     1️⃣ Минимум - заполнить красные поля. Начнем с заголовка.<br />🙏🏻 вы хорошо поможете, если заполните все поля.
+                    </span>}
+
+                  {!formData.pic_theme &&
+                    formData.title &&
+                    "2️⃣ Теперь впишите тему картинки на английском языке"}
+
+                  {formData.pic_theme &&
+                    formData.title &&
+                    !photosUrls &&
+                    !formData.pic_url &&
+                    "3️⃣ Загрузите картинки для выбора, нажав кнопку 'Загрузить'"}
+
+                  {formData.title &&
+                    photosUrls &&
+                    !formData.pic_url &&
+                    "4️⃣ Кликните одну из картинок, чтобы выбрать ее"}
+
+                  {formData.title &&
+                    formData.pic_url &&
+                    textLen === 0 &&
+                    "5️⃣ Теперь вы можете вставить китайский текст"}
+
+                  {textLen > 0 &&
+                    formData.chineseChunkedWords.length === 0 &&
+                    "6️⃣ Обработаем и переведем китайский текст, нажав кнопку 'Предобработка'"}
+
+                  {formData.chineseChunkedWords.length !== 0 && <span>
+                    7️⃣ Поправьте русский перевод и китайский оригинал при необходимости (после надо снова нажать 'Предобработка').<br /> 
+                    Если результат устраивает, то можете нажать 'Опубликовать'.<br /> 
+                    🔥 китайские слова можно отделить пробелами, если они выделены неверно.<br /> 
+                    🙏🏻 вы хорошо поможете, если заполните все поля (описание и тэги)
+                    </span>
+                    }
+                </p>
+                <div className='progress'>
+                  <div
+                    className={`progress-bar bg-${
+                      formData.chunkedOriginText.length && formData.chunkedOriginText[0] !== ""
+                        ? "success"
+                        : "info"
+                    }`}
+                    role='progressbar'
+                    style={{
+                      width: `${((formData.title ? 1 : 0) +
+                        (formData.description ? 1 : 0) +
+                        (formData.tags.length && formData.tags[0] !== "" ? 1 : 0) +
+                        (formData.pic_theme ? 1 : 0) +
+                        (formData.theme_word ? 1 : 0) +
+                        (formData.pic_url ? 1 : 0) +
+                        (photosUrls ? 1 : 0) +
+                        (formData.chunkedOriginText.length && formData.chunkedOriginText[0] !== ""
+                          ? 1
+                          : 0) +
+                        (formData.chunkedTranslation.length && formData.chunkedTranslation[0] !== ""
+                          ? 1
+                          : 0) +
+                        1) *
+                        10}%`
+                    }}
+                    aria-valuenow='25'
+                    aria-valuemin='0'
+                    aria-valuemax='100'
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div className='row'>
+              <WordModal />
+            </div>
 
             <form onSubmit={e => onSubmit(e)} style={{ width: "100%" }}>
               <fieldset>
@@ -267,7 +347,12 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   <div className='form-group col-md-6'>
                     <label htmlFor='title'>Заголовок текста</label>
                     <input
-                      onChange={e => setFormData({ ...formData, [e.target.id]: e.target.value })}
+                      onChange={e => {
+                        setFormData({
+                          ...formData,
+                          [e.target.id]: e.target.value
+                        });
+                      }}
                       type='text'
                       className={`form-control ${!formData.title && "is-invalid"}`}
                       id='title'
@@ -280,26 +365,26 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                     <input
                       onChange={e => setFormData({ ...formData, [e.target.id]: e.target.value })}
                       type='text'
-                      className={`form-control ${!formData.description && "is-invalid"}`}
+                      className={`form-control`}
                       id='description'
                       autoComplete='off'
-                      placeholder='О чем текст...'
+                      placeholder='О чем или откуда этот текст...'
                     />
                   </div>
                 </div>
                 <div className='form-row'>
                   <div className='form-group col-md-6'>
-                    <label htmlFor='tags'>Тэги</label>
+                    <label htmlFor='tags'>Тэги через запятую</label>
                     <input
                       onChange={e => parseTags(e.target.value)}
                       type='text'
-                      className={`form-control ${!formData.tags.length && "is-invalid"}`}
+                      className={`form-control`}
                       id='tags'
-                      placeholder='Тэги через запятую'
+                      placeholder='Список тэгов'
                     />
                   </div>
                   <div className='form-group col-md-6'>
-                    <label htmlFor='level'>Уровень</label>
+                    <label htmlFor='level'>Уровень, от 1(простой) до 3(сложный)</label>
                     <select
                       className='form-control'
                       id='level'
@@ -325,12 +410,13 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   </div>
                   <div className='form-group col-md-3'>
                     <label htmlFor='theme_word'>1 или 2 汉字 на картинку</label>
+                    {
+                      // `form-control ${!(formData.theme_word.length === 1 || formData.theme_word.length === 2) && "is-invalid"}`
+                    }
                     <input
                       onChange={e => setFormData({ ...formData, [e.target.id]: e.target.value })}
                       type='text'
-                      className={`form-control ${!(
-                        formData.theme_word.length === 1 || formData.theme_word.length === 2
-                      ) && "is-invalid"}`}
+                      className={`form-control`}
                       id='theme_word'
                       placeholder='汉字'
                       autoComplete='off'
@@ -349,11 +435,23 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   </div>
                 </div>
 
-                <div className='form-row'>
-                  <span>Загрузить картинки для выбора: </span>
-                  <button className='btn btn-sm btn-primary mx-1' disabled={!formData.pic_theme}>
-                    Загрузить
-                  </button>
+                <div className='form-row' style={{ paddingLeft: "5px" }}>
+                  {photosUrls ? (
+                    <label className='text-success'>Выберите кликом 1 из картинок ниже:</label>
+                  ) : (
+                    <Fragment>
+                      <label className={formData.pic_theme ? "text-warning" : "text-secondary"}>
+                        Загрузить картинки для выбора:
+                      </label>
+                      <button
+                        className='btn btn-sm btn-primary mx-1'
+                        disabled={!formData.pic_theme && !photosUrls}
+                        onClick={loadPictures}
+                      >
+                        Загрузить
+                      </button>
+                    </Fragment>
+                  )}
                 </div>
 
                 <div className='form-row'>
@@ -367,17 +465,22 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   <div className='form-group col-md-6'>
                     <label htmlFor='textArea'>Вставьте китайский текст для обработки:</label>
                     <textarea
-                      onChange={e => setTextLen(e.target.value.length)}
+                      onChange={e => {
+                        setTextLen(e.target.value.length);
+                        setOkToPublish(false);
+                      }}
                       className='form-control'
                       id='textArea'
                       rows='3'
                       placeholder='汉字。。。'
+                      disabled={formData.pic_url && formData.title ? false : true}
                     ></textarea>
                     <small className='text-muted'>{textLen}/1000</small>
                   </div>
                   <div className='form-group col-md-6'>
                     <label htmlFor='translationArea'>Исправьте автоматический перевод:</label>
                     <textarea
+                      onChange={() => setOkToPublish(false)}
                       className='form-control'
                       id='translationArea'
                       rows='3'
@@ -388,24 +491,19 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   </div>
                 </div>
                 <div className='form-row'>
-                  <button type='submit' className='btn btn-primary mx-1'>
-                    Предобработка
-                  </button>
+                  {textLen !== 0 && (
+                    <button
+                      type='submit'
+                      className='btn btn-primary mx-1'
+                      onClick={() => setOkToPublish(true)}
+                    >
+                      Предобработка
+                    </button>
+                  )}
                 </div>
               </fieldset>
             </form>
           </div>
-          <hr />
-
-          <button className='btn btn-primary mx-1' onClick={e => publishText(formData)}>
-            Опубликовать
-          </button>
-          {isToEdit && (
-            <button className='btn btn-primary mx-1' onClick={e => editText(formData)}>
-              Изменить текст
-            </button>
-          )}
-
           <hr />
 
           <div className='row'>
@@ -420,6 +518,34 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   toEdit={true}
                 />
               ))}
+          </div>
+          <hr />
+
+          <div className='row'>
+            {formData.chineseChunkedWords.length !== 0 && okToPublish && (
+              <Fragment>
+                <button
+                  className='btn btn-primary mx-1'
+                  onClick={e => publishText(formData)}
+                  disabled={
+                    formData.chunkedTranslation.length !== formData.chineseChunkedWords.length
+                  }
+                >
+                  Опубликовать
+                </button>
+
+                {formData.chunkedTranslation.length !== formData.chineseChunkedWords.length && (
+                  <span className='text-danger'>
+                    Кол-во параграфов оригинала и перевода не совпадает!
+                  </span>
+                )}
+              </Fragment>
+            )}
+            {isToEdit && (
+              <button className='btn btn-primary mx-1' onClick={e => editText(formData)}>
+                Изменить текст
+              </button>
+            )}
           </div>
         </Fragment>
       )}
