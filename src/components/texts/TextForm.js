@@ -96,7 +96,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         // console.log(translation);
         translationArea.value = translation.join("\n\n");
         chunkedTranslation = translation;
-        translationArea.disabled = false;
+        // translationArea.disabled = false;
       } else {
         let translationTrimed = translationArea.value.trim();
         chunkedTranslation = translationTrimed.split("\n"); // array of strings
@@ -264,78 +264,90 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         <Fragment>
           <div className='col-md-12'>
             <h2>Добавить текст</h2>
-            <div className='card bg-light mb-3'>
-              <div className='card-header'>Следуйте шагам ниже</div>
-              <div className='card-body'>
-                <p className='card-text'>
-                  {!formData.title && <span>
-                     1️⃣ Минимум - заполнить красные поля. Начнем с заголовка.<br />🙏🏻 вы хорошо поможете, если заполните все поля.
-                    </span>}
+            {!textToEdit && !isToEdit && (
+              <div className='card bg-light mb-3'>
+                <div className='card-header'>Следуйте шагам ниже</div>
+                <div className='card-body'>
+                  <p className='card-text'>
+                    {!formData.title && (
+                      <span>
+                        1️⃣ Минимум - заполнить красные поля. Начнем с заголовка.
+                        <br />
+                        🙏🏻 вы хорошо поможете, если заполните все поля.
+                      </span>
+                    )}
 
-                  {!formData.pic_theme &&
-                    formData.title &&
-                    "2️⃣ Теперь впишите тему картинки на английском языке"}
+                    {!formData.pic_theme &&
+                      formData.title &&
+                      "2️⃣ Теперь впишите тему картинки на английском языке"}
 
-                  {formData.pic_theme &&
-                    formData.title &&
-                    !photosUrls &&
-                    !formData.pic_url &&
-                    "3️⃣ Загрузите картинки для выбора, нажав кнопку 'Загрузить'"}
+                    {formData.pic_theme &&
+                      formData.title &&
+                      !photosUrls &&
+                      !formData.pic_url &&
+                      "3️⃣ Загрузите картинки для выбора, нажав кнопку 'Загрузить'"}
 
-                  {formData.title &&
-                    photosUrls &&
-                    !formData.pic_url &&
-                    "4️⃣ Кликните одну из картинок, чтобы выбрать ее"}
+                    {formData.title &&
+                      photosUrls &&
+                      !formData.pic_url &&
+                      "4️⃣ Кликните одну из картинок, чтобы выбрать ее"}
 
-                  {formData.title &&
-                    formData.pic_url &&
-                    textLen === 0 &&
-                    "5️⃣ Теперь вы можете вставить китайский текст"}
+                    {formData.title &&
+                      formData.pic_url &&
+                      textLen === 0 &&
+                      "5️⃣ Теперь вы можете вставить китайский текст"}
 
-                  {textLen > 0 &&
-                    formData.chineseChunkedWords.length === 0 &&
-                    "6️⃣ Обработаем и переведем китайский текст, нажав кнопку 'Предобработка'"}
+                    {textLen > 0 &&
+                      formData.chineseChunkedWords.length === 0 &&
+                      "6️⃣ Обработаем и переведем китайский текст, нажав кнопку 'Предобработка'"}
 
-                  {formData.chineseChunkedWords.length !== 0 && <span>
-                    7️⃣ Поправьте русский перевод и китайский оригинал при необходимости (после надо снова нажать 'Предобработка').<br /> 
-                    Если результат устраивает, то можете нажать 'Опубликовать'.<br /> 
-                    🔥 китайские слова можно отделить пробелами, если они выделены неверно.<br /> 
-                    🙏🏻 вы хорошо поможете, если заполните все поля (описание и тэги)
-                    </span>
-                    }
-                </p>
-                <div className='progress'>
-                  <div
-                    className={`progress-bar bg-${
-                      formData.chunkedOriginText.length && formData.chunkedOriginText[0] !== ""
-                        ? "success"
-                        : "info"
-                    }`}
-                    role='progressbar'
-                    style={{
-                      width: `${((formData.title ? 1 : 0) +
-                        (formData.description ? 1 : 0) +
-                        (formData.tags.length && formData.tags[0] !== "" ? 1 : 0) +
-                        (formData.pic_theme ? 1 : 0) +
-                        (formData.theme_word ? 1 : 0) +
-                        (formData.pic_url ? 1 : 0) +
-                        (photosUrls ? 1 : 0) +
-                        (formData.chunkedOriginText.length && formData.chunkedOriginText[0] !== ""
-                          ? 1
-                          : 0) +
-                        (formData.chunkedTranslation.length && formData.chunkedTranslation[0] !== ""
-                          ? 1
-                          : 0) +
-                        1) *
-                        10}%`
-                    }}
-                    aria-valuenow='25'
-                    aria-valuemin='0'
-                    aria-valuemax='100'
-                  ></div>
+                    {formData.chineseChunkedWords.length !== 0 && (
+                      <span>
+                        7️⃣ Поправьте русский перевод и китайский оригинал при необходимости (после
+                        надо снова нажать 'Предобработка').
+                        <br />
+                        🔥 Если результат устраивает, то можете нажать 'Опубликовать'.
+                        <br />
+                        🛑 китайские слова можно отделить пробелами, если они выделены неверно.
+                        <br />
+                        🙏🏻 вы хорошо поможете, если заполните все поля (описание и тэги)
+                      </span>
+                    )}
+                  </p>
+                  <div className='progress'>
+                    <div
+                      className={`progress-bar bg-${
+                        formData.chunkedOriginText.length && formData.chunkedOriginText[0] !== ""
+                          ? "success"
+                          : "info"
+                      }`}
+                      role='progressbar'
+                      style={{
+                        width: `${((formData.title ? 1 : 0) +
+                          (formData.description ? 1 : 0) +
+                          (formData.tags.length && formData.tags[0] !== "" ? 1 : 0) +
+                          (formData.pic_theme ? 1 : 0) +
+                          (formData.theme_word ? 1 : 0) +
+                          (formData.pic_url ? 1 : 0) +
+                          (photosUrls ? 1 : 0) +
+                          (formData.chunkedOriginText.length && formData.chunkedOriginText[0] !== ""
+                            ? 1
+                            : 0) +
+                          (formData.chunkedTranslation.length &&
+                          formData.chunkedTranslation[0] !== ""
+                            ? 1
+                            : 0) +
+                          1) *
+                          10}%`
+                      }}
+                      aria-valuenow='25'
+                      aria-valuemin='0'
+                      aria-valuemax='100'
+                    ></div>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
 
             <div className='row'>
               <WordModal />
@@ -354,7 +366,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                         });
                       }}
                       type='text'
-                      className={`form-control ${!formData.title && "is-invalid"}`}
+                      className={`form-control ${!formData.title && !isToEdit && "is-invalid"}`}
                       id='title'
                       placeholder='Заголовок'
                       autoComplete='off'
@@ -473,7 +485,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                       id='textArea'
                       rows='3'
                       placeholder='汉字。。。'
-                      disabled={formData.pic_url && formData.title ? false : true}
+                      disabled={(formData.pic_url && formData.title) || isToEdit ? false : true}
                     ></textarea>
                     <small className='text-muted'>{textLen}/1000</small>
                   </div>
@@ -485,13 +497,13 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                       id='translationArea'
                       rows='3'
                       placeholder='Тут будет автоматический перевод, который нужно поправить!'
-                      disabled
+                      disabled={isTranslated || isToEdit ? false : true}
                     ></textarea>
                     <small className='text-muted'>не забывайте про параграфы</small>
                   </div>
                 </div>
                 <div className='form-row'>
-                  {textLen !== 0 && (
+                  {(textLen !== 0 || isToEdit) && (
                     <button
                       type='submit'
                       className='btn btn-primary mx-1'
@@ -522,7 +534,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
           <hr />
 
           <div className='row'>
-            {formData.chineseChunkedWords.length !== 0 && okToPublish && (
+            {formData.chineseChunkedWords.length !== 0 && okToPublish && !isToEdit && (
               <Fragment>
                 <button
                   className='btn btn-primary mx-1'
