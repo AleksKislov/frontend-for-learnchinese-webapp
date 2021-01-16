@@ -62,31 +62,29 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
   const [formData, setFormData] = useState({
     chineseChunkedWords: [],
     chunkedTranslation: [],
-    description: "",
-    title: "",
-    level: 1,
+    description: "", // rewriten usestate
+    title: "", // rewriten usestate
+    level: 1, // rewriten usestate
     chunkedOriginText: [],
-    tags: [],
+    tags: [], // rewriten usestate
     length: 0,
     allwords: [],
     textId: "",
+    pic_theme: "", // in English for pic_url
     pic_url: "",
-    theme_word: ""
+    theme_word: "" // rewriten usestate
   });
 
   const onSubmit = async e => {
     e.preventDefault();
     const textArea = document.getElementById("textArea");
-    const tagsId = document.getElementById("tags");
 
     if (textLen > 1000) {
       store.dispatch(setAlert("Максимум 1000 знаков в китайском тексте, удалите лишние", "danger"));
     } else {
       let originText = textArea.value.trim();
-
       const translationArea = document.getElementById("translationArea");
 
-      // console.log(chunkedTranslation);
       let chunkedOriginText = originText.split("\n"); // array of strings
       chunkedOriginText = chunkedOriginText.filter(chunk => chunk);
       let chunkedTranslation;
@@ -96,6 +94,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         // console.log(translation);
         translationArea.value = translation.join("\n\n");
         chunkedTranslation = translation;
+        translationArea.disabled = false;
       } else {
         let translationTrimed = translationArea.value.trim();
         chunkedTranslation = translationTrimed.split("\n"); // array of strings
@@ -109,23 +108,23 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       // console.log(wordsFromDB);
       const newArr = itirateWordsFromDB(allwords, wordsFromDB);
       const length = countZnChars(originText);
-      let tags = tagsId.value.replaceAll("，", ",");
-      tags = tags.replaceAll("、", ",");
-      tags = tags.split(",");
-      tags = tags.map(tag => tag.trim().toLowerCase()); // array of words
+      // let tags = tagsId.value.replaceAll("，", ",");
+      // tags = tags.replaceAll("、", ",");
+      // tags = tags.split(",");
+      // tags = tags.map(tag => tag.trim().toLowerCase()); // array of words
 
       let chineseChunkedWords = chunkArrayFunc(newArr); // array of object arrays
       chineseChunkedWords = chineseChunkedWords.filter(chunk => chunk.length);
       // console.log({ chineseChunkedWords });
 
-      const title = document.getElementById("title").value; // string
-      const description = document.getElementById("description").value; // string
-      const level = parseInt(document.getElementById("level").value); // number
-      const pic_theme = document.getElementById("pic_theme").value;
-      const theme_word = document.getElementById("theme_word").value;
+      // const title = document.getElementById("title").value; // string
+      // const description = document.getElementById("description").value; // string
+      // const pic_theme = document.getElementById("pic_theme").value;
+      // const level = parseInt(document.getElementById("level").value); // number
+      // const theme_word = document.getElementById("theme_word").value;
 
-      if (!photosUrls && pic_theme) {
-        getPhotos(pic_theme);
+      if (!photosUrls && formData.pic_theme) {
+        getPhotos(formData.pic_theme);
         setPhotosUrls(true);
       }
 
@@ -133,16 +132,24 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         ...formData,
         chineseChunkedWords,
         chunkedTranslation,
-        tags,
+        // tags,
         chunkedOriginText,
-        title,
-        description,
-        level,
+        // title,
+        // description,
+        // level,
         length,
-        allwords,
-        theme_word
+        allwords
+        // theme_word
       });
     }
+  };
+
+  const parseTags = text => {
+    let tags = text.replaceAll("，", ",");
+    tags = tags.replaceAll("、", ",");
+    tags = tags.split(",");
+    tags = tags.map(tag => tag.trim().toLowerCase()); // array of words
+    setFormData({ ...formData, tags });
   };
 
   const choosePicUrl = e => {
@@ -260,8 +267,9 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   <div className='form-group col-md-6'>
                     <label htmlFor='title'>Заголовок текста</label>
                     <input
+                      onChange={e => setFormData({ ...formData, [e.target.id]: e.target.value })}
                       type='text'
-                      className='form-control'
+                      className={`form-control ${!formData.title && "is-invalid"}`}
                       id='title'
                       placeholder='Заголовок'
                       autoComplete='off'
@@ -270,8 +278,9 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   <div className='form-group col-md-6'>
                     <label htmlFor='description'>Краткое описание</label>
                     <input
+                      onChange={e => setFormData({ ...formData, [e.target.id]: e.target.value })}
                       type='text'
-                      className='form-control'
+                      className={`form-control ${!formData.description && "is-invalid"}`}
                       id='description'
                       autoComplete='off'
                       placeholder='О чем текст...'
@@ -282,15 +291,20 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   <div className='form-group col-md-6'>
                     <label htmlFor='tags'>Тэги</label>
                     <input
+                      onChange={e => parseTags(e.target.value)}
                       type='text'
-                      className='form-control'
+                      className={`form-control ${!formData.tags.length && "is-invalid"}`}
                       id='tags'
                       placeholder='Тэги через запятую'
                     />
                   </div>
                   <div className='form-group col-md-6'>
                     <label htmlFor='level'>Уровень</label>
-                    <select className='form-control' id='level'>
+                    <select
+                      className='form-control'
+                      id='level'
+                      onChange={e => setFormData({ ...formData, [e.target.id]: e.target.value })}
+                    >
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -299,22 +313,26 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                 </div>
                 <div className='form-row'>
                   <div className='form-group col-md-3'>
-                    <label htmlFor='pic_theme'>Тема для картинки</label>
+                    <label htmlFor='pic_theme'>Тема для картинки (1 слово Eng)</label>
                     <input
+                      onChange={e => setFormData({ ...formData, [e.target.id]: e.target.value })}
                       type='text'
-                      className='form-control'
+                      className={`form-control ${!formData.pic_theme && "is-invalid"}`}
                       id='pic_theme'
                       placeholder='На английском'
                       autoComplete='off'
                     />
                   </div>
                   <div className='form-group col-md-3'>
-                    <label htmlFor='theme_word'>Тема для картинки</label>
+                    <label htmlFor='theme_word'>1 или 2 汉字 на картинку</label>
                     <input
+                      onChange={e => setFormData({ ...formData, [e.target.id]: e.target.value })}
                       type='text'
-                      className='form-control'
+                      className={`form-control ${!(
+                        formData.theme_word.length === 1 || formData.theme_word.length === 2
+                      ) && "is-invalid"}`}
                       id='theme_word'
-                      placeholder='На китайском'
+                      placeholder='汉字'
                       autoComplete='off'
                     />
                   </div>
@@ -330,6 +348,14 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                     />
                   </div>
                 </div>
+
+                <div className='form-row'>
+                  <span>Загрузить картинки для выбора: </span>
+                  <button className='btn btn-sm btn-primary mx-1' disabled={!formData.pic_theme}>
+                    Загрузить
+                  </button>
+                </div>
+
                 <div className='form-row'>
                   <div
                     className='form-group col-md-12'
@@ -350,12 +376,13 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                     <small className='text-muted'>{textLen}/1000</small>
                   </div>
                   <div className='form-group col-md-6'>
-                    <label htmlFor='translationArea'>Вставьте перевод:</label>
+                    <label htmlFor='translationArea'>Исправьте автоматический перевод:</label>
                     <textarea
                       className='form-control'
                       id='translationArea'
                       rows='3'
-                      placeholder='Перевод...'
+                      placeholder='Тут будет автоматический перевод, который нужно поправить!'
+                      disabled
                     ></textarea>
                     <small className='text-muted'>не забывайте про параграфы</small>
                   </div>
