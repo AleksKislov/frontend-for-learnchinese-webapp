@@ -4,7 +4,8 @@ import {
   LOAD_TEXTS_ERR,
   LOAD_TEXT_ERR,
   SET_LOADING,
-  CLEAR_TEXT
+  CLEAR_TEXT,
+  LOAD_NOT_APPROVED
 } from "./types";
 import axios from "axios";
 
@@ -33,6 +34,22 @@ export const loadTexts = len => async dispatch => {
     const { data } = await axios.get(`/api/texts/infinite?skip=${skip}`);
     dispatch({
       type: LOAD_TEXTS,
+      payload: data
+    });
+  } catch (err) {
+    console.log(err);
+    dispatch({
+      type: LOAD_TEXTS_ERR
+    });
+  }
+};
+
+export const loadNotAppoved = len => async dispatch => {
+  let skip = len || "0";
+  try {
+    const { data } = await axios.get(`/api/texts/not_approved?skip=${skip}`);
+    dispatch({
+      type: LOAD_NOT_APPROVED,
       payload: data
     });
   } catch (err) {

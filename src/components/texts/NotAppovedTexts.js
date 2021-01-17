@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { loadTexts, clearText } from "../../actions/texts";
+import { loadNotAppoved, clearText } from "../../actions/texts";
 import Spinner from "../layout/Spinner";
 import TextCard from "./TextCard";
 import ReadingCard from "../dashboard/ReadingCard";
-import { Helmet } from "react-helmet";
 
-const Texts = ({ loadTexts, texts, loading, clearText, moreTexts }) => {
+const NotApprovedTexts = ({ loadNotAppoved, texts, loading, clearText, moreTexts }) => {
   useEffect(() => {
     clearText();
-    if (texts.length === 0) loadTexts(0);
+    if (texts.length === 0) loadNotAppoved(0);
   }, []);
 
   const levelFilter = [
@@ -42,26 +41,18 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts }) => {
 
   return (
     <div className='row'>
-      <Helmet>
-        <meta charSet='utf-8' />
-        <title>Тексты на китайском языке с переводом | Chinese+</title>
-      </Helmet>
-
       <div className='col-md-3'>
         <div className='card bg-light mb-3'>
           <div className='card-body'>
-            <p className='card-text'>
-              Чтение текстов на китайском языке с параллельным переводом каждого параграфа, а также
-              с буквальным переводом каждого слова (по клику).
-            </p>
+            <p className='card-text'>Эти тексты ожидают проверки модератором</p>
           </div>
         </div>
 
         <div className='card bg-light mb-3'>
           <div className='card-body'>
             <p className='card-text'>
-              <Link className='card-link' to='/not_approved_texts'>
-                Тексты на проверке
+              <Link className='card-link' to='/texts'>
+                Назад к проверенным
               </Link>
             </p>
           </div>
@@ -71,7 +62,7 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts }) => {
       </div>
 
       <div className='col-md-9'>
-        <h2>Тексты на китайском языке с переводом</h2>
+        <h2>Тексты, ожидающие проверки</h2>
 
         <div className='form-group'>
           <select className='custom-select' onChange={e => onSelect(e)}>
@@ -94,7 +85,7 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts }) => {
                 <button
                   type='button'
                   className='btn btn-info btn-sm mb-1'
-                  onClick={() => loadTexts(texts.length)}
+                  onClick={() => loadNotAppoved(texts.length)}
                 >
                   Загрузить Ещё
                 </button>
@@ -112,9 +103,9 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts }) => {
 };
 
 const mapStateToProps = state => ({
-  texts: state.texts.texts,
+  texts: state.texts.not_approved,
   loading: state.texts.loading,
   moreTexts: state.texts.moreTexts
 });
 
-export default connect(mapStateToProps, { loadTexts, clearText })(Texts);
+export default connect(mapStateToProps, { loadNotAppoved, clearText })(NotApprovedTexts);

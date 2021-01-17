@@ -5,12 +5,14 @@ import {
   LOAD_TEXT_ERR,
   SET_LOADING,
   CLEAR_TEXT,
+  LOAD_NOT_APPROVED,
   GET_COMMENTS,
   ADD_COMMENT
 } from "../actions/types";
 
 const initialState = {
   texts: [],
+  not_approved: [],
   moreTexts: true,
   text: null,
   loading: true,
@@ -44,6 +46,14 @@ export default function(state = initialState, action) {
         ...state,
         text: null,
         currentComments: []
+      };
+    case LOAD_NOT_APPROVED:
+      return {
+        ...state,
+        text: null,
+        loading: false,
+        not_approved: [...state.not_approved, ...payload],
+        moreTexts: payload.length === 5 ? true : false
       };
     case SET_LOADING:
       return {

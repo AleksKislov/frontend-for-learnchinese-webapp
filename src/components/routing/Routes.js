@@ -28,6 +28,7 @@ import Books from "../books/Books";
 import BookCardPage from "../books/BookCardPage";
 import PageForm from "../books/PageForm";
 import ChapterPage from "../books/ChapterPage";
+import NotAppovedTexts from "../texts/NotAppovedTexts";
 
 // import TranslationForm from "../translation/TranslateForm";
 // <Route exact path='/translate' component={TranslationForm} />
@@ -79,6 +80,7 @@ const Routes = () => {
           <PrivateRoute exact path='/create-text' component={TextForm} />
           <PrivateRoute exact path='/create-bookpage' component={PageForm} />
           <Route exact path='/texts' component={Texts} />
+          <Route exact path='/not_approved_texts' component={NotAppovedTexts} />
           <Route exact path='/books' component={Books} />
           <Route exact path='/texts/:id' component={TextPage} />
           <Route exact path='/books/:id' component={BookCardPage} />

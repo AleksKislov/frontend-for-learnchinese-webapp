@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { connect } from "react-redux";
 import store from "../../store";
+import { Redirect } from "react-router-dom";
 import axios from "axios";
 import PropTypes from "prop-types";
 import WordModal from "../translation/WordModal";
@@ -37,7 +38,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
           description,
           translation,
           _id,
-          theme_word
+          theme_word,
+          isApproved
         } = textToEdit;
         document.getElementById("description").value = description;
         document.getElementById("level").value = level;
@@ -46,15 +48,23 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         document.getElementById("textArea").value = origintext.join("\n");
         document.getElementById("translationArea").value = translation.join("\n");
         document.getElementById("theme_word").value = theme_word;
+        document.getElementById("isApproved").value = isApproved ? "1" : "0";
 
         setFormData({
           ...formData,
+          level,
+          tags,
+          title,
+          description,
+          theme_word,
+          isApproved,
           textId: _id
         });
       }
     }, 0);
   }, [textToEdit]);
 
+  const [isRedirected, setIsRedirected] = useState(false);
   const [okToPublish, setOkToPublish] = useState(false);
   const [isToEdit, setIsToEdit] = useState(false);
   const [textLen, setTextLen] = useState(0);
@@ -76,7 +86,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     theme_word: "" // rewriten usestate
   });
 
-  const onSubmit = async e => {
+  const preprocessForm = async e => {
     e.preventDefault();
     const textArea = document.getElementById("textArea");
 
@@ -85,6 +95,11 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     } else {
       let originText = textArea.value.trim();
       const translationArea = document.getElementById("translationArea");
+      originText = originText.replace(/\n\s*\n/g, "\n");
+
+      let allwords = await segmenter(originText);
+      allwords = allwords.filter(word => word !== " ");
+      const wordsFromDB = await getWords(allwords);
 
       let chunkedOriginText = originText.split("\n"); // array of strings
       chunkedOriginText = chunkedOriginText.filter(chunk => chunk);
@@ -102,10 +117,6 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         chunkedTranslation = translationTrimed.split("\n"); // array of strings
         chunkedTranslation = chunkedTranslation.filter(chunk => chunk.length);
       }
-
-      let allwords = await segmenter(originText);
-      allwords = allwords.filter(word => word !== " ");
-      const wordsFromDB = await getWords(allwords);
 
       // console.log(wordsFromDB);
       const newArr = itirateWordsFromDB(allwords, wordsFromDB);
@@ -188,7 +199,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       length,
       allwords,
       pic_url,
-      theme_word
+      theme_word,
+      isApproved
     } = formdata;
 
     const body = JSON.stringify({
@@ -202,12 +214,14 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       length,
       pic_url,
       theme_word,
+      isApproved,
       name: user.name
     });
 
     try {
       await axios.post(`/api/texts`, body, config);
-      alert("Текст опубликован!");
+      alert("Текст опубликован! Спасибо, что вносите свой вклад!");
+      setIsRedirected(true);
     } catch (err) {
       console.log(err);
     }
@@ -231,7 +245,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       allwords,
       textId,
       pic_url,
-      theme_word
+      theme_word,
+      isApproved
     } = formdata;
 
     const body = JSON.stringify({
@@ -245,21 +260,30 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       chinese_arr: allwords,
       length,
       pic_url,
-      theme_word
+      theme_word,
+      isApproved
     });
 
     try {
       await axios.post(`/api/texts`, body, config);
       alert("Текст успешно изменен!");
+      setIsRedirected(true);
     } catch (err) {
       console.log(err);
     }
   };
 
+  const handleKeyDown = e => {
+    e.target.style.height = "inherit";
+    e.target.style.height = `${e.target.scrollHeight}px`;
+  };
+
+  if (isRedirected) return <Redirect to='/texts' />;
+
   return (
     <Fragment>
-      {user && user.role !== "admin" ? (
-        "Страница доступна пока только админу"
+      {!user ? (
+        "Страница доступна только авторизованным пользователям"
       ) : (
         <Fragment>
           <div className='col-md-12'>
@@ -271,7 +295,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   <p className='card-text'>
                     {!formData.title && (
                       <span>
-                        1️⃣ Минимум - заполнить красные поля. Начнем с заголовка.
+                        1️⃣ Минимум - заполнить красные поля. Начните с заголовка.
                         <br />
                         🙏🏻 вы хорошо поможете, если заполните все поля.
                       </span>
@@ -353,8 +377,26 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
               <WordModal />
             </div>
 
-            <form onSubmit={e => onSubmit(e)} style={{ width: "100%" }}>
+            <form onSubmit={e => preprocessForm(e)} style={{ width: "100%" }}>
               <fieldset>
+                {user && user.role === "admin" && isToEdit && (
+                  <div className='form-row'>
+                    <div className='form-group col-md-6'>
+                      <label htmlFor='isApproved'>Одобрено</label>
+                      <select
+                        className='form-control'
+                        id='isApproved'
+                        onChange={e =>
+                          setFormData({ ...formData, [e.target.id]: parseInt(e.target.value) })
+                        }
+                      >
+                        <option>0</option>
+                        <option>1</option>
+                      </select>
+                    </div>
+                  </div>
+                )}
+
                 <div className='form-row'>
                   <div className='form-group col-md-6'>
                     <label htmlFor='title'>Заголовок текста</label>
@@ -477,6 +519,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   <div className='form-group col-md-6'>
                     <label htmlFor='textArea'>Вставьте китайский текст для обработки:</label>
                     <textarea
+                      onClick={handleKeyDown}
                       onChange={e => {
                         setTextLen(e.target.value.length);
                         setOkToPublish(false);
@@ -492,6 +535,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   <div className='form-group col-md-6'>
                     <label htmlFor='translationArea'>Исправьте автоматический перевод:</label>
                     <textarea
+                      onClick={handleKeyDown}
                       onChange={() => setOkToPublish(false)}
                       className='form-control'
                       id='translationArea'
