@@ -28,7 +28,7 @@ export default function(state = initialState, action) {
         text: null,
         loading: false,
         texts: [...state.texts, ...payload],
-        moreTexts: payload.length === 5 ? true : false
+        moreTexts: payload.length === 10 ? true : false
       };
     case GET_COMMENTS:
       return {
@@ -53,7 +53,7 @@ export default function(state = initialState, action) {
         text: null,
         loading: false,
         not_approved: [...state.not_approved, ...payload],
-        moreTexts: payload.length === 5 ? true : false
+        moreTexts: payload.length === 10 ? true : false
       };
     case SET_LOADING:
       return {

@@ -101,12 +101,14 @@ export const segmenter = async text => {
 };
 
 export const getPhotos = async pic_theme => {
+  // console.log(pic_theme);
+
   const photosDiv = document.getElementById("photosDiv");
   photosDiv.innerHTML = "";
 
   try {
     const { data } = await axios.get("/api/translation/unsplash/" + pic_theme);
-    // console.log(data.results[1].urls.small);
+    // console.log(data.results);
 
     data.results.forEach(el => {
       const img = document.createElement("img");
@@ -114,6 +116,8 @@ export const getPhotos = async pic_theme => {
       photosDiv.appendChild(img);
       img.classList.add("imgToChoose");
     });
+
+    return data.results.length > 0;
   } catch (err) {
     console.log(err);
   }

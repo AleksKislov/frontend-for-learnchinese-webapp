@@ -8,7 +8,6 @@ import WordModal from "../translation/WordModal";
 import { setAlert } from "../../actions/alert";
 import { loadUserWords } from "../../actions/userWords";
 import { TweenMax } from "gsap";
-
 import {
   getPhotos,
   getWords,
@@ -26,7 +25,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
   useEffect(() => {
     loadUserWords();
 
-    setTimeout(noticeMe, 1000);
+    if (!textToEdit) setTimeout(noticeMe, 1000);
   }, []);
 
   useEffect(() => {
@@ -68,6 +67,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     }, 0);
   }, [textToEdit]);
 
+  const [photosResult, setPhotosResult] = useState(true);
+  const [isEnglish, setIsEnglish] = useState(false);
   const [isRedirected, setIsRedirected] = useState(false);
   const [okToPublish, setOkToPublish] = useState(false);
   const [isToEdit, setIsToEdit] = useState(false);
@@ -92,74 +93,82 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
 
   const preprocessForm = async e => {
     e.preventDefault();
-    const textArea = document.getElementById("textArea");
 
-    if (textLen > 1000) {
-      store.dispatch(setAlert("Максимум 1000 знаков в китайском тексте, удалите лишние", "danger"));
-    } else {
-      let originText = textArea.value.trim();
-      const translationArea = document.getElementById("translationArea");
-      originText = originText.replace(/\n\s*\n/g, "\n");
+    // pics are loaded, so we can submit the form
+    if (photosUrls || isToEdit) {
+      const textArea = document.getElementById("textArea");
 
-      let allwords = await segmenter(originText);
-      allwords = allwords.filter(word => word !== " ");
-      const wordsFromDB = await getWords(allwords);
-
-      let chunkedOriginText = originText.split("\n"); // array of strings
-      chunkedOriginText = chunkedOriginText.filter(chunk => chunk);
-      textArea.value = chunkedOriginText.join("\n\n");
-      let chunkedTranslation;
-      if (!isTranslated) {
-        const { translation } = await getTranslation(chunkedOriginText);
-        setIsTranslated(true);
-        // console.log(translation);
-        translationArea.value = translation.join("\n\n");
-        chunkedTranslation = translation;
-        // translationArea.disabled = false;
+      if (textLen > 1000) {
+        store.dispatch(
+          setAlert("Максимум 1000 знаков в китайском тексте, удалите лишние", "danger")
+        );
       } else {
-        let translationTrimed = translationArea.value.trim();
-        chunkedTranslation = translationTrimed.split("\n"); // array of strings
-        chunkedTranslation = chunkedTranslation.filter(chunk => chunk.length);
+        let originText = textArea.value.trim();
+        const translationArea = document.getElementById("translationArea");
+        originText = originText.replace(/\n\s*\n/g, "\n");
+
+        let allwords = await segmenter(originText);
+        allwords = allwords.filter(word => word !== " ");
+        const wordsFromDB = await getWords(allwords);
+
+        let chunkedOriginText = originText.split("\n"); // array of strings
+        chunkedOriginText = chunkedOriginText.filter(chunk => chunk);
+        textArea.value = chunkedOriginText.join("\n\n");
+        let chunkedTranslation;
+        if (!isTranslated) {
+          console.log("HERE");
+          const { translation } = await getTranslation(chunkedOriginText);
+          setIsTranslated(true);
+          // console.log(translation);
+          translationArea.value = translation.join("\n\n");
+          chunkedTranslation = translation;
+          // translationArea.disabled = false;
+        } else {
+          let translationTrimed = translationArea.value.trim();
+          chunkedTranslation = translationTrimed.split("\n"); // array of strings
+          chunkedTranslation = chunkedTranslation.filter(chunk => chunk.length);
+        }
+
+        // console.log(wordsFromDB);
+        const newArr = itirateWordsFromDB(allwords, wordsFromDB);
+        const length = countZnChars(originText);
+        // let tags = tagsId.value.replaceAll("，", ",");
+        // tags = tags.replaceAll("、", ",");
+        // tags = tags.split(",");
+        // tags = tags.map(tag => tag.trim().toLowerCase()); // array of words
+
+        let chineseChunkedWords = chunkArrayFunc(newArr); // array of object arrays
+        chineseChunkedWords = chineseChunkedWords.filter(chunk => chunk.length);
+        // console.log({ chineseChunkedWords });
+
+        // const title = document.getElementById("title").value; // string
+        // const description = document.getElementById("description").value; // string
+        // const pic_theme = document.getElementById("pic_theme").value;
+        // const level = parseInt(document.getElementById("level").value); // number
+        // const theme_word = document.getElementById("theme_word").value;
+
+        setFormData({
+          ...formData,
+          chineseChunkedWords,
+          chunkedTranslation,
+          // tags,
+          chunkedOriginText,
+          // title,
+          // description,
+          // level,
+          length,
+          allwords
+          // theme_word
+        });
       }
-
-      // console.log(wordsFromDB);
-      const newArr = itirateWordsFromDB(allwords, wordsFromDB);
-      const length = countZnChars(originText);
-      // let tags = tagsId.value.replaceAll("，", ",");
-      // tags = tags.replaceAll("、", ",");
-      // tags = tags.split(",");
-      // tags = tags.map(tag => tag.trim().toLowerCase()); // array of words
-
-      let chineseChunkedWords = chunkArrayFunc(newArr); // array of object arrays
-      chineseChunkedWords = chineseChunkedWords.filter(chunk => chunk.length);
-      // console.log({ chineseChunkedWords });
-
-      // const title = document.getElementById("title").value; // string
-      // const description = document.getElementById("description").value; // string
-      // const pic_theme = document.getElementById("pic_theme").value;
-      // const level = parseInt(document.getElementById("level").value); // number
-      // const theme_word = document.getElementById("theme_word").value;
-
-      setFormData({
-        ...formData,
-        chineseChunkedWords,
-        chunkedTranslation,
-        // tags,
-        chunkedOriginText,
-        // title,
-        // description,
-        // level,
-        length,
-        allwords
-        // theme_word
-      });
     }
   };
 
-  const loadPictures = () => {
+  const loadPictures = async () => {
     if (!photosUrls && formData.pic_theme) {
-      getPhotos(formData.pic_theme);
-      setPhotosUrls(true);
+      let res = await getPhotos(formData.pic_theme);
+      setPhotosResult(res);
+      setPhotosUrls(res);
     }
   };
 
@@ -285,14 +294,49 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
   };
 
   const noticeMe = e => {
-    TweenMax.fromTo(
-      ".noticeMe",
-      { backgroundColor: "#e74c3c" },
-      { duration: 2, backgroundColor: "#f39c12" }
-    );
+    if (!isToEdit) {
+      TweenMax.fromTo(
+        ".noticeMe",
+        { backgroundColor: "#e74c3c" },
+        { duration: 2, backgroundColor: "#f39c12" }
+      );
+    }
   };
 
+  const testEngInput = str => setIsEnglish(/^[a-zA-Z]+$/.test(str));
+
   if (isRedirected) return <Redirect to='/not_approved_texts' />;
+
+  // const readyToClickOrMisspelled = (photosUrls ? (
+  //   <label className='text-danger'>Выберите кликом 1 из картинок ниже:</label>
+  // ) : !isEnglish && formData.pic_theme ? (
+  //   <label className='text-danger'>ТОЛЬКО ЛАТИНСКИЕ БУКВЫ</label>
+  // ))
+
+  const readyToClick = <label className='text-danger'>Выберите кликом 1 из картинок ниже:</label>;
+  const isNotEnglish = <label className='text-danger'>ТОЛЬКО ЛАТИНСКИЕ БУКВЫ</label>;
+  const loadPicsErr = (
+    <label className='text-danger'>Упс, картинок не нашлось. Попробуйте поменять слово</label>
+  );
+  const loadPicsBtn = (
+    <Fragment>
+      <label className={formData.pic_theme ? "text-warning" : "text-secondary"}>
+        Загрузить картинки для выбора:
+      </label>
+      <button
+        className='btn btn-sm btn-primary mx-1'
+        disabled={!formData.pic_theme && !photosUrls}
+        onClick={() => {
+          loadPictures();
+          noticeMe();
+        }}
+      >
+        Загрузить
+      </button>
+    </Fragment>
+  );
+  const loadPicsBtnResult = photosResult ? loadPicsBtn : loadPicsErr;
+  const loadPicsBtnClicked = !isEnglish && formData.pic_theme ? isNotEnglish : loadPicsBtnResult;
 
   return (
     <Fragment>
@@ -303,13 +347,14 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
           <div className='col-md-12'>
             <h2>Добавьте текст</h2>
             <h4>следуя шагам ниже</h4>
+            <p>самое важное - поправить перевод, все остальное быстро поправит админ</p>
 
             {!textToEdit && !isToEdit && (
               <div className='alert alert-warning noticeMe'>
                 <div className='mb-3'>
                   {!formData.title && (
                     <Fragment>
-                      <h4 class='alert-heading'>ШАГ 1</h4>
+                      <h4 className='alert-heading'>ШАГ 1</h4>
                       <p>
                         <span>
                           Красные поля - обязательные. Начните с заголовка.
@@ -322,42 +367,42 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
 
                   {!formData.pic_theme && formData.title && (
                     <Fragment>
-                      <h4 class='alert-heading'>ШАГ 2</h4>
+                      <h4 className='alert-heading'>ШАГ 2</h4>
                       <p>Теперь впишите тему картинки на английском языке.</p>
                     </Fragment>
                   )}
 
                   {formData.pic_theme && formData.title && !photosUrls && !formData.pic_url && (
                     <Fragment>
-                      <h4 class='alert-heading'>ШАГ 3</h4>
+                      <h4 className='alert-heading'>ШАГ 3</h4>
                       <p>Загрузите картинки для выбора, нажав кнопку 'Загрузить'.</p>
                     </Fragment>
                   )}
 
                   {formData.title && photosUrls && !formData.pic_url && (
                     <Fragment>
-                      <h4 class='alert-heading'>ШАГ 4</h4>
+                      <h4 className='alert-heading'>ШАГ 4</h4>
                       <p>Кликните одну из картинок, чтобы выбрать ее</p>
                     </Fragment>
                   )}
 
                   {formData.title && formData.pic_url && textLen === 0 && (
                     <Fragment>
-                      <h4 class='alert-heading'>ШАГ 5</h4>
+                      <h4 className='alert-heading'>ШАГ 5</h4>
                       <p>Теперь вы можете вставить китайский текст</p>
                     </Fragment>
                   )}
 
                   {textLen > 0 && formData.chineseChunkedWords.length === 0 && (
                     <Fragment>
-                      <h4 class='alert-heading'>ШАГ 6</h4>
+                      <h4 className='alert-heading'>ШАГ 6</h4>
                       <p>Обработаем и переведем китайский текст, нажав кнопку 'Предобработка'</p>
                     </Fragment>
                   )}
 
                   {formData.chineseChunkedWords.length !== 0 && (
                     <Fragment>
-                      <h4 class='alert-heading'>ШАГ 7</h4>
+                      <h4 className='alert-heading'>ШАГ 7</h4>
                       <p>
                         <span>
                           Шаг 7. Поправьте русский перевод и китайский оригинал при необходимости
@@ -491,7 +536,10 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                     <label htmlFor='pic_theme'>Тема для картинки (1 слово Eng)</label>
                     <input
                       onBlur={noticeMe}
-                      onChange={e => setFormData({ ...formData, [e.target.id]: e.target.value })}
+                      onChange={e => {
+                        testEngInput(e.target.value);
+                        setFormData({ ...formData, [e.target.id]: e.target.value });
+                      }}
                       type='text'
                       className={`form-control ${!formData.pic_theme && "is-invalid"}`}
                       id='pic_theme'
@@ -528,25 +576,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                 </div>
 
                 <div className='form-row' style={{ paddingLeft: "5px" }}>
-                  {photosUrls ? (
-                    <label className='text-danger'>Выберите кликом 1 из картинок ниже:</label>
-                  ) : (
-                    <Fragment>
-                      <label className={formData.pic_theme ? "text-warning" : "text-secondary"}>
-                        Загрузить картинки для выбора:
-                      </label>
-                      <button
-                        className='btn btn-sm btn-primary mx-1'
-                        disabled={!formData.pic_theme && !photosUrls}
-                        onClick={() => {
-                          loadPictures();
-                          noticeMe();
-                        }}
-                      >
-                        Загрузить
-                      </button>
-                    </Fragment>
-                  )}
+                  {photosUrls ? readyToClick : loadPicsBtnClicked}
                 </div>
 
                 <div className='form-row'>

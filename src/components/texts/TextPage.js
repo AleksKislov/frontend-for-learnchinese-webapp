@@ -16,6 +16,8 @@ import { Helmet } from "react-helmet";
 import { levelStars } from "../../actions/helpers";
 import FontSize from "../common/FontSize";
 
+// (currentUser._id === text.user || currentUser.role === "admin") && (
+
 const TextPage = ({
   text,
   loadText,
@@ -90,12 +92,11 @@ const TextPage = ({
 
                 <FontSize />
 
-                {isAuthenticated &&
-                  (currentUser._id === text.user || currentUser.role === "admin") && (
-                    <Link to='/create-text'>
-                      <button className='btn btn-sm btn-outline-warning'>Edit</button>
-                    </Link>
-                  )}
+                {isAuthenticated && currentUser.role === "admin" && (
+                  <Link to='/create-text'>
+                    <button className='btn btn-sm btn-outline-warning'>Edit</button>
+                  </Link>
+                )}
               </div>
             </div>
 
