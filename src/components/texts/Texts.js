@@ -6,6 +6,7 @@ import Spinner from "../layout/Spinner";
 import TextCard from "./TextCard";
 import ReadingCard from "../dashboard/ReadingCard";
 import { Helmet } from "react-helmet";
+import PleaseShareText from "./PleaseShareText";
 
 const Texts = ({ loadTexts, texts, loading, clearText, moreTexts }) => {
   useEffect(() => {
@@ -57,6 +58,9 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts }) => {
           </div>
         </div>
 
+        <PleaseShareText />
+        <ReadingCard />
+
         <div className='card bg-light mb-3'>
           <div className='card-body'>
             <p className='card-text'>
@@ -66,8 +70,6 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts }) => {
             </p>
           </div>
         </div>
-
-        <ReadingCard />
       </div>
 
       <div className='col-md-9'>

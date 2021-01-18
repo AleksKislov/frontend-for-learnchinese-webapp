@@ -15,6 +15,7 @@ import ReadingCard from "../dashboard/ReadingCard";
 import { Helmet } from "react-helmet";
 import { levelStars } from "../../actions/helpers";
 import FontSize from "../common/FontSize";
+import PleaseShareText from "./PleaseShareText";
 
 // (currentUser._id === text.user || currentUser.role === "admin") && (
 
@@ -101,6 +102,7 @@ const TextPage = ({
             </div>
 
             <ReadingCard />
+            <PleaseShareText />
           </div>
 
           <div className='col-sm-9'>

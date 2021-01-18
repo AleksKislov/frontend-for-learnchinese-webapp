@@ -18,6 +18,7 @@ import CreateProfile from "../profile/CreateProfile";
 import EditProfile from "../profile/EditProfile";
 import NotFound from "../layout/NotFound";
 import Contacts from "../layout/Contacts";
+import Donate from "../layout/Donate";
 import Search from "../translation/Search";
 import Posts from "../posts/Posts";
 import PostPage from "../posts/PostPage";
@@ -77,7 +78,7 @@ const Routes = () => {
           <Route exact path='/search' component={Search} />
           <Route exact path='/posts' component={Posts} />
           <Route exact path='/posts/:id' component={PostPage} />
-          <PrivateRoute exact path='/create-text' component={TextForm} />
+          <Route exact path='/create-text' component={TextForm} />
           <PrivateRoute exact path='/create-bookpage' component={PageForm} />
           <Route exact path='/texts' component={Texts} />
           <Route exact path='/not_approved_texts' component={NotAppovedTexts} />
@@ -85,6 +86,7 @@ const Routes = () => {
           <Route exact path='/texts/:id' component={TextPage} />
           <Route exact path='/books/:id' component={BookCardPage} />
           <Route exact path='/contacts' component={Contacts} />
+          <Route exact path='/donate' component={Donate} />
           <Route exact path='/books/:bookId/:chapterId/:pageInd' component={ChapterPage} />
 
           <NotFound />

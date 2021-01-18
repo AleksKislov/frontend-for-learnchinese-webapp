@@ -5,7 +5,24 @@ const Footer = () => {
     <footer className='footer fixed-bottom' style={style}>
       <div className='container text-center'>
         <span className='text-muted'>
-          Связаться с <Link to='/contacts'>админом</Link>
+          Связь с <Link to='/contacts'>админом</Link>
+        </span>
+      </div>
+      <div className='container text-center'>
+        <span className='text-muted'>
+          Следите за проектом:{" "}
+          <a href='https://t.me/chineseplusnew' target='_blank'>
+            <i className='fab fa-telegram'></i>
+          </a>{" "}
+          <a href='https://vk.com/buyilehu' target='_blank'>
+            <i className='fab fa-vk'></i>
+          </a>{" "}
+          <a href='https://www.youtube.com/c/Buyilehuorg' target='_blank'>
+            <i className='fab fa-youtube'></i>
+          </a>{" "}
+          <a href='https://www.facebook.com/buyilehu/' target='_blank'>
+            <i className='fab fa-facebook-square'></i>
+          </a>
         </span>
       </div>
     </footer>

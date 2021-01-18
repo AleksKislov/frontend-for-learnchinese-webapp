@@ -164,6 +164,10 @@ const Navbar = ({
             Мои Слова <span className='badge badge-pill badge-warning'>{userWordsLen}</span>
           </NavLink>
 
+          <NavLink className='dropdown-item' to='/create-text' exact={true}>
+            Поделиться текстом
+          </NavLink>
+
           <NavLink onClick={logout} className='dropdown-item' to='/#' exact={true}>
             Выйти <i className='fas fa-sign-out-alt'></i>
           </NavLink>
@@ -271,6 +275,16 @@ const Navbar = ({
             activeStyle={activeNavLink}
           >
             Гостевая
+          </NavLink>
+        </li>
+        <li className='nav-item'>
+          <NavLink
+            onClick={collapseIt}
+            className='nav-link'
+            to='/donate'
+            activeStyle={activeNavLink}
+          >
+            🙏🏻 Донат
           </NavLink>
         </li>
       </ul>
