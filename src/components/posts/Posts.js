@@ -138,8 +138,24 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
         <div className='card bg-light mb-3'>
           <div className='card-body'>
             <p className='card-text'>
-              Здесь можно сообщать о багах, пожеланиях.
-              <br />О последних новостях проекта админ также будет сообщать здесь.
+              Здесь можно написать о багах, пожеланиях.
+              <br />
+              О новостях проекта также будем сообщать здесь. <br />
+              <span className=''>
+                За проектом можно следить и в соцсетях:{" "}
+                <a href='https://t.me/chineseplusnew' target='_blank'>
+                  <i className='fab fa-telegram'></i>
+                </a>{" "}
+                <a href='https://vk.com/buyilehu' target='_blank'>
+                  <i className='fab fa-vk'></i>
+                </a>{" "}
+                <a href='https://www.youtube.com/c/Buyilehuorg' target='_blank'>
+                  <i className='fab fa-youtube'></i>
+                </a>{" "}
+                <a href='https://www.facebook.com/buyilehu/' target='_blank'>
+                  <i className='fab fa-facebook-square'></i>
+                </a>
+              </span>
             </p>
           </div>
         </div>
