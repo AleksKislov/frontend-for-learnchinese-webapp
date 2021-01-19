@@ -8,14 +8,28 @@ const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) return <Redirect to='/dashboard' />;
 
   return (
-    <section className='landing'>
+    <section className='landing row'>
       <Helmet>
         <meta charSet='utf-8' />
         <title>Chinese+ Клуб изучения китайского языка</title>
       </Helmet>
+
       <div className='dark-overlay'>
         <div className='landing-inner'>
           <h1 className='x-large'>Добро пожаловать в клуб Chinese+</h1>
+
+          <div className='embed-responsive embed-responsive-16by9' style={{ maxWidth: "50rem" }}>
+            <iframe
+              className='embed-responsive-item'
+              width='560'
+              height='315'
+              src='https://www.youtube.com/embed/fxM8lH17fUY'
+              frameBorder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowFullScreen
+            ></iframe>
+          </div>
+
           <p className='lead'>Web-приложение для изучающих китайский язык от ChinesePlus</p>
           <div className='buttons'>
             <Link to='/register' className='btn btn-dark'>
@@ -28,7 +42,7 @@ const Landing = ({ isAuthenticated }) => {
 
           <div className='card text-primary bg-light mt-4'>
             <div className='card-header'>
-              <h5>Место, где вы сможете</h5>
+              <h5>Здесь вы сможете</h5>
             </div>
             <div className='card-body'>
               <ul className='card-text' style={{ marginRight: "2rem", textAlign: "left" }}>

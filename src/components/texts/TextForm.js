@@ -52,6 +52,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         document.getElementById("translationArea").value = translation.join("\n");
         document.getElementById("theme_word").value = theme_word;
         document.getElementById("isApproved").value = isApproved ? "1" : "0";
+        setIsTranslated(true);
 
         setFormData({
           ...formData,
@@ -113,10 +114,11 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
 
         let chunkedOriginText = originText.split("\n"); // array of strings
         chunkedOriginText = chunkedOriginText.filter(chunk => chunk);
+        chunkedOriginText = chunkedOriginText.map(chunk => chunk.trim());
         textArea.value = chunkedOriginText.join("\n\n");
         let chunkedTranslation;
         if (!isTranslated) {
-          console.log("HERE");
+          // console.log("HERE");
           const { translation } = await getTranslation(chunkedOriginText);
           setIsTranslated(true);
           // console.log(translation);

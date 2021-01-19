@@ -47,7 +47,7 @@ const Routes = () => {
     <Fragment>
       <section
         className={pathname === "/pinyin" ? "container-fluid" : "container"}
-        style={{ marginTop: "2rem", marginBottom: "3rem" }}
+        style={{ marginTop: "2rem", marginBottom: "4rem" }}
       >
         <div
           style={{
