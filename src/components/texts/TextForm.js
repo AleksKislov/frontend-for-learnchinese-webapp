@@ -662,9 +662,9 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
           </div>
           <hr />
 
-          <div className='row'>
+          <div className='col-md-12' style={{ height: "6rem" }}>
             {formData.chineseChunkedWords.length !== 0 && okToPublish && !isToEdit && (
-              <Fragment>
+              <div className=''>
                 <button
                   className='btn btn-primary mx-1'
                   onClick={e => publishText(formData)}
@@ -680,7 +680,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                     Кол-во параграфов оригинала и перевода не совпадает!
                   </span>
                 )}
-              </Fragment>
+              </div>
             )}
             {isToEdit && (
               <button className='btn btn-primary mx-1' onClick={e => editText(formData)}>
