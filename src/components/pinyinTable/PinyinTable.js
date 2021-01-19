@@ -84,6 +84,11 @@ const PinyinTable = () => {
       <div className='col-auto'>
         <h1 className='text-primary'>Таблица Пиньиня с Озвучкой</h1>
 
+        <div className="alert alert-dismissible alert-info">
+          <button type="button" className="close" data-dismiss="alert">&times;</button>
+          Кликайте на слоги, чтобы услышать озвучку носителем языка
+        </div>
+
         <table className='table table-bordered table-responsive' id='table-pinjin'>
           <thead>
             <tr id='tableHead'>

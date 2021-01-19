@@ -26,7 +26,7 @@ const Donate = () => {
             <div class='card-body'>
               <p class='card-text'>
                 Cпасибо всем большое за поддержку! Если вы не хотите быть анонимным спонсором, то
-                просим писать здесь в <Link to='/posts'>Гостевой</Link> или{" "}
+                просим писать в <Link to='/posts'>Гостевой</Link> или{" "}
                 <Link to='/contacts'>админу</Link>
               </p>
             </div>
