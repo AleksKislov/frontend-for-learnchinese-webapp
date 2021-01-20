@@ -52,10 +52,10 @@ const Routes = () => {
         <div
           style={{
             position: "fixed",
-            top: "80px",
-            right: "60px",
+            top: "6rem",
+            right: "4rem",
             zIndex: "100",
-            width: "300px"
+            width: "20rem"
           }}
         >
           <Alert />

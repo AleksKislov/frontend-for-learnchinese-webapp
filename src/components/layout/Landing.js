@@ -8,7 +8,10 @@ const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) return <Redirect to='/dashboard' />;
 
   return (
-    <section className='landing row' style={{ marginBottom: "3rem" }}>
+    <section
+      className='landing row'
+      style={{ marginBottom: "3rem", marginRight: "0", marginLeft: "0" }}
+    >
       <Helmet>
         <meta charSet='utf-8' />
         <title>Chinese+ Клуб изучения китайского языка</title>
