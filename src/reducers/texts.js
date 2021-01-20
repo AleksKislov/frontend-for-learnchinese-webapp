@@ -14,6 +14,7 @@ const initialState = {
   texts: [],
   not_approved: [],
   moreTexts: true,
+  moreNotApproved: true,
   text: null,
   loading: true,
   currentComments: []
@@ -48,12 +49,13 @@ export default function(state = initialState, action) {
         currentComments: []
       };
     case LOAD_NOT_APPROVED:
+      console.log(payload);
       return {
         ...state,
         text: null,
         loading: false,
         not_approved: [...state.not_approved, ...payload],
-        moreTexts: payload.length === 10 ? true : false
+        moreNotApproved: payload.length === 10 ? true : false
       };
     case SET_LOADING:
       return {

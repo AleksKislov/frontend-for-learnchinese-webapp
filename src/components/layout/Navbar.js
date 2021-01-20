@@ -265,6 +265,14 @@ const Navbar = ({
             >
               Книги
             </NavLink>
+            <NavLink
+              className='dropdown-item'
+              to='/not_approved_texts'
+              activeStyle={activeNavLink}
+              onClick={() => setPathsAndCollapse({ ...paths, reading: "/not_approved_texts" })}
+            >
+              На проверке
+            </NavLink>
           </div>
         </li>
         <li className='nav-item'>

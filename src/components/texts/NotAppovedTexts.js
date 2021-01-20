@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import { loadNotAppoved, clearText } from "../../actions/texts";
 import Spinner from "../layout/Spinner";
 import TextCard from "./TextCard";
 import ReadingCard from "../dashboard/ReadingCard";
+import NumOfTexts from "./NumOfTexts";
 
 const NotApprovedTexts = ({ loadNotAppoved, texts, loading, clearText, moreTexts }) => {
   useEffect(() => {
@@ -45,16 +45,7 @@ const NotApprovedTexts = ({ loadNotAppoved, texts, loading, clearText, moreTexts
         <div className='card bg-light mb-3'>
           <div className='card-body'>
             <p className='card-text'>Эти тексты ожидают проверки модератором</p>
-          </div>
-        </div>
-
-        <div className='card bg-light mb-3'>
-          <div className='card-body'>
-            <p className='card-text'>
-              <Link className='card-link' to='/texts'>
-                Назад к проверенным
-              </Link>
-            </p>
+            <NumOfTexts />
           </div>
         </div>
 
@@ -105,7 +96,7 @@ const NotApprovedTexts = ({ loadNotAppoved, texts, loading, clearText, moreTexts
 const mapStateToProps = state => ({
   texts: state.texts.not_approved,
   loading: state.texts.loading,
-  moreTexts: state.texts.moreTexts
+  moreTexts: state.texts.moreNotApproved
 });
 
 export default connect(mapStateToProps, { loadNotAppoved, clearText })(NotApprovedTexts);

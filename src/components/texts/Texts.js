@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import { loadTexts, clearText } from "../../actions/texts";
 import Spinner from "../layout/Spinner";
 import TextCard from "./TextCard";
 import ReadingCard from "../dashboard/ReadingCard";
 import { Helmet } from "react-helmet";
 import PleaseShareText from "./PleaseShareText";
+import NumOfTexts from "./NumOfTexts";
 
 const Texts = ({ loadTexts, texts, loading, clearText, moreTexts }) => {
   useEffect(() => {
@@ -51,28 +51,17 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts }) => {
       <div className='col-md-3'>
         <div className='card bg-light mb-3'>
           <div className='card-body'>
-            <p className='card-text'>
-              Чтение текстов на китайском языке с параллельным переводом каждого параграфа, а также
-              с буквальным переводом каждого слова (по клику).
+            <p className='card-text'>Чтение китайских текстов с умным переводом.</p>
+            <p className='card-text text-info'>
+              Если в текстах что-то не так, оставьте комментарий, и мы поправим.
             </p>
-            <p className='card-text text-danger'>
-              Если в текстах что-то не так, напишите комментарий, и мы поправим.
-            </p>
+
+            <NumOfTexts />
           </div>
         </div>
 
         <PleaseShareText />
         <ReadingCard />
-
-        <div className='card bg-light mb-3'>
-          <div className='card-body'>
-            <p className='card-text'>
-              <Link className='card-link' to='/not_approved_texts'>
-                Тексты на проверке
-              </Link>
-            </p>
-          </div>
-        </div>
       </div>
 
       <div className='col-md-9'>
