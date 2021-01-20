@@ -8,7 +8,7 @@ const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) return <Redirect to='/dashboard' />;
 
   return (
-    <section className='landing row'>
+    <section className='landing row' style={{ marginBottom: "3rem" }}>
       <Helmet>
         <meta charSet='utf-8' />
         <title>Chinese+ Клуб изучения китайского языка</title>
@@ -18,7 +18,7 @@ const Landing = ({ isAuthenticated }) => {
         <div className='landing-inner'>
           <h1 className='x-large'>Добро пожаловать в клуб Chinese+</h1>
 
-          <div className='embed-responsive embed-responsive-16by9' style={{ maxWidth: "50rem" }}>
+          <div className='embed-responsive embed-responsive-16by9' style={{ maxWidth: "60rem" }}>
             <iframe
               className='embed-responsive-item'
               width='560'
