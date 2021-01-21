@@ -3,6 +3,7 @@ import { addComment, getComments } from "../../actions/comments";
 import { connect } from "react-redux";
 import store from "../../store";
 import { setAlert } from "../../actions/alert";
+import { commentLength } from "../../apikeys.json";
 
 // path is from/for book Chapterpage
 const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, path }) => {
@@ -14,7 +15,7 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, pa
     if (isAuthenticated) {
       const newtext = text.replace(/\n/g, "<br />");
 
-      if (text.length < 281) {
+      if (text.length <= commentLength) {
         // id, text
         addComment(where, _id, newtext, path);
       } else {
@@ -48,8 +49,8 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, pa
               required
             ></textarea>
 
-            <small className={`text-${text.length < 281 ? "mute" : "danger"}`}>
-              {text.length}/280
+            <small className={`text-${text.length <= commentLength ? "mute" : "danger"}`}>
+              {text.length}/{commentLength}
             </small>
 
             <button type='submit' className='btn btn-primary float-right mt-3'>

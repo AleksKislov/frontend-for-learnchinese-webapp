@@ -6,6 +6,7 @@ import { loadPosts, addPost } from "../../actions/posts";
 import { setAlert } from "../../actions/alert";
 import Spinner from "../layout/Spinner";
 import { Helmet } from "react-helmet";
+import { commentLength } from "../../apikeys.json";
 
 const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, morePosts }) => {
   useEffect(() => {
@@ -53,7 +54,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
         return;
       }
 
-      if (formData.text.length < 281 && formData.title.length < 91) {
+      if (formData.text.length <= commentLength && formData.title.length < 91) {
         // title, text, theme
         title = emoji + " " + title;
         addPost(title, newtext, postTag);
@@ -235,8 +236,10 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
                   value={text}
                   required
                 ></textarea>
-                <small className={`text-${formData.text.length < 281 ? "mute" : "danger"}`}>
-                  {formData.text.length}/280
+                <small
+                  className={`text-${formData.text.length <= commentLength ? "mute" : "danger"}`}
+                >
+                  {formData.text.length}/{commentLength}
                 </small>
                 <button type='submit' className='btn btn-primary float-right mt-3'>
                   Опубликовать

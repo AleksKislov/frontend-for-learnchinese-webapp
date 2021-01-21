@@ -21,7 +21,7 @@ const NumOfTexts = () => {
   return (
     <p className='card-text'>
       <Link className='card-link' to='/texts'>
-        Проверенных:
+        Проверенные:
       </Link>{" "}
       <span className='badge badge-success float-right' style={badgeStyle}>
         {num.approved}
