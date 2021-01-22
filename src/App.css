@@ -11406,3 +11406,39 @@
   width: 8rem;
   height: 8rem;
 }
+
+
+/*/ KANBAN */
+
+.kanban {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.kanban h5 {
+  color: var(--white)
+}
+
+.kanbanCol {
+  padding: 3px;
+}
+
+.kanbanCol .toast-header {
+  color: var(--primary)
+}
+
+.greenKanban{
+  background-color: var(--success);
+}
+
+.blueKanban{
+  background-color: var(--info);
+}
+
+.orangeKanban {
+  background-color: var(--warning);
+}
+
+.greyKanban {
+  background-color: var(--gray);
+}

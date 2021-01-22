@@ -285,15 +285,34 @@ const Navbar = ({
             Гостевая
           </NavLink>
         </li>
-        <li className='nav-item'>
+        <li className='nav-item dropdown'>
           <NavLink
-            onClick={collapseIt}
-            className='nav-link'
+            className='nav-link dropdown-toggle'
+            data-toggle='dropdown'
             to='/donate'
             activeStyle={activeNavLink}
           >
             🙏🏻 Донат
           </NavLink>
+
+          <div className='dropdown-menu'>
+            <NavLink
+              className='dropdown-item'
+              to='/donate'
+              activeStyle={activeNavLink}
+              onClick={() => setPathsAndCollapse({ ...paths, donate: "/donate" })}
+            >
+              🙏🏻 Донат
+            </NavLink>
+            <NavLink
+              className='dropdown-item'
+              to='/kanban'
+              activeStyle={activeNavLink}
+              onClick={() => setPathsAndCollapse({ ...paths, donate: "/kanban" })}
+            >
+              Канбан
+            </NavLink>
+          </div>
         </li>
       </ul>
 

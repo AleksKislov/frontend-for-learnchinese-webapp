@@ -7,6 +7,7 @@ import { setAlert } from "../../actions/alert";
 import Spinner from "../layout/Spinner";
 import { Helmet } from "react-helmet";
 import { commentLength } from "../../apikeys.json";
+import { Link } from "react-router-dom";
 
 const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, morePosts }) => {
   useEffect(() => {
@@ -136,36 +137,32 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
         <h2>Гостевая и Новости Проекта</h2>
       </div>
       <div className='col-sm-6'>
-        <div className='card bg-light mb-3'>
-          <div className='card-body'>
-            <p className='card-text'>
-              Здесь можно написать о багах, пожеланиях.
-              <br />
-              О новостях проекта также будем сообщать здесь. <br />
-              <span className=''>
-                За проектом можно следить и в соцсетях:{" "}
-                <a href='https://t.me/chineseplusnew' target='_blank'>
-                  <i className='fab fa-telegram'></i>
-                </a>{" "}
-                <a href='https://vk.com/buyilehu' target='_blank'>
-                  <i className='fab fa-vk'></i>
-                </a>{" "}
-                <a href='https://www.youtube.com/c/Buyilehuorg' target='_blank'>
-                  <i className='fab fa-youtube'></i>
-                </a>{" "}
-                <a href='https://www.facebook.com/buyilehu/' target='_blank'>
-                  <i className='fab fa-facebook-square'></i>
-                </a>
-              </span>
-            </p>
-          </div>
+        <div class='alert alert-info'>
+          <span>
+            За проектом можно следить и в соцсетях:{" "}
+            <a href='https://t.me/chineseplusnew' target='_blank'>
+              <i className='fab fa-telegram'></i>
+            </a>{" "}
+            <a href='https://vk.com/buyilehu' target='_blank'>
+              <i className='fab fa-vk'></i>
+            </a>{" "}
+            <a href='https://www.youtube.com/c/Buyilehuorg' target='_blank'>
+              <i className='fab fa-youtube'></i>
+            </a>{" "}
+            <a href='https://www.facebook.com/buyilehu/' target='_blank'>
+              <i className='fab fa-facebook-square'></i>
+            </a>
+          </span>
+        </div>
+        <div class='alert alert-success'>
+          У проекта свой <Link to='/kanban'>канбан</Link> с текущими задачами. Здесь вы можете
+          влиять на него, оставляя свои пожелания или сообщая о багах.
         </div>
 
         <div className='card'>
           <div className='card-body'>
-            <h4 className='card-title'>Поделитесь своим мнением</h4>
             <div className='mb-3'>
-              <span className='mr-2 text-muted'>Выберите тэг: </span>
+              <span className='mr-2 font-weight-bold'>Вы хотите поделиться: </span>
 
               <span
                 className='badge badge-warning'
@@ -173,7 +170,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
                 onClick={e => onClick(e)}
                 style={badgeStyle}
               >
-                Пожелание
+                Пожеланием
               </span>
               <span
                 className='badge badge-primary mx-2'
@@ -181,7 +178,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
                 onClick={e => onClick(e)}
                 style={badgeStyle}
               >
-                Баг
+                Багом
               </span>
               {user && user.role === "admin" && (
                 <span
