@@ -49,7 +49,6 @@ export default function(state = initialState, action) {
         currentComments: []
       };
     case LOAD_NOT_APPROVED:
-      console.log(payload);
       return {
         ...state,
         text: null,

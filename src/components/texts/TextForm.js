@@ -51,7 +51,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         document.getElementById("textArea").value = origintext.join("\n");
         document.getElementById("translationArea").value = translation.join("\n");
         document.getElementById("theme_word").value = theme_word;
-        document.getElementById("isApproved").value = isApproved ? "1" : "0";
+        if (document.getElementById("isApproved"))
+          document.getElementById("isApproved").value = isApproved ? "1" : "0";
         setIsTranslated(true);
 
         setFormData({
@@ -352,12 +353,22 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
           <div className='col-md-12'>
             <h2>Добавьте текст для Читалки</h2>
             <h4>следуя шагам ниже</h4>
-            <p>
-              🙏🏻 сделайте свой вклад в развитие платформы и преумножение доступного образования в
-              Интернете
-              <br />
-              🔥 самое важное - поправить перевод, все остальное может сделать и админ. Спасибо Вам!
-            </p>
+            {isToEdit ? (
+              <div className='alert alert-info'>
+                <div className='mb-3'>
+                  🙏🏻 Если вы редактируете, то меняйте любые поля, затем нажмите "ПРЕДОБРАБОТКА",
+                  только потом появится кнопка "Изменить текст"
+                </div>
+              </div>
+            ) : (
+              <p>
+                🙏🏻 сделайте свой вклад в развитие платформы и преумножение доступного образования в
+                Интернете
+                <br />
+                🔥 самое важное - поправить перевод, все остальное может сделать и админ. Спасибо
+                Вам!
+              </p>
+            )}
 
             {!textToEdit && !isToEdit && (
               <div className='alert alert-warning noticeMe'>
@@ -684,9 +695,9 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                 )}
               </div>
             )}
-            {isToEdit && (
+            {isToEdit && okToPublish && (
               <button className='btn btn-primary mx-1' onClick={e => editText(formData)}>
-                Изменить текст
+                Изменить Текст
               </button>
             )}
           </div>

@@ -35,7 +35,7 @@ const TextPage = ({
     setLoading();
     loadText(match.params.id);
     getComments("text", match.params.id);
-  }, [loadText, setLoading, getComments]);
+  }, [setLoading, getComments]);
 
   useEffect(() => {
     if (text) {
@@ -47,11 +47,25 @@ const TextPage = ({
   }, [text]);
 
   useEffect(() => {
-    if (isAuthenticated) loadUserWords();
+    if (isAuthenticated) {
+      loadUserWords();
+    }
   }, [isAuthenticated]);
+
+  useEffect(() => {
+    // console.log("render");
+    if (
+      currentUser &&
+      text &&
+      (currentUser.role === "admin" || (currentUser._id === text.user && text.isApproved !== 1))
+    ) {
+      setIsOkToEdit(true);
+    }
+  }, [text, isAuthenticated]);
 
   const [chineseChunkedArr, setChineseChunkedArr] = useState([]);
   const [hideFlag, setHideFlag] = useState(false);
+  const [isOkToEdit, setIsOkToEdit] = useState(false);
   const onClick = () => setHideFlag(!hideFlag);
 
   return (
@@ -93,7 +107,10 @@ const TextPage = ({
 
                 <FontSize />
 
-                {isAuthenticated && currentUser.role === "admin" && (
+                {
+                  // (currentUser._id === text.user || currentUser.role === "admin") && (
+                }
+                {isAuthenticated && isOkToEdit && (
                   <Link to='/create-text'>
                     <button className='btn btn-sm btn-outline-warning'>Edit</button>
                   </Link>
