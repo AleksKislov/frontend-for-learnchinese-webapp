@@ -11185,7 +11185,7 @@
 .tippyPinyin {
   font-size: 1.6em;
   /* background-color: #149a80; */
-  padding: 0.2rem;
+  /* padding: 0.2rem; */
   width: 100%;
   border-radius: 5px;
   margin-top: 0.3rem;
@@ -11193,9 +11193,6 @@
   /* text-align: center */
 }
 
-.tippyTranslation {
-  margin-bottom: 0.2rem
-}
 
 #audio, .questions {
   margin-bottom: 1rem;
@@ -11218,10 +11215,10 @@
   border-right: 0
 }
 
-.tippyPinyin .btn-info {
+/* .tippyPinyin .btn-info {
   float: right;
   margin-left: 0.2rem;
-}
+} */
 
 .tippyTranslation .btn-warning {
   /* float: right; */

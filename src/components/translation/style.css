@@ -53,3 +53,7 @@
     height: 90vh;
   }
 }
+
+.tippy-box {
+  min-width: 240px;
+}

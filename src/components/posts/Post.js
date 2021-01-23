@@ -10,7 +10,7 @@ const Post = ({ post, addLike, addDislike }) => {
   const tagTheme = {
     wish: "Пожелание",
     bug: "Баг",
-    news: "Новости Проекта"
+    news: "Новости"
   };
 
   const dateAndTime = dateToStr(date);

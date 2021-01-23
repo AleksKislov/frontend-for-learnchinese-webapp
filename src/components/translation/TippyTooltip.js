@@ -94,6 +94,14 @@ const TippyTooltip = ({
     }
   };
 
+  const [open, setIsOpen] = useState(undefined);
+  const hideIt = () => {
+    setIsOpen(false);
+    setTimeout(() => {
+      setIsOpen(undefined);
+    }, 100);
+  };
+
   if (word === "\n") {
     return <span className='row'></span>;
   } else if (!word.chinese) {
@@ -107,20 +115,29 @@ const TippyTooltip = ({
         theme='light-border'
         placement='bottom'
         interactive={true}
+        visible={open}
+        onClickOutside={hideIt}
         content={
           <div>
             <div className='tippyPinyin'>
               <span className='onlyPinyin text-info'>{chinese}</span>
               <span className='onlyPinyin'>{pinyin}</span>
               <button
-                className={`btn btn-sm float-right btn-${clicked ? "danger" : "info"}`}
-                onClick={e => onClick(e)}
+                type='button'
+                className='btn btn-sm btn-outline-danger float-right'
+                onClick={hideIt}
               >
-                {clicked ? <i className='fas fa-minus'></i> : <i className='fas fa-plus'></i>}
+                <i className='fas fa-times'></i>
               </button>
             </div>
             <p className='tippyTranslation' dangerouslySetInnerHTML={{ __html: translation }}></p>{" "}
             {moreButton}
+            <button
+              className={`btn btn-sm float-right btn-${clicked ? "danger" : "info"}`}
+              onClick={e => onClick(e)}
+            >
+              {clicked ? <i className='fas fa-minus'></i> : <i className='fas fa-plus'></i>}
+            </button>
           </div>
         }
       >

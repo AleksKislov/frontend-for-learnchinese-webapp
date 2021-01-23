@@ -170,7 +170,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
                 onClick={e => onClick(e)}
                 style={badgeStyle}
               >
-                Пожеланием
+                пожеланием
               </span>
               <span
                 className='badge badge-primary mx-2'
@@ -178,7 +178,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
                 onClick={e => onClick(e)}
                 style={badgeStyle}
               >
-                Багом
+                багом
               </span>
               {user && user.role === "admin" && (
                 <span
@@ -187,7 +187,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
                   onClick={e => onClick(e)}
                   style={badgeStyle}
                 >
-                  Новости Проекта
+                  новостями
                 </span>
               )}
             </div>
