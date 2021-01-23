@@ -20,11 +20,13 @@ import Paragraph from "./Paragraph";
 import { v4 as uuid } from "uuid";
 import "./style.css";
 import { countZnChars } from "../../actions/helpers";
+import { bgTextLen, smTextLen } from "../../apikeys.json";
 
 const TextForm = ({ loadUserWords, user, textToEdit }) => {
   useEffect(() => {
     loadUserWords();
 
+    if (user && (user.role === "admin" || user.role === "moderator")) setMaxTextLen(bgTextLen);
     if (!textToEdit) setTimeout(noticeMe, 1000);
   }, []);
 
@@ -69,6 +71,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     }, 0);
   }, [textToEdit]);
 
+  const [maxTextLen, setMaxTextLen] = useState(smTextLen);
   const [photosResult, setPhotosResult] = useState(true);
   const [isEnglish, setIsEnglish] = useState(false);
   const [isRedirected, setIsRedirected] = useState(false);
@@ -100,9 +103,9 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     if (photosUrls || isToEdit) {
       const textArea = document.getElementById("textArea");
 
-      if (textLen > 1000) {
+      if (textLen > maxTextLen) {
         store.dispatch(
-          setAlert("Максимум 1000 знаков в китайском тексте, удалите лишние", "danger")
+          setAlert(`Максимум ${maxTextLen} знаков в китайском тексте, удалите лишние`, "danger")
         );
       } else {
         let originText = textArea.value.trim();
@@ -310,12 +313,6 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
 
   if (isRedirected) return <Redirect to='/not_approved_texts' />;
 
-  // const readyToClickOrMisspelled = (photosUrls ? (
-  //   <label className='text-danger'>Выберите кликом 1 из картинок ниже:</label>
-  // ) : !isEnglish && formData.pic_theme ? (
-  //   <label className='text-danger'>ТОЛЬКО ЛАТИНСКИЕ БУКВЫ</label>
-  // ))
-
   const readyToClick = <label className='text-danger'>Выберите кликом 1 из картинок ниже:</label>;
   const isNotEnglish = <label className='text-danger'>ТОЛЬКО ЛАТИНСКИЕ БУКВЫ</label>;
   const loadPicsErr = (
@@ -336,10 +333,11 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       >
         Загрузить
       </button>
+      {!photosResult && loadPicsErr}
     </Fragment>
   );
-  const loadPicsBtnResult = photosResult ? loadPicsBtn : loadPicsErr;
-  const loadPicsBtnClicked = !isEnglish && formData.pic_theme ? isNotEnglish : loadPicsBtnResult;
+  // const loadPicsBtnResult = photosResult ? loadPicsBtn : loadPicsErr;
+  const loadPicsBtnClicked = !isEnglish && formData.pic_theme ? isNotEnglish : loadPicsBtn;
 
   return (
     <Fragment>
@@ -357,7 +355,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
               <div className='alert alert-info'>
                 <div className='mb-3'>
                   🙏🏻 Если вы редактируете, то меняйте любые поля, затем нажмите "ПРЕДОБРАБОТКА",
-                  только потом появится кнопка "Изменить текст"
+                  только потом появится кнопка "Изменить текст" <br />
+                  Поле с картинкой заполнять ТОЛЬКО, если хотите ее поменять
                 </div>
               </div>
             ) : (
@@ -411,6 +410,10 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                     <Fragment>
                       <h4 className='alert-heading'>ШАГ 5</h4>
                       <p>Теперь вы можете вставить китайский текст</p>
+                      <p>
+                        ВНИМАНИЕ: если не нужен автоматический перевод, то кликните тумблер над
+                        полем для перевода, чтобы отключить google translate
+                      </p>
                     </Fragment>
                   )}
 
@@ -495,7 +498,6 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                     </div>
                   </div>
                 )}
-
                 <div className='form-row'>
                   <div className='form-group col-md-6'>
                     <label htmlFor='title'>Заголовок текста</label>
@@ -595,11 +597,9 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                     />
                   </div>
                 </div>
-
                 <div className='form-row' style={{ paddingLeft: "5px" }}>
                   {photosUrls ? readyToClick : loadPicsBtnClicked}
                 </div>
-
                 <div className='form-row'>
                   <div
                     className='form-group col-md-12'
@@ -610,6 +610,27 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                     }}
                   ></div>
                 </div>
+
+                {!isToEdit && (
+                  <div className='form-row'>
+                    <div className='form-group col-md-6'></div>
+                    <div className='form-group col-md-6'>
+                      <div className='custom-control custom-switch'>
+                        <input
+                          type='checkbox'
+                          className='custom-control-input'
+                          id='needGoogle'
+                          checked={!isTranslated}
+                          onChange={() => setIsTranslated(!isTranslated)}
+                        />
+                        <label className='custom-control-label text-danger' for='needGoogle'>
+                          {!isTranslated ? "Мне нужен гугл-перевод" : "У меня свой перевод"}
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 <div className='form-row'>
                   <div className='form-group col-md-6'>
                     <label htmlFor='textArea'>Вставьте китайский текст для обработки:</label>
@@ -625,7 +646,9 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                       placeholder='汉字。。。'
                       disabled={(formData.pic_url && formData.title) || isToEdit ? false : true}
                     ></textarea>
-                    <small className='text-muted'>{textLen}/1000</small>
+                    <small className='text-muted'>
+                      {textLen}/{maxTextLen}
+                    </small>
                   </div>
                   <div className='form-group col-md-6'>
                     <label htmlFor='translationArea'>Исправьте автоматический перевод:</label>
@@ -635,7 +658,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                       className='form-control'
                       id='translationArea'
                       rows='3'
-                      placeholder='Тут будет автоматический перевод, который нужно поправить!'
+                      placeholder='Тут будет гугл-перевод, который нужно поправить! (Или вставьте свой перевод)'
                       disabled={isTranslated || isToEdit ? false : true}
                     ></textarea>
                     <small className='text-muted'>не забывайте про параграфы</small>

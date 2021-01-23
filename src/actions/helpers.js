@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-
+import { symbolsToIgnore } from "../apikeys.json";
 /**
  *
  * @param {array} allwords
@@ -140,7 +140,12 @@ export const numberToStr = num => {
  * @returns {number}    - number of Chinese chars in str w/o spaces
  */
 export const countZnChars = str => {
-  if (str) return str.replaceAll(" ", "").length;
+  if (str) {
+    symbolsToIgnore.forEach(char => {
+      str = str.replaceAll(char, "");
+    });
+    return str.length;
+  }
   return 0;
 };
 /**

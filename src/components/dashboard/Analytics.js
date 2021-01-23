@@ -11,47 +11,49 @@ const Analytics = ({ user }) => {
     const { data } = await axios.get("/api/users/reading_results");
     // console.log(data);
 
-    // setMaxX
-    const maxGoal = Math.max(...data.map(day => day.daily_goal));
-    const maxResult = Math.max(...data.map(day => day.have_read));
-    if (maxGoal > maxResult) setMaxX(maxGoal * 2);
-    if (maxGoal < maxResult) setMaxX(maxResult * 2);
+    if (data) {
+      // setMaxX
+      const maxGoal = Math.max(...data.map(day => day.daily_goal));
+      const maxResult = Math.max(...data.map(day => day.have_read));
+      if (maxGoal > maxResult) setMaxX(maxGoal * 2);
+      if (maxGoal < maxResult) setMaxX(maxResult * 2);
 
-    let today = new Date();
-    let rows1 = [];
-    rows1[0] = [today.toISOString().slice(0, 10)];
-    rows1[0].push(user.read_today_num);
-    rows1[0].push(user.daily_reading_goal);
+      let today = new Date();
+      let rows1 = [];
+      rows1[0] = [today.toISOString().slice(0, 10)];
+      rows1[0].push(user.read_today_num);
+      rows1[0].push(user.daily_reading_goal);
 
-    for (let i = 1; i < 30; i++) {
-      today.setDate(today.getDate() - 1);
-      // console.log(today.toISOString().slice(0, 10));
-      rows1[i] = [today.toISOString().slice(0, 10)];
-      rows1[i].push(0);
-      rows1[i].push(0);
-    }
+      for (let i = 1; i < 30; i++) {
+        today.setDate(today.getDate() - 1);
+        // console.log(today.toISOString().slice(0, 10));
+        rows1[i] = [today.toISOString().slice(0, 10)];
+        rows1[i].push(0);
+        rows1[i].push(0);
+      }
 
-    for (let i = 0; i < rows1.length; i++) {
-      for (let j = 0; j < data.length; j++) {
-        if (rows1[i][0] === data[j].createdAt) {
-          rows1[i][1] = data[j].have_read;
-          rows1[i][2] = data[j].daily_goal;
+      for (let i = 0; i < rows1.length; i++) {
+        for (let j = 0; j < data.length; j++) {
+          if (rows1[i][0] === data[j].createdAt) {
+            rows1[i][1] = data[j].have_read;
+            rows1[i][2] = data[j].daily_goal;
+          }
         }
       }
-    }
 
-    let previousGoal = 0;
-    for (let i = 0; i < rows1.length; i++) {
-      if (rows1[i][2] !== 0) {
-        previousGoal = rows1[i][2];
-      } else {
-        rows1[i][2] = previousGoal;
+      let previousGoal = 0;
+      for (let i = 0; i < rows1.length; i++) {
+        if (rows1[i][2] !== 0) {
+          previousGoal = rows1[i][2];
+        } else {
+          rows1[i][2] = previousGoal;
+        }
+        rows1[i][0] = dateToStr(rows1[i][0], true);
       }
-      rows1[i][0] = dateToStr(rows1[i][0], true);
-    }
 
-    // console.log(rows1);
-    setstate(rows1.reverse());
+      // console.log(rows1);
+      setstate(rows1.reverse());
+    }
   };
 
   useEffect(() => {
