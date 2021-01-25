@@ -273,6 +273,15 @@ const Navbar = ({
             >
               На проверке
             </NavLink>
+            <div className='dropdown-divider'></div>
+            <NavLink
+              className='dropdown-item'
+              to='/statistics'
+              activeStyle={activeNavLink}
+              onClick={() => setPathsAndCollapse({ ...paths, reading: "/statistics" })}
+            >
+              Наши Герои
+            </NavLink>
           </div>
         </li>
         <li className='nav-item'>

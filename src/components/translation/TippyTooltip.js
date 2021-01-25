@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "tippy.js/themes/light-border.css";
+import "./light-border.css";
 import Tippy from "@tippyjs/react";
 import { followCursor } from "tippy.js";
 import PropTypes from "prop-types";
