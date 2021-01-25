@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { levelStars } from "../../actions/helpers";
 import { dateToStr } from "../../actions/helpers";
+import Tippy from "@tippyjs/react";
 
 const TextCard = ({ text }) => {
   const {
@@ -15,7 +16,8 @@ const TextCard = ({ text }) => {
     name,
     comments_id,
     _id,
-    theme_word
+    theme_word,
+    hits
   } = text;
 
   const dateAndTime = dateToStr(date);
@@ -29,9 +31,14 @@ const TextCard = ({ text }) => {
           </Link>
         </div>
         <div className='col-md-9'>
-          <Link to={`/texts/${_id}`}>
-            <h4 className='card-title'>{title}</h4>
-          </Link>
+          <h4 className='card-title'>
+            <Link to={`/texts/${_id}`}>{title}</Link>{" "}
+            <Tippy content={`просмотров: ${hits}`}>
+              <small className='text-muted extra-smtext'>
+                <i className='fas fa-eye'></i> {hits}
+              </small>
+            </Tippy>
+          </h4>
           <h6 className='card-subtitle mb-1 text-muted'>
             <em>{dateAndTime}</em>
           </h6>

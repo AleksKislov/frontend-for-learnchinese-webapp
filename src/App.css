@@ -11439,3 +11439,7 @@
 .greyKanban {
   background-color: var(--gray);
 }
+
+.extra-smtext {
+  font-size: 1.1rem;
+}

@@ -125,7 +125,12 @@ const TextPage = ({
           </div>
 
           <div className='col-sm-9'>
-            <h2>{text.title}</h2>
+            <h2>
+              {text.title}{" "}
+              <small className='text-muted extra-smtext'>
+                <i className='fas fa-eye'></i> {text.hits}
+              </small>
+            </h2>
 
             <Link to='/texts'>
               <div className='btn btn-sm btn-outline-info'>Назад</div>

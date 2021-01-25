@@ -109,6 +109,7 @@ const TippyTooltip = ({
   } else {
     return (
       <Tippy
+        className='mintippy-box'
         followCursor='initial'
         trigger='click'
         plugins={[followCursor]}
