@@ -95,11 +95,8 @@ const ReadingCard = ({ user, setReadGoal, setAlert }) => {
   ) : (
     <div className='card bg-light border-primary mb-3'>
       <div className='card-body'>
-        <h4 className='card-title'>Учет Чтения</h4>
-        <p className='card-text'>
-          Авторизуйтесь, чтобы выставить дневную планку для чтения и вести учет прочитанных
-          иероглифов.
-        </p>
+        <h5 className='card-title'>Дневник чтения</h5>
+        <p className='card-text'>Войдите, чтобы вести учет прочитанных иероглифов 📚</p>
         <Link to='/login' className='card-link'>
           Вход
         </Link>

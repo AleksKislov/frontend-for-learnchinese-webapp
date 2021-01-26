@@ -23,6 +23,12 @@ const TextCard = ({ text }) => {
   const dateAndTime = dateToStr(date);
   return (
     <div className='card my-2'>
+      <Tippy content='Прочитано'>
+        <h2 className='alreadyReadMark'>
+          <i className='fas fa-check-circle text-success'></i>
+        </h2>
+      </Tippy>
+
       <div className='card-body row'>
         <div style={{ position: "relative" }} className='col-md-3'>
           <Link to={`/texts/${_id}`}>

@@ -623,7 +623,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                           checked={!isTranslated}
                           onChange={() => setIsTranslated(!isTranslated)}
                         />
-                        <label className='custom-control-label text-danger' for='needGoogle'>
+                        <label className='custom-control-label text-danger' htmlFor='needGoogle'>
                           {!isTranslated ? "Мне нужен гугл-перевод" : "У меня свой перевод"}
                         </label>
                       </div>

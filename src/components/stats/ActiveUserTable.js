@@ -37,7 +37,7 @@ const ActiveUserTable = ({}) => {
       </div>
 
       <div className='col-sm-9'>
-        <div class='table-responsive'>
+        <div className='table-responsive'>
           <table className='table table-hover text-center '>
             <thead>
               <tr className='table-info'>

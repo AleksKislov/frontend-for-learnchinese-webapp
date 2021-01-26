@@ -161,23 +161,26 @@ export const checkBaseUrl = href =>
 export const levelStars = lvl => {
   if (lvl === 3)
     return (
-      <span className='text-warning'>
-        <i className='fas fa-star'></i>
-        <i className='fas fa-star'></i>
-        <i className='fas fa-star'></i>
+      <span className='text-stars'>
+        <i className='fas fa-star text-warning'></i>
+        <i className='fas fa-star text-warning'></i>
+        <i className='fas fa-star text-warning'></i>
       </span>
     );
   if (lvl === 2)
     return (
-      <span className='text-warning'>
-        <i className='fas fa-star'></i>
-        <i className='fas fa-star'></i>
+      <span className='text-stars'>
+        <i className='fas fa-star text-warning'></i>
+        <i className='fas fa-star text-warning'></i>
+        <i className='fas fa-star text-muted'></i>
       </span>
     );
   if (lvl === 1)
     return (
-      <span className='text-warning'>
-        <i className='fas fa-star'></i>
+      <span className='text-stars'>
+        <i className='fas fa-star text-warning'></i>
+        <i className='fas fa-star text-muted'></i>
+        <i className='fas fa-star text-muted'></i>
       </span>
     );
 };

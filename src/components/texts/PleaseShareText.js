@@ -5,10 +5,10 @@ const PleaseShareText = () => {
   return (
     <div className='card bg-light border-primary mb-3'>
       <div className='card-body'>
-        <h4 className='card-title'>Поделитесь?</h4>
+        <h5 className='card-title'>Станьте героем 💪</h5>
 
         <p className='card-text'>
-          <span>🙏🏻 внесите свой вклад, добавив новый текст в Читалку</span>
+          <span>И поделитесь текстами для Читалки со всем светом</span>
         </p>
         <Link className='card-link' to='/create-text'>
           Добавить Текст

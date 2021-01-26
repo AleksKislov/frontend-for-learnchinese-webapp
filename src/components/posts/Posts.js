@@ -137,7 +137,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
         <h2>Гостевая и Новости Проекта</h2>
       </div>
       <div className='col-sm-6'>
-        <div class='alert alert-info'>
+        <div className='alert alert-info'>
           <span>
             За проектом можно следить и в соцсетях:{" "}
             <a href='https://t.me/chineseplusnew' target='_blank'>
@@ -154,7 +154,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
             </a>
           </span>
         </div>
-        <div class='alert alert-success'>
+        <div className='alert alert-success'>
           У проекта свой <Link to='/kanban'>канбан</Link> с текущими задачами. Здесь вы можете
           влиять на него, оставляя свои пожелания или сообщая о багах.
         </div>

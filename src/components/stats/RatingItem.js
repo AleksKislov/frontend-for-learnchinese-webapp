@@ -11,7 +11,7 @@ const RatingItem = ({ user, ind }) => {
 
   return (
     userid !== "5f301a8f0aa547478da68c18" && (
-      <tr className={(ind === 3 || ind === 1 || ind === 2) && "font-weight-bold"}>
+      <tr className={ind === 3 || ind === 1 || ind === 2 ? "font-weight-bold" : ""}>
         <td>{index}</td>
         <td className='text-left'>{name}</td>
         <td>{num}</td>

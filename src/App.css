@@ -11443,3 +11443,21 @@
 .extra-smtext {
   font-size: 1.1rem;
 }
+
+.text-stars .text-muted {
+  opacity: 0.4
+}
+
+.alreadyReadMark {
+  position: absolute;
+  top: 0;
+  right: 1.2rem;
+  /* margin-top: -0.5rem; */
+  z-index: 1000;
+}
+
+@media (max-width: 768px) { 
+  .alreadyReadMark {
+    font-size: 2.5rem;
+  }
+}
