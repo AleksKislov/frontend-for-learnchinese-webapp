@@ -113,19 +113,26 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
             </div>
           </Tippy>
 
-          <div className='col-sm-4'>
-            <label htmlFor='categoryFilt'>Категория</label>
-            <select className='custom-select' onChange={e => onCategorySelect(e)} id='categoryFilt'>
-              <option defaultValue='0' value='0'>
-                Все Категории
-              </option>
-              {textCategories.map((x, ind) => (
-                <option value={ind + 1} key={ind}>
-                  {x}
+          <Tippy content='В разработке' placement='bottom'>
+            <div className='col-sm-4'>
+              <label htmlFor='categoryFilt'>Категория</label>
+              <select
+                className='custom-select'
+                onChange={e => onCategorySelect(e)}
+                id='categoryFilt'
+                disabled
+              >
+                <option defaultValue='0' value='0'>
+                  Все Категории
                 </option>
-              ))}
-            </select>
-          </div>
+                {textCategories.map((x, ind) => (
+                  <option value={ind + 1} key={ind}>
+                    {x}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </Tippy>
         </div>
 
         {loading ? (
