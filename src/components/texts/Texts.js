@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 import PleaseShareText from "./PleaseShareText";
 import NumOfTexts from "./NumOfTexts";
 import Tippy from "@tippyjs/react";
+import { textCategories } from "../../apikeys.json";
 
 const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
   useEffect(() => {
@@ -38,6 +39,7 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
     }
   ];
 
+  const [categoryFlag, setCategoryFlag] = useState(0);
   const [hideReadFlag, setHideReadFlag] = useState(0);
   const [hideFlag, setHideFlag] = useState(levelFilter[0]);
   const onLevelSelect = e =>
@@ -45,6 +47,10 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
 
   const onReadSelect = e =>
     setHideReadFlag(parseInt(e.target.options[e.target.options.selectedIndex].value));
+
+  const onCategorySelect = e => {
+    setCategoryFlag(parseInt(e.target.options[e.target.options.selectedIndex].value));
+  };
 
   return (
     <div className='row'>
@@ -106,6 +112,20 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
               </select>
             </div>
           </Tippy>
+
+          <div className='col-sm-4'>
+            <label htmlFor='categoryFilt'>Категория</label>
+            <select className='custom-select' onChange={e => onCategorySelect(e)} id='categoryFilt'>
+              <option defaultValue='0' value='0'>
+                Все Категории
+              </option>
+              {textCategories.map((x, ind) => (
+                <option value={ind + 1} key={ind}>
+                  {x}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
 
         {loading ? (
@@ -114,7 +134,14 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
           <div className=''>
             {texts.map(
               text =>
-                hideFlag[text.level] && <TextCard key={text._id} text={text} hide={hideReadFlag} />
+                hideFlag[text.level] && (
+                  <TextCard
+                    key={text._id}
+                    text={text}
+                    hide={hideReadFlag}
+                    category={categoryFlag}
+                  />
+                )
             )}
             <div className='text-center'>
               {moreTexts ? (

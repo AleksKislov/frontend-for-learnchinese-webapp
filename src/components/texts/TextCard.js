@@ -5,12 +5,7 @@ import { dateToStr } from "../../actions/helpers";
 import Tippy from "@tippyjs/react";
 import { connect } from "react-redux";
 
-const TextCard = ({ text, user, hide }) => {
-  useEffect(() => {
-    if (hide === 0) setHideId(false);
-    if (hide === 1) setHideId(isRead(_id));
-    if (hide === 2) setHideId(!isRead(_id));
-  }, [hide]);
+const TextCard = ({ text, user, hide, category }) => {
   const {
     title,
     pic_url,
@@ -23,15 +18,25 @@ const TextCard = ({ text, user, hide }) => {
     comments_id,
     _id,
     theme_word,
-    hits
+    hits,
+    categoryInd
   } = text;
+  useEffect(() => {
+    if (hide === 0) setHideId(false);
+    if (hide === 1) setHideId(isRead(_id));
+    if (hide === 2) setHideId(!isRead(_id));
+    // console.log({ category, categoryInd });
+    setRightCategory(category === 0 || category === categoryInd + 1);
+  }, [hide, category]);
 
   const isRead = textid => (user ? user.finished_texts.includes(textid) : false);
   const [hideIt, setHideId] = useState(false);
+  const [rightCategory, setRightCategory] = useState(true);
 
   const dateAndTime = dateToStr(date);
   return (
-    !hideIt && (
+    !hideIt &&
+    rightCategory && (
       <div className={`card my-2 ${isRead(_id) ? "alreadyReadCard" : ""}`}>
         {isRead(_id) && (
           <Tippy content='Прочитано'>
@@ -61,12 +66,14 @@ const TextCard = ({ text, user, hide }) => {
               <em>{dateAndTime}</em>
             </h6>
             <div className='mb-2'>
-              <span className='text-muted'>Тэги: </span>
-              {tags.map((tag, ind) => (
-                <span key={ind} className='badge badge-pill badge-info ml-1'>
-                  {tag}
-                </span>
-              ))}
+              <h6 className='text-muted'>
+                Тэги:
+                {tags.map((tag, ind) => (
+                  <span key={ind} className='badge badge-pill badge-info ml-1'>
+                    {tag}
+                  </span>
+                ))}
+              </h6>
             </div>
             <h6 className='card-subtitle mb-2'>
               <span className='text-muted'>Опубликовал: </span>

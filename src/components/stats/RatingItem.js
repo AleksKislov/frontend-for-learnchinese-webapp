@@ -5,19 +5,17 @@ const RatingItem = ({ user, ind }) => {
 
   let index;
   index = ind;
-  if (ind === 1) index = "🥇";
-  if (ind === 2) index = "🥈";
-  if (ind === 3) index = "🥉";
+  if (ind === 0) index = <h3>🥇</h3>;
+  if (ind === 1) index = <h3>🥈</h3>;
+  if (ind === 2) index = <h3>🥉</h3>;
 
   return (
-    userid !== "5f301a8f0aa547478da68c18" && (
-      <tr className={ind === 3 || ind === 1 || ind === 2 ? "font-weight-bold" : ""}>
-        <td>{index}</td>
-        <td className='text-left'>{name}</td>
-        <td>{num}</td>
-        <td>{length}</td>
-      </tr>
-    )
+    <tr className={ind === 0 || ind === 1 || ind === 2 ? "font-weight-bold" : ""}>
+      <td>{index}</td>
+      <td className='text-left'>{name}</td>
+      <td>{num}</td>
+      <td>{length}</td>
+    </tr>
   );
 };
 
