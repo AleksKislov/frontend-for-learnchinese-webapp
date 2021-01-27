@@ -16,6 +16,7 @@ import { Helmet } from "react-helmet";
 import { levelStars } from "../../actions/helpers";
 import FontSize from "../common/FontSize";
 import PleaseShareText from "./PleaseShareText";
+import ReadSwitch from "./ReadSwitch";
 
 // (currentUser._id === text.user || currentUser.role === "admin") && (
 
@@ -94,6 +95,8 @@ const TextPage = ({
                     </span>
                   ))}
                 </p>
+                <ReadSwitch id={text._id} />
+
                 <h6 className='card-subtitle mb-2'>
                   <span className='text-muted'>Опубликовал: </span>
                   {text.name}

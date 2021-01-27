@@ -11,7 +11,8 @@ import {
   SET_GOAL_FAIL,
   READ_TODAY,
   READ_TODAY_ERR,
-  GOOGLE_LOGIN_SUCCESS
+  GOOGLE_LOGIN_SUCCESS,
+  MARK_TEXT_READ
 } from "../actions/types";
 
 const initialState = {
@@ -51,6 +52,7 @@ export default function(state = initialState, action) {
       return state;
     case USER_LOADED:
     case READ_TODAY:
+    case MARK_TEXT_READ:
     case SET_GOAL_SUCCESS:
       return {
         ...state,

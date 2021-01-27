@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { levelStars } from "../../actions/helpers";
 import { dateToStr } from "../../actions/helpers";
 import Tippy from "@tippyjs/react";
+import { connect } from "react-redux";
 
-const TextCard = ({ text }) => {
+const TextCard = ({ text, user, hide }) => {
+  useEffect(() => {
+    if (hide === 0) setHideId(false);
+    if (hide === 1) setHideId(isRead(_id));
+    if (hide === 2) setHideId(!isRead(_id));
+  }, [hide]);
   const {
     title,
     pic_url,
@@ -20,66 +26,73 @@ const TextCard = ({ text }) => {
     hits
   } = text;
 
+  const isRead = textid => (user ? user.finished_texts.includes(textid) : false);
+  const [hideIt, setHideId] = useState(false);
+
   const dateAndTime = dateToStr(date);
   return (
-    <div className='card my-2'>
-      <Tippy content='Прочитано'>
-        <h2 className='alreadyReadMark'>
-          <i className='fas fa-check-circle text-success'></i>
-        </h2>
-      </Tippy>
+    !hideIt && (
+      <div className={`card my-2 ${isRead(_id) ? "alreadyReadCard" : ""}`}>
+        {isRead(_id) && (
+          <Tippy content='Прочитано'>
+            <h3 className='alreadyReadMark'>
+              <i className='fas fa-check-circle text-success'></i>
+            </h3>
+          </Tippy>
+        )}
 
-      <div className='card-body row'>
-        <div style={{ position: "relative" }} className='col-md-3'>
-          <Link to={`/texts/${_id}`}>
-            <img className='mr-3 textCardImg' src={`${pic_url}`} alt='text pic' />
-            <div style={imgText}>{theme_word}</div>
-          </Link>
-        </div>
-        <div className='col-md-9'>
-          <h4 className='card-title'>
-            <Link to={`/texts/${_id}`}>{title}</Link>{" "}
-            <Tippy content={`просмотров: ${hits}`}>
-              <small className='text-muted extra-smtext'>
-                <i className='fas fa-eye'></i> {hits}
-              </small>
-            </Tippy>
-          </h4>
-          <h6 className='card-subtitle mb-1 text-muted'>
-            <em>{dateAndTime}</em>
-          </h6>
-          <div className='mb-2'>
-            <span className='text-muted'>Тэги: </span>
-            {tags.map((tag, ind) => (
-              <span key={ind} className='badge badge-pill badge-info ml-1'>
-                {tag}
-              </span>
-            ))}
-          </div>
-          <h6 className='card-subtitle mb-2'>
-            <span className='text-muted'>Опубликовал: </span>
-            {name}
-          </h6>
-          <h6 className='card-subtitle mb-2'>
-            <span className='text-muted'>Уровень: </span>
-            {levelStars(level)}
-          </h6>
-          <h6 className='card-subtitle mb-2'>
-            <span className='text-muted'>Кол-во знаков: </span>
-            {length}
-          </h6>
-          <p className='card-text'>{description}</p>
-
-          <div className=''>
+        <div className='card-body row'>
+          <div style={{ position: "relative" }} className='col-md-3'>
             <Link to={`/texts/${_id}`}>
-              <button className='btn btn-sm btn-outline-info'>
-                Комментарии {comments_id.length > 0 && <span>{comments_id.length}</span>}
-              </button>
+              <img className='mr-3 textCardImg' src={`${pic_url}`} alt='text pic' />
+              <div style={imgText}>{theme_word}</div>
             </Link>
+          </div>
+          <div className='col-md-9'>
+            <h4 className='card-title'>
+              <Link to={`/texts/${_id}`}>{title}</Link>{" "}
+              <Tippy content={`просмотров: ${hits}`}>
+                <small className='text-muted extra-smtext'>
+                  <i className='fas fa-eye'></i> {hits}
+                </small>
+              </Tippy>
+            </h4>
+            <h6 className='card-subtitle mb-1 text-muted'>
+              <em>{dateAndTime}</em>
+            </h6>
+            <div className='mb-2'>
+              <span className='text-muted'>Тэги: </span>
+              {tags.map((tag, ind) => (
+                <span key={ind} className='badge badge-pill badge-info ml-1'>
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <h6 className='card-subtitle mb-2'>
+              <span className='text-muted'>Опубликовал: </span>
+              {name}
+            </h6>
+            <h6 className='card-subtitle mb-2'>
+              <span className='text-muted'>Уровень: </span>
+              {levelStars(level)}
+            </h6>
+            <h6 className='card-subtitle mb-2'>
+              <span className='text-muted'>Кол-во знаков: </span>
+              {length}
+            </h6>
+            <p className='card-text'>{description}</p>
+
+            <div className=''>
+              <Link to={`/texts/${_id}`}>
+                <button className='btn btn-sm btn-outline-info'>
+                  Комментарии {comments_id.length > 0 && <span>{comments_id.length}</span>}
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    )
   );
 };
 
@@ -97,4 +110,8 @@ const imgText = {
   marginLeft: "1rem"
 };
 
-export default TextCard;
+const mapStateToProps = state => ({
+  user: state.auth.user
+});
+
+export default connect(mapStateToProps, {})(TextCard);

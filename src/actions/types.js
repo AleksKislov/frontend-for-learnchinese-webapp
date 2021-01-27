@@ -78,3 +78,6 @@ export const SET_GOAL_SUCCESS = "SET_GOAL_SUCCESS";
 export const SET_GOAL_FAIL = "SET_GOAL_FAIL";
 export const READ_TODAY = "READ_TODAY";
 export const READ_TODAY_ERR = "READ_TODAY_ERR";
+
+export const MARK_TEXT_READ = "MARK_TEXT_READ";
+export const MARK_TEXT_UNREAD = "MARK_TEXT_UNREAD";

@@ -13,7 +13,8 @@ import {
   SET_GOAL_FAIL,
   READ_TODAY,
   READ_TODAY_ERR,
-  GOOGLE_LOGIN_SUCCESS
+  GOOGLE_LOGIN_SUCCESS,
+  MARK_TEXT_READ
 } from "./types";
 import { setAuthToken, setGoogleAuth } from "../utils/setAuthToken";
 
@@ -199,5 +200,32 @@ export const unreadToday = ({ num, path, ind }) => async dispatch => {
     // dispatch(loadUser());
   } catch (err) {
     dispatch({ type: READ_TODAY_ERR });
+  }
+};
+
+/**
+ * @param {string} id           - text id
+ * @param {boolean} alreadyRead   -
+ */
+export const markAsRead = (id, alreadyRead) => async dispatch => {
+  const url = alreadyRead ? "unmark_finished_texts" : "mark_finished_texts";
+
+  const config = {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  };
+
+  try {
+    const { data } = await axios.post(`/api/texts/${url}/${id}`, {}, config);
+
+    dispatch({
+      type: MARK_TEXT_READ,
+      payload: data
+    });
+  } catch (err) {
+    dispatch({
+      type: LOGIN_FAIL
+    });
   }
 };

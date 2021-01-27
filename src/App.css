@@ -11450,14 +11450,53 @@
 
 .alreadyReadMark {
   position: absolute;
-  top: 0;
-  right: 1.2rem;
+  bottom: 0;
+  right: 0.6rem;
   /* margin-top: -0.5rem; */
   z-index: 1000;
 }
 
+.alreadyReadCard {
+  background-color: #ecf0f1;
+}
+
 @media (max-width: 768px) { 
   .alreadyReadMark {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
+
+
+.custom-control-input:focus ~  
+.custom-control-label::before { 
+      /* when the button is toggled off  
+it is still in focus and a violet border will appear */ 
+      border-color: var(--success) !important; 
+      /* box shadow is blue by default 
+but we do not want any shadow hence we have set  
+all the values as 0 */ 
+      box-shadow: 
+        0 0 0 0rem rgba(0, 0, 0, 0) !important; 
+  } 
+
+  /*sets the background color of 
+switch to violet when it is checked*/ 
+  .custom-control-input:checked ~  
+.custom-control-label::before { 
+      border-color: var(--success) !important; 
+      background-color: var(--success) !important; 
+  } 
+
+  /*sets the background color of 
+switch to violet when it is active*/ 
+  .custom-control-input:active ~  
+.custom-control-label::before { 
+      background-color: var(--success) !important; 
+      border-color: var(--success) !important; 
+  } 
+
+  /*sets the border color of switch 
+to violet when it is not checked*/ 
+  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before { 
+      border-color: var(--success) !important; 
+  } 
