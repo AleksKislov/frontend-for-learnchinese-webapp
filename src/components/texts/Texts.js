@@ -52,6 +52,15 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
     setCategoryFlag(parseInt(e.target.options[e.target.options.selectedIndex].value));
   };
 
+  const clearFilters = () => {
+    setCategoryFlag(0);
+    setHideReadFlag(0);
+    setHideFlag(levelFilter[0]);
+    document.getElementById("levelFilt").value = 0;
+    document.getElementById("readFilt").value = 0;
+    document.getElementById("categoryFilt").value = 0;
+  };
+
   return (
     <div className='row'>
       <Helmet>
@@ -79,7 +88,7 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
         <h2>Тексты на китайском языке с переводом</h2>
 
         <div className='form-group row'>
-          <div className='col-sm-4'>
+          <div className='col-sm-3'>
             <label htmlFor='levelFilt'>Уровень</label>
             <select className='custom-select' onChange={e => onLevelSelect(e)} id='levelFilt'>
               <option defaultValue='0' value='0'>
@@ -96,7 +105,7 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
             placement='bottom'
             disabled={user ? true : false}
           >
-            <div className='col-sm-4'>
+            <div className='col-sm-3'>
               <label htmlFor='readFilt'>Прочитанные</label>
               <select
                 className='custom-select'
@@ -113,26 +122,25 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
             </div>
           </Tippy>
 
-          <Tippy content='В разработке' placement='bottom'>
-            <div className='col-sm-4'>
-              <label htmlFor='categoryFilt'>Категория</label>
-              <select
-                className='custom-select'
-                onChange={e => onCategorySelect(e)}
-                id='categoryFilt'
-                disabled
-              >
-                <option defaultValue='0' value='0'>
-                  Все Категории
+          <div className='col-sm-3'>
+            <label htmlFor='categoryFilt'>Категория</label>
+            <select className='custom-select' onChange={e => onCategorySelect(e)} id='categoryFilt'>
+              <option defaultValue='0' value='0'>
+                Все Категории
+              </option>
+              {textCategories.map((x, ind) => (
+                <option value={ind + 1} key={ind}>
+                  {x}
                 </option>
-                {textCategories.map((x, ind) => (
-                  <option value={ind + 1} key={ind}>
-                    {x}
-                  </option>
-                ))}
-              </select>
+              ))}
+            </select>
+          </div>
+
+          <div className='col-sm-3 d-flex align-self-end'>
+            <div className='btn btn-sm btn-primary mb-1' onClick={clearFilters}>
+              Сбросить
             </div>
-          </Tippy>
+          </div>
         </div>
 
         {loading ? (

@@ -4,7 +4,7 @@ const RatingItem = ({ user, ind }) => {
   const { num, userid, length, name } = user;
 
   let index;
-  index = ind;
+  index = ind + 1;
   if (ind === 0) index = <h3>🥇</h3>;
   if (ind === 1) index = <h3>🥈</h3>;
   if (ind === 2) index = <h3>🥉</h3>;

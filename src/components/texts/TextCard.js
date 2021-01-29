@@ -4,6 +4,7 @@ import { levelStars } from "../../actions/helpers";
 import { dateToStr } from "../../actions/helpers";
 import Tippy from "@tippyjs/react";
 import { connect } from "react-redux";
+import { textCategories } from "../../apikeys.json";
 
 const TextCard = ({ text, user, hide, category }) => {
   const {
@@ -76,7 +77,7 @@ const TextCard = ({ text, user, hide, category }) => {
               </h6>
             </div>
             <h6 className='card-subtitle mb-2'>
-              <span className='text-muted'>Опубликовал: </span>
+              <span className='text-muted'>Опубликовал/а: </span>
               {name}
             </h6>
             <h6 className='card-subtitle mb-2'>
@@ -84,9 +85,14 @@ const TextCard = ({ text, user, hide, category }) => {
               {levelStars(level)}
             </h6>
             <h6 className='card-subtitle mb-2'>
+              <span className='text-muted'>Категория: </span>
+              {textCategories[categoryInd]}
+            </h6>
+            <h6 className='card-subtitle mb-2'>
               <span className='text-muted'>Кол-во знаков: </span>
               {length}
             </h6>
+
             <p className='card-text'>{description}</p>
 
             <div className=''>

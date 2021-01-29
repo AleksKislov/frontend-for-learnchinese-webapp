@@ -21,6 +21,7 @@ import { v4 as uuid } from "uuid";
 import "./style.css";
 import { countZnChars } from "../../actions/helpers";
 import { bgTextLen, smTextLen } from "../../apikeys.json";
+import { textCategories } from "../../apikeys.json";
 
 const TextForm = ({ loadUserWords, user, textToEdit }) => {
   useEffect(() => {
@@ -44,10 +45,12 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
           translation,
           _id,
           theme_word,
-          isApproved
+          isApproved,
+          categoryInd
         } = textToEdit;
         document.getElementById("description").value = description;
         document.getElementById("level").value = level;
+        document.getElementById("categoryInd").value = categoryInd;
         document.getElementById("tags").value = tags.join(", ");
         document.getElementById("title").value = title;
         document.getElementById("textArea").value = origintext.join("\n");
@@ -65,6 +68,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
           description,
           theme_word,
           isApproved,
+          categoryInd,
           textId: _id
         });
       }
@@ -93,7 +97,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     textId: "",
     pic_theme: "", // in English for pic_url
     pic_url: "",
-    theme_word: "" // rewriten usestate
+    theme_word: "", // rewriten usestate,
+    categoryInd: 0
   });
 
   const preprocessForm = async e => {
@@ -219,7 +224,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       allwords,
       pic_url,
       theme_word,
-      isApproved
+      isApproved,
+      categoryInd
     } = formdata;
 
     const body = JSON.stringify({
@@ -234,6 +240,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       pic_url,
       theme_word,
       isApproved,
+      categoryInd,
       name: user.name
     });
 
@@ -267,7 +274,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       textId,
       pic_url,
       theme_word,
-      isApproved
+      isApproved,
+      categoryInd
     } = formdata;
 
     const body = JSON.stringify({
@@ -282,7 +290,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       length,
       pic_url,
       theme_word,
-      isApproved
+      isApproved,
+      categoryInd
     });
 
     try {
@@ -611,11 +620,24 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                   ></div>
                 </div>
 
-                {!isToEdit && (
-                  <div className='form-row'>
-                    <div className='form-group col-md-6'></div>
-                    <div className='form-group col-md-6'>
-                      <div className='custom-control custom-switch'>
+                <div className='form-row'>
+                  <div className='form-group col-md-6'>
+                    <label htmlFor='categoryInd'>Выбор категории</label>
+                    <select
+                      className='form-control'
+                      id='categoryInd'
+                      onChange={e => setFormData({ ...formData, [e.target.id]: e.target.value })}
+                    >
+                      {textCategories.map((x, ind) => (
+                        <option value={ind} key={ind}>
+                          {x}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  {!isToEdit && (
+                    <div className='form-group col-md-6 d-flex align-self-end'>
+                      <div className='custom-control custom-switch mb-2'>
                         <input
                           type='checkbox'
                           className='custom-control-input'
@@ -628,8 +650,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                         </label>
                       </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
 
                 <div className='form-row'>
                   <div className='form-group col-md-6'>
@@ -664,6 +686,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                     <small className='text-muted'>не забывайте про параграфы</small>
                   </div>
                 </div>
+
                 <div className='form-row'>
                   {(textLen !== 0 || isToEdit) && (
                     <button
