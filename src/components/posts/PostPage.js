@@ -22,7 +22,7 @@ const PostPage = ({ clearPost, loadPost, post, match, loading, comments, getComm
       <div className='row'>
         <div className='col-sm-6'>
           <Link to='/posts'>
-            <button className='btn btn-outline-info my-2'>Назад</button>
+            <button className='btn btn-outline-info my-2 btn-sm'>Назад</button>
           </Link>
           <Post post={post} />
 

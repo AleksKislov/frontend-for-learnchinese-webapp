@@ -55,9 +55,9 @@ const Routes = () => {
           style={{
             position: "fixed",
             top: "6rem",
-            right: "4rem",
+            right: "2rem",
             zIndex: "100",
-            width: "20rem"
+            maxWidth: "20rem"
           }}
         >
           <Alert />

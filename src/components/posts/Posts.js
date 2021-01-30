@@ -6,7 +6,7 @@ import { loadPosts, addPost } from "../../actions/posts";
 import { setAlert } from "../../actions/alert";
 import Spinner from "../layout/Spinner";
 import { Helmet } from "react-helmet";
-import { commentLength } from "../../apikeys.json";
+import { commentLength, commentEmojis } from "../../apikeys.json";
 import { Link } from "react-router-dom";
 
 const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, morePosts }) => {
@@ -126,6 +126,10 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
     setEmoji(selectedEmo);
   };
 
+  const checkAuthorized = () => {
+    if (!isAuthenticated) store.dispatch(setAlert("Войдите, чтобы комментировать", "danger"));
+  };
+
   return (
     <div className='row'>
       <Helmet>
@@ -197,10 +201,9 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
                 <div className='form-group col-md-2'>
                   <select id='inputEmo' className='custom-select' onChange={e => onSelect(e)}>
                     <option>..</option>
-                    <option>🔥</option>
-                    <option>🙏🏻</option>
-                    <option>👍</option>
-                    <option>💩</option>
+                    {commentEmojis.map((emo, ind) => (
+                      <option key={ind}>{emo}</option>
+                    ))}
                   </select>
                   <small className='mute'>эмо</small>
                 </div>
@@ -210,7 +213,10 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
                     id='titleForm'
                     className='form-control'
                     placeholder='Тема сообщения'
-                    onChange={e => onChange(e)}
+                    onChange={e => {
+                      checkAuthorized();
+                      onChange(e);
+                    }}
                     name='title'
                     value={title}
                     autoComplete='off'
@@ -227,7 +233,10 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
                   className='form-control'
                   rows='3'
                   id='textForm'
-                  onChange={e => onChange(e)}
+                  onChange={e => {
+                    checkAuthorized();
+                    onChange(e);
+                  }}
                   placeholder='Текст'
                   name='text'
                   value={text}
@@ -238,7 +247,7 @@ const Posts = ({ loadPosts, posts, loading, isAuthenticated, addPost, user, more
                 >
                   {formData.text.length}/{commentLength}
                 </small>
-                <button type='submit' className='btn btn-primary float-right mt-3'>
+                <button type='submit' className='btn btn-primary float-right mt-3 btn-sm'>
                   Опубликовать
                 </button>
               </div>

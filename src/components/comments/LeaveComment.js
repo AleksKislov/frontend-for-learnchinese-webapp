@@ -3,14 +3,14 @@ import { addComment, getComments } from "../../actions/comments";
 import { connect } from "react-redux";
 import store from "../../store";
 import { setAlert } from "../../actions/alert";
-import { commentLength } from "../../apikeys.json";
+import { commentLength, commentEmojis } from "../../apikeys.json";
 
 // path is from/for book Chapterpage
 const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, path }) => {
   const [text, setText] = useState("");
 
-  const onSubmit = e => {
-    e.preventDefault();
+  const onSubmit = () => {
+    // e.preventDefault();
 
     if (isAuthenticated) {
       const newtext = text.replace(/\n/g, "<br />");
@@ -31,31 +31,60 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, pa
     getComments(where, _id);
   };
 
+  const sizeUp = e => (e.target.style.fontSize = "2rem");
+  const sizeDown = e => (e.target.style.fontSize = "0.9375rem");
+
+  const addEmoToText = e => {
+    setText(`${text} ${e.target.innerHTML}`);
+  };
+
+  const checkAuthorized = () => {
+    if (!isAuthenticated) store.dispatch(setAlert("Войдите, чтобы комментировать", "danger"));
+  };
+
   return (
     <div className='card my-2'>
       <div className='card-body'>
-        <h4 className='card-title'>Ваш Комментарий</h4>
+        <div className='mb-3'>
+          <span className='h6'>Ваш Комментарий</span>
+          <button type='submit' className='btn btn-primary btn-sm float-right' onClick={onSubmit}>
+            Опубликовать
+          </button>
+        </div>
 
-        <form onSubmit={e => onSubmit(e)}>
+        <form>
           <div className='form-group'>
             <textarea
               className='form-control'
               rows='3'
               id='textForm'
-              onChange={e => setText(e.target.value)}
+              onChange={e => {
+                checkAuthorized();
+                setText(e.target.value);
+              }}
               placeholder='Текст'
               name='text'
               value={text}
               required
             ></textarea>
 
-            <small className={`text-${text.length <= commentLength ? "mute" : "danger"}`}>
-              {text.length}/{commentLength}
-            </small>
-
-            <button type='submit' className='btn btn-primary float-right mt-3'>
-              Опубликовать
-            </button>
+            <div className=''>
+              <small className={`text-${text.length <= commentLength ? "mute" : "danger"}`}>
+                {text.length}/{commentLength}
+              </small>
+              <p className='float-right'>
+                {commentEmojis.map((emo, ind) => (
+                  <span
+                    key={ind}
+                    onMouseEnter={e => sizeUp(e)}
+                    onMouseLeave={e => sizeDown(e)}
+                    onClick={e => addEmoToText(e)}
+                  >
+                    {emo}{" "}
+                  </span>
+                ))}
+              </p>
+            </div>
           </div>
         </form>
       </div>
