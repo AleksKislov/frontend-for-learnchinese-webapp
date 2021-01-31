@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { levelStars } from "../../actions/helpers";
-import { dateToStr } from "../../actions/helpers";
+import { levelStars, dateToStr } from "../../actions/helpers";
 import Tippy from "@tippyjs/react";
 import { connect } from "react-redux";
 import { textCategories } from "../../apikeys.json";
+import LikeTextBtn from "./LikeTextBtn";
 
 const TextCard = ({ text, user, hide, category }) => {
   const {
@@ -20,7 +20,8 @@ const TextCard = ({ text, user, hide, category }) => {
     _id,
     theme_word,
     hits,
-    categoryInd
+    categoryInd,
+    likes
   } = text;
   useEffect(() => {
     if (hide === 0) setHideId(false);
@@ -35,6 +36,7 @@ const TextCard = ({ text, user, hide, category }) => {
   const [rightCategory, setRightCategory] = useState(true);
 
   const dateAndTime = dateToStr(date);
+
   return (
     !hideIt &&
     rightCategory && (
@@ -97,10 +99,11 @@ const TextCard = ({ text, user, hide, category }) => {
 
             <div className=''>
               <Link to={`/texts/${_id}`}>
-                <button className='btn btn-sm btn-outline-info'>
+                <button className='btn btn-sm btn-outline-info mr-2'>
                   Комментарии {comments_id.length > 0 && <span>{comments_id.length}</span>}
                 </button>
               </Link>
+              <LikeTextBtn likes={likes} id={_id} />
             </div>
           </div>
         </div>

@@ -7,7 +7,8 @@ import {
   CLEAR_TEXT,
   LOAD_NOT_APPROVED,
   GET_COMMENTS,
-  ADD_COMMENT
+  ADD_COMMENT,
+  LIKE_TEXT
 } from "../actions/types";
 
 const initialState = {
@@ -41,6 +42,14 @@ export default function(state = initialState, action) {
       return {
         ...state,
         currentComments: payload
+      };
+    case LIKE_TEXT:
+      return {
+        ...state,
+        texts: state.texts.map(text =>
+          text._id === payload.id ? { ...text, likes: payload.likes } : text
+        ),
+        text: state.text ? { ...state.text, likes: payload.likes } : state.text
       };
     case CLEAR_TEXT:
       return {

@@ -5,9 +5,11 @@ import {
   LOAD_TEXT_ERR,
   SET_LOADING,
   CLEAR_TEXT,
-  LOAD_NOT_APPROVED
+  LOAD_NOT_APPROVED,
+  LIKE_TEXT
 } from "./types";
 import axios from "axios";
+import { setAlert } from "./alert";
 
 // export const loadTexts = () => async dispatch => {
 //   try {
@@ -80,4 +82,20 @@ export const setLoading = _ => async dispatch => {
 
 export const clearText = _ => async dispatch => {
   dispatch({ type: CLEAR_TEXT });
+};
+
+export const likeText = id => async dispatch => {
+  try {
+    const { data } = await axios.put(`/api/texts/like/${id}`);
+
+    dispatch({
+      type: LIKE_TEXT,
+      payload: { id, likes: data }
+    });
+  } catch (err) {
+    dispatch({
+      type: LOAD_TEXT_ERR
+    });
+    dispatch(setAlert("Нужно войти", "danger"));
+  }
 };

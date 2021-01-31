@@ -95,6 +95,7 @@ export const addLike = id => async dispatch => {
     dispatch({
       type: LOAD_POST_ERR
     });
+    dispatch(setAlert("Нужно войти", "danger"));
   }
 };
 
@@ -110,5 +111,6 @@ export const addDislike = id => async dispatch => {
     dispatch({
       type: LOAD_POST_ERR
     });
+    dispatch(setAlert("Нужно войти", "danger"));
   }
 };

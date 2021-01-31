@@ -18,6 +18,7 @@ import FontSize from "../common/FontSize";
 import PleaseShareText from "./PleaseShareText";
 import ReadSwitch from "./ReadSwitch";
 import ConfirmModal from "../comments/ConfirmModal";
+import LikeTextBtn from "./LikeTextBtn";
 
 // (currentUser._id === text.user || currentUser.role === "admin") && (
 
@@ -97,10 +98,16 @@ const TextPage = ({
                     </span>
                   ))}
                 </p>
+
+                <h6 className='card-subtitle mb-2'>
+                  <span className='text-muted'>Благодарности: </span>
+                  <LikeTextBtn likes={text.likes} id={text._id} />
+                </h6>
+
                 <ReadSwitch id={text._id} />
 
                 <h6 className='card-subtitle mb-2'>
-                  <span className='text-muted'>Опубликовал: </span>
+                  <span className='text-muted'>Опубликовал/а: </span>
                   {text.name}
                 </h6>
                 <h6 className='card-subtitle mb-2'>
