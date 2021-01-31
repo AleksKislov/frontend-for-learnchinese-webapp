@@ -82,7 +82,7 @@ const ReadingCard = ({ user, setReadGoal, setAlert }) => {
   return user ? (
     <div className='card bg-light border-primary mb-3'>
       <div className='card-body'>
-        <h4 className='card-title'>Дневник Чтения</h4>
+        <h4 className='card-title'>Дневник Чтения 📚</h4>
         <div className='textGoal'>
           {textAboutGoal}
           {user.daily_reading_goal ? changeGoalButton : ""}
@@ -95,8 +95,8 @@ const ReadingCard = ({ user, setReadGoal, setAlert }) => {
   ) : (
     <div className='card bg-light border-primary mb-3'>
       <div className='card-body'>
-        <h5 className='card-title'>Дневник чтения</h5>
-        <p className='card-text'>Войдите, чтобы вести учет прочитанных иероглифов 📚</p>
+        <h5 className='card-title'>Дневник чтения 📚</h5>
+        <p className='card-text'>Войдите, чтобы вести учет прочитанных иероглифов</p>
         <Link to='/login' className='card-link'>
           Вход
         </Link>

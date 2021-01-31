@@ -1,4 +1,4 @@
-import { GET_COMMENTS_ERR, GET_COMMENTS, GET_10COMMENTS } from "./types";
+import { GET_COMMENTS_ERR, GET_COMMENTS, GET_10COMMENTS, SET_COMMENT_TO_DEL } from "./types";
 import axios from "axios";
 import { setAlert } from "./alert";
 
@@ -97,4 +97,11 @@ export const getLastComments = () => async dispatch => {
     console.log(err);
     dispatch({ type: GET_COMMENTS_ERR });
   }
+};
+
+export const setCommentToDelete = obj => async dispatch => {
+  dispatch({
+    type: SET_COMMENT_TO_DEL,
+    payload: obj
+  });
 };

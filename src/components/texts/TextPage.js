@@ -17,6 +17,7 @@ import { levelStars } from "../../actions/helpers";
 import FontSize from "../common/FontSize";
 import PleaseShareText from "./PleaseShareText";
 import ReadSwitch from "./ReadSwitch";
+import ConfirmModal from "../comments/ConfirmModal";
 
 // (currentUser._id === text.user || currentUser.role === "admin") && (
 
@@ -83,6 +84,7 @@ const TextPage = ({
           </Helmet>
 
           <WordModal />
+          <ConfirmModal />
 
           <div className='col-sm-3'>
             <div className='card bg-light mb-3'>

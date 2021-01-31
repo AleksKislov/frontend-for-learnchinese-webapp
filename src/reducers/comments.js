@@ -1,8 +1,14 @@
-import { GET_COMMENTS_ERR, GET_COMMENTS, GET_10COMMENTS } from "../actions/types";
+import {
+  GET_COMMENTS_ERR,
+  GET_COMMENTS,
+  GET_10COMMENTS,
+  SET_COMMENT_TO_DEL
+} from "../actions/types";
 
 const initialState = {
   currentComments: [],
-  lastComments: []
+  lastComments: [],
+  commentToDelete: null
 };
 
 export default function(state = initialState, action) {
@@ -16,12 +22,15 @@ export default function(state = initialState, action) {
     case GET_COMMENTS:
       return {
         ...state,
-        currentComments: payload
+        currentComments: payload,
+        commentToDelete: null
       };
     case GET_COMMENTS_ERR:
       return {
         ...state
       };
+    case SET_COMMENT_TO_DEL:
+      return { ...state, commentToDelete: payload };
     default:
       return state;
   }

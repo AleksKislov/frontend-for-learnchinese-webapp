@@ -7,6 +7,7 @@ import { getComments } from "../../actions/comments";
 import Post from "./Post";
 import Comment from "../comments/Comment";
 import LeaveComment from "../comments/LeaveComment";
+import ConfirmModal from "../comments/ConfirmModal";
 
 const PostPage = ({ clearPost, loadPost, post, match, loading, comments, getComments }) => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const PostPage = ({ clearPost, loadPost, post, match, loading, comments, getComm
   return (
     post && (
       <div className='row'>
+        <ConfirmModal />
         <div className='col-sm-6'>
           <Link to='/posts'>
             <button className='btn btn-outline-info my-2 btn-sm'>Назад</button>

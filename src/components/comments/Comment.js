@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import { deleteComment } from "../../actions/comments";
+import { setCommentToDelete } from "../../actions/comments";
 import { dateToStr } from "../../actions/helpers";
 
-const Comment = ({ comment, currentUser, isAuthenticated, deleteComment }) => {
-  const { avatar, text, name, date, user, post_id, _id, destination } = comment;
+const Comment = ({ comment, currentUser, isAuthenticated, setCommentToDelete }) => {
+  const { avatar, text, name, date, user } = comment;
 
   const dateAndTime = dateToStr(date);
 
@@ -18,7 +18,9 @@ const Comment = ({ comment, currentUser, isAuthenticated, deleteComment }) => {
           {isAuthenticated && (currentUser._id === user || currentUser.role === "admin") && (
             <button
               className='btn btn-sm btn-danger float-right'
-              onClick={e => deleteComment(destination, post_id, _id)}
+              data-toggle='modal'
+              data-target='#confirmModal'
+              onClick={e => setCommentToDelete(comment)}
             >
               <i className='fas fa-trash-alt'></i>
             </button>
@@ -48,4 +50,4 @@ const mapStateToProps = state => ({
   currentUser: state.auth.user
 });
 
-export default connect(mapStateToProps, { deleteComment })(Comment);
+export default connect(mapStateToProps, { setCommentToDelete })(Comment);

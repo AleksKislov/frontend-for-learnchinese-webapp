@@ -13,6 +13,7 @@ import ImageCard from "./info/ImageCard";
 import LeaveComment from "../comments/LeaveComment";
 import Comment from "../comments/Comment";
 import BookTitle from "./info/BookTitle";
+import ConfirmModal from "../comments/ConfirmModal";
 // import PageButtons from "./info/PageButtons";
 
 const ChapterPage = ({
@@ -77,6 +78,7 @@ const ChapterPage = ({
 
           <div className='row'>
             <WordModal />
+            <ConfirmModal />
 
             <ImageCard book={book} />
 
