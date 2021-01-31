@@ -11,7 +11,7 @@ import {
 import axios from "axios";
 import { setAlert } from "./alert";
 
-// export const loadTexts = () => async dispatch => {
+// export const loadAllTexts = () => async dispatch => {
 //   try {
 //     const { data } = await axios.get("/api/texts");
 //     dispatch({

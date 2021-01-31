@@ -88,7 +88,7 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
         <h2>Тексты на китайском языке с переводом</h2>
 
         <div className='form-group row'>
-          <div className='col-sm-3'>
+          <div className='col-sm-3 mb-2'>
             <label htmlFor='levelFilt'>Уровень</label>
             <select className='custom-select' onChange={e => onLevelSelect(e)} id='levelFilt'>
               <option defaultValue='0' value='0'>
@@ -105,7 +105,7 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
             placement='bottom'
             disabled={user ? true : false}
           >
-            <div className='col-sm-3'>
+            <div className='col-sm-3 mb-2'>
               <label htmlFor='readFilt'>Прочитанные</label>
               <select
                 className='custom-select'
@@ -122,7 +122,7 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
             </div>
           </Tippy>
 
-          <div className='col-sm-3'>
+          <div className='col-sm-3 mb-2'>
             <label htmlFor='categoryFilt'>Категория</label>
             <select className='custom-select' onChange={e => onCategorySelect(e)} id='categoryFilt'>
               <option defaultValue='0' value='0'>
@@ -136,9 +136,13 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
             </select>
           </div>
 
-          <div className='col-sm-3 d-flex align-self-end'>
-            <div className='btn btn-sm btn-primary mb-1' onClick={clearFilters}>
-              Сбросить
+          <div className='col-sm-3 d-flex align-self-end mb-2'>
+            <div
+              className='btn btn-outline-primary mt-2 w-100'
+              onClick={clearFilters}
+              style={{ minHeight: "36.5px" }}
+            >
+              Сброс фильтра
             </div>
           </div>
         </div>
