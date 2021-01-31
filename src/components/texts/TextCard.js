@@ -21,7 +21,8 @@ const TextCard = ({ text, user, hide, category }) => {
     theme_word,
     hits,
     categoryInd,
-    likes
+    likes,
+    source
   } = text;
   useEffect(() => {
     if (hide === 0) setHideId(false);
@@ -94,6 +95,12 @@ const TextCard = ({ text, user, hide, category }) => {
               <span className='text-muted'>Кол-во знаков: </span>
               {length}
             </h6>
+            {source && (
+              <h6 className='card-subtitle mb-2'>
+                <span className='text-muted'>Источник: </span>
+                {source}
+              </h6>
+            )}
 
             <p className='card-text'>{description}</p>
 

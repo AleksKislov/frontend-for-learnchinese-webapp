@@ -46,7 +46,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
           _id,
           theme_word,
           isApproved,
-          categoryInd
+          categoryInd,
+          source
         } = textToEdit;
         document.getElementById("description").value = description;
         document.getElementById("level").value = level;
@@ -56,6 +57,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
         document.getElementById("textArea").value = origintext.join("\n");
         document.getElementById("translationArea").value = translation.join("\n");
         document.getElementById("theme_word").value = theme_word;
+        if (source) document.getElementById("source").value = source;
         if (document.getElementById("isApproved"))
           document.getElementById("isApproved").value = isApproved ? "1" : "0";
         setIsTranslated(true);
@@ -69,6 +71,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
           theme_word,
           isApproved,
           categoryInd,
+          source,
           textId: _id
         });
       }
@@ -98,6 +101,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
     pic_theme: "", // in English for pic_url
     pic_url: "",
     theme_word: "", // rewriten usestate,
+    source: "",
     categoryInd: 0
   });
 
@@ -225,7 +229,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       pic_url,
       theme_word,
       isApproved,
-      categoryInd
+      categoryInd,
+      source
     } = formdata;
 
     const body = JSON.stringify({
@@ -241,6 +246,7 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       theme_word,
       isApproved,
       categoryInd,
+      source,
       name: user.name
     });
 
@@ -275,7 +281,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       pic_url,
       theme_word,
       isApproved,
-      categoryInd
+      categoryInd,
+      source
     } = formdata;
 
     const body = JSON.stringify({
@@ -291,7 +298,8 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
       pic_url,
       theme_word,
       isApproved,
-      categoryInd
+      categoryInd,
+      source
     });
 
     try {
@@ -635,6 +643,23 @@ const TextForm = ({ loadUserWords, user, textToEdit }) => {
                       ))}
                     </select>
                   </div>
+                  <div className='form-group col-md-6'>
+                    <label htmlFor='source'>
+                      Источник: автор, книга, журнал или домен сайта (кратко)
+                    </label>
+                    <input
+                      onChange={e => setFormData({ ...formData, [e.target.id]: e.target.value })}
+                      type='text'
+                      className='form-control'
+                      id='source'
+                      placeholder='Источник (по желанию)'
+                      autoComplete='off'
+                    />
+                  </div>
+                </div>
+
+                <div className='form-row'>
+                  <div className='form-group col-md-6'></div>
                   {!isToEdit && (
                     <div className='form-group col-md-6 d-flex align-self-end'>
                       <div className='custom-control custom-switch mb-2'>
