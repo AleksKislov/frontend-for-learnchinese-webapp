@@ -15,7 +15,7 @@ import ReadingCard from "../dashboard/ReadingCard";
 import { Helmet } from "react-helmet";
 import { levelStars } from "../../actions/helpers";
 import FontSize from "../common/FontSize";
-import PleaseShareText from "./PleaseShareText";
+import PleaseShareText from "./common/PleaseShareText";
 import ReadSwitch from "./ReadSwitch";
 import ConfirmModal from "../comments/ConfirmModal";
 import LikeTextBtn from "./LikeTextBtn";

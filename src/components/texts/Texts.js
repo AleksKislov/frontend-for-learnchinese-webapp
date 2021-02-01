@@ -5,12 +5,12 @@ import Spinner from "../layout/Spinner";
 import TextCard from "./TextCard";
 import ReadingCard from "../dashboard/ReadingCard";
 import { Helmet } from "react-helmet";
-import PleaseShareText from "./PleaseShareText";
-import NumOfTexts from "./NumOfTexts";
+import PleaseShareText from "./common/PleaseShareText";
 import LevelFilter from "./common/LevelFilter";
 import CategoryFilter from "./common/CategoryFilter";
 import ReadFilter from "./common/ReadFilter";
 import UnsetFiltersBtn from "./common/UnsetFiltersBtn";
+import TextsInfoCard from "./common/TextsInfoCard";
 
 const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
   useEffect(() => {
@@ -48,17 +48,7 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
       </Helmet>
 
       <div className='col-md-3'>
-        <div className='card bg-light mb-3'>
-          <div className='card-body'>
-            <p className='card-text'>Чтение китайских текстов с умным переводом.</p>
-            <p className='card-text text-info'>
-              Если в текстах что-то не так, оставьте комментарий, и мы поправим.
-            </p>
-
-            <NumOfTexts />
-          </div>
-        </div>
-
+        <TextsInfoCard text={"Чтение китайских текстов с умным переводом."} />
         <PleaseShareText />
         <ReadingCard />
       </div>

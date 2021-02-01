@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { loadNotAppoved, clearText } from "../../actions/texts";
 import Spinner from "../layout/Spinner";
 import NotApprovedTextCard from "./NotApprovedTextCard";
 import ReadingCard from "../dashboard/ReadingCard";
-import NumOfTexts from "./NumOfTexts";
+import TextsInfoCard from "./common/TextsInfoCard";
 
 const NotApprovedTexts = ({ loadNotAppoved, texts, loading, clearText, moreTexts }) => {
   useEffect(() => {
@@ -15,13 +15,7 @@ const NotApprovedTexts = ({ loadNotAppoved, texts, loading, clearText, moreTexts
   return (
     <div className='row'>
       <div className='col-md-3'>
-        <div className='card bg-light mb-3'>
-          <div className='card-body'>
-            <p className='card-text'>Эти тексты ожидают проверки модератором</p>
-            <NumOfTexts />
-          </div>
-        </div>
-
+        <TextsInfoCard text={"Эти тексты ожидают проверки модератором"} />
         <ReadingCard />
       </div>
 

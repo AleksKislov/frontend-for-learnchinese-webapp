@@ -7,6 +7,10 @@ import LevelFilter from "./common/LevelFilter";
 import CategoryFilter from "./common/CategoryFilter";
 import ReadFilter from "./common/ReadFilter";
 import UnsetFiltersBtn from "./common/UnsetFiltersBtn";
+import { Helmet } from "react-helmet";
+import TextsInfoCard from "./common/TextsInfoCard";
+import PleaseShareText from "./common/PleaseShareText";
+import ReadingCard from "../dashboard/ReadingCard";
 
 const AllTextsTable = ({}) => {
   useEffect(() => {
@@ -48,9 +52,19 @@ const AllTextsTable = ({}) => {
 
   return (
     <div className='row'>
-      <div className='col-sm-3'>все тексы списком</div>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <title>Тексты на китайском языке с переводом | Chinese+</title>
+      </Helmet>
+      <div className='col-sm-3'>
+        <TextsInfoCard text={"Все проверенные тексты Читалки единым списком"} />
+        <PleaseShareText />
+        <ReadingCard />
+      </div>
 
       <div className='col-sm-9'>
+        <h2>Тексты на китайском языке с переводом</h2>
+
         <div className='form-group row'>
           <LevelFilter onChange={onLevelSelect} />
           <ReadFilter onChange={onReadSelect} />
