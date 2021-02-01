@@ -3,6 +3,10 @@ import axios from "axios";
 import Spinner from "../layout/Spinner";
 import Tippy from "@tippyjs/react";
 import AllTextsTableItem from "./AllTextsTableItem";
+import LevelFilter from "./common/LevelFilter";
+import CategoryFilter from "./common/CategoryFilter";
+import ReadFilter from "./common/ReadFilter";
+import UnsetFiltersBtn from "./common/UnsetFiltersBtn";
 
 const AllTextsTable = ({}) => {
   useEffect(() => {
@@ -20,11 +24,39 @@ const AllTextsTable = ({}) => {
     }
   };
 
+  const [categoryFlag, setCategoryFlag] = useState(0);
+  const [hideReadFlag, setHideReadFlag] = useState(0);
+  const [hideLevelFlag, setHideLevelFlag] = useState(0);
+  const onLevelSelect = e =>
+    setHideLevelFlag(parseInt(e.target.options[e.target.options.selectedIndex].value));
+
+  const onReadSelect = e =>
+    setHideReadFlag(parseInt(e.target.options[e.target.options.selectedIndex].value));
+
+  const onCategorySelect = e => {
+    setCategoryFlag(parseInt(e.target.options[e.target.options.selectedIndex].value));
+  };
+
+  const clearFilters = () => {
+    setCategoryFlag(0);
+    setHideReadFlag(0);
+    setHideLevelFlag(0);
+    document.getElementById("levelFilt").value = 0;
+    document.getElementById("readFilt").value = 0;
+    document.getElementById("categoryFilt").value = 0;
+  };
+
   return (
     <div className='row'>
       <div className='col-sm-3'>все тексы списком</div>
 
       <div className='col-sm-9'>
+        <div className='form-group row'>
+          <LevelFilter onChange={onLevelSelect} />
+          <ReadFilter onChange={onReadSelect} />
+          <CategoryFilter onChange={onCategorySelect} />
+          <UnsetFiltersBtn onClick={clearFilters} />
+        </div>
         <div className='table-responsive'>
           <table className='table table-hover text-center'>
             <thead>
@@ -47,12 +79,24 @@ const AllTextsTable = ({}) => {
                     <i className='fas fa-comment-dots'></i>
                   </th>
                 </Tippy>
-                <th>Прочитано</th>
+                <Tippy content='Прочитано ли' placement='bottom'>
+                  <th style={{ paddingRight: "1.5rem" }}>
+                    <i className='fas fa-clipboard-check'></i>{" "}
+                  </th>
+                </Tippy>
               </tr>
             </thead>
             <tbody>
               {texts ? (
-                texts.map(text => <AllTextsTableItem key={text._id} text={text} />)
+                texts.map(text => (
+                  <AllTextsTableItem
+                    key={text._id}
+                    text={text}
+                    hide={hideReadFlag}
+                    category={categoryFlag}
+                    hideLevel={hideLevelFlag}
+                  />
+                ))
               ) : (
                 <tr>
                   <td colSpan='7'>

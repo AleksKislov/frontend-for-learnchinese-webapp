@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import { textCategories } from "../../apikeys.json";
 import LikeTextBtn from "./LikeTextBtn";
 
-const TextCard = ({ text, user, hide, category }) => {
+const TextCard = ({ text, user, hide, category, hideLevel }) => {
   const {
     title,
     pic_url,
@@ -30,17 +30,20 @@ const TextCard = ({ text, user, hide, category }) => {
     if (hide === 2) setHideId(!isRead(_id));
     // console.log({ category, categoryInd });
     setRightCategory(category === 0 || category === categoryInd + 1);
-  }, [hide, category]);
+    setRightLevel(hideLevel === 0 || level === hideLevel);
+  }, [hide, category, hideLevel]);
 
   const isRead = textid => (user ? user.finished_texts.includes(textid) : false);
   const [hideIt, setHideId] = useState(false);
   const [rightCategory, setRightCategory] = useState(true);
+  const [rightLevel, setRightLevel] = useState(true);
 
   const dateAndTime = dateToStr(date);
 
   return (
     !hideIt &&
-    rightCategory && (
+    rightCategory &&
+    rightLevel && (
       <div className={`card my-2 ${isRead(_id) ? "alreadyReadCard" : ""}`}>
         {isRead(_id) && (
           <Tippy content='Прочитано'>

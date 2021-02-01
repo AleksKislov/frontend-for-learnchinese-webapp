@@ -7,8 +7,10 @@ import ReadingCard from "../dashboard/ReadingCard";
 import { Helmet } from "react-helmet";
 import PleaseShareText from "./PleaseShareText";
 import NumOfTexts from "./NumOfTexts";
-import Tippy from "@tippyjs/react";
-import { textCategories } from "../../apikeys.json";
+import LevelFilter from "./common/LevelFilter";
+import CategoryFilter from "./common/CategoryFilter";
+import ReadFilter from "./common/ReadFilter";
+import UnsetFiltersBtn from "./common/UnsetFiltersBtn";
 
 const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
   useEffect(() => {
@@ -16,34 +18,11 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
     if (texts.length === 0) loadTexts(0);
   }, []);
 
-  const levelFilter = [
-    {
-      1: true,
-      2: true,
-      3: true
-    },
-    {
-      1: true,
-      2: false,
-      3: false
-    },
-    {
-      1: false,
-      2: true,
-      3: false
-    },
-    {
-      1: false,
-      2: false,
-      3: true
-    }
-  ];
-
   const [categoryFlag, setCategoryFlag] = useState(0);
   const [hideReadFlag, setHideReadFlag] = useState(0);
-  const [hideFlag, setHideFlag] = useState(levelFilter[0]);
+  const [hideLevelFlag, setHideLevelFlag] = useState(0);
   const onLevelSelect = e =>
-    setHideFlag(levelFilter[parseInt(e.target.options[e.target.options.selectedIndex].value)]);
+    setHideLevelFlag(parseInt(e.target.options[e.target.options.selectedIndex].value));
 
   const onReadSelect = e =>
     setHideReadFlag(parseInt(e.target.options[e.target.options.selectedIndex].value));
@@ -55,7 +34,7 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
   const clearFilters = () => {
     setCategoryFlag(0);
     setHideReadFlag(0);
-    setHideFlag(levelFilter[0]);
+    setHideLevelFlag(0);
     document.getElementById("levelFilt").value = 0;
     document.getElementById("readFilt").value = 0;
     document.getElementById("categoryFilt").value = 0;
@@ -88,80 +67,25 @@ const Texts = ({ loadTexts, texts, loading, clearText, moreTexts, user }) => {
         <h2>Тексты на китайском языке с переводом</h2>
 
         <div className='form-group row'>
-          <div className='col-sm-3 mb-2'>
-            <label htmlFor='levelFilt'>Уровень</label>
-            <select className='custom-select' onChange={e => onLevelSelect(e)} id='levelFilt'>
-              <option defaultValue='0' value='0'>
-                Все Уровни
-              </option>
-              <option value='1'>1 Простой ⭐</option>
-              <option value='2'>2 Средний ⭐⭐</option>
-              <option value='3'>3 Сложный ⭐⭐⭐</option>
-            </select>
-          </div>
-
-          <Tippy
-            content='Только для авторизованных'
-            placement='bottom'
-            disabled={user ? true : false}
-          >
-            <div className='col-sm-3 mb-2'>
-              <label htmlFor='readFilt'>Прочитанные</label>
-              <select
-                className='custom-select'
-                onChange={e => onReadSelect(e)}
-                id='readFilt'
-                disabled={user ? false : true}
-              >
-                <option defaultValue='0' value='0'>
-                  Все тексты
-                </option>
-                <option value='1'>Непрочитанные</option>
-                <option value='2'>Прочитанные</option>
-              </select>
-            </div>
-          </Tippy>
-
-          <div className='col-sm-3 mb-2'>
-            <label htmlFor='categoryFilt'>Категория</label>
-            <select className='custom-select' onChange={e => onCategorySelect(e)} id='categoryFilt'>
-              <option defaultValue='0' value='0'>
-                Все Категории
-              </option>
-              {textCategories.map((x, ind) => (
-                <option value={ind + 1} key={ind}>
-                  {x}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className='col-sm-3 d-flex align-self-end mb-2'>
-            <div
-              className='btn btn-outline-primary mt-2 w-100'
-              onClick={clearFilters}
-              style={{ minHeight: "36.5px" }}
-            >
-              Сброс фильтра
-            </div>
-          </div>
+          <LevelFilter onChange={onLevelSelect} />
+          <ReadFilter onChange={onReadSelect} />
+          <CategoryFilter onChange={onCategorySelect} />
+          <UnsetFiltersBtn onClick={clearFilters} />
         </div>
 
         {loading ? (
           <Spinner />
         ) : (
           <div className=''>
-            {texts.map(
-              text =>
-                hideFlag[text.level] && (
-                  <TextCard
-                    key={text._id}
-                    text={text}
-                    hide={hideReadFlag}
-                    category={categoryFlag}
-                  />
-                )
-            )}
+            {texts.map(text => (
+              <TextCard
+                key={text._id}
+                text={text}
+                hide={hideReadFlag}
+                category={categoryFlag}
+                hideLevel={hideLevelFlag}
+              />
+            ))}
             <div className='text-center'>
               {moreTexts ? (
                 <button
