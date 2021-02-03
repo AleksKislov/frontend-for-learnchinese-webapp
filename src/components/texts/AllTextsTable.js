@@ -18,6 +18,11 @@ const AllTextsTable = ({}) => {
   }, []);
 
   const [texts, setTexts] = useState(null);
+  const [changed, setChanged] = useState(false);
+
+  useEffect(() => {
+    setTexts(texts);
+  }, [changed]);
 
   const loadAllTexts = async () => {
     try {
@@ -48,6 +53,11 @@ const AllTextsTable = ({}) => {
     document.getElementById("levelFilt").value = 0;
     document.getElementById("readFilt").value = 0;
     document.getElementById("categoryFilt").value = 0;
+  };
+
+  const sortByHits = () => {
+    setTexts(texts.sort((a, b) => b.hits - a.hits));
+    setChanged(!changed);
   };
 
   return (
@@ -85,7 +95,7 @@ const AllTextsTable = ({}) => {
                 </Tippy>
                 <Tippy content='Кол-во просмотров' placement='bottom'>
                   <th>
-                    <i className='fas fa-eye'></i>
+                    <i onClick={sortByHits} className='fas fa-eye'></i>
                   </th>
                 </Tippy>
                 <Tippy content='Кол-во комментариев' placement='bottom'>
