@@ -306,6 +306,15 @@ const Search = ({
           {wordFromSearch && (
             <Fragment>
               <Fragment>
+                <Tippy content={<span>Добавить слово в вокабуляр</span>}>
+                  <button
+                    className='btn btn-sm btn-info mr-1'
+                    onClick={() => updateVocabulary(wordFromSearch)}
+                  >
+                    {clicked ? <i className='fas fa-minus'></i> : <i className='fas fa-plus'></i>}
+                  </button>
+                </Tippy>
+
                 <Tippy
                   content={<span>{showExamples ? "Скрыть примеры" : "Показать примеры"}</span>}
                 >
@@ -315,14 +324,6 @@ const Search = ({
                     onClick={showMoreButton}
                   >
                     {showExamples ? "Меньше" : "Больше"}
-                  </button>
-                </Tippy>
-                <Tippy content={<span>Добавить слово в вокабуляр</span>}>
-                  <button
-                    className='btn btn-sm btn-info'
-                    onClick={() => updateVocabulary(wordFromSearch)}
-                  >
-                    {clicked ? <i className='fas fa-minus'></i> : <i className='fas fa-plus'></i>}
                   </button>
                 </Tippy>
 

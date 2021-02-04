@@ -11272,9 +11272,9 @@
   cursor: pointer
 }
 
-#showMoreButton {
+/* #showMoreButton {
   float: right;
-}
+} */
 
 [data-class='black'] {
   display: flex;
