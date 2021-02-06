@@ -61,8 +61,9 @@ const TextPage = ({
       currentUser &&
       text &&
       (currentUser.role === "admin" ||
-        (currentUser._id === text.user && text.isApproved !== 1) ||
-        (currentUser._id === text.user && currentUser.role === "moderator"))
+        currentUser.role === "moderator" ||
+        (currentUser._id === text.user && text.isApproved !== 1))
+      // || (currentUser._id === text.user && currentUser.role === "moderator"))
     ) {
       setIsOkToEdit(true);
     }
