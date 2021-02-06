@@ -7,6 +7,7 @@ import Spinner from "../layout/Spinner";
 import { v4 as uuid } from "uuid";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import WordModal from "../translation/WordModal";
 import { loadUserWords } from "../../actions/userWords";
 import Comment from "../comments/Comment";
@@ -19,6 +20,8 @@ import PleaseShareText from "./common/PleaseShareText";
 import ReadSwitch from "./ReadSwitch";
 import ConfirmModal from "../comments/ConfirmModal";
 import LikeTextBtn from "./LikeTextBtn";
+
+// <HashLink to='#601c500db0b9fb6d36762af5'>tut</HashLink>
 
 // (currentUser._id === text.user || currentUser.role === "admin") && (
 
@@ -109,7 +112,7 @@ const TextPage = ({
 
                 <h6 className='card-subtitle mb-2'>
                   <span className='text-muted'>Опубликовал/а: </span>
-                  {text.name}
+                  <Link to={`/user/${text.user}`}>{text.name}</Link>
                 </h6>
                 <h6 className='card-subtitle mb-2'>
                   <span className='text-muted'>Уровень: </span>

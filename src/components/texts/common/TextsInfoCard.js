@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const TextsInfoCard = ({ text }) => {
   useEffect(() => {
-    console.log(window.location.pathname);
     if (window.location.pathname.includes("/texts")) {
       setIsCards(true);
       setIsTable(false);

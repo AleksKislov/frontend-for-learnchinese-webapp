@@ -33,6 +33,7 @@ import ChapterPage from "../books/ChapterPage";
 import NotAppovedTexts from "../texts/NotAppovedTexts";
 import ActiveUserTable from "../stats/ActiveUserTable";
 import AllTextsTable from "../texts/AllTextsTable";
+import UserProfile from "../profile/UserProfile";
 
 // import TranslationForm from "../translation/TranslateForm";
 // <Route exact path='/translate' component={TranslationForm} />
@@ -91,6 +92,7 @@ const Routes = () => {
           <Route exact path='/books' component={Books} />
           <Route exact path='/texts/:id' component={TextPage} />
           <Route exact path='/books/:id' component={BookCardPage} />
+          <Route exact path='/user/:id' component={UserProfile} />
           <Route exact path='/contacts' component={Contacts} />
           <Route exact path='/donate' component={Donate} />
           <Route exact path='/books/:bookId/:chapterId/:pageInd' component={ChapterPage} />

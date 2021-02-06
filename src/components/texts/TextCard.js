@@ -84,7 +84,7 @@ const TextCard = ({ text, user, hide, category, hideLevel }) => {
             </div>
             <h6 className='card-subtitle mb-2'>
               <span className='text-muted'>Опубликовал/а: </span>
-              {name}
+              <Link to={`/user/${user._id}`}>{name}</Link>
             </h6>
             <h6 className='card-subtitle mb-2'>
               <span className='text-muted'>Уровень: </span>
