@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Spinner from "../layout/Spinner";
 import Tippy from "@tippyjs/react";
+// import {withRouter} from 'react-router-dom'
 
-const UserProfile = ({ match }) => {
+const UserProfile = ({ match, history }) => {
   useEffect(() => {
     loadProfile(match.params.id);
   }, []);
@@ -22,6 +23,11 @@ const UserProfile = ({ match }) => {
 
   return profile ? (
     <div className='row'>
+      <div className='col-md-12'>
+        <button className='btn btn-outline-info my-2 btn-sm' onClick={history.goBack}>
+          Назад
+        </button>
+      </div>
       <div className='col-md-1'>
         <img className='mr-3' src={`https:${profile.avatar}`} style={imgStyle} alt='Avatar' />
       </div>
@@ -33,13 +39,13 @@ const UserProfile = ({ match }) => {
           <strong>Роль:</strong> {profile.role || "изучающий"}
         </p>
         <p>
-          <strong>ID пользователя:</strong> {`@@${profile._id}@@`}{" "}
+          <strong>ID пользователя:</strong> {`@@[${profile._id}]{${profile.name}}@@`}{" "}
           <Tippy content={"Кнопка копирования ID"} placement='bottom'>
             <button
               className='btn btn-sm btn-primary'
               onClick={() => {
                 setIsCopied(true);
-                navigator.clipboard.writeText(`@@${profile._id}@@, `);
+                navigator.clipboard.writeText(`@@[${profile._id}]{${profile.name}}@@, `);
               }}
             >
               <i className='far fa-copy'></i>

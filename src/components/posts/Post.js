@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { addLike, addDislike } from "../../actions/posts";
 import { Helmet } from "react-helmet";
-import { dateToStr } from "../../actions/helpers";
+import { dateToStr, addressToUser } from "../../actions/helpers";
+import Tippy from "@tippyjs/react";
 
 const Post = ({ post, addLike, addDislike }) => {
-  const { text, name, avatar, date, title, _id, tag, comments_id, likes, dislikes } = post;
+  const { text, name, avatar, date, title, _id, tag, comments_id, likes, dislikes, user } = post;
   const tagTheme = {
     wish: "Пожелание",
     bug: "Баг",
@@ -25,7 +26,18 @@ const Post = ({ post, addLike, addDislike }) => {
 
       <div className='card-body' style={customStyle}>
         <div>
-          <img className='mr-3' src={`https:${avatar}`} style={imgStyle} alt='Avatar' />
+          <Tippy
+            content='Кликните, чтобы обратиться к пользователю в комментарии'
+            placement='bottom'
+          >
+            <img
+              className='mr-3'
+              src={`https:${avatar}`}
+              style={imgStyle}
+              alt='Avatar'
+              onClick={() => addressToUser(user, name)}
+            />
+          </Tippy>
         </div>
         <div>
           <div style={{ display: "flex", alignItems: "baseline" }}>

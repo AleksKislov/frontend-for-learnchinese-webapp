@@ -1,21 +1,34 @@
 import React from "react";
 import { connect } from "react-redux";
 import { setCommentToDelete } from "../../actions/comments";
-import { dateToStr } from "../../actions/helpers";
+import { dateToStr, addressToUser } from "../../actions/helpers";
 import { Link } from "react-router-dom";
+import Tippy from "@tippyjs/react";
 
 const Comment = ({ comment, currentUser, isAuthenticated, setCommentToDelete }) => {
   const { avatar, text, name, date, user, _id } = comment;
-
   const dateAndTime = dateToStr(date);
+
+  // const addressToUser = () => {
+  //   document.getElementById("textForm").value += `@@[${user}]{${name}}@@, `;
+  // };
 
   return (
     <div className='card my-2' id={_id}>
       <div className='card-body' style={customStyle}>
         <div>
-          <Link to={`/user/${user}`}>
-            <img className='mr-3' src={`https:${avatar}`} style={imgStyle} alt='Avatar' />
-          </Link>
+          <Tippy
+            content='Кликните, чтобы обратиться к пользователю в комментарии'
+            placement='bottom'
+          >
+            <img
+              className='mr-3'
+              src={`https:${avatar}`}
+              style={imgStyle}
+              alt='Avatar'
+              onClick={() => addressToUser(user, name)}
+            />
+          </Tippy>
         </div>
         <div style={{ width: "100%" }}>
           {isAuthenticated && (currentUser._id === user || currentUser.role === "admin") && (

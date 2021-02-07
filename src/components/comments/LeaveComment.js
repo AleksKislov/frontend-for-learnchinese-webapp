@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { addComment, getComments } from "../../actions/comments";
 import { connect } from "react-redux";
 import store from "../../store";
@@ -8,12 +8,21 @@ import { commentLength, commentEmojis } from "../../apikeys.json";
 // path is from/for book Chapterpage
 const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, path }) => {
   const [text, setText] = useState("");
+  const [addressedUsers, setAddressedUsers] = useState([]);
+
+  useEffect(() => {
+    setAddressedUsers(checkIfAddressed(text));
+  }, [text]);
 
   const onSubmit = () => {
     // e.preventDefault();
 
     if (isAuthenticated) {
-      const newtext = text.replace(/\n/g, "<br />");
+      let newtext = text.replace(/\n/g, "<br />");
+
+      addressedUsers.forEach(user => {
+        newtext = newtext.replace(user.str, `<strong class='text-info'>${user.name}</strong>`);
+      });
 
       if (text.length <= commentLength) {
         // id, text
@@ -42,6 +51,17 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, pa
     if (!isAuthenticated) store.dispatch(setAlert("Войдите, чтобы комментировать", "danger"));
   };
 
+  const checkIfAddressed = txt => {
+    const resArr = txt.split("@@");
+    const onlyNames = resArr.filter(x => x[0] === "[" && x[x.length - 1] === "}");
+    const userSet = Array.from(new Set(onlyNames));
+    return userSet.map(x => {
+      const id = x.slice(1, x.indexOf("]"));
+      const name = x.slice(x.indexOf("{") + 1, x.length - 1);
+      return { id, name, str: `@@${x}@@` };
+    });
+  };
+
   return (
     <div className='card my-2'>
       <div className='card-body'>
@@ -52,12 +72,19 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, pa
           </button>
         </div>
 
+        <div className=''>
+          {addressedUsers.length === 0 ? "" : "Вы обращаетесь к: "}
+
+          {addressedUsers.length > 0 &&
+            addressedUsers.map((user, ind) => <span key={ind}>{user.name}, </span>)}
+        </div>
         <form>
           <div className='form-group'>
             <textarea
               className='form-control'
               rows='3'
               id='textForm'
+              onClick={e => setText(e.target.value)}
               onChange={e => {
                 checkAuthorized();
                 setText(e.target.value);

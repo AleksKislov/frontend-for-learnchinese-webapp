@@ -197,3 +197,11 @@ export const dateToStr = (date, onlyDate) => {
   if (onlyDate) return rusDate;
   return `${rusDate}, ${date.slice(11, 16)}`;
 };
+
+/**
+ * @param {string} id - user id
+ * @param {string} name - user name
+ */
+export const addressToUser = (id, name) => {
+  document.getElementById("textForm").value += `@@[${id}]{${name}}@@, `;
+};

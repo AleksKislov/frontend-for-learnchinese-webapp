@@ -19,9 +19,9 @@ const CommentsCard = ({ getLastComments, comments, loading }) => {
               className='list-group-item list-group-item-action'
               key={comment._id}
             >
-              <span className='text-info'>{comment.name}</span>
+              <span className='text-success'>{comment.name}</span>
               <span className='badge badge-primary float-right mx-2'>{fromNow(comment.date)}</span>
-              <p>{comment.text}</p>
+              <p dangerouslySetInnerHTML={{ __html: comment.text }}></p>
             </Link>
           ))}
       </ul>
