@@ -9,6 +9,7 @@ const UserProfile = ({ match }) => {
   }, []);
 
   const [profile, setProfile] = useState(null);
+  const [isCopied, setIsCopied] = useState(false);
 
   const loadProfile = async id => {
     try {
@@ -37,12 +38,14 @@ const UserProfile = ({ match }) => {
             <button
               className='btn btn-sm btn-primary'
               onClick={() => {
+                setIsCopied(true);
                 navigator.clipboard.writeText(`@@${profile._id}@@, `);
               }}
             >
               <i className='far fa-copy'></i>
             </button>
-          </Tippy>
+          </Tippy>{" "}
+          {isCopied && <span className='text-danger'> Скопировано!</span>}
         </p>
 
         <div className='alert alert-dismissible alert-success'>
