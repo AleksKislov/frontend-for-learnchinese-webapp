@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Spinner from "../layout/Spinner";
+import Tippy from "@tippyjs/react";
 
 const UserProfile = ({ match }) => {
   useEffect(() => {
@@ -24,9 +25,29 @@ const UserProfile = ({ match }) => {
         <img className='mr-3' src={`https:${profile.avatar}`} style={imgStyle} alt='Avatar' />
       </div>
       <div className='col-md-11'>
-        <p>Пользователь: {profile.name}</p>
-        <p>Роль: {profile.role || "изучающий"}</p>
-        <p>ID пользователя: {profile._id}</p>
+        <p>
+          <strong>Пользователь:</strong> {profile.name}
+        </p>
+        <p>
+          <strong>Роль:</strong> {profile.role || "изучающий"}
+        </p>
+        <p>
+          <strong>ID пользователя:</strong> {`@@${profile._id}@@`}{" "}
+          <Tippy content={"Кнопка копирования ID"} placement='bottom'>
+            <button
+              className='btn btn-sm btn-primary'
+              onClick={() => {
+                navigator.clipboard.writeText(`@@${profile._id}@@, `);
+              }}
+            >
+              <i className='far fa-copy'></i>
+            </button>
+          </Tippy>
+        </p>
+
+        <div className='alert alert-dismissible alert-success'>
+          По ID можно обращаться к пользователям в комментариях. Чтобы скопировать - нажмите кнопку
+        </div>
       </div>
     </div>
   ) : (
@@ -35,7 +56,7 @@ const UserProfile = ({ match }) => {
 };
 
 const imgStyle = {
-  width: "40px",
+  width: "60px",
   borderRadius: "8px"
 };
 
