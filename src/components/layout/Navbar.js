@@ -6,6 +6,7 @@ import { logout } from "../../actions/auth";
 import { loadLengths } from "../../actions/hskTable";
 import { loadUserWordsLen } from "../../actions/userWords";
 import { appVersion } from "../../apikeys.json";
+import { getMentionsLen } from "../../actions/comments";
 
 const Navbar = ({
   logout,
@@ -14,7 +15,9 @@ const Navbar = ({
   allWordsLen,
   loadUserWordsLen,
   userWordsLen,
-  user
+  user,
+  getMentionsLen,
+  mentionsLen
 }) => {
   const [paths, setPaths] = useState({
     tests: "/pinyin-tests",
@@ -24,6 +27,7 @@ const Navbar = ({
   });
   const privateLinks = ["/dashboard", "/hsk-words", "userwords"];
   const [totalWordsLen, setTotalWordsLen] = useState(0);
+  const [mentions, setMentions] = useState(mentionsLen > 0);
 
   useEffect(() => {
     const url = window.location.pathname;
@@ -62,13 +66,16 @@ const Navbar = ({
   useEffect(() => {
     setTimeout(() => {
       if (isAuthenticated) {
+        getMentionsLen();
+        setMentions(mentionsLen > 0);
+        // console.log(mentionsLen);
         loadLengths();
         loadUserWordsLen();
         if ((userWordsLen && allWordsLen) || userWordsLen === 0 || allWordsLen === 0)
           setTotalWordsLen(userWordsLen + allWordsLen);
       }
     }, 500);
-  }, [isAuthenticated, allWordsLen, userWordsLen]);
+  }, [isAuthenticated, allWordsLen, userWordsLen, mentionsLen]);
 
   const navbarId = document.getElementById("navbarId");
   const collapseIt = () => {
@@ -130,10 +137,11 @@ const Navbar = ({
           activeStyle={activeNavLink}
         >
           {user && (
-            <Fragment>
+            <div style={{ display: "inline", position: "relative" }}>
               <span className='badge badge-pill badge-warning'>{totalWordsLen}</span>{" "}
               <img className='' src={`https:${user.avatar}`} style={imgStyle} alt='Avatar' />
-            </Fragment>
+              {mentions && <div className='mentionsCircle'></div>}
+            </div>
           )}
         </NavLink>
         <div className='dropdown-menu dropdown-menu-right'>
@@ -164,7 +172,11 @@ const Navbar = ({
             Мои Слова <span className='badge badge-pill badge-warning'>{userWordsLen}</span>
           </NavLink>
 
-          <NavLink className='dropdown-item' to='/create-text' exact={true}>
+          <NavLink className='dropdown-item' to='/mentions' exact={true}>
+            Упоминания и ответы {mentions && <div className='mentionsCircleLink'></div>}
+          </NavLink>
+
+          <NavLink className='dropdown-item font-weight-bold' to='/create-text' exact={true}>
             Поделиться текстом
           </NavLink>
 
@@ -378,7 +390,10 @@ const mapStateToProps = state => ({
   auth: state.auth,
   user: state.auth.user,
   allWordsLen: state.hskTable.allWordsLen,
-  userWordsLen: state.userwords.userWordsLen
+  userWordsLen: state.userwords.userWordsLen,
+  mentionsLen: state.comments.mentionsLen
 });
 
-export default connect(mapStateToProps, { logout, loadLengths, loadUserWordsLen })(Navbar);
+export default connect(mapStateToProps, { logout, loadLengths, loadUserWordsLen, getMentionsLen })(
+  Navbar
+);

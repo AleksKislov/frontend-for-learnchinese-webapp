@@ -7,7 +7,6 @@ import Spinner from "../layout/Spinner";
 import { v4 as uuid } from "uuid";
 import Paragraph from "./Paragraph";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import WordModal from "../translation/WordModal";
 import { loadUserWords } from "../../actions/userWords";
 import Comment from "../comments/Comment";
@@ -20,8 +19,6 @@ import PleaseShareText from "./common/PleaseShareText";
 import ReadSwitch from "./ReadSwitch";
 import ConfirmModal from "../comments/ConfirmModal";
 import LikeTextBtn from "./LikeTextBtn";
-
-// <HashLink to='#601c500db0b9fb6d36762af5'>tut</HashLink>
 
 // (currentUser._id === text.user || currentUser.role === "admin") && (
 
@@ -135,7 +132,7 @@ const TextPage = ({
                   // (currentUser._id === text.user || currentUser.role === "admin") && (
                 }
                 {isAuthenticated && isOkToEdit && (
-                  <Link to='/create-text'>
+                  <Link to='/create-text?edit'>
                     <button className='btn btn-sm btn-outline-warning'>Edit</button>
                   </Link>
                 )}
@@ -174,10 +171,10 @@ const TextPage = ({
             </div>
 
             <div className='my-2 mx-2'>
-              <LeaveComment _id={text._id} where={"text"} />
               <h4>Комментарии:</h4>
               {comments.length > 0 &&
                 comments.map(comment => <Comment key={comment._id} comment={comment} />)}
+              <LeaveComment _id={text._id} where={"text"} />
             </div>
           </div>
         </div>

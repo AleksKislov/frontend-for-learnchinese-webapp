@@ -11500,3 +11500,24 @@ to violet when it is not checked*/
   .custom-control-input:focus:not(:checked) ~ .custom-control-label::before { 
       border-color: var(--success) !important; 
   } 
+
+  
+  .mentionsCircle {
+    position: absolute;
+    top:-5px;
+    right:-3px;
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  .mentionsCircleLink {
+    height: 10px;
+    width: 10px;
+    background-color: var(--danger);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  

@@ -4,6 +4,7 @@ import { setCommentToDelete } from "../../actions/comments";
 import { dateToStr, addressToUser } from "../../actions/helpers";
 import { Link } from "react-router-dom";
 import Tippy from "@tippyjs/react";
+import { HashLink } from "react-router-hash-link";
 
 const Comment = ({ comment, currentUser, isAuthenticated, setCommentToDelete }) => {
   const { avatar, text, name, date, user, _id } = comment;
@@ -21,13 +22,15 @@ const Comment = ({ comment, currentUser, isAuthenticated, setCommentToDelete }) 
             content='Кликните, чтобы обратиться к пользователю в комментарии'
             placement='bottom'
           >
-            <img
-              className='mr-3'
-              src={`https:${avatar}`}
-              style={imgStyle}
-              alt='Avatar'
-              onClick={() => addressToUser(user, name)}
-            />
+            <HashLink to='#yourCommentId'>
+              <img
+                className='mr-3'
+                src={`https:${avatar}`}
+                style={imgStyle}
+                alt='Avatar'
+                onClick={() => addressToUser(user, name)}
+              />
+            </HashLink>
           </Tippy>
         </div>
         <div style={{ width: "100%" }}>

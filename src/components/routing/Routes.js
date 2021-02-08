@@ -34,6 +34,7 @@ import NotAppovedTexts from "../texts/NotAppovedTexts";
 import ActiveUserTable from "../stats/ActiveUserTable";
 import AllTextsTable from "../texts/AllTextsTable";
 import UserProfile from "../profile/UserProfile";
+import Mentions from "../dashboard/Mentions";
 
 // import TranslationForm from "../translation/TranslateForm";
 // <Route exact path='/translate' component={TranslationForm} />
@@ -72,6 +73,7 @@ const Routes = () => {
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
           <PrivateRoute exact path='/hsk-words' component={Words} />
           <PrivateRoute exact path='/userwords' component={UserWords} />
+          <PrivateRoute exact path='/mentions' component={Mentions} />
           <Route exact path='/hsk-table' component={HskTable} />
           <Route exact path='/pinyin-tests' component={PinyinTests} />
           <Route exact path='/hsk-tests' component={HskTests} />

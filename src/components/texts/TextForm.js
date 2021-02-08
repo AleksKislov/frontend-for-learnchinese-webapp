@@ -14,27 +14,28 @@ import {
   chunkArrayFunc,
   segmenter,
   itirateWordsFromDB,
-  getTranslation
+  getTranslation,
+  countZnChars
 } from "../../actions/helpers";
 import Paragraph from "./Paragraph";
 import { v4 as uuid } from "uuid";
 import "./style.css";
-import { countZnChars } from "../../actions/helpers";
 import { bgTextLen, smTextLen } from "../../apikeys.json";
 import { textCategories } from "../../apikeys.json";
+import { clearText } from "../../actions/texts";
 
-const TextForm = ({ loadUserWords, user, textToEdit }) => {
+const TextForm = ({ loadUserWords, user, textToEdit, clearText, location }) => {
   useEffect(() => {
     loadUserWords();
 
     if (user && (user.role === "admin" || user.role === "moderator")) setMaxTextLen(bgTextLen);
     if (!textToEdit) setTimeout(noticeMe, 1000);
-  }, []);
+  }, [user]);
 
   useEffect(() => {
     setTimeout(() => {
       // console.log(textToEdit);
-      if (textToEdit) {
+      if (textToEdit && location.search === "?edit") {
         setIsToEdit(true);
         const {
           level,
@@ -790,4 +791,4 @@ const mapStateToProps = state => ({
   textToEdit: state.texts.text
 });
 
-export default connect(mapStateToProps, { loadUserWords })(TextForm);
+export default connect(mapStateToProps, { loadUserWords, clearText })(TextForm);

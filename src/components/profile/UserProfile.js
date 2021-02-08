@@ -39,13 +39,13 @@ const UserProfile = ({ match, history }) => {
           <strong>Роль:</strong> {profile.role || "изучающий"}
         </p>
         <p>
-          <strong>ID пользователя:</strong> {`@@[${profile._id}]{${profile.name}}@@`}{" "}
+          <strong>ID пользователя:</strong> {` @@[${profile._id}]{${profile.name}}@@`}{" "}
           <Tippy content={"Кнопка копирования ID"} placement='bottom'>
             <button
               className='btn btn-sm btn-primary'
               onClick={() => {
                 setIsCopied(true);
-                navigator.clipboard.writeText(`@@[${profile._id}]{${profile.name}}@@, `);
+                navigator.clipboard.writeText(` @@[${profile._id}]{${profile.name}}@@, `);
               }}
             >
               <i className='far fa-copy'></i>
@@ -56,6 +56,15 @@ const UserProfile = ({ match, history }) => {
 
         <div className='alert alert-dismissible alert-success'>
           По ID можно обращаться к пользователям в комментариях. Чтобы скопировать - нажмите кнопку
+        </div>
+        <div className=''>
+          <h5>Ниже функционал в разработке:</h5>
+          <ul>
+            <li>написать личное сообщение пользователю</li>
+            <li>ачивки / бэйджики</li>
+            <li>тексты, опубликованные именно данным пользователем</li>
+            <li>если есть идеи, что сюда можно добавить - пишите в Гостевой :)</li>
+          </ul>
         </div>
       </div>
     </div>

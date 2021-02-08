@@ -22,7 +22,8 @@ const TextCard = ({ text, user, hide, category, hideLevel }) => {
     hits,
     categoryInd,
     likes,
-    source
+    source,
+    user: textUser
   } = text;
   useEffect(() => {
     if (hide === 0) setHideId(false);
@@ -84,7 +85,7 @@ const TextCard = ({ text, user, hide, category, hideLevel }) => {
             </div>
             <h6 className='card-subtitle mb-2'>
               <span className='text-muted'>Опубликовал/а: </span>
-              <Link to={`/user/${user._id}`}>{name}</Link>
+              <Link to={`/user/${textUser}`}>{name}</Link>
             </h6>
             <h6 className='card-subtitle mb-2'>
               <span className='text-muted'>Уровень: </span>

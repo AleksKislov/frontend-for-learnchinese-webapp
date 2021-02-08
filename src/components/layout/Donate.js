@@ -22,9 +22,9 @@ const Donate = () => {
         </div>
 
         <div className='col-sm-6 mb-3'>
-          <div class='card bg-light mb-3'>
-            <div class='card-body'>
-              <p class='card-text'>
+          <div className='card bg-light mb-3'>
+            <div className='card-body'>
+              <p className='card-text'>
                 Cпасибо всем большое за поддержку! Если вы не хотите быть анонимным спонсором, то
                 просим писать в <Link to='/posts'>Гостевой</Link> или{" "}
                 <Link to='/contacts'>админу</Link>
@@ -52,7 +52,7 @@ const Donate = () => {
           <a
             style={{ color: "#fff", width: "6rem" }}
             type='button'
-            class='btn btn-success btn-link'
+            className='btn btn-success btn-link'
             href='https://www.paypal.com/paypalme/buyilehu'
             target='_blank'
           >

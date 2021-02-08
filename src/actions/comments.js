@@ -1,6 +1,13 @@
-import { GET_COMMENTS_ERR, GET_COMMENTS, GET_10COMMENTS, SET_COMMENT_TO_DEL } from "./types";
+import {
+  GET_COMMENTS_ERR,
+  GET_COMMENTS,
+  GET_10COMMENTS,
+  SET_COMMENT_TO_DEL,
+  SET_MENTIONS_LEN
+} from "./types";
 import axios from "axios";
 import { setAlert } from "./alert";
+// import { dateToStr } from "./helpers";
 
 /**
  *
@@ -28,15 +35,16 @@ export const getComments = (where, id) => async dispatch => {
  * @param {string} id       - of destination page
  * @param {string} text     - text of a comment
  * @param {string} path     - relative path to book page (only)
+ * @param {array} addressees - obj array with users to whom comment it addressed
  */
-export const addComment = (where, id, text, path) => async dispatch => {
+export const addComment = (where, id, text, path, addressees = []) => async dispatch => {
   const config = {
     headers: {
       "Content-Type": "application/json"
     }
   };
 
-  const body = JSON.stringify({ text, path });
+  const body = JSON.stringify({ text, path, addressees });
 
   try {
     await axios.post(`/api/comments?where=${where}&id=${id}`, body, config);
@@ -104,4 +112,17 @@ export const setCommentToDelete = obj => async dispatch => {
     type: SET_COMMENT_TO_DEL,
     payload: obj
   });
+};
+
+export const getMentionsLen = () => async dispatch => {
+  try {
+    const { data } = await axios.get("/api/comments/to_me/false");
+
+    dispatch({
+      type: SET_MENTIONS_LEN,
+      payload: data.length
+    });
+  } catch (err) {
+    console.log(err);
+  }
 };

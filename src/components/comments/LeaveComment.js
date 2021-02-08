@@ -26,7 +26,7 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, pa
 
       if (text.length <= commentLength) {
         // id, text
-        addComment(where, _id, newtext, path);
+        addComment(where, _id, newtext, path, addressedUsers);
       } else {
         store.dispatch(setAlert("Сообщение не должно превышать лимит", "danger"));
       }
@@ -44,7 +44,8 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, pa
   const sizeDown = e => (e.target.style.fontSize = "0.9375rem");
 
   const addEmoToText = e => {
-    setText(`${text} ${e.target.innerHTML}`);
+    const previousTxt = document.getElementById("textForm").value;
+    setText(`${previousTxt} ${e.target.innerHTML}`);
   };
 
   const checkAuthorized = () => {
@@ -66,17 +67,23 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, pa
     <div className='card my-2'>
       <div className='card-body'>
         <div className='mb-3'>
-          <span className='h6'>Ваш Комментарий</span>
+          <span className='h6' id='yourCommentId'>
+            Ваш Комментарий
+          </span>
           <button type='submit' className='btn btn-primary btn-sm float-right' onClick={onSubmit}>
             Опубликовать
           </button>
         </div>
 
-        <div className=''>
+        <div className='mb-1 text-info'>
           {addressedUsers.length === 0 ? "" : "Вы обращаетесь к: "}
 
           {addressedUsers.length > 0 &&
-            addressedUsers.map((user, ind) => <span key={ind}>{user.name}, </span>)}
+            addressedUsers.map((user, ind) => (
+              <span className='badge badge-pill badge-primary mr-1 ' key={ind}>
+                {user.name}
+              </span>
+            ))}
         </div>
         <form>
           <div className='form-group'>

@@ -34,7 +34,7 @@ const Plans = ({}) => {
       <div className='col-sm-12'>
         <h2>Канбан Проекта</h2>
         <p className='text-primary'>看板 kànbǎn - доска по текущим задачам и планам</p>
-        <div class='alert alert-light'>
+        <div className='alert alert-light'>
           На доске не хватает чего-то, что полезно реализовать? Просим рассказать об этом в{" "}
           <Link to='/posts'>Гостевой</Link>
         </div>
