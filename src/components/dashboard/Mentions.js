@@ -43,7 +43,7 @@ const Mentions = ({ getMentionsLen }) => {
       <div className='col-md-4'>
         <div className='btn-group w-100 mb-1' role='group'>
           <button
-            className={`btn btn-secondary btn-sm ${isSeen === "true" ? "" : "active"}`}
+            className={`btn btn-warning btn-sm ${isSeen === "true" ? "" : "active"}`}
             type='button'
             onClick={() => setIsSeen("false")}
           >

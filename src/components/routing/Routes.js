@@ -35,6 +35,7 @@ import ActiveUserTable from "../stats/ActiveUserTable";
 import AllTextsTable from "../texts/AllTextsTable";
 import UserProfile from "../profile/UserProfile";
 import Mentions from "../dashboard/Mentions";
+import MentionsAlert from "../layout/MentionsAlert";
 
 // import TranslationForm from "../translation/TranslateForm";
 // <Route exact path='/translate' component={TranslationForm} />
@@ -54,17 +55,10 @@ const Routes = () => {
         className={pathname === "/pinyin" ? "container-fluid" : "container"}
         style={{ marginTop: "2rem", marginBottom: "4rem" }}
       >
-        <div
-          style={{
-            position: "fixed",
-            top: "6rem",
-            right: "2rem",
-            zIndex: "100",
-            maxWidth: "20rem"
-          }}
-        >
+        <div className='alertDiv'>
           <Alert />
         </div>
+        <MentionsAlert />
 
         <Switch>
           <Route exact path='/register' component={Register} />
