@@ -40,10 +40,13 @@ const Mentions = ({ getMentionsLen }) => {
 
   return (
     <div className='row'>
+      <div className='col-md-12'>
+        <h3 className=''>Ответы и упоминания</h3>
+      </div>
       <div className='col-md-4'>
         <div className='btn-group w-100 mb-1' role='group'>
           <button
-            className={`btn btn-warning btn-sm ${isSeen === "true" ? "" : "active"}`}
+            className={`btn btn-${isSeen === "true" ? "secondary" : "warning"} btn-sm`}
             type='button'
             onClick={() => setIsSeen("false")}
           >
@@ -51,7 +54,7 @@ const Mentions = ({ getMentionsLen }) => {
           </button>
           <button
             type='button'
-            className={`btn btn-secondary btn-sm ${isSeen === "true" ? "active" : ""}`}
+            className={`btn btn-${isSeen === "true" ? "warning" : "secondary"} btn-sm`}
             onClick={() => setIsSeen("true")}
           >
             Прочитанное
@@ -59,7 +62,6 @@ const Mentions = ({ getMentionsLen }) => {
         </div>
       </div>
       <div className='col-md-12'>
-        <h4 className=''>Вас упоминали здесь:</h4>
         {isSeen === "false" && mentions && mentions.length > 0 && (
           <button className='btn btn-outline-info my-2 btn-sm' onClick={markArSeen}>
             Пометить как прочитанное

@@ -3,7 +3,9 @@ import {
   GET_COMMENTS,
   GET_10COMMENTS,
   SET_COMMENT_TO_DEL,
-  SET_MENTIONS_LEN
+  SET_MENTIONS_LEN,
+  SET_COMMENT_REPLY,
+  UNSET_COMMENT_REPLY
 } from "./types";
 import axios from "axios";
 import { setAlert } from "./alert";
@@ -36,15 +38,23 @@ export const getComments = (where, id) => async dispatch => {
  * @param {string} text     - text of a comment
  * @param {string} path     - relative path to book page (only)
  * @param {array} addressees - obj array with users to whom comment it addressed
+ * @param {object} commentIdToReply - {commentId, userId, name} - info about comment we are replying to
  */
-export const addComment = (where, id, text, path, addressees = []) => async dispatch => {
+export const addComment = (
+  where,
+  id,
+  text,
+  path,
+  addressees = [],
+  commentIdToReply
+) => async dispatch => {
   const config = {
     headers: {
       "Content-Type": "application/json"
     }
   };
 
-  const body = JSON.stringify({ text, path, addressees });
+  const body = JSON.stringify({ text, path, addressees, commentIdToReply });
 
   try {
     await axios.post(`/api/comments?where=${where}&id=${id}`, body, config);
@@ -125,4 +135,26 @@ export const getMentionsLen = () => async dispatch => {
   } catch (err) {
     console.log(err);
   }
+};
+
+/**
+ * @param {string} commentId - comment id
+ * @param {string} userId
+ * @param {string} name - user name
+ */
+export const setCommentReply = (commentId, userId, name) => dispatch => {
+  // document.getElementById(
+  //   "mentionsInCommentId"
+  // ).innerHTML = `Вы отвечаете на комментарий <span class='badge badge-pill badge-primary'>#${commentId.slice(
+  //   -3
+  // )} <i class="fas fa-times"></i></span>`;
+
+  dispatch({
+    type: SET_COMMENT_REPLY,
+    payload: { commentId, userId, name }
+  });
+};
+
+export const unsetCommentReply = () => dispatch => {
+  dispatch({ type: UNSET_COMMENT_REPLY });
 };

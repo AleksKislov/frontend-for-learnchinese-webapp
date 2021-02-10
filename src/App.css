@@ -11528,3 +11528,13 @@ to violet when it is not checked*/
     z-index: 100;
     max-width: 20rem;
   }
+
+  .commentIdNum {
+    padding-right: 4px;
+    color: grey;
+    position: absolute;
+    z-index: 1;
+    font-size: 12px;
+    right: 0;
+    top: 0;
+  }

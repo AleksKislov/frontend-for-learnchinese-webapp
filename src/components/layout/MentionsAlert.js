@@ -12,7 +12,7 @@ const MentionsAlert = ({ mentionsLen, isAuthenticated }) => {
             <button type='button' className='close' data-dismiss='alert'>
               &times;
             </button>
-            У Вас есть непрочитанные
+            У Вас есть непрочитанные{" "}
             <Link to='/mentions'>
               <strong>сообщения</strong>
             </Link>

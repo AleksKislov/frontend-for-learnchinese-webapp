@@ -3,14 +3,17 @@ import {
   GET_COMMENTS,
   GET_10COMMENTS,
   SET_COMMENT_TO_DEL,
-  SET_MENTIONS_LEN
+  SET_MENTIONS_LEN,
+  SET_COMMENT_REPLY,
+  UNSET_COMMENT_REPLY
 } from "../actions/types";
 
 const initialState = {
   currentComments: [],
   lastComments: [],
   commentToDelete: null,
-  mentionsLen: 0
+  mentionsLen: 0,
+  commentIdToReply: null
 };
 
 export default function(state = initialState, action) {
@@ -35,6 +38,16 @@ export default function(state = initialState, action) {
     case GET_COMMENTS_ERR:
       return {
         ...state
+      };
+    case SET_COMMENT_REPLY:
+      return {
+        ...state,
+        commentIdToReply: payload
+      };
+    case UNSET_COMMENT_REPLY:
+      return {
+        ...state,
+        commentIdToReply: null
       };
     case SET_COMMENT_TO_DEL:
       return { ...state, commentToDelete: payload };

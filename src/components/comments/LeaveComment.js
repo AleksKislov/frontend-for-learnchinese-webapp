@@ -1,14 +1,32 @@
 import React, { useState, useEffect } from "react";
-import { addComment, getComments } from "../../actions/comments";
+import { addComment, getComments, unsetCommentReply } from "../../actions/comments";
 import { connect } from "react-redux";
 import store from "../../store";
 import { setAlert } from "../../actions/alert";
 import { commentLength, commentEmojis } from "../../apikeys.json";
 
 // path is from/for book Chapterpage
-const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, path }) => {
+const LeaveComment = ({
+  addComment,
+  getComments,
+  isAuthenticated,
+  _id,
+  where,
+  path,
+  commentIdToReply,
+  unsetCommentReply
+}) => {
   const [text, setText] = useState("");
   const [addressedUsers, setAddressedUsers] = useState([]);
+
+  // useEffect(() => {
+  //   if (commentIdToReply) {
+  //     setAddressedUsers([
+  //       ...addressedUsers,
+  //       { id: commentIdToReply.userId, name: commentIdToReply.name }
+  //     ]);
+  //   }
+  // }, [commentIdToReply]);
 
   useEffect(() => {
     setAddressedUsers(checkIfAddressed(text));
@@ -26,7 +44,8 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, pa
 
       if (text.length <= commentLength) {
         // id, text
-        addComment(where, _id, newtext, path, addressedUsers);
+        addComment(where, _id, newtext, path, addressedUsers, commentIdToReply);
+        unsetCommentReply();
       } else {
         store.dispatch(setAlert("Сообщение не должно превышать лимит", "danger"));
       }
@@ -52,6 +71,10 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, pa
     if (!isAuthenticated) store.dispatch(setAlert("Войдите, чтобы комментировать", "danger"));
   };
 
+  /**
+   * @param {string} txt - comment text
+   * @returns {object} - {id, name, str} - where id is user id, name - is user name
+   */
   const checkIfAddressed = txt => {
     const resArr = txt.split("@@");
     const onlyNames = resArr.filter(x => x[0] === "[" && x[x.length - 1] === "}");
@@ -75,12 +98,27 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, pa
           </button>
         </div>
 
+        {commentIdToReply && (
+          <div className='mb-1 text-info'>
+            Вы отвечаете{" "}
+            <span className='badge badge-pill badge-primary'>{commentIdToReply.name}</span> на
+            комментарий{" "}
+            <span
+              className='badge badge-pill badge-primary'
+              onClick={unsetCommentReply}
+              style={{ cursor: "pointer" }}
+            >
+              {`#${commentIdToReply.commentId.slice(-3)}`} <i className='fas fa-times'></i>
+            </span>
+          </div>
+        )}
+
         <div className='mb-1 text-info'>
           {addressedUsers.length === 0 ? "" : "Вы обращаетесь к: "}
 
           {addressedUsers.length > 0 &&
             addressedUsers.map((user, ind) => (
-              <span className='badge badge-pill badge-primary mr-1 ' key={ind}>
+              <span className='badge badge-pill badge-primary mr-1' key={ind}>
                 {user.name}
               </span>
             ))}
@@ -127,7 +165,10 @@ const LeaveComment = ({ addComment, getComments, isAuthenticated, _id, where, pa
 };
 
 const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
+  isAuthenticated: state.auth.isAuthenticated,
+  commentIdToReply: state.comments.commentIdToReply
 });
 
-export default connect(mapStateToProps, { addComment, getComments })(LeaveComment);
+export default connect(mapStateToProps, { addComment, getComments, unsetCommentReply })(
+  LeaveComment
+);
