@@ -11538,3 +11538,7 @@ to violet when it is not checked*/
     right: 0;
     top: 0;
   }
+
+  .commentP {
+    color: #212529;
+  }

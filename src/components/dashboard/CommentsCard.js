@@ -22,7 +22,7 @@ const CommentsCard = ({ getLastComments, comments, loading }) => {
             >
               <span className='text-success'>{comment.name}</span>
               <span className='badge badge-primary float-right mx-2'>{fromNow(comment.date)}</span>
-              <p dangerouslySetInnerHTML={{ __html: comment.text }}></p>
+              <p dangerouslySetInnerHTML={{ __html: comment.text }} className='commentP'></p>
             </Link>
           ))}
       </ul>

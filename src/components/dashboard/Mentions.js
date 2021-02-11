@@ -46,7 +46,7 @@ const Mentions = ({ getMentionsLen }) => {
       <div className='col-md-4'>
         <div className='btn-group w-100 mb-1' role='group'>
           <button
-            className={`btn btn-${isSeen === "true" ? "secondary" : "warning"} btn-sm`}
+            className={`btn btn-${isSeen === "true" ? "secondary" : "success"} btn-sm`}
             type='button'
             onClick={() => setIsSeen("false")}
           >
@@ -54,7 +54,7 @@ const Mentions = ({ getMentionsLen }) => {
           </button>
           <button
             type='button'
-            className={`btn btn-${isSeen === "true" ? "warning" : "secondary"} btn-sm`}
+            className={`btn btn-${isSeen === "true" ? "success" : "secondary"} btn-sm`}
             onClick={() => setIsSeen("true")}
           >
             Прочитанное
@@ -79,7 +79,7 @@ const Mentions = ({ getMentionsLen }) => {
                 <span className='badge badge-primary float-right mx-2'>
                   {fromNow(comment.date)}
                 </span>
-                <p dangerouslySetInnerHTML={{ __html: comment.text }}></p>
+                <p dangerouslySetInnerHTML={{ __html: comment.text }} className='commentP'></p>
               </Link>
             ))}
         </ul>
