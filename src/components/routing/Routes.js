@@ -36,6 +36,7 @@ import AllTextsTable from "../texts/AllTextsTable";
 import UserProfile from "../profile/UserProfile";
 import Mentions from "../dashboard/Mentions";
 import MentionsAlert from "../layout/MentionsAlert";
+import Notice from "../layout/Notice";
 
 // import TranslationForm from "../translation/TranslateForm";
 // <Route exact path='/translate' component={TranslationForm} />
@@ -59,6 +60,7 @@ const Routes = () => {
           <Alert />
         </div>
         <MentionsAlert />
+        <Notice />
 
         <Switch>
           <Route exact path='/register' component={Register} />
