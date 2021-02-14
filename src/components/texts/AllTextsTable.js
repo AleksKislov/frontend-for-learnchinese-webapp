@@ -5,6 +5,7 @@ import Tippy from "@tippyjs/react";
 import AllTextsTableItem from "./AllTextsTableItem";
 import LevelFilter from "./common/LevelFilter";
 import CategoryFilter from "./common/CategoryFilter";
+import PublisherFilter from "./common/PublisherFilter";
 import ReadFilter from "./common/ReadFilter";
 import UnsetFiltersBtn from "./common/UnsetFiltersBtn";
 import { Helmet } from "react-helmet";
@@ -21,6 +22,11 @@ const AllTextsTable = ({}) => {
   const [hitsClicked, setHitsClicked] = useState(true);
   const [likesClicked, setLikesClicked] = useState(true);
   const [commentsClicked, setCommentsClicked] = useState(true);
+  const [publishers, setPublishers] = useState(null);
+
+  useEffect(() => {
+    if (texts) setPublishers([...new Set(texts.map(text => text.name))]);
+  }, [texts]);
 
   useEffect(() => {
     setTexts(texts);
@@ -34,10 +40,11 @@ const AllTextsTable = ({}) => {
       console.log(err);
     }
   };
-
+  const [publisherFlag, setPublisherFlag] = useState("all");
   const [categoryFlag, setCategoryFlag] = useState(0);
   const [hideReadFlag, setHideReadFlag] = useState(0);
   const [hideLevelFlag, setHideLevelFlag] = useState(0);
+
   const onLevelSelect = e =>
     setHideLevelFlag(parseInt(e.target.options[e.target.options.selectedIndex].value));
 
@@ -48,13 +55,19 @@ const AllTextsTable = ({}) => {
     setCategoryFlag(parseInt(e.target.options[e.target.options.selectedIndex].value));
   };
 
+  const onPublisherSelect = e => {
+    setPublisherFlag(e.target.options[e.target.options.selectedIndex].value);
+  };
+
   const clearFilters = () => {
     setCategoryFlag(0);
     setHideReadFlag(0);
     setHideLevelFlag(0);
+    setPublisherFlag("all");
     document.getElementById("levelFilt").value = 0;
     document.getElementById("readFilt").value = 0;
     document.getElementById("categoryFilt").value = 0;
+    document.getElementById("publisherFilt").value = "all";
   };
 
   const sortByHits = () => {
@@ -101,6 +114,8 @@ const AllTextsTable = ({}) => {
           <LevelFilter onChange={onLevelSelect} />
           <ReadFilter onChange={onReadSelect} />
           <CategoryFilter onChange={onCategorySelect} />
+          <PublisherFilter onChange={onPublisherSelect} publishers={publishers ? publishers : []} />
+
           <UnsetFiltersBtn onClick={clearFilters} />
         </div>
         <div className='table-responsive'>
@@ -110,6 +125,7 @@ const AllTextsTable = ({}) => {
                 <th className=''>Уровень</th>
                 <th className='text-left'>Название</th>
                 <th>Категория</th>
+                <th>Опубликовал</th>
                 <Tippy content='Кол-во благодарностей' placement='top'>
                   <th style={thStyle}>
                     <div onClick={sortByLikes}>
@@ -147,6 +163,7 @@ const AllTextsTable = ({}) => {
                     hide={hideReadFlag}
                     category={categoryFlag}
                     hideLevel={hideLevelFlag}
+                    publisher={publisherFlag}
                   />
                 ))
               ) : (
