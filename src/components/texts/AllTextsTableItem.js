@@ -6,7 +6,7 @@ import Tippy from "@tippyjs/react";
 import { connect } from "react-redux";
 
 const AllTextsTableItem = ({ text, hide, category, hideLevel, user, publisher }) => {
-  const { _id, level, title, likes, hits, categoryInd, comments_id, name } = text;
+  const { _id, level, title, likes, hits, categoryInd, comments_id, name, date } = text;
 
   useEffect(() => {
     if (hide === 0) setHideId(false);
@@ -30,6 +30,7 @@ const AllTextsTableItem = ({ text, hide, category, hideLevel, user, publisher })
     rightLevel &&
     rightPublisher && (
       <tr>
+        <td>{date.split("T")[0]}</td>
         <td>{levelStars(level)}</td>
         <td className='text-left'>
           <Link to={`/texts/${_id}`}>{title}</Link>
@@ -47,11 +48,13 @@ const AllTextsTableItem = ({ text, hide, category, hideLevel, user, publisher })
         <Tippy content={`${comments_id.length} комментариев`} placement='bottom'>
           <td>{comments_id.length}</td>
         </Tippy>
-        <td style={{ paddingRight: "1.5rem" }}>
-          <Tippy content={`${isRead(_id) && "Прочитано"}`} placement='bottom'>
-            {isRead(_id) && <i className='fas fa-check-circle text-success'></i>}
-          </Tippy>
-        </td>
+        {user && (
+          <td style={{ paddingRight: "1.5rem" }}>
+            <Tippy content={`${isRead(_id) && "Прочитано"}`} placement='bottom'>
+              {isRead(_id) && <i className='fas fa-check-circle text-success'></i>}
+            </Tippy>
+          </td>
+        )}
       </tr>
     )
   );

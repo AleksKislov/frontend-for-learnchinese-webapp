@@ -12,13 +12,15 @@ import { Helmet } from "react-helmet";
 import TextsInfoCard from "./common/TextsInfoCard";
 import PleaseShareText from "./common/PleaseShareText";
 import ReadingCard from "../dashboard/ReadingCard";
+import { connect } from "react-redux";
 
-const AllTextsTable = ({}) => {
+const AllTextsTable = ({ user }) => {
   useEffect(() => {
     loadAllTexts();
   }, []);
 
   const [texts, setTexts] = useState(null);
+  const [dateClicked, setDateClicked] = useState(true);
   const [hitsClicked, setHitsClicked] = useState(true);
   const [likesClicked, setLikesClicked] = useState(true);
   const [commentsClicked, setCommentsClicked] = useState(true);
@@ -30,7 +32,7 @@ const AllTextsTable = ({}) => {
 
   useEffect(() => {
     setTexts(texts);
-  }, [hitsClicked, likesClicked, commentsClicked]);
+  }, [hitsClicked, likesClicked, commentsClicked, dateClicked]);
 
   const loadAllTexts = async () => {
     try {
@@ -95,6 +97,15 @@ const AllTextsTable = ({}) => {
     setCommentsClicked(!commentsClicked);
   };
 
+  const sortByDate = () => {
+    setTexts(
+      texts.sort((a, b) =>
+        dateClicked ? new Date(a.date) - new Date(b.date) : new Date(b.date) - new Date(a.date)
+      )
+    );
+    setDateClicked(!dateClicked);
+  };
+
   return (
     <div className='row'>
       <Helmet>
@@ -122,7 +133,12 @@ const AllTextsTable = ({}) => {
           <table className='table table-hover text-center'>
             <thead>
               <tr className='table-info'>
-                <th className=''>Уровень</th>
+                <th style={thStyle}>
+                  <div onClick={sortByDate}>
+                    Дата <i className='fas fa-sort'></i>
+                  </div>
+                </th>
+                <th>Уровень</th>
                 <th className='text-left'>Название</th>
                 <th>Категория</th>
                 <th>Опубликовал</th>
@@ -147,11 +163,13 @@ const AllTextsTable = ({}) => {
                     </div>
                   </th>
                 </Tippy>
-                <Tippy content='Прочитано ли' placement='top'>
-                  <th style={{ paddingRight: "1.5rem" }}>
-                    <i className='fas fa-clipboard-check'></i>{" "}
-                  </th>
-                </Tippy>
+                {user && (
+                  <Tippy content='Прочитано ли' placement='top'>
+                    <th style={{ paddingRight: "1.5rem" }}>
+                      <i className='fas fa-clipboard-check'></i>{" "}
+                    </th>
+                  </Tippy>
+                )}
               </tr>
             </thead>
             <tbody>
@@ -168,7 +186,7 @@ const AllTextsTable = ({}) => {
                 ))
               ) : (
                 <tr>
-                  <td colSpan='7'>
+                  <td colSpan={user ? "9" : "8"}>
                     <Spinner />
                   </td>
                 </tr>
@@ -185,4 +203,8 @@ const thStyle = {
   whiteSpace: "nowrap"
 };
 
-export default AllTextsTable;
+const mapStateToProps = state => ({
+  user: state.auth.user
+});
+
+export default connect(mapStateToProps, {})(AllTextsTable);
