@@ -13,6 +13,7 @@ const Mentions = ({ getMentionsLen }) => {
   }, [isSeen]);
 
   const getMentions = async seenIt => {
+    console.log("getmentions");
     try {
       const { data } = await axios.get("/api/comments/to_me/" + seenIt);
       setMentions(data);
