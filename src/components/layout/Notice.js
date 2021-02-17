@@ -8,7 +8,6 @@ const Notice = ({}) => {
   }, []);
 
   const loadNotice = async () => {
-    console.log("loadnotices");
     try {
       const { data } = await axios.get("/api/notices");
       // console.log(data);

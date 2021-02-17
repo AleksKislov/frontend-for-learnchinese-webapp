@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import store from "../../store";
 import { setAlert } from "../../actions/alert";
 import { commentLength, commentEmojis } from "../../apikeys.json";
+import EmojiSelect from "./EmojiSelect";
 
 // path is from/for book Chapterpage
 const LeaveComment = ({
@@ -86,6 +87,32 @@ const LeaveComment = ({
     });
   };
 
+  //   <Tippy
+  //   className='mintippy-box'
+  //   trigger='click'
+  //   theme='light-border'
+  //   placement='bottom'
+  //   content={
+  //     <div>
+  //       {
+  //         "hello"
+  //         //   commentEmojis.map((emo, ind) => (
+  //         //   <span
+  //         //     key={ind}
+  //         //     onMouseEnter={e => sizeUp(e)}
+  //         //     onMouseLeave={e => sizeDown(e)}
+  //         //     onClick={e => addEmoToText(e)}
+  //         //   >
+  //         //     {emo}{" "}
+  //         //   </span>
+  //         // ))
+  //       }
+  //     </div>
+  //   }
+  // >
+  //   tets
+  // </Tippy>
+
   return (
     <div className='card my-2'>
       <div className='card-body'>
@@ -144,18 +171,9 @@ const LeaveComment = ({
               <small className={`text-${text.length <= commentLength ? "mute" : "danger"}`}>
                 {text.length}/{commentLength}
               </small>
-              <p className='float-right'>
-                {commentEmojis.map((emo, ind) => (
-                  <span
-                    key={ind}
-                    onMouseEnter={e => sizeUp(e)}
-                    onMouseLeave={e => sizeDown(e)}
-                    onClick={e => addEmoToText(e)}
-                  >
-                    {emo}{" "}
-                  </span>
-                ))}
-              </p>
+              <div className='float-right'>
+                <EmojiSelect sizeUp={sizeUp} sizeDown={sizeDown} addEmoToText={addEmoToText} />
+              </div>
             </div>
           </div>
         </form>

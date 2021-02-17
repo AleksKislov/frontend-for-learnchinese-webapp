@@ -11542,3 +11542,8 @@ to violet when it is not checked*/
   .commentP {
     color: #212529;
   }
+
+  .emotippy-box {
+    max-width: 140px !important;
+  }
+  
