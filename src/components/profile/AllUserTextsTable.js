@@ -56,49 +56,51 @@ const AllUserTextsTable = ({ userId }) => {
     <div className=''>
       <h4>Тексты, опубликованные пользователем:</h4>
 
-      <div className='table-responsive'>
-        <table className='table table-hover text-center'>
-          <thead>
-            <tr className='table-info'>
-              <th className=''>Уровень</th>
-              <th className='text-left'>Название</th>
-              <th>Категория</th>
-              <Tippy content='Кол-во благодарностей' placement='top'>
-                <th style={thStyle}>
-                  <div onClick={sortByLikes}>
-                    <i className='fas fa-heart'></i> <i className='fas fa-sort'></i>
-                  </div>
-                </th>
-              </Tippy>
-              <Tippy content='Кол-во просмотров' placement='top'>
-                <th style={thStyle}>
-                  <div onClick={sortByHits}>
-                    <i className='fas fa-eye'></i> <i className='fas fa-sort'></i>
-                  </div>
-                </th>
-              </Tippy>
-              <Tippy content='Кол-во комментариев' placement='top'>
-                <th style={thStyle}>
-                  <div onClick={sortByComments}>
-                    <i className='fas fa-comment-dots'></i> <i className='fas fa-sort'></i>
-                  </div>
-                </th>
-              </Tippy>
-            </tr>
-          </thead>
-          <tbody>
-            {texts ? (
-              texts.map(text => <AllUserTextsTableItem key={text._id} text={text} />)
-            ) : (
-              <tr>
-                <td colSpan='7'>
-                  <Spinner />
-                </td>
+      {texts && texts.length > 0 && (
+        <div className='table-responsive'>
+          <table className='table table-hover text-center'>
+            <thead>
+              <tr className='table-info'>
+                <th className=''>Уровень</th>
+                <th className='text-left'>Название</th>
+                <th>Категория</th>
+                <Tippy content='Кол-во благодарностей' placement='top'>
+                  <th style={thStyle}>
+                    <div onClick={sortByLikes}>
+                      <i className='fas fa-heart'></i> <i className='fas fa-sort'></i>
+                    </div>
+                  </th>
+                </Tippy>
+                <Tippy content='Кол-во просмотров' placement='top'>
+                  <th style={thStyle}>
+                    <div onClick={sortByHits}>
+                      <i className='fas fa-eye'></i> <i className='fas fa-sort'></i>
+                    </div>
+                  </th>
+                </Tippy>
+                <Tippy content='Кол-во комментариев' placement='top'>
+                  <th style={thStyle}>
+                    <div onClick={sortByComments}>
+                      <i className='fas fa-comment-dots'></i> <i className='fas fa-sort'></i>
+                    </div>
+                  </th>
+                </Tippy>
               </tr>
-            )}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {texts ? (
+                texts.map(text => <AllUserTextsTableItem key={text._id} text={text} />)
+              ) : (
+                <tr>
+                  <td colSpan='7'>
+                    <Spinner />
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };

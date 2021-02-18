@@ -45,7 +45,7 @@ const Post = ({ post, addLike, addDislike }) => {
             <span className={`mx-2 badge badge-${badgeColor}`}>{tagTheme[tag]}</span>
           </div>
           <h6 className='card-subtitle mb-2 text-muted'>
-            {name} | <em>{dateAndTime}</em>
+            <Link to={`/user/${user}`}>{name}</Link> | <em>{dateAndTime}</em>
           </h6>
           <p className='card-text' dangerouslySetInnerHTML={{ __html: text }}></p>
           <div className=''>

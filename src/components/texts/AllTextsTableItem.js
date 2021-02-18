@@ -30,7 +30,9 @@ const AllTextsTableItem = ({ text, hide, category, hideLevel, user, publisher })
     rightLevel &&
     rightPublisher && (
       <tr>
-        <td>{date.split("T")[0]}</td>
+        <td>
+          <small>{date.split("T")[0]}</small>
+        </td>
         <td>{levelStars(level)}</td>
         <td className='text-left'>
           <Link to={`/texts/${_id}`}>{title}</Link>
