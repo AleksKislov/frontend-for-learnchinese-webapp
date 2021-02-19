@@ -37,6 +37,7 @@ import UserProfile from "../profile/UserProfile";
 import Mentions from "../dashboard/Mentions";
 import MentionsAlert from "../layout/MentionsAlert";
 import Notice from "../layout/Notice";
+import SetAvatar from "../profile/SetAvatar";
 
 // import TranslationForm from "../translation/TranslateForm";
 // <Route exact path='/translate' component={TranslationForm} />
@@ -66,6 +67,7 @@ const Routes = () => {
           <Route exact path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/login_success/:id' component={GoogleLoginSuccess} />
+          <PrivateRoute exact path='/set_avatar' component={SetAvatar} />
           <PrivateRoute exact path='/dashboard' component={Dashboard} />
           <PrivateRoute exact path='/hsk-words' component={Words} />
           <PrivateRoute exact path='/userwords' component={UserWords} />

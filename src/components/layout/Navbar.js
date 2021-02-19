@@ -375,9 +375,9 @@ const activeNavLink = {
 };
 
 const imgStyle = {
-  width: "3vh",
+  width: "3.5vh",
   borderRadius: "50%",
-  border: "2px solid #18BC9C",
+  border: "1px solid #18BC9C",
   marginLeft: "0.3rem"
 };
 
