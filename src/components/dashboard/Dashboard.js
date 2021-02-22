@@ -9,6 +9,7 @@ import CommentsCard from "./CommentsCard";
 import ReadingCard from "./ReadingCard";
 import { Helmet } from "react-helmet";
 import Analytics from "./Analytics";
+import Tippy from "@tippyjs/react";
 
 const Dashboard = ({
   // getCurrentProfile,
@@ -37,10 +38,23 @@ const Dashboard = ({
       <div className='row'>
         <div className='col-sm-6'>
           <h1 className='text-primary'>Личный Кабинет</h1>
-          <p className='lead'>
-            <i className='fas fa-user'></i> Добро пожаловать{user && ", " + user.name}
-          </p>
-          <p className='lead'>Роль: {(user && user.role) || "Изучающий"}</p>
+          <div className='row'>
+            <div className='col-2'>
+              {user && (
+                <Tippy content='Поменять аватар' placement='bottom'>
+                  <Link to='/set_avatar'>
+                    <img src={`https://${user.avatar}`} alt='avatar' style={imgStyle} />
+                  </Link>
+                </Tippy>
+              )}
+            </div>
+            <div className='col-10'>
+              <p className=''>
+                <i className='fas fa-user'></i> Привет{user && ", " + user.name}
+              </p>
+              <p className=''>Роль: {(user && user.role) || "Изучающий"}</p>
+            </div>
+          </div>
         </div>
 
         <div className='col-sm-6'>
@@ -158,6 +172,11 @@ Dashboard.propTypes = {
   // getCurrentProfile: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
   // profile: PropTypes.object.isRequired
+};
+
+const imgStyle = {
+  width: "60px",
+  borderRadius: "8px"
 };
 
 const mapStateToProps = state => ({
