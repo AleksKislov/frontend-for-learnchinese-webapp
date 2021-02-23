@@ -51,12 +51,10 @@ const Routes = () => {
 
   const [pathname, setPathname] = useState("");
 
+  // style={{ marginTop: "2rem", marginBottom: "4rem" }}
   return (
     <Fragment>
-      <section
-        className={pathname === "/pinyin" ? "container-fluid" : "container"}
-        style={{ marginTop: "2rem", marginBottom: "4rem" }}
-      >
+      <section className={pathname === "/pinyin" ? "container-fluid" : "container"}>
         <div className='alertDiv'>
           <Alert />
         </div>

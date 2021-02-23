@@ -292,7 +292,7 @@ const Navbar = ({
               activeStyle={activeNavLink}
               onClick={() => setPathsAndCollapse({ ...paths, reading: "/statistics" })}
             >
-              Наши Герои
+              Герои Клуба
             </NavLink>
           </div>
         </li>
@@ -344,7 +344,7 @@ const Navbar = ({
   );
 
   return (
-    <nav className='navbar navbar-expand-lg navbar-dark bg-primary'>
+    <nav className='navbar navbar-expand-lg navbar-dark bg-primary' id='topNavbar'>
       <NavLink className='navbar-brand' to='/'>
         <i className='fas fa-yin-yang'></i> Chinese+Club{" "}
         <span style={{ fontSize: "50%" }}>{appVersion}</span>

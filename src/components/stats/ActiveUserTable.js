@@ -24,7 +24,7 @@ const ActiveUserTable = ({}) => {
       <div className='col-sm-3'>
         <div className='card bg-light mb-3'>
           <div className='card-body'>
-            <h4 className='card-title'>Наши Герои</h4>
+            <h4 className='card-title'>Герои Клуба</h4>
             <p className='card-text'>
               Эти герои делятся текстами и переводами с остальными читателями.
               <br />
