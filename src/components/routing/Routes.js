@@ -54,7 +54,10 @@ const Routes = () => {
   // style={{ marginTop: "2rem", marginBottom: "4rem" }}
   return (
     <Fragment>
-      <section className={pathname === "/pinyin" ? "container-fluid" : "container"}>
+      <section
+        id='mainSection'
+        className={pathname === "/pinyin" ? "container-fluid" : "container"}
+      >
         <div className='alertDiv'>
           <Alert />
         </div>

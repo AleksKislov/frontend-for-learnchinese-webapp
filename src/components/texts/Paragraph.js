@@ -129,7 +129,7 @@ const Paragraph = ({
     <Fragment>
       <div className={`result${fontsize} col-sm-${hideFlag ? "12" : "6"} my-1`}>
         <div
-          className={`card border-primary ${alreadyRead && "alreadyRead"}`}
+          className={`card border-secondary ${alreadyRead ? "alreadyRead" : ""}`}
           style={{ height: "100%" }}
         >
           <p className='card-text textPadding'>
@@ -142,7 +142,7 @@ const Paragraph = ({
         </div>
       </div>
       <div className='col-sm-6 my-1' style={hideFlag ? hidden : {}}>
-        <div className='card border-primary' style={{ height: "100%" }}>
+        <div className='card border-secondary' style={{ height: "100%" }}>
           <p className='card-text textPadding'>{translation}</p>
           {paragraphNum}
         </div>
