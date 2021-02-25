@@ -11030,11 +11030,15 @@
   justify-content: center;
 }
 
-@media (max-height: 800px) {
+.LandingWhiteTxt {
+  color: #fff;
+}
+
+/* @media (max-height: 800px) {
   .landing {
     height:800px !important;
   }
-}
+} */
 
 
 /* Overlay */

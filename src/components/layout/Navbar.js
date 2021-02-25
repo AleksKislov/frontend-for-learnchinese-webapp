@@ -20,7 +20,8 @@ const Navbar = ({
   mentionsLen
 }) => {
   const [paths, setPaths] = useState({
-    tests: "/pinyin-tests",
+    pinyin: "/pinyin",
+    hsk: "/hsk-table",
     reading: "/texts",
     login: "/register",
     private: "/dashboard"
@@ -33,28 +34,40 @@ const Navbar = ({
     const url = window.location.pathname;
     if (url.includes("/books") || url.includes("/texts")) {
       setPaths({
-        tests: "/pinyin-tests",
+        hsk: "/hsk-table",
+        pinyin: "/pinyin",
         reading: url,
         login: "/register",
         private: "/dashboard"
       });
-    } else if (url.includes("/pinyin-tests") || url.includes("/hsk-tests")) {
+    } else if (url.includes("/pinyin")) {
       setPaths({
-        tests: url,
+        hsk: "/hsk-table",
+        pinyin: url,
+        reading: "/texts",
+        login: "/register",
+        private: "/dashboard"
+      });
+    } else if (url.includes("/hsk")) {
+      setPaths({
+        hsk: url,
+        pinyin: "/pinyin",
         reading: "/texts",
         login: "/register",
         private: "/dashboard"
       });
     } else if (url === "/register" || url === "/login") {
       setPaths({
-        tests: "/pinyin-tests",
+        hsk: "/hsk-table",
+        pinyin: "/pinyin",
         reading: "/texts",
         login: url,
         private: "/dashboard"
       });
     } else if (privateLinks.includes(url)) {
       setPaths({
-        tests: "/pinyin-tests",
+        hsk: "/hsk-table",
+        pinyin: "/pinyin",
         reading: "/texts",
         login: "/register",
         private: url
@@ -191,55 +204,65 @@ const Navbar = ({
   const mainMenu = (
     <Fragment>
       <ul className='navbar-nav text-center mr-auto'>
-        <li className='nav-item'>
-          <NavLink
-            onClick={collapseIt}
-            className='nav-link'
-            to='/pinyin'
-            activeStyle={activeNavLink}
-          >
-            Таблица Пиньиня
-          </NavLink>
-        </li>
-        <li className='nav-item'>
-          <NavLink
-            onClick={collapseIt}
-            className='nav-link'
-            to='/hsk-table'
-            activeStyle={activeNavLink}
-          >
-            Слова HSK
-          </NavLink>
-        </li>
         <li className='nav-item dropdown'>
           <NavLink
             className='nav-link dropdown-toggle'
             data-toggle='dropdown'
-            to={paths.tests}
+            to={paths.pinyin}
             activeStyle={activeNavLink}
           >
-            Тесты
+            Пиньинь
           </NavLink>
 
           <div className='dropdown-menu'>
             <NavLink
               className='dropdown-item'
+              to='/pinyin'
+              activeStyle={activeNavLink}
+              onClick={() => setPathsAndCollapse({ ...paths, pinyin: "/pinyin" })}
+            >
+              Таблица
+            </NavLink>
+            <NavLink
+              className='dropdown-item'
               to='/pinyin-tests'
               activeStyle={activeNavLink}
-              onClick={() => setPathsAndCollapse({ ...paths, tests: "/pinyin-tests" })}
+              onClick={() => setPathsAndCollapse({ ...paths, pinyin: "/pinyin-tests" })}
             >
-              Пиньинь
+              Тесты
+            </NavLink>
+          </div>
+        </li>
+        <li className='nav-item dropdown'>
+          <NavLink
+            className='nav-link dropdown-toggle'
+            data-toggle='dropdown'
+            to={paths.hsk}
+            activeStyle={activeNavLink}
+          >
+            HSK
+          </NavLink>
+
+          <div className='dropdown-menu'>
+            <NavLink
+              className='dropdown-item'
+              to='/hsk-table'
+              activeStyle={activeNavLink}
+              onClick={() => setPathsAndCollapse({ ...paths, hsk: "/hsk-table" })}
+            >
+              Все слова
             </NavLink>
             <NavLink
               className='dropdown-item'
               to='/hsk-tests'
               activeStyle={activeNavLink}
-              onClick={() => setPathsAndCollapse({ ...paths, tests: "/hsk-tests" })}
+              onClick={() => setPathsAndCollapse({ ...paths, hsk: "/hsk-tests" })}
             >
-              Лексика HSK
+              Тесты
             </NavLink>
           </div>
         </li>
+
         <li className='nav-item'>
           <NavLink
             onClick={collapseIt}
@@ -345,7 +368,7 @@ const Navbar = ({
 
   return (
     <nav className='navbar navbar-expand-lg navbar-dark bg-primary' id='topNavbar'>
-      <NavLink className='navbar-brand' to='/'>
+      <NavLink className='navbar-brand' to='/' onClick={collapseIt}>
         <i className='fas fa-yin-yang'></i> Chinese+Club{" "}
         <span style={{ fontSize: "50%" }}>{appVersion}</span>
       </NavLink>

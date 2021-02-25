@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 import { parseChineseWords } from "../../actions/helpers";
 import TippyTooltip from "../translation/TippyTooltip";
 import WordModal from "../translation/WordModal";
+import HanziWriter from "hanzi-writer";
 
 const Landing = ({ isAuthenticated }) => {
   const [word, setWord] = useState(null);
@@ -17,6 +18,16 @@ const Landing = ({ isAuthenticated }) => {
 
   useEffect(() => {
     setTooltip();
+
+    const writer = HanziWriter.create("showCharDiv", "字", {
+      width: 40,
+      height: 40,
+      padding: 0,
+      showOutline: true,
+      radicalColor: "#168F16",
+      delayBetweenLoops: 3000
+    });
+    writer.loopCharacterAnimation();
   }, []);
 
   if (isAuthenticated) return <Redirect to='/dashboard' />;
@@ -27,7 +38,22 @@ const Landing = ({ isAuthenticated }) => {
         <meta charSet='utf-8' />
         <title>Chinese+ Клуб изучения китайского языка</title>
       </Helmet>
-      <div className='container'>
+      <div className='dark-overlay'></div>
+      <div className='container' id='landingContainer'>
+        <div className='row my-5'>
+          <div className='col-md-12 text-center'>
+            <h2 className='LandingWhiteTxt'>Добро пожаловать в клуб Chinese+</h2>
+            <p className='lead LandingWhiteTxt'>Web-приложение для изучающих китайский язык</p>
+            <div className='buttons'>
+              <Link to='/register' className='btn btn-dark mx-1'>
+                Регистрация
+              </Link>
+              <Link to='/login' className='btn btn-light mx-1'>
+                Войти
+              </Link>
+            </div>
+          </div>
+        </div>
         <div className='row'>
           <WordModal />
           <div className='col-sm-4'>
@@ -39,8 +65,8 @@ const Landing = ({ isAuthenticated }) => {
                 </div>
                 <div className='col-md-10'>
                   <p className='card-text'>
-                    Все тексты с параллельным переводом. И это еще не всё! Кликните на иероглиф -
-                    появится перевод.
+                    Все <Link to='/texts'>тексты</Link> не только с параллельным переводом, но и с
+                    переводом каждого слова. Кликните на иероглиф.
                   </p>
                 </div>
               </div>
@@ -48,24 +74,39 @@ const Landing = ({ isAuthenticated }) => {
           </div>
           <div className='col-sm-4'>
             <div className='card border-light mb-3'>
-              <div className='card-header h5'>Можно делиться текстами</div>
-              <div className='card-body'>
-                <p className='card-text'>
-                  Участники клуба ежедневно добавляют новые тексты и переводы. Разных уровней
-                  сложности. У нас есть и целые книги!
-                </p>
+              <div className='card-header h5'>Делимся текстами</div>
+              <div className='card-body row'>
+                <div className='col-md-2'>
+                  <h3>
+                    <i className='fas fa-book-reader'></i>
+                  </h3>
+                </div>
+                <div className='col-md-10'>
+                  <p className='card-text'>
+                    <Link to='/statistics'>Пользователи</Link> каждый день добавляют новые{" "}
+                    <Link to='/texts'>тексты</Link>. У нас есть и целые{" "}
+                    <Link to='/books'>книги</Link>! Поделитесь и Вы своими переводами.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div className='col-sm-4'>
             <div className='card border-light mb-3'>
               <div className='card-header h5'>Личный вокабуляр</div>
-              <div className='card-body'>
-                <h4 className='card-title'>Light card title</h4>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
+              <div className='card-body row'>
+                <div className='col-md-2'>
+                  <h3>
+                    <i className='fas fa-clipboard-list'></i>
+                  </h3>
+                </div>
+                <div className='col-md-10'>
+                  <p className='card-text'>
+                    Любые слова из лексики <Link to='/hsk-table'>HSK</Link>,{" "}
+                    <Link to='/texts'>текстов</Link> или <Link to='/search'>словаря</Link> Вы можете
+                    добавить в личный вокабуляр и повторять их отдельно.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -74,31 +115,68 @@ const Landing = ({ isAuthenticated }) => {
           <div className='col-sm-4'>
             <div className='card border-light mb-3'>
               <div className='card-header h5'>Словарь с анимацией</div>
-              <div className='card-body'>
-                <h4 className='card-title'>Light card title</h4>
-                <p className='card-text'>
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
+              <div className='card-body row'>
+                <div className='col-md-2' id='showCharDiv'></div>
+                <div className='col-md-10'>
+                  <p className='card-text'>
+                    Каждый иероглиф в <Link to='/search'>словаре</Link> снабжен анимированным
+                    порядком написания черт иероглифа.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div className='col-sm-4'>
             <div className='card border-light mb-3'>
               <div className='card-header h5'>Для начинающих</div>
-              <div className='card-body'>
-                <h4 className='card-title'>Light card title</h4>
-                <p className='card-text'>Озвученный пиньинь и слова HSK</p>
+              <div className='card-body row'>
+                <div className='col-md-2'>
+                  <h3>
+                    <i className='fas fa-brain'></i>
+                  </h3>
+                </div>
+                <div className='col-md-10'>
+                  <p className='card-text'>
+                    Озвученная таблица <Link to='/pinyin'>пиньиня</Link>, все слова для{" "}
+                    <Link to='/hsk-table'>HSK</Link> с озвучкой, а также тесты, чтобы проверить свои
+                    знания.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div className='col-sm-4'>
             <div className='card border-light mb-3'>
-              <div className='card-header h5'>Тесты и квизы</div>
-              <div className='card-body'>
-                <h4 className='card-title'>Light card title</h4>
-                <p className='card-text'>Проверьте свои знания при помощи тестов</p>
+              <div className='card-header h5'>Дневник чтения</div>
+              <div className='card-body row'>
+                <div className='col-md-2'>
+                  <h3>
+                    <i className='fas fa-chart-line'></i>
+                  </h3>
+                </div>
+                <div className='col-md-10'>
+                  <p className='card-text'>
+                    Ставьте себе суточные цели, отмечайте сколько иероглифов прочитано, следите за
+                    графиком своей "успеваемости".
+                  </p>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className='row my-5'>
+          <div className='col-12 d-flex justify-content-center'>
+            <div className='embed-responsive embed-responsive-16by9' style={{ maxWidth: "50rem" }}>
+              <iframe
+                className='embed-responsive-item'
+                width='560'
+                height='315'
+                src='https://www.youtube.com/embed/fxM8lH17fUY'
+                frameBorder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </div>
@@ -111,27 +189,15 @@ const Landing = ({ isAuthenticated }) => {
 // <div className='landing-inner'>
 //   <h1 className='x-large'>Добро пожаловать в клуб Chinese+</h1>
 
-//   <div className='embed-responsive embed-responsive-16by9' style={{ maxWidth: "60rem" }}>
-//     <iframe
-//       className='embed-responsive-item'
-//       width='560'
-//       height='315'
-//       src='https://www.youtube.com/embed/fxM8lH17fUY'
-//       frameBorder='0'
-//       allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-//       allowFullScreen
-//     ></iframe>
-//   </div>
-
-//   <p className='lead'>Web-приложение для изучающих китайский язык от ChinesePlus</p>
-//   <div className='buttons'>
-//     <Link to='/register' className='btn btn-dark'>
-//       Регистрация
-//     </Link>
-//     <Link to='/login' className='btn btn-light'>
-//       Войти
-//     </Link>
-//   </div>
+// <p className='lead'>Web-приложение для изучающих китайский язык от ChinesePlus</p>
+// <div className='buttons'>
+//   <Link to='/register' className='btn btn-dark'>
+//     Регистрация
+//   </Link>
+//   <Link to='/login' className='btn btn-light'>
+//     Войти
+//   </Link>
+// </div>
 
 //   <div className='card text-primary bg-light mt-4'>
 //     <div className='card-header'>

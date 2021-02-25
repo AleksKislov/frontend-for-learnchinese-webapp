@@ -8,13 +8,19 @@ import { Helmet } from "react-helmet";
 
 const HskTests = ({ lexicons, loadTestLexicon, loading }) => {
   const [level, setLevel] = useState("hsk1");
-  useEffect(() => {
-    loadTestLexicon(level.charAt(3));
-  }, []);
 
   let translationDiv = document.querySelector("#translation");
   let pinyinDiv = document.querySelector("#pinyin");
   let audioDiv = document.querySelector("#audio");
+
+  useEffect(() => {
+    loadTestLexicon(level.charAt(3));
+    setTimeout(() => {
+      if (!loading && translationDiv) {
+        init();
+      }
+    }, 500);
+  }, [loading, translationDiv]);
 
   const init = () => {
     view.displayQuestions(translationDiv, lexicons);
@@ -278,10 +284,6 @@ const HskTests = ({ lexicons, loadTestLexicon, loading }) => {
       }
     }
   };
-
-  if (!loading && translationDiv) {
-    init();
-  }
 
   const refreshButton = mycase => {
     switch (mycase) {
