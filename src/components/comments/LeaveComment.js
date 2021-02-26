@@ -3,7 +3,7 @@ import { addComment, getComments, unsetCommentReply } from "../../actions/commen
 import { connect } from "react-redux";
 import store from "../../store";
 import { setAlert } from "../../actions/alert";
-import { commentLength, commentEmojis } from "../../apikeys.json";
+import { commentLength } from "../../apikeys.json";
 import EmojiSelect from "./EmojiSelect";
 
 // path is from/for book Chapterpage
@@ -60,9 +60,6 @@ const LeaveComment = ({
     getComments(where, _id);
   };
 
-  const sizeUp = e => (e.target.style.fontSize = "2rem");
-  const sizeDown = e => (e.target.style.fontSize = "0.9375rem");
-
   const addEmoToText = e => {
     const previousTxt = document.getElementById("textForm").value;
     setText(`${previousTxt} ${e.target.innerHTML}`);
@@ -86,32 +83,6 @@ const LeaveComment = ({
       return { id, name, str: `@@${x}@@` };
     });
   };
-
-  //   <Tippy
-  //   className='mintippy-box'
-  //   trigger='click'
-  //   theme='light-border'
-  //   placement='bottom'
-  //   content={
-  //     <div>
-  //       {
-  //         "hello"
-  //         //   commentEmojis.map((emo, ind) => (
-  //         //   <span
-  //         //     key={ind}
-  //         //     onMouseEnter={e => sizeUp(e)}
-  //         //     onMouseLeave={e => sizeDown(e)}
-  //         //     onClick={e => addEmoToText(e)}
-  //         //   >
-  //         //     {emo}{" "}
-  //         //   </span>
-  //         // ))
-  //       }
-  //     </div>
-  //   }
-  // >
-  //   tets
-  // </Tippy>
 
   return (
     <div className='card my-2'>
@@ -172,7 +143,7 @@ const LeaveComment = ({
                 {text.length}/{commentLength}
               </small>
               <div className='float-right'>
-                <EmojiSelect sizeUp={sizeUp} sizeDown={sizeDown} addEmoToText={addEmoToText} />
+                <EmojiSelect addEmoToText={addEmoToText} />
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Tippy from "@tippyjs/react";
 import { commentEmojis } from "../../apikeys.json";
 
-const EmojiSelect = ({ sizeUp, sizeDown, addEmoToText }) => {
+const EmojiSelect = ({ addEmoToText }) => {
   return (
     <Tippy
       className='emotippy-box'

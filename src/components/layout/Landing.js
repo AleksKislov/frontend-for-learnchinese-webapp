@@ -17,17 +17,19 @@ const Landing = ({ isAuthenticated }) => {
   };
 
   useEffect(() => {
-    setTooltip();
+    if (!isAuthenticated) {
+      setTooltip();
 
-    const writer = HanziWriter.create("showCharDiv", "字", {
-      width: 40,
-      height: 40,
-      padding: 0,
-      showOutline: true,
-      radicalColor: "#168F16",
-      delayBetweenLoops: 3000
-    });
-    writer.loopCharacterAnimation();
+      const writer = HanziWriter.create("showCharDiv", "字", {
+        width: 40,
+        height: 40,
+        padding: 0,
+        showOutline: true,
+        radicalColor: "#168F16",
+        delayBetweenLoops: 3000
+      });
+      writer.loopCharacterAnimation();
+    }
   }, []);
 
   if (isAuthenticated) return <Redirect to='/dashboard' />;

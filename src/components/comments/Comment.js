@@ -57,23 +57,27 @@ const Comment = ({
             </div>
             <div className='col-4'>
               {isAuthenticated && (currentUser._id === user || currentUser.role === "admin") && (
-                <button
-                  className='btn btn-sm btn-danger float-right ml-1'
-                  data-toggle='modal'
-                  data-target='#confirmModal'
-                  onClick={e => setCommentToDelete(comment)}
-                >
-                  <i className='fas fa-trash-alt'></i>
-                </button>
+                <Tippy content='Отредактировать / удалить'>
+                  <button
+                    className='btn btn-sm btn-info float-right ml-1'
+                    data-toggle='modal'
+                    data-target='#confirmModal'
+                    onClick={e => setCommentToDelete(comment)}
+                  >
+                    <i className='far fa-edit'></i>
+                  </button>
+                </Tippy>
               )}
               {isAuthenticated && currentUser._id !== user && (
-                <HashLink
-                  to='#yourCommentId'
-                  className='btn btn-outline-primary btn-sm float-right'
-                  onClick={() => setCommentReply(_id, user, name)}
-                >
-                  Ответ
-                </HashLink>
+                <Tippy content='Ответить'>
+                  <HashLink
+                    to='#yourCommentId'
+                    className='btn btn-outline-primary btn-sm float-right'
+                    onClick={() => setCommentReply(_id, user, name)}
+                  >
+                    <i className='fas fa-reply'></i>
+                  </HashLink>
+                </Tippy>
               )}
             </div>
           </div>

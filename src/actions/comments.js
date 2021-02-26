@@ -5,7 +5,8 @@ import {
   SET_COMMENT_TO_DEL,
   SET_MENTIONS_LEN,
   SET_COMMENT_REPLY,
-  UNSET_COMMENT_REPLY
+  UNSET_COMMENT_REPLY,
+  EDIT_COMMENT
 } from "./types";
 import axios from "axios";
 import { setAlert } from "./alert";
@@ -63,6 +64,34 @@ export const addComment = (
     dispatch({
       type: GET_COMMENTS,
       payload: data
+    });
+  } catch (err) {
+    const errors = err.response.data.errors;
+
+    console.log(err);
+    if (errors) {
+      errors.forEach(error => dispatch(setAlert(error.msg, "danger")));
+    } else {
+    }
+    dispatch({ type: GET_COMMENTS_ERR });
+  }
+};
+
+export const editComment = (text, id) => async dispatch => {
+  const config = {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  };
+
+  const body = JSON.stringify({ text, id });
+
+  try {
+    await axios.post(`/api/comments/edit`, body, config);
+
+    dispatch({
+      type: EDIT_COMMENT,
+      payload: { text, id }
     });
   } catch (err) {
     const errors = err.response.data.errors;

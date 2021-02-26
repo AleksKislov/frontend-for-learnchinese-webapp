@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import { dateToStr, addressToUser } from "../../actions/helpers";
 import Tippy from "@tippyjs/react";
 
-const Post = ({ post, addLike, addDislike }) => {
+const Post = ({ post, addLike, addDislike, comments, isPage }) => {
   const { text, name, avatar, date, title, _id, tag, comments_id, likes, dislikes, user } = post;
   const tagTheme = {
     wish: "Пожелание",
@@ -58,7 +58,10 @@ const Post = ({ post, addLike, addDislike }) => {
             </button>
             <Link to={`/posts/${_id}`}>
               <button className='btn btn-sm btn-outline-info mb-1'>
-                Комментарии {comments_id.length > 0 && <span>{comments_id.length}</span>}
+                Комментарии{" "}
+                {isPage
+                  ? comments.length > 0 && <span>{comments.length}</span>
+                  : comments_id.length > 0 && <span>{comments_id.length}</span>}
               </button>
             </Link>
           </div>
@@ -77,4 +80,8 @@ const customStyle = {
   display: "flex"
 };
 
-export default connect(null, { addDislike, addLike })(Post);
+const mapStateToProps = state => ({
+  comments: state.comments.currentComments
+});
+
+export default connect(mapStateToProps, { addDislike, addLike })(Post);

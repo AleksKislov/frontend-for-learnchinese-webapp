@@ -5,7 +5,8 @@ import {
   SET_COMMENT_TO_DEL,
   SET_MENTIONS_LEN,
   SET_COMMENT_REPLY,
-  UNSET_COMMENT_REPLY
+  UNSET_COMMENT_REPLY,
+  EDIT_COMMENT
 } from "../actions/types";
 
 const initialState = {
@@ -23,6 +24,15 @@ export default function(state = initialState, action) {
       return {
         ...state,
         lastComments: payload
+      };
+    case EDIT_COMMENT:
+      return {
+        ...state,
+        commentToDelete: null,
+        currentComments: state.currentComments.map(x => {
+          if (x._id === payload.id) x.text = payload.text;
+          return x;
+        })
       };
     case GET_COMMENTS:
       return {

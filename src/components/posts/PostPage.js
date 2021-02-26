@@ -26,7 +26,7 @@ const PostPage = ({ clearPost, loadPost, post, match, loading, comments, getComm
           <Link to='/posts'>
             <button className='btn btn-outline-info my-2 btn-sm'>Назад</button>
           </Link>
-          <Post post={post} />
+          <Post post={post} isPage={true} />
 
           <LeaveComment _id={post._id} where={"post"} />
         </div>
