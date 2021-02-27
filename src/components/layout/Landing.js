@@ -7,6 +7,7 @@ import { parseChineseWords } from "../../actions/helpers";
 import TippyTooltip from "../translation/TippyTooltip";
 import WordModal from "../translation/WordModal";
 import HanziWriter from "hanzi-writer";
+import CommentsCard from "../dashboard/CommentsCard";
 
 const Landing = ({ isAuthenticated }) => {
   const [word, setWord] = useState(null);
@@ -85,8 +86,8 @@ const Landing = ({ isAuthenticated }) => {
                 </div>
                 <div className='col-md-10'>
                   <p className='card-text'>
-                    <Link to='/statistics'>Пользователи</Link> каждый день добавляют новые{" "}
-                    <Link to='/texts'>тексты</Link>. У нас есть и целые{" "}
+                    <Link to='/statistics'>Пользователи</Link> регулярно добавляют новые{" "}
+                    <Link to='/texts'>тексты</Link>. Скоро будут и целые{" "}
                     <Link to='/books'>книги</Link>! Поделитесь и Вы своими переводами.
                   </p>
                 </div>
@@ -180,6 +181,12 @@ const Landing = ({ isAuthenticated }) => {
                 allowFullScreen
               ></iframe>
             </div>
+          </div>
+        </div>
+
+        <div className='row mb-5 d-flex justify-content-center'>
+          <div className='col-sm-9 LandingWhiteTxt'>
+            <CommentsCard />
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { getLastComments } from "../../actions/comments";
 import { Link } from "react-router-dom";
 import { fromNow } from "../../actions/helpers";
+import Spinner from "../layout/Spinner";
 
 const CommentsCard = ({ getLastComments, comments, loading }) => {
   useEffect(() => {
@@ -13,7 +14,7 @@ const CommentsCard = ({ getLastComments, comments, loading }) => {
     <div className=''>
       <h4 className=''>Последние 10 комментариев:</h4>
       <ul className='list-group'>
-        {!loading &&
+        {!loading ? (
           comments.map(comment => (
             <Link
               to={`/${comment.destination}s/${comment.path || comment.post_id}`}
@@ -24,7 +25,10 @@ const CommentsCard = ({ getLastComments, comments, loading }) => {
               <span className='badge badge-primary float-right mx-2'>{fromNow(comment.date)}</span>
               <p dangerouslySetInnerHTML={{ __html: comment.text }} className='commentP'></p>
             </Link>
-          ))}
+          ))
+        ) : (
+          <Spinner />
+        )}
       </ul>
     </div>
   );
