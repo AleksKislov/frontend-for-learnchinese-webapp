@@ -11569,3 +11569,17 @@ to violet when it is not checked*/
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+
+  .answerLine {
+    height: 4px;
+    position: absolute;
+    border-radius: 20%
+  }
+
+  .answerLineRed {
+    background-color: var(--danger); 
+  }
+
+  .answerLineGreen {
+    background-color: var(--success); 
+  }

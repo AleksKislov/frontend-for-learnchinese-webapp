@@ -7,7 +7,7 @@ import GoogleLoginSuccess from "../auth/GoogleLoginSuccess";
 import Alert from "../layout/Alert";
 import HskTable from "../hsk-table/HskTable";
 import Words from "../hsk-table/Words";
-import UserWords from "../texts/UserWords";
+import UserWords from "../userWords/UserWords";
 
 import Dashboard from "../dashboard/Dashboard";
 import PrivateRoute from "../routing/PrivateRoute";

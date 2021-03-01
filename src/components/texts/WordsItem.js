@@ -8,6 +8,7 @@ import {
   addWord,
   loadUserWords
 } from "../../actions/userWords";
+import { parseRussian } from "../../actions/helpers";
 
 const WordsItem = ({
   removeWord,
@@ -37,27 +38,7 @@ const WordsItem = ({
     }
   };
 
-  let russian = translation
-    .replace(/\[b\]\\\[o\\\]\d\[\/b\]/g, "")
-    .replace(/\[b\]/g, "<span class='tippyBold'>")
-    .replace(/\[\/b\]/g, "</span>")
-    .replace(/\[c\]/g, "<span class='tippyColor'>")
-    .replace(/\[\/c\]/g, "</span>")
-    .replace(/\[p\]/g, "<span class='tippyColor tippyItalic'>")
-    .replace(/\[\/p\]/g, "</span>")
-    .replace(/\[i\]/g, "<span class='tippyItalic'>")
-    .replace(/\[\/i\]/g, "</span>")
-    .replace(/\[m1\]/g, "<span class='tippyParagraph'>")
-    .replace(/\[m\d\]/g, "<span class='tippyExample'>")
-    .replace(/\[\/m\]/g, "</span>")
-    .replace(/\[\*\]\[ex\]/g, "<span class='tippyExs'>")
-    .replace(/\[\/ex\]\[\/\*\]/g, "</span>")
-    .replace(/\\\[(.{1,})\\\]/g, "($1)");
-
-  if (russian.length > 2000) {
-    const ind = russian.slice(800, russian.length).indexOf("<span class='tippyExample'>");
-    russian = russian.slice(0, ind + 800);
-  }
+  let russian = parseRussian(translation);
 
   const showModal = e => {
     lexicon.russian = lexicon.translation;

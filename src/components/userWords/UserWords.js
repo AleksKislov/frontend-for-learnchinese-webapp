@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { loadUserWords } from "../../actions/userWords";
-import WordsItem from "./WordsItem";
+import WordsItem from "../texts/WordsItem";
 import PropTypes from "prop-types";
 import Spinner from "../layout/Spinner";
 import WordModal from "../translation/WordModal";
 import { Link } from "react-router-dom";
+import TypingGame from "./TypingGame";
 
 const UserWords = ({ loadUserWords, words, wordsLoading }) => {
   const [hideFlag, setHideFlag] = useState({
@@ -58,15 +59,15 @@ const UserWords = ({ loadUserWords, words, wordsLoading }) => {
             <h4 className='card-title'>Мой Лексикон</h4>
             <h6 className='card-subtitle mb-2 text-muted'>слова для повторения</h6>
             <p className='card-text'>
-              Добавляйте сюда любые китайские слова из <Link to='/texts'>читалки</Link>,{" "}
-              <Link to='/search'>словаря</Link> и просто любых отрывков текстов, которые захотите{" "}
-              <Link to='/translate'>перевести</Link>.
+              Добавляйте сюда любые китайские слова из <Link to='/texts'>текстов</Link>,{" "}
+              <Link to='/books'>книг</Link> и <Link to='/search'>словаря</Link>
             </p>
           </div>
         </div>
       </div>
 
       <div className='col-sm-9'>
+        <TypingGame words={words} />
         <table className='table table-hover table-responsive'>
           <thead>
             <tr className='table-info'>
