@@ -15,6 +15,7 @@ const TypingGame = ({ words }) => {
   }, [shuffledWords]);
 
   const [width, setWidth] = useState(0);
+  const [testResult, setTestResult] = useState({ correct: 0, wrong: 0 });
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
   const [wrong, setWrong] = useState(0);
@@ -25,6 +26,7 @@ const TypingGame = ({ words }) => {
       setWidth(width + 0.5);
       if (width >= 100) {
         setNewQuestion();
+        setWrong(wrong + 1);
       }
     }
   }, 100);
@@ -44,14 +46,16 @@ const TypingGame = ({ words }) => {
       if (answer === question.chinese) {
         setCorrect(correct + 1);
         setNewQuestion();
-      } else {
-        setWrong(wrong + 1);
       }
+      //  else {
+      //   setWrong(wrong + 1);
+      // }
       setAnswer("");
     }
   };
 
   const setNewGame = () => {
+    setTestResult(null);
     setWidth(0);
     setQuestionNum(0);
     setShuffledWords(shuffleArr(words).slice(0, 10));
@@ -78,7 +82,7 @@ const TypingGame = ({ words }) => {
               <input
                 className='form-control form-control-sm'
                 type='text'
-                placeholder='ответ'
+                placeholder='Ответ на кит. языке'
                 id='answer'
                 onChange={e => setAnswer(e.target.value)}
                 value={answer}
@@ -86,7 +90,8 @@ const TypingGame = ({ words }) => {
                 autoComplete='off'
               />
               <label className='col-form-label col-form-label-sm' htmlFor='answer'>
-                Верно: {correct}, ошибки: {wrong}
+                <i className='fas fa-check-circle text-success'></i> {correct}{" "}
+                <i className='fas fa-times-circle text-danger'></i> {wrong}
               </label>
             </div>
           ) : (
