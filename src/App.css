@@ -11583,3 +11583,15 @@ to violet when it is not checked*/
   .answerLineGreen {
     background-color: var(--success); 
   }
+
+  .typing-img {
+    height: 64px;
+  }
+
+.questionColorDiv {
+  height:5px;
+  width: 100%;
+  background-color: var(--secondary);
+  border: 1px solid var(--primary);
+  margin:1px;
+}

@@ -7,6 +7,7 @@ import Spinner from "../layout/Spinner";
 import Pagination from "./Pagination";
 import TableCard from "./TableCard";
 import { Helmet } from "react-helmet";
+import Tippy from "@tippyjs/react";
 
 const HskTable = ({
   loadLexicon,
@@ -118,31 +119,37 @@ const HskTable = ({
               <tr className='table-info'>
                 <th>#</th>
                 <th>
-                  <button
-                    type='button'
-                    className='btn btn-light btn-sm'
-                    onClick={e => hideChinese(e)}
-                  >
-                    Иероглифы
-                  </button>
+                  <Tippy placement='bottom' content='Скрыть иероглифы'>
+                    <button
+                      type='button'
+                      className='btn btn-light btn-sm'
+                      onClick={e => hideChinese(e)}
+                    >
+                      Иероглифы
+                    </button>
+                  </Tippy>
                 </th>
                 <th>
-                  <button
-                    type='button'
-                    className='btn btn-light btn-sm'
-                    onClick={e => hidePinyin(e)}
-                  >
-                    Пиньинь
-                  </button>
+                  <Tippy placement='bottom' content='Скрыть пиньинь'>
+                    <button
+                      type='button'
+                      className='btn btn-light btn-sm'
+                      onClick={e => hidePinyin(e)}
+                    >
+                      Пиньинь
+                    </button>
+                  </Tippy>
                 </th>
                 <th style={{ width: "70%" }}>
-                  <button
-                    type='button'
-                    className='btn btn-light btn-sm'
-                    onClick={e => hideFanyi(e)}
-                  >
-                    Перевод
-                  </button>
+                  <Tippy placement='bottom' content='Скрыть перевод'>
+                    <button
+                      type='button'
+                      className='btn btn-light btn-sm'
+                      onClick={e => hideFanyi(e)}
+                    >
+                      Перевод
+                    </button>
+                  </Tippy>
                 </th>
                 <th>
                   <div className='text-center'>

@@ -7,6 +7,7 @@ import Spinner from "../layout/Spinner";
 import WordModal from "../translation/WordModal";
 import { Link } from "react-router-dom";
 import TypingGame from "./TypingGame";
+import Tippy from "@tippyjs/react";
 
 const UserWords = ({ loadUserWords, words, wordsLoading }) => {
   const [hideFlag, setHideFlag] = useState({
@@ -14,6 +15,8 @@ const UserWords = ({ loadUserWords, words, wordsLoading }) => {
     pinyin: false,
     translation: false
   });
+
+  const [testStarted, setTestStarted] = useState(false);
 
   useEffect(() => {
     loadUserWords();
@@ -67,39 +70,56 @@ const UserWords = ({ loadUserWords, words, wordsLoading }) => {
       </div>
 
       <div className='col-sm-9'>
-        <TypingGame words={words} />
-        <table className='table table-hover table-responsive'>
-          <thead>
-            <tr className='table-info'>
-              <th>
-                <button
-                  type='button'
-                  className='btn btn-light btn-sm'
-                  onClick={e => hideChinese(e)}
-                >
-                  Иероглифы
-                </button>
-              </th>
-              <th>
-                <button type='button' className='btn btn-light btn-sm' onClick={e => hidePinyin(e)}>
-                  Пиньинь
-                </button>
-              </th>
-              <th style={{ width: "60%" }}>
-                <button type='button' className='btn btn-light btn-sm' onClick={e => hideFanyi(e)}>
-                  Перевод
-                </button>
-              </th>
-              <th>Примеры</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {words.map(word => (
-              <WordsItem key={word._id} lexicon={word} hideFlag={hideFlag} />
-            ))}
-          </tbody>
-        </table>
+        <TypingGame words={words} testStarted={setTestStarted} />
+
+        {!testStarted && (
+          <table className='table table-hover table-responsive'>
+            <thead>
+              <tr className='table-info'>
+                <th>
+                  <Tippy placement='bottom' content='Скрыть иероглифы'>
+                    <button
+                      type='button'
+                      className='btn btn-light btn-sm'
+                      onClick={e => hideChinese(e)}
+                    >
+                      Иероглифы
+                    </button>
+                  </Tippy>
+                </th>
+                <th>
+                  <Tippy placement='bottom' content='Скрыть пиньинь'>
+                    <button
+                      type='button'
+                      className='btn btn-light btn-sm'
+                      onClick={e => hidePinyin(e)}
+                    >
+                      Пиньинь
+                    </button>
+                  </Tippy>
+                </th>
+                <th style={{ width: "60%" }}>
+                  <Tippy placement='bottom' content='Скрыть перевод'>
+                    <button
+                      type='button'
+                      className='btn btn-light btn-sm'
+                      onClick={e => hideFanyi(e)}
+                    >
+                      Перевод
+                    </button>
+                  </Tippy>
+                </th>
+                <th>Примеры</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {words.map(word => (
+                <WordsItem key={word._id} lexicon={word} hideFlag={hideFlag} />
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
     </div>
   );
