@@ -8,9 +8,15 @@ import TippyTooltip from "../translation/TippyTooltip";
 import WordModal from "../translation/WordModal";
 import HanziWriter from "hanzi-writer";
 import CommentsCard from "../dashboard/CommentsCard";
+import { loadPosts } from "../../actions/posts";
+import Post from "../posts/Post";
 
-const Landing = ({ isAuthenticated }) => {
+const Landing = ({ isAuthenticated, loadPosts, posts }) => {
   const [word, setWord] = useState(null);
+
+  useEffect(() => {
+    if (posts.length === 0) loadPosts(0);
+  }, []);
 
   const setTooltip = async () => {
     const res = await parseChineseWords({ chinese_arr: ["我"] });
@@ -184,9 +190,16 @@ const Landing = ({ isAuthenticated }) => {
           </div>
         </div>
 
-        <div className='row mb-5 d-flex justify-content-center'>
-          <div className='col-sm-9 LandingWhiteTxt'>
+        <div className='row mb-5'>
+          <div className='col-sm-6 LandingWhiteTxt mb-3'>
             <CommentsCard />
+          </div>
+          <div className='col-sm-6'>
+            <h4 className='LandingWhiteTxt'>Последние записи в Гостевой:</h4>
+
+            {posts.map(post => (
+              <Post key={post._id} post={post} />
+            ))}
           </div>
         </div>
       </div>
@@ -230,7 +243,8 @@ Landing.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
+  isAuthenticated: state.auth.isAuthenticated,
+  posts: state.posts.posts
 });
 
-export default connect(mapStateToProps)(Landing);
+export default connect(mapStateToProps, { loadPosts })(Landing);
