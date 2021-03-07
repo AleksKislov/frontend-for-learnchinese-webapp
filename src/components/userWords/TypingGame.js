@@ -4,6 +4,7 @@ import { useInterval } from "../../actions/customHooks";
 import badImg from "../../img/typingGame/001bad.png";
 import okImg from "../../img/typingGame/003ok.png";
 import goodImg from "../../img/typingGame/002positive.png";
+import Tippy from "@tippyjs/react";
 
 const TypingGame = ({ words, testStarted }) => {
   const [shuffledWords, setShuffledWords] = useState(null);
@@ -30,11 +31,9 @@ const TypingGame = ({ words, testStarted }) => {
 
   useInterval(() => {
     if (start) {
-      setProgress(progress + 1);
+      setProgress(progress + 0.5);
       if (progress >= 100) {
-        setWrongAnswers([...wrongAnswers, question.chinese]);
-        setNewQuestion();
-        setWrong(wrong + 1);
+        skipQuestion();
       }
     }
   }, 100);
@@ -45,9 +44,14 @@ const TypingGame = ({ words, testStarted }) => {
     setQuestionNum(questionNum + 1);
   };
 
+  const skipQuestion = () => {
+    setWrongAnswers([...wrongAnswers, question.chinese]);
+    setNewQuestion();
+    setWrong(wrong + 1);
+  };
+
   useEffect(() => {
     if (questionNum > 10) {
-      console.log(wrongAnswers);
       setResultWords(correct > 8 ? "Отличный результат!" : correct > 5 ? "Неплохо!" : "Н-да уж...");
       testStarted(false);
       setStart(false);
@@ -87,17 +91,28 @@ const TypingGame = ({ words, testStarted }) => {
         className='card-text text-sm'
         dangerouslySetInnerHTML={{ __html: question && parseRussian(question.translation) }}
       ></p>
-      <input
-        className='form-control form-control-sm'
-        type='text'
-        placeholder='Ответ на кит. языке'
-        id='answer'
-        onChange={e => setAnswer(e.target.value)}
-        value={answer}
-        onKeyDown={e => checkIt(e)}
-        autoComplete='off'
-      />
-      <label className='col-form-label col-form-label-sm' htmlFor='answer'>
+      <div className='row'>
+        <div className='col-10' style={{ paddingRight: "0" }}>
+          <input
+            className='form-control'
+            type='text'
+            placeholder='Ответ на кит. языке'
+            id='answer'
+            onChange={e => setAnswer(e.target.value)}
+            value={answer}
+            onKeyDown={e => checkIt(e)}
+            autoComplete='off'
+          />
+        </div>
+        <div className='col-1 ml-1' style={{ paddingLeft: "0" }}>
+          <Tippy content='Пропустить вопрос' placement='bottom'>
+            <button className='btn btn-danger' onClick={skipQuestion}>
+              <i className='fas fa-forward'></i>
+            </button>
+          </Tippy>
+        </div>
+      </div>
+      <label className='col-form-label ml-1' htmlFor='answer'>
         <i className='fas fa-check-circle text-success'></i> {correct}{" "}
         <i className='fas fa-times-circle text-danger'></i> {wrong}
       </label>
@@ -154,32 +169,30 @@ const TypingGame = ({ words, testStarted }) => {
                   </button>
                   <span className='card-text'>
                     {questionNum > 10
-                      ? resultWords
+                      ? `${resultWords} ${
+                          wrongAnswers.filter(x => x).length > 0 ? "Нужно повторить " : ""
+                        } ${wrongAnswers.filter(x => x)}`
                       : "Проверьте насколько хорошо вы знаете слова ниже"}
                   </span>
                 </div>
               )}
-
-              <div className='row d-flex justify-content-center'>
-                <div
-                  className={`col-1 ${
-                    wrongAnswers.length > 0 && wrongAnswers[0]
-                      ? "question-success"
-                      : "question-grey"
-                  }`}
-                ></div>
-                <div className='col-1 questionColorDiv'></div>
-                <div className='col-1 questionColorDiv'></div>
-                <div className='col-1 questionColorDiv'></div>
-                <div className='col-1 questionColorDiv'></div>
-                <div className='col-1 questionColorDiv'></div>
-                <div className='col-1 questionColorDiv'></div>
-                <div className='col-1 questionColorDiv'></div>
-                <div className='col-1 questionColorDiv'></div>
-                <div className='col-1 questionColorDiv'></div>
-              </div>
             </div>
           )}
+        </div>
+
+        <div className='row d-flex justify-content-center'>
+          {new Array(10).fill(1).map((x, ind) => (
+            <div
+              key={ind}
+              className={`col-1 questionColorDiv ${
+                wrongAnswers.length > ind
+                  ? wrongAnswers[ind]
+                    ? "question-danger"
+                    : "question-success"
+                  : "question-grey"
+              }`}
+            ></div>
+          ))}
         </div>
       </div>
     )

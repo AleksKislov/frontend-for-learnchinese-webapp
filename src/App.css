@@ -11589,9 +11589,20 @@ to violet when it is not checked*/
   }
 
 .questionColorDiv {
-  height:5px;
+  height:6px;
   width: 100%;
-  background-color: var(--secondary);
   border: 1px solid var(--primary);
   margin:1px;
+}
+
+.question-grey {
+  background-color: var(--secondary);
+}
+
+.question-success {
+  background-color: var(--success);
+}
+
+.question-danger {
+  background-color: var(--danger);
 }
