@@ -110,14 +110,14 @@ export const getPhotos = async pic_theme => {
     const { data } = await axios.get("/api/translation/unsplash/" + pic_theme);
     // console.log(data.results);
 
-    data.results.forEach(el => {
+    data.forEach(el => {
       const img = document.createElement("img");
       img.src = el.urls.small;
       photosDiv.appendChild(img);
       img.classList.add("imgToChoose");
     });
 
-    return data.results.length > 0;
+    return data.length > 0;
   } catch (err) {
     console.log(err);
   }
