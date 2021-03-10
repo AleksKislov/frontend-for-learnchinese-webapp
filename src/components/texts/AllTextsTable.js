@@ -134,7 +134,7 @@ const AllTextsTable = ({ user }) => {
             <thead>
               <tr className='table-info'>
                 <th style={thStyle}>
-                  <div onClick={sortByDate}>
+                  <div onClick={sortByDate} style={{ cursor: "pointer" }}>
                     Дата <i className='fas fa-sort'></i>
                   </div>
                 </th>
@@ -144,21 +144,21 @@ const AllTextsTable = ({ user }) => {
                 <th>Опубликовал</th>
                 <Tippy content='Кол-во благодарностей' placement='top'>
                   <th style={thStyle}>
-                    <div onClick={sortByLikes}>
+                    <div onClick={sortByLikes} style={{ cursor: "pointer" }}>
                       <i className='fas fa-heart'></i> <i className='fas fa-sort'></i>
                     </div>
                   </th>
                 </Tippy>
                 <Tippy content='Кол-во просмотров' placement='top'>
                   <th style={thStyle}>
-                    <div onClick={sortByHits}>
+                    <div onClick={sortByHits} style={{ cursor: "pointer" }}>
                       <i className='fas fa-eye'></i> <i className='fas fa-sort'></i>
                     </div>
                   </th>
                 </Tippy>
                 <Tippy content='Кол-во комментариев' placement='top'>
                   <th style={thStyle}>
-                    <div onClick={sortByComments}>
+                    <div onClick={sortByComments} style={{ cursor: "pointer" }}>
                       <i className='fas fa-comment-dots'></i> <i className='fas fa-sort'></i>
                     </div>
                   </th>

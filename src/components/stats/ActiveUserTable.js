@@ -9,6 +9,7 @@ const ActiveUserTable = ({}) => {
   }, []);
 
   const [data, setData] = useState(null);
+  const [clicked, setClicked] = useState(true);
 
   const loadData = async () => {
     try {
@@ -17,6 +18,16 @@ const ActiveUserTable = ({}) => {
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const sortByTexts = () => {
+    setData(data.sort((a, b) => b.num - a.num));
+    setClicked(!clicked);
+  };
+
+  const sortByCharacters = () => {
+    setData(data.sort((a, b) => b.length - a.length));
+    setClicked(!clicked);
   };
 
   return (
@@ -50,8 +61,12 @@ const ActiveUserTable = ({}) => {
                 <th colSpan='2'>Опубликовал</th>
               </tr>
               <tr className='table-info'>
-                <th>Текстов</th>
-                <th>Иероглифов</th>
+                <th onClick={sortByTexts} style={{ cursor: "pointer" }}>
+                  Текстов <i className='fas fa-sort-up'></i>
+                </th>
+                <th onClick={sortByCharacters} style={{ cursor: "pointer" }}>
+                  Иероглифов <i className='fas fa-sort-up'></i>
+                </th>
               </tr>
             </thead>
             <tbody>
