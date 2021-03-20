@@ -185,6 +185,17 @@ const Navbar = ({
             Мои Слова <span className='badge badge-pill badge-warning'>{userWordsLen}</span>
           </NavLink>
 
+          {user && (
+            <NavLink
+              className='dropdown-item'
+              to={"/user/" + user._id}
+              activeStyle={activeNavLink}
+              onClick={collapseIt}
+            >
+              Мои тексты
+            </NavLink>
+          )}
+
           <NavLink className='dropdown-item' to='/mentions' exact={true}>
             Упоминания и ответы {mentions && <div className='mentionsCircleLink'></div>}
           </NavLink>
@@ -201,163 +212,207 @@ const Navbar = ({
     </ul>
   );
 
+  const pinyinNav = (
+    <li className='nav-item dropdown'>
+      <NavLink
+        className='nav-link dropdown-toggle'
+        data-toggle='dropdown'
+        to={paths.pinyin}
+        activeStyle={activeNavLink}
+      >
+        Пиньинь
+      </NavLink>
+
+      <div className='dropdown-menu'>
+        <NavLink
+          className='dropdown-item'
+          to='/pinyin'
+          activeStyle={activeNavLink}
+          onClick={() => setPathsAndCollapse({ ...paths, pinyin: "/pinyin" })}
+        >
+          Таблица
+        </NavLink>
+        <NavLink
+          className='dropdown-item'
+          to='/pinyin-tests'
+          activeStyle={activeNavLink}
+          onClick={() => setPathsAndCollapse({ ...paths, pinyin: "/pinyin-tests" })}
+        >
+          Тесты
+        </NavLink>
+      </div>
+    </li>
+  );
+
+  const readingNav = (
+    <li className='nav-item dropdown'>
+      <NavLink
+        className='nav-link dropdown-toggle'
+        data-toggle='dropdown'
+        to={paths.reading}
+        activeStyle={activeNavLink}
+      >
+        Читалка
+      </NavLink>
+
+      <div className='dropdown-menu'>
+        <NavLink
+          className='dropdown-item'
+          to='/texts'
+          activeStyle={activeNavLink}
+          onClick={() => setPathsAndCollapse({ ...paths, reading: "/texts" })}
+        >
+          Тексты
+        </NavLink>
+        <NavLink
+          className='dropdown-item'
+          to='/books'
+          activeStyle={activeNavLink}
+          onClick={() => setPathsAndCollapse({ ...paths, reading: "/books" })}
+        >
+          Книги
+        </NavLink>
+        <NavLink
+          className='dropdown-item'
+          to='/not_approved_texts'
+          activeStyle={activeNavLink}
+          onClick={() => setPathsAndCollapse({ ...paths, reading: "/not_approved_texts" })}
+        >
+          На проверке
+        </NavLink>
+        <div className='dropdown-divider'></div>
+        <NavLink
+          className='dropdown-item'
+          to='/statistics'
+          activeStyle={activeNavLink}
+          onClick={() => setPathsAndCollapse({ ...paths, reading: "/statistics" })}
+        >
+          Герои Клуба
+        </NavLink>
+      </div>
+    </li>
+  );
+
+  const hskNav = (
+    <li className='nav-item dropdown'>
+      <NavLink
+        className='nav-link dropdown-toggle'
+        data-toggle='dropdown'
+        to={paths.hsk}
+        activeStyle={activeNavLink}
+      >
+        HSK
+      </NavLink>
+
+      <div className='dropdown-menu'>
+        <NavLink
+          className='dropdown-item'
+          to='/hsk-table'
+          activeStyle={activeNavLink}
+          onClick={() => setPathsAndCollapse({ ...paths, hsk: "/hsk-table" })}
+        >
+          Все слова
+        </NavLink>
+        <NavLink
+          className='dropdown-item'
+          to='/hsk-tests'
+          activeStyle={activeNavLink}
+          onClick={() => setPathsAndCollapse({ ...paths, hsk: "/hsk-tests" })}
+        >
+          Тесты
+        </NavLink>
+        <NavLink
+          className='dropdown-item'
+          to='/hsk-search'
+          activeStyle={activeNavLink}
+          onClick={() => setPathsAndCollapse({ ...paths, hsk: "/hsk-search" })}
+        >
+          Поиск
+        </NavLink>
+      </div>
+    </li>
+  );
+
+  const feedbackNav = (
+    <li className='nav-item dropdown'>
+      <NavLink
+        className='nav-link dropdown-toggle'
+        data-toggle='dropdown'
+        to='/donate'
+        activeStyle={activeNavLink}
+      >
+        <i className='far fa-comment-alt'></i> Фидбэк
+      </NavLink>
+
+      <div className='dropdown-menu'>
+        <NavLink
+          onClick={collapseIt}
+          className='dropdown-item'
+          to='/posts'
+          activeStyle={activeNavLink}
+        >
+          Гостевая
+        </NavLink>
+        <NavLink
+          className='dropdown-item'
+          to='/donate'
+          activeStyle={activeNavLink}
+          onClick={() => setPathsAndCollapse({ ...paths, donate: "/donate" })}
+        >
+          🙏🏻 Донат
+        </NavLink>
+        <NavLink
+          className='dropdown-item'
+          to='/kanban'
+          activeStyle={activeNavLink}
+          onClick={() => setPathsAndCollapse({ ...paths, donate: "/kanban" })}
+        >
+          Канбан
+        </NavLink>
+      </div>
+    </li>
+  );
+
+  const translationNav = (
+    <li className='nav-item dropdown'>
+      <NavLink
+        className='nav-link dropdown-toggle'
+        data-toggle='dropdown'
+        to='/search'
+        activeStyle={activeNavLink}
+      >
+        Словарь
+      </NavLink>
+
+      <div className='dropdown-menu'>
+        <NavLink
+          onClick={collapseIt}
+          className='dropdown-item'
+          to='/search'
+          activeStyle={activeNavLink}
+        >
+          Словарь
+        </NavLink>
+        <NavLink
+          onClick={collapseIt}
+          className='dropdown-item'
+          to='/translate'
+          activeStyle={activeNavLink}
+        >
+          Pop-up перевод
+        </NavLink>
+      </div>
+    </li>
+  );
+
   const mainMenu = (
     <Fragment>
       <ul className='navbar-nav text-center mr-auto'>
-        <li className='nav-item dropdown'>
-          <NavLink
-            className='nav-link dropdown-toggle'
-            data-toggle='dropdown'
-            to={paths.pinyin}
-            activeStyle={activeNavLink}
-          >
-            Пиньинь
-          </NavLink>
-
-          <div className='dropdown-menu'>
-            <NavLink
-              className='dropdown-item'
-              to='/pinyin'
-              activeStyle={activeNavLink}
-              onClick={() => setPathsAndCollapse({ ...paths, pinyin: "/pinyin" })}
-            >
-              Таблица
-            </NavLink>
-            <NavLink
-              className='dropdown-item'
-              to='/pinyin-tests'
-              activeStyle={activeNavLink}
-              onClick={() => setPathsAndCollapse({ ...paths, pinyin: "/pinyin-tests" })}
-            >
-              Тесты
-            </NavLink>
-          </div>
-        </li>
-        <li className='nav-item dropdown'>
-          <NavLink
-            className='nav-link dropdown-toggle'
-            data-toggle='dropdown'
-            to={paths.hsk}
-            activeStyle={activeNavLink}
-          >
-            HSK
-          </NavLink>
-
-          <div className='dropdown-menu'>
-            <NavLink
-              className='dropdown-item'
-              to='/hsk-table'
-              activeStyle={activeNavLink}
-              onClick={() => setPathsAndCollapse({ ...paths, hsk: "/hsk-table" })}
-            >
-              Все слова
-            </NavLink>
-            <NavLink
-              className='dropdown-item'
-              to='/hsk-tests'
-              activeStyle={activeNavLink}
-              onClick={() => setPathsAndCollapse({ ...paths, hsk: "/hsk-tests" })}
-            >
-              Тесты
-            </NavLink>
-          </div>
-        </li>
-
-        <li className='nav-item'>
-          <NavLink
-            onClick={collapseIt}
-            className='nav-link'
-            to='/search'
-            activeStyle={activeNavLink}
-          >
-            Словарь
-          </NavLink>
-        </li>
-        <li className='nav-item dropdown'>
-          <NavLink
-            className='nav-link dropdown-toggle'
-            data-toggle='dropdown'
-            to={paths.reading}
-            activeStyle={activeNavLink}
-          >
-            Читалка
-          </NavLink>
-
-          <div className='dropdown-menu'>
-            <NavLink
-              className='dropdown-item'
-              to='/texts'
-              activeStyle={activeNavLink}
-              onClick={() => setPathsAndCollapse({ ...paths, reading: "/texts" })}
-            >
-              Тексты
-            </NavLink>
-            <NavLink
-              className='dropdown-item'
-              to='/books'
-              activeStyle={activeNavLink}
-              onClick={() => setPathsAndCollapse({ ...paths, reading: "/books" })}
-            >
-              Книги
-            </NavLink>
-            <NavLink
-              className='dropdown-item'
-              to='/not_approved_texts'
-              activeStyle={activeNavLink}
-              onClick={() => setPathsAndCollapse({ ...paths, reading: "/not_approved_texts" })}
-            >
-              На проверке
-            </NavLink>
-            <div className='dropdown-divider'></div>
-            <NavLink
-              className='dropdown-item'
-              to='/statistics'
-              activeStyle={activeNavLink}
-              onClick={() => setPathsAndCollapse({ ...paths, reading: "/statistics" })}
-            >
-              Герои Клуба
-            </NavLink>
-          </div>
-        </li>
-        <li className='nav-item'>
-          <NavLink
-            onClick={collapseIt}
-            className='nav-link'
-            to='/posts'
-            activeStyle={activeNavLink}
-          >
-            Гостевая
-          </NavLink>
-        </li>
-        <li className='nav-item dropdown'>
-          <NavLink
-            className='nav-link dropdown-toggle'
-            data-toggle='dropdown'
-            to='/donate'
-            activeStyle={activeNavLink}
-          >
-            🙏🏻 Донат
-          </NavLink>
-
-          <div className='dropdown-menu'>
-            <NavLink
-              className='dropdown-item'
-              to='/donate'
-              activeStyle={activeNavLink}
-              onClick={() => setPathsAndCollapse({ ...paths, donate: "/donate" })}
-            >
-              🙏🏻 Донат
-            </NavLink>
-            <NavLink
-              className='dropdown-item'
-              to='/kanban'
-              activeStyle={activeNavLink}
-              onClick={() => setPathsAndCollapse({ ...paths, donate: "/kanban" })}
-            >
-              Канбан
-            </NavLink>
-          </div>
-        </li>
+        {readingNav}
+        {pinyinNav}
+        {hskNav}
+        {translationNav}
+        {feedbackNav}
       </ul>
 
       {isAuthenticated && authLinks}

@@ -38,9 +38,9 @@ import Mentions from "../dashboard/Mentions";
 import MentionsAlert from "../layout/MentionsAlert";
 import Notice from "../layout/Notice";
 import SetAvatar from "../profile/SetAvatar";
+import SearchHSK from "../hsk-table/SearchHSK";
 
-// import TranslationForm from "../translation/TranslateForm";
-// <Route exact path='/translate' component={TranslationForm} />
+import TranslationForm from "../translation/TranslateForm";
 // import TranslateForm from "../translation/TranslateForm";
 // <PrivateRoute exact path='/translate' component={TranslateForm} />
 
@@ -74,6 +74,7 @@ const Routes = () => {
           <PrivateRoute exact path='/userwords' component={UserWords} />
           <PrivateRoute exact path='/mentions' component={Mentions} />
           <Route exact path='/hsk-table' component={HskTable} />
+          <Route exact path='/hsk-search' component={SearchHSK} />
           <Route exact path='/pinyin-tests' component={PinyinTests} />
           <Route exact path='/hsk-tests' component={HskTests} />
           <PrivateRoute exact path='/create-profile' component={CreateProfile} />
@@ -81,6 +82,8 @@ const Routes = () => {
           <Route exact path='/pinyin' component={PinyinTable} />
           <Route exact path='/search/:chinese' component={Search} />
           <Route exact path='/search' component={Search} />
+          <Route exact path='/translate' component={TranslationForm} />
+
           <Route exact path='/posts' component={Posts} />
           <Route exact path='/kanban' component={Plans} />
           <Route exact path='/posts/:id' component={PostPage} />

@@ -30,7 +30,9 @@ const UserProfile = ({ match, history }) => {
         </button>
       </div>
       <div className='col-md-1'>
-        <img className='mr-3' src={`https:${profile.avatar}`} style={imgStyle} alt='Avatar' />
+        <Tippy content={"Поменять аватар можно в ЛК"} placement='bottom'>
+          <img className='mr-3' src={`https:${profile.avatar}`} style={imgStyle} alt='Avatar' />
+        </Tippy>
       </div>
       <div className='col-md-11'>
         <p>

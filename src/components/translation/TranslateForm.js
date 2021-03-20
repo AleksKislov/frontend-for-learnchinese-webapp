@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import store from "../../store";
-import axios from "axios";
+// import axios from "axios";
 import PropTypes from "prop-types";
 import WordModal from "./WordModal";
 import { setAlert } from "../../actions/alert";
@@ -9,7 +9,7 @@ import { loadUserWords } from "../../actions/userWords";
 import { getWords, segmenter, itirateWordsFromDB } from "../../actions/helpers";
 import TippyTooltip from "./TippyTooltip";
 import { v4 as uuid } from "uuid";
-import { Widget, addResponseMessage } from "react-chat-widget";
+// import { Widget, addResponseMessage } from "react-chat-widget";
 import "react-chat-widget/lib/styles.css";
 import "./style.css";
 import { Helmet } from "react-helmet";
@@ -37,26 +37,43 @@ const TranslateForm = ({ loadUserWords, isAuthenticated }) => {
       setWordsFromText(newArr);
     }
 
-    textArea.value = "";
-    setTextLen(0);
+    // textArea.value = "";
+    // setTextLen(0);
   };
 
-  const handleNewUserMessage = async newMessage => {
-    // console.log(`New message incoming! ${newMessage}`);
-    // Now send the message throught the backend API
+  // const handleNewUserMessage = async newMessage => {
+  //   // console.log(`New message incoming! ${newMessage}`);
+  //   // Now send the message throught the backend API
 
-    let res;
-    try {
-      res = await axios.get("/api/dialogflow?text=" + newMessage);
+  //   let res;
+  //   try {
+  //     res = await axios.get("/api/dialogflow?text=" + newMessage);
 
-      if (res) {
-        // console.log(res.data.response);
-        addResponseMessage(res.data.response);
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  //     if (res) {
+  //       // console.log(res.data.response);
+  //       addResponseMessage(res.data.response);
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+
+  //   <Widget
+  //   handleNewUserMessage={handleNewUserMessage}
+  //   title='AI-чат Buyilehu'
+  //   subtitle='Пообщайтесь с AI на китайском'
+  //   senderPlaceHolder='Ваше сообщение...'
+  // />
+
+  // <div className='card text-white bg-primary mb-3'>
+  // <div className='card-body'>
+  //   <h4 className='card-title'>Чат с AI</h4>
+  //   <p className='card-text'>
+  //     В нижнем правом углу кнопка для вызова чата с AI. Поддерживаемые темы будут
+  //     расширяться.
+  //   </p>
+  // </div>
+  // </div>
 
   const onChange = e => setTextLen(e.target.value.length);
 
@@ -73,8 +90,8 @@ const TranslateForm = ({ loadUserWords, isAuthenticated }) => {
           <div className='card-body'>
             <h4 className='card-title'>Pop-up Перевод</h4>
             <p className='card-text'>
-              Введите до 350 иероглифов и получите перевод для каждого слова. Чтобы увидеть перевод
-              - наведите курсор на иероглифы.
+              Введите до 350 иероглифов и получите перевод для каждого слова. Клик на слово покажет
+              его перевод.
             </p>
             <p className='card-text'>
               Кнопка "Больше" покажет примеры и еще больше значений слова (если есть).
@@ -83,17 +100,7 @@ const TranslateForm = ({ loadUserWords, isAuthenticated }) => {
               Кнопка "+" добавит слово в личный вокабуляр для последующего повторения.
             </p>
             <p className='card-text text-success'>
-              При необходимости разделяйте слова на отдельные иероглифы при помощи пробелов.
-            </p>
-          </div>
-        </div>
-
-        <div className='card text-white bg-primary mb-3'>
-          <div className='card-body'>
-            <h4 className='card-title'>Чат с AI</h4>
-            <p className='card-text'>
-              В нижнем правом углу кнопка для вызова чата с AI. Поддерживаемые темы будут
-              расширяться.
+              При необходимости сегментируйте слова при помощи пробелов.
             </p>
           </div>
         </div>
@@ -119,7 +126,7 @@ const TranslateForm = ({ loadUserWords, isAuthenticated }) => {
         <hr />
 
         <div>
-          <h4>Перевод</h4>
+          <h4>Перевод:</h4>
           <div className='result'>
             <p>
               {wordsFromText &&
@@ -127,13 +134,6 @@ const TranslateForm = ({ loadUserWords, isAuthenticated }) => {
             </p>
           </div>
         </div>
-
-        <Widget
-          handleNewUserMessage={handleNewUserMessage}
-          title='AI-чат Buyilehu'
-          subtitle='Пообщайтесь с AI на китайском'
-          senderPlaceHolder='Ваше сообщение...'
-        />
       </div>
     </div>
   );
