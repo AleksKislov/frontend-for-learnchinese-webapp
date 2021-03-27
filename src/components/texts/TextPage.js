@@ -170,7 +170,7 @@ const TextPage = ({
               ))}
             </div>
 
-            <div className='my-2 mx-2'>
+            <div className='my-2'>
               <h4>Комментарии:</h4>
               {comments.length > 0 &&
                 comments.map(comment => <Comment key={comment._id} comment={comment} />)}
