@@ -6,7 +6,8 @@ import {
   SET_MENTIONS_LEN,
   SET_COMMENT_REPLY,
   UNSET_COMMENT_REPLY,
-  EDIT_COMMENT
+  EDIT_COMMENT,
+  LIKE_COMMENT
 } from "../actions/types";
 
 const initialState = {
@@ -33,6 +34,13 @@ export default function(state = initialState, action) {
           if (x._id === payload.id) x.text = payload.text;
           return x;
         })
+      };
+    case LIKE_COMMENT:
+      return {
+        ...state,
+        currentComments: state.currentComments.map(comment =>
+          comment._id === payload.id ? { ...comment, likes: payload.likes } : comment
+        )
       };
     case GET_COMMENTS:
       return {

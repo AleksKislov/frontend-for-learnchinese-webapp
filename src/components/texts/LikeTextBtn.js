@@ -11,7 +11,13 @@ const LikeTextBtn = ({ likes, id, likeText, user }) => {
   const [liked, setLiked] = useState(user ? likes.some(like => like.user === user._id) : false);
 
   return (
-    <Tippy content={liked ? "Уже сказали спасибо" : "Поблагодарить за текст"}>
+    <Tippy
+      content={
+        likes && likes.length > 0
+          ? likes.reduce((acc, x) => (acc += `${x.name}, `), "").slice(0, -2)
+          : "Еще никто не лайкал"
+      }
+    >
       <button
         className={`btn btn-sm btn-${liked ? "danger" : "outline-info"}`}
         onClick={() => {

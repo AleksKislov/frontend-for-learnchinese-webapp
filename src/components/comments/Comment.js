@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { setCommentToDelete, setCommentReply } from "../../actions/comments";
+import { setCommentToDelete, setCommentReply, addLike } from "../../actions/comments";
 import { dateToStr, addressToUser } from "../../actions/helpers";
 import { Link } from "react-router-dom";
 import Tippy from "@tippyjs/react";
@@ -11,10 +11,19 @@ const Comment = ({
   currentUser,
   isAuthenticated,
   setCommentToDelete,
-  setCommentReply
+  setCommentReply,
+  addLike
 }) => {
-  const { avatar, text, name, date, user, _id, commentIdToReply } = comment;
+  const { avatar, text, name, date, user, _id, commentIdToReply, likes } = comment;
   const dateAndTime = dateToStr(date);
+
+  useEffect(() => {
+    if (currentUser) setLiked(likes.some(like => like.user === currentUser._id));
+  }, [likes, currentUser]);
+
+  const [liked, setLiked] = useState(
+    currentUser ? likes.some(like => like.user === currentUser._id) : false
+  );
 
   return (
     <div className='card my-2' id={_id}>
@@ -50,35 +59,54 @@ const Comment = ({
           <p className='card-text' dangerouslySetInnerHTML={{ __html: text }}></p>
 
           <div className='row'>
-            <div className='col-8 mt-2'>
+            <div className='col-md-8 my-2'>
               <h6 className='card-subtitle text-muted'>
                 <Link to={`/user/${user}`}>{name}</Link> | <em>{dateAndTime}</em>
               </h6>
             </div>
-            <div className='col-4'>
-              {isAuthenticated && (currentUser._id === user || currentUser.role === "admin") && (
-                <Tippy content='Отредактировать / удалить'>
+            <div className='col-md-4'>
+              <div className='float-right'>
+                <Tippy
+                  content={
+                    likes && likes.length > 0
+                      ? likes.reduce((acc, x) => (acc += `${x.name}, `), "").slice(0, -2)
+                      : "Никто не лайкал"
+                  }
+                >
                   <button
-                    className='btn btn-sm btn-info float-right ml-1'
-                    data-toggle='modal'
-                    data-target='#confirmModal'
-                    onClick={e => setCommentToDelete(comment)}
+                    className={`btn btn-sm btn-${liked ? "" : "outline-"}info mx-1'`}
+                    onClick={() => addLike(_id)}
                   >
-                    <i className='far fa-edit'></i>
+                    <i className='fas fa-thumbs-up'></i>{" "}
+                    {likes.length > 0 && <span>{likes.length}</span>}
                   </button>
                 </Tippy>
-              )}
-              {isAuthenticated && currentUser._id !== user && (
-                <Tippy content='Ответить'>
-                  <HashLink
-                    to='#yourCommentId'
-                    className='btn btn-outline-primary btn-sm float-right'
-                    onClick={() => setCommentReply(_id, user, name)}
-                  >
-                    <i className='fas fa-reply'></i>
-                  </HashLink>
-                </Tippy>
-              )}
+
+                {isAuthenticated && (currentUser._id === user || currentUser.role === "admin") && (
+                  <Tippy content='Отредактировать / удалить'>
+                    <button
+                      className='btn btn-sm btn-info mx-1'
+                      data-toggle='modal'
+                      data-target='#confirmModal'
+                      onClick={e => setCommentToDelete(comment)}
+                    >
+                      <i className='far fa-edit'></i>
+                    </button>
+                  </Tippy>
+                )}
+
+                {isAuthenticated && currentUser._id !== user && (
+                  <Tippy content='Ответить'>
+                    <HashLink
+                      to='#yourCommentId'
+                      className='btn btn-outline-primary btn-sm mx-1'
+                      onClick={() => setCommentReply(_id, user, name)}
+                    >
+                      <i className='fas fa-reply'></i>
+                    </HashLink>
+                  </Tippy>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -101,4 +129,4 @@ const mapStateToProps = state => ({
   currentUser: state.auth.user
 });
 
-export default connect(mapStateToProps, { setCommentToDelete, setCommentReply })(Comment);
+export default connect(mapStateToProps, { setCommentToDelete, setCommentReply, addLike })(Comment);

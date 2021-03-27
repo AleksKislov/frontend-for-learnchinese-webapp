@@ -49,13 +49,16 @@ const Post = ({ post, addLike, addDislike, comments, isPage }) => {
           </h6>
           <p className='card-text' dangerouslySetInnerHTML={{ __html: text }}></p>
           <div className=''>
-            <button className='btn btn-sm btn-light mb-1' onClick={() => addLike(_id)}>
-              <i className='fas fa-thumbs-up'></i> {likes.length > 0 && <span>{likes.length}</span>}
-            </button>
-            <button className='btn btn-sm btn-light mx-2 mb-1' onClick={() => addDislike(_id)}>
-              <i className='fas fa-thumbs-down'></i>{" "}
-              {dislikes.length > 0 && <span>{dislikes.length}</span>}
-            </button>
+            {
+              // remove likes/dislikes for posts
+              // <button className='btn btn-sm btn-light mb-1' onClick={() => addLike(_id)}>
+              // <i className='fas fa-thumbs-up'></i> {likes.length > 0 && <span>{likes.length}</span>}
+              // </button>
+              // <button className='btn btn-sm btn-light mx-2 mb-1' onClick={() => addDislike(_id)}>
+              // <i className='fas fa-thumbs-down'></i>{" "}
+              // {dislikes.length > 0 && <span>{dislikes.length}</span>}
+              // </button>
+            }
             <Link to={`/posts/${_id}`}>
               <button className='btn btn-sm btn-outline-info mb-1'>
                 Комментарии{" "}

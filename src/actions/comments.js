@@ -6,7 +6,8 @@ import {
   SET_MENTIONS_LEN,
   SET_COMMENT_REPLY,
   UNSET_COMMENT_REPLY,
-  EDIT_COMMENT
+  EDIT_COMMENT,
+  LIKE_COMMENT
 } from "./types";
 import axios from "axios";
 import { setAlert } from "./alert";
@@ -105,8 +106,23 @@ export const editComment = (text, id) => async dispatch => {
   }
 };
 
+export const addLike = id => async dispatch => {
+  try {
+    const { data } = await axios.put(`/api/comments/like/${id}`);
+
+    dispatch({
+      type: LIKE_COMMENT,
+      payload: { id, likes: data }
+    });
+  } catch (err) {
+    dispatch({
+      type: GET_COMMENTS_ERR
+    });
+    dispatch(setAlert("Нужно войти", "danger"));
+  }
+};
+
 /**
- *
  * @param {string} where        - destination: post, text or a book (page)
  * @param {string} where_id     - id of destination: post, text or a book (page)
  * @param {string} comment_id   - comment id
