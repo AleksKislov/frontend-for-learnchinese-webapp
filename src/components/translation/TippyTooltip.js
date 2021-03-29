@@ -11,7 +11,7 @@ import {
   setModalWord,
   loadUserWordsLen
 } from "../../actions/userWords";
-// import "tippy.js/dist/tippy.css"; // optional
+import { sanitizer } from "../../utils/sanitizer";
 
 const TippyTooltip = ({
   word,
@@ -131,7 +131,10 @@ const TippyTooltip = ({
                 <i className='fas fa-times'></i>
               </button>
             </div>
-            <p className='tippyTranslation' dangerouslySetInnerHTML={{ __html: translation }}></p>{" "}
+            <p
+              className='tippyTranslation'
+              dangerouslySetInnerHTML={{ __html: sanitizer(translation) }}
+            ></p>{" "}
             {moreButton}
             <button
               className={`btn btn-sm float-right btn-${clicked ? "danger" : "info"}`}

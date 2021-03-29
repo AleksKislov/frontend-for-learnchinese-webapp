@@ -17,6 +17,7 @@ import { Helmet } from "react-helmet";
 import { Widget, addResponseMessage } from "react-chat-widget";
 import "react-chat-widget/lib/styles.css";
 import "./style.css";
+import { sanitizer } from "../../utils/sanitizer";
 
 const Search = ({
   history,
@@ -344,7 +345,7 @@ const Search = ({
               <div
                 className='mb-3'
                 dangerouslySetInnerHTML={{
-                  __html: wordFromSearch && markUpRussianText(wordFromSearch.russian)
+                  __html: wordFromSearch && sanitizer(markUpRussianText(wordFromSearch.russian))
                 }}
               ></div>
             </Fragment>

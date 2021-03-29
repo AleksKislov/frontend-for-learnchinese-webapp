@@ -5,6 +5,7 @@ import { addLike, addDislike } from "../../actions/posts";
 import { Helmet } from "react-helmet";
 import { dateToStr, addressToUser } from "../../actions/helpers";
 import Tippy from "@tippyjs/react";
+import { sanitizer } from "../../utils/sanitizer";
 
 const Post = ({ post, addLike, addDislike, comments, isPage }) => {
   const { text, name, avatar, date, title, _id, tag, comments_id, likes, dislikes, user } = post;
@@ -47,7 +48,7 @@ const Post = ({ post, addLike, addDislike, comments, isPage }) => {
           <h6 className='card-subtitle mb-2 text-muted'>
             <Link to={`/user/${user}`}>{name}</Link> | <em>{dateAndTime}</em>
           </h6>
-          <p className='card-text' dangerouslySetInnerHTML={{ __html: text }}></p>
+          <p className='card-text' dangerouslySetInnerHTML={{ __html: sanitizer(text) }}></p>
           <div className=''>
             {
               // remove likes/dislikes for posts

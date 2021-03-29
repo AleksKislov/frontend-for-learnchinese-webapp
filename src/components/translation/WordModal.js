@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { setModalWord } from "../../actions/userWords";
 import Tippy from "@tippyjs/react";
+import { sanitizer } from "../../utils/sanitizer";
 
 const WordModal = ({ word }) => {
   const { chinese, pinyin, russian } = word;
@@ -72,7 +73,10 @@ const WordModal = ({ word }) => {
               <span aria-hidden='true'>&times;</span>
             </button>
           </div>
-          <div className='modal-body' dangerouslySetInnerHTML={{ __html: translation }}></div>
+          <div
+            className='modal-body'
+            dangerouslySetInnerHTML={{ __html: sanitizer(translation) }}
+          ></div>
         </div>
       </div>
     </div>

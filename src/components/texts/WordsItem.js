@@ -9,6 +9,7 @@ import {
   loadUserWords
 } from "../../actions/userWords";
 import { parseRussian } from "../../actions/helpers";
+import { sanitizer } from "../../utils/sanitizer";
 
 const WordsItem = ({
   removeWord,
@@ -77,7 +78,9 @@ const WordsItem = ({
         <h4>{!hideFlag.chinese && chinese}</h4>
       </td>
       <td>{!hideFlag.pinyin && pinyin}</td>
-      <td dangerouslySetInnerHTML={{ __html: !hideFlag.translation ? russian : "" }}></td>
+      <td
+        dangerouslySetInnerHTML={{ __html: sanitizer(!hideFlag.translation ? russian : "") }}
+      ></td>
       <td>{moreButton}</td>
       {// for /search page
       fromSearch ? (

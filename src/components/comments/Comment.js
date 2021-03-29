@@ -5,6 +5,7 @@ import { dateToStr, addressToUser } from "../../actions/helpers";
 import { Link } from "react-router-dom";
 import Tippy from "@tippyjs/react";
 import { HashLink } from "react-router-hash-link";
+import { sanitizer } from "../../utils/sanitizer";
 
 const Comment = ({
   comment,
@@ -22,7 +23,7 @@ const Comment = ({
   }, [likes, currentUser]);
 
   const [liked, setLiked] = useState(
-    currentUser ? likes.some(like => like.user === currentUser._id) : false
+    currentUser && likes ? likes.some(like => like.user === currentUser._id) : false
   );
 
   return (
@@ -56,7 +57,7 @@ const Comment = ({
               </HashLink>
             </small>
           )}
-          <p className='card-text' dangerouslySetInnerHTML={{ __html: text }}></p>
+          <p className='card-text' dangerouslySetInnerHTML={{ __html: sanitizer(text) }}></p>
 
           <div className='row'>
             <div className='col-md-8 my-2'>
