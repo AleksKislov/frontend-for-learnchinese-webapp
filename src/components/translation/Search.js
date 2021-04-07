@@ -136,6 +136,7 @@ const Search = ({
       return word;
     });
 
+    // console.log({ newArr });
     if (newArr.length === 1) {
       setWordFromSearch(newArr[0]);
       setWordsFromSearch(null);
@@ -154,24 +155,28 @@ const Search = ({
   };
 
   const markUpRussianText = text => {
-    return text
-      .replace(/\[b\]\\\[o\\\]\d\[\/b\]/g, "")
-      .replace(/\[b\]/g, "<span class='tippyBold'>")
-      .replace(/\[\/b\]/g, "</span>")
-      .replace(/\[c\]/g, "<span class='tippyColor'>")
-      .replace(/\[\/c\]/g, "</span>")
-      .replace(/\[p\]/g, "<span class='tippyColor tippyItalic'>")
-      .replace(/\[\/p\]/g, "</span>")
-      .replace(/\[i\]/g, "<span class='tippyItalic'>")
-      .replace(/\[\/i\]/g, "</span>")
-      .replace(/\[m1\]/g, "<span class='tippyParagraph'>")
-      .replace(/\[m\d\]/g, "<span class='tippyExample'>")
-      .replace(/\[\/m\]/g, "</span>")
-      .replace(/\[\*\]\[ex\]/g, "<div class='tippyExsShow'>")
-      .replace(/\[\/ex\]\[\/\*\]/g, "</div>")
-      .replace(/\\\[(.{1,})\\\]/g, "($1)")
-      .replace(/\[ref\]/g, "<span class='text-info'>")
-      .replace(/\[\/ref\]/g, "</span>");
+    if (text) {
+      return text
+        .replace(/\[b\]\\\[o\\\]\d\[\/b\]/g, "")
+        .replace(/\[b\]/g, "<span class='tippyBold'>")
+        .replace(/\[\/b\]/g, "</span>")
+        .replace(/\[c\]/g, "<span class='tippyColor'>")
+        .replace(/\[\/c\]/g, "</span>")
+        .replace(/\[p\]/g, "<span class='tippyColor tippyItalic'>")
+        .replace(/\[\/p\]/g, "</span>")
+        .replace(/\[i\]/g, "<span class='tippyItalic'>")
+        .replace(/\[\/i\]/g, "</span>")
+        .replace(/\[m1\]/g, "<span class='tippyParagraph'>")
+        .replace(/\[m\d\]/g, "<span class='tippyExample'>")
+        .replace(/\[\/m\]/g, "</span>")
+        .replace(/\[\*\]\[ex\]/g, "<div class='tippyExsShow'>")
+        .replace(/\[\/ex\]\[\/\*\]/g, "</div>")
+        .replace(/\\\[(.{1,})\\\]/g, "($1)")
+        .replace(/\[ref\]/g, "<span class='text-info'>")
+        .replace(/\[\/ref\]/g, "</span>");
+    } else {
+      return " ";
+    }
   };
 
   const showMoreButton = () => {
