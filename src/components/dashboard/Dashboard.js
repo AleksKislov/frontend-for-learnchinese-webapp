@@ -2,6 +2,7 @@ import React, { useEffect, Fragment } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { clearText } from "../../actions/texts";
 // import { getCurrentProfile } from "../../actions/profile";
 import Spinner from "../layout/Spinner";
 import CommentsCard from "./CommentsCard";
@@ -12,6 +13,7 @@ import Analytics from "./Analytics";
 import Tippy from "@tippyjs/react";
 
 const Dashboard = ({
+  clearText,
   // getCurrentProfile,
   auth: { user, loading },
   // profile: { loading, profile },
@@ -20,11 +22,12 @@ const Dashboard = ({
   // dictStats,
   // getDictStats
 }) => {
-  // useEffect(() => {
-  //   // getCurrentProfile();
-  //   // getDictStats();
-  //   // eslint-disable-next-line
-  // }, []);
+  useEffect(() => {
+    clearText();
+    // getCurrentProfile();
+    // getDictStats();
+    // eslint-disable-next-line
+  }, []);
 
   return !user && loading ? (
     <Spinner />
@@ -187,4 +190,4 @@ const mapStateToProps = state => ({
   // dictStats: state.profile.dictStats
 });
 
-export default connect(mapStateToProps, {})(Dashboard);
+export default connect(mapStateToProps, { clearText })(Dashboard);
