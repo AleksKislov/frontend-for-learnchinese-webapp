@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 import { fromNow } from "../../actions/helpers";
 import { getMentionsLen } from "../../actions/comments";
 import { connect } from "react-redux";
+import { clearText } from "../../actions/texts";
 
-const Mentions = ({ getMentionsLen }) => {
+const Mentions = ({ getMentionsLen, clearText }) => {
+  useEffect(() => {
+    clearText();
+  }, []);
   const [mentions, setMentions] = useState(null);
   const [isSeen, setIsSeen] = useState("false");
   useEffect(() => {
@@ -88,4 +92,4 @@ const Mentions = ({ getMentionsLen }) => {
   );
 };
 
-export default connect(null, { getMentionsLen })(Mentions);
+export default connect(null, { getMentionsLen, clearText })(Mentions);
