@@ -18,9 +18,19 @@ const Landing = ({ isAuthenticated, loadPosts, posts }) => {
     if (posts.length === 0) loadPosts(0);
   }, []);
 
-  const setTooltip = async () => {
-    const res = await parseChineseWords({ chinese_arr: ["我"] });
-    setWord(res[0][0]);
+  const setTooltip = () => {
+    // const res = await parseChineseWords({ chinese_arr: ["我"] });
+    // console.log(JSON.stringify(res[0][0]));
+    // setWord(res[0][0]);
+
+    // just hard coded it
+    setWord({
+      chinese: "我",
+      _id: "5f04819868566a15a9ff0227",
+      pinyin: " wǒ",
+      russian:
+        " [m1]1) я; мой[/m][m2][*][ex]我是学生 я ― учащийся[/ex][/*][/m][m2][*][ex]我父亲 мой отец[/ex][/*][/m][m1]2) мы; наш ([i]о коллективе, стране[/i])[/m][m2][*][ex]我方 наша сторона, наши[/ex][/*][/m][m2][*][ex]我军 наша армия[/ex][/*][/m][m2][*][ex]敌我 противник и мы[/ex][/*][/m][m1]3) сам; самоличный, частный, личный[/m][m2][*][ex]自我 сам; собственный[/ex][/*][/m][m2][*][ex]大公无我 всё общественное, нет ничего личного (собственного)[/ex][/*][/m]"
+    });
   };
 
   useEffect(() => {
