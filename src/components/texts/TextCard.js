@@ -5,6 +5,7 @@ import Tippy from "@tippyjs/react";
 import { connect } from "react-redux";
 import { textCategories } from "../../apikeys.json";
 import LikeTextBtn from "./LikeTextBtn";
+import TextDescription from "./common/TextDescription";
 
 const TextCard = ({ text, user, hide, category, hideLevel }) => {
   const {
@@ -106,7 +107,7 @@ const TextCard = ({ text, user, hide, category, hideLevel }) => {
               </h6>
             )}
 
-            <p className='card-text'>{description}</p>
+            <TextDescription description={description} />
 
             <div className=''>
               <Link to={`/texts/${_id}`}>

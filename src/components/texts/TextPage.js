@@ -128,6 +128,10 @@ const TextPage = ({
 
                 <FontSize />
 
+                <h6 className='card-subtitle mb-2'>
+                  <span className='text-muted'>Описание: </span>
+                  {text.description}
+                </h6>
                 {
                   // (currentUser._id === text.user || currentUser.role === "admin") && (
                 }
