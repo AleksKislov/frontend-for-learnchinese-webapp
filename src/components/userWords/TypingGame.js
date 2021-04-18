@@ -58,15 +58,17 @@ const TypingGame = ({ words, testStarted }) => {
     }
   }, [questionNum]);
 
+  const handleEnter = e => {
+    if (e.key === "Enter") checkIt();
+  };
+
   const checkIt = e => {
-    if (e.key === "Enter") {
-      if (answer === question.chinese) {
-        setWrongAnswers([...wrongAnswers, false]);
-        setCorrect(correct + 1);
-        setNewQuestion();
-      }
-      setAnswer("");
+    if (answer === question.chinese) {
+      setWrongAnswers([...wrongAnswers, false]);
+      setCorrect(correct + 1);
+      setNewQuestion();
     }
+    setAnswer("");
   };
 
   const setNewGame = () => {
@@ -86,13 +88,18 @@ const TypingGame = ({ words, testStarted }) => {
 
   const gameDiv = (
     <div className=''>
+      <div className='float-right' style={{ position: "absolute", right: "1.8em" }}>
+        <button className='btn btn-danger btn-sm' onClick={skipQuestion}>
+          Пропустить
+        </button>
+      </div>
       <h5 className='card-subtitle mb-2'>Вопрос {questionNum}/10</h5>
       <p
         className='card-text text-sm'
         dangerouslySetInnerHTML={{ __html: question && parseRussian(question.translation) }}
       ></p>
       <div className='row'>
-        <div className='col-10' style={{ paddingRight: "0" }}>
+        <div className='col-11'>
           <input
             className='form-control'
             type='text'
@@ -100,16 +107,14 @@ const TypingGame = ({ words, testStarted }) => {
             id='answer'
             onChange={e => setAnswer(e.target.value)}
             value={answer}
-            onKeyDown={e => checkIt(e)}
+            onKeyDown={e => handleEnter(e)}
             autoComplete='off'
           />
         </div>
-        <div className='col-1 ml-1' style={{ paddingLeft: "0" }}>
-          <Tippy content='Пропустить вопрос' placement='bottom'>
-            <button className='btn btn-danger' onClick={skipQuestion}>
-              <i className='fas fa-forward'></i>
-            </button>
-          </Tippy>
+        <div className='col-1' style={{ paddingLeft: "0" }}>
+          <button className='btn btn-success' onClick={checkIt}>
+            <i className='fas fa-level-up-alt enter-icon'></i>
+          </button>
         </div>
       </div>
       <label className='col-form-label ml-1' htmlFor='answer'>
