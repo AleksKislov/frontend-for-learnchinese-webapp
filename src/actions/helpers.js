@@ -279,7 +279,7 @@ export function validURL(str) {
 
 function addProtocolIfNeeded(str) {
   if (str.includes("http://") || str.includes("https://")) {
-    return;
+    return str;
   } else {
     return "http://" + str;
   }

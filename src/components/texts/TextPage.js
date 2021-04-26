@@ -120,16 +120,8 @@ const TextPage = ({
                   <span className='text-muted'>Кол-во знаков: </span>
                   {text.length}
                 </h6>
-                {
-                  //   text.source && (
-                  //   <h6 className='card-subtitle mb-2'>
-                  //     <span className='text-muted'>Источник: </span>
-                  //     {text.source}
-                  //   </h6>
-                  // )
-                }
-                <TextSource textSource={text.source} />
 
+                <TextSource textSource={text.source} />
                 <FontSize />
 
                 <h6 className='card-subtitle mb-2'>

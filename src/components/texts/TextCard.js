@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { textCategories } from "../../apikeys.json";
 import LikeTextBtn from "./LikeTextBtn";
 import TextDescription from "./common/TextDescription";
+import TextSource from "./common/TextSource";
 
 const TextCard = ({ text, user, hide, category, hideLevel }) => {
   const {
@@ -100,12 +101,15 @@ const TextCard = ({ text, user, hide, category, hideLevel }) => {
               <span className='text-muted'>Кол-во знаков: </span>
               {length}
             </h6>
-            {source && (
-              <h6 className='card-subtitle mb-2'>
-                <span className='text-muted'>Источник: </span>
-                {source}
-              </h6>
-            )}
+            {
+              //   source && (
+              //   <h6 className='card-subtitle mb-2'>
+              //     <span className='text-muted'>Источник: </span>
+              //     {source}
+              //   </h6>
+              // )
+            }
+            <TextSource textSource={source} />
 
             <TextDescription description={description} />
 
