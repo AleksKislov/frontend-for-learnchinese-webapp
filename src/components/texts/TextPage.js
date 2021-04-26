@@ -2,7 +2,7 @@ import React, { useEffect, Fragment, useState } from "react";
 import { connect } from "react-redux";
 import { loadText, setLoading } from "../../actions/texts";
 import { getComments } from "../../actions/comments";
-import { parseChineseWords } from "../../actions/helpers";
+import { parseChineseWords, validURL, parseURL } from "../../actions/helpers";
 import Spinner from "../layout/Spinner";
 import { v4 as uuid } from "uuid";
 import Paragraph from "./Paragraph";
@@ -19,6 +19,7 @@ import PleaseShareText from "./common/PleaseShareText";
 import ReadSwitch from "./ReadSwitch";
 import ConfirmModal from "../comments/ConfirmModal";
 import LikeTextBtn from "./LikeTextBtn";
+import TextSource from "./common/TextSource";
 
 // (currentUser._id === text.user || currentUser.role === "admin") && (
 
@@ -119,12 +120,15 @@ const TextPage = ({
                   <span className='text-muted'>Кол-во знаков: </span>
                   {text.length}
                 </h6>
-                {text.source && (
-                  <h6 className='card-subtitle mb-2'>
-                    <span className='text-muted'>Источник: </span>
-                    {text.source}
-                  </h6>
-                )}
+                {
+                  //   text.source && (
+                  //   <h6 className='card-subtitle mb-2'>
+                  //     <span className='text-muted'>Источник: </span>
+                  //     {text.source}
+                  //   </h6>
+                  // )
+                }
+                <TextSource textSource={text.source} />
 
                 <FontSize />
 

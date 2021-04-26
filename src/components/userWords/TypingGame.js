@@ -113,7 +113,7 @@ const TypingGame = ({ words, testStarted }) => {
         </div>
         <div className='col-1' style={{ paddingLeft: "0" }}>
           <button className='btn btn-success' onClick={checkIt}>
-            <i className='fas fa-level-up-alt enter-icon'></i>
+            <i className='fas fa-level-down-alt enter-icon'></i>
           </button>
         </div>
       </div>
