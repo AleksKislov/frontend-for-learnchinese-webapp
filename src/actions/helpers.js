@@ -294,6 +294,7 @@ export const parseURL = str => {
   try {
     return new URL(addProtocolIfNeeded(str));
   } catch (err) {
+    // TODO add notifications
     console.log(err);
   }
 };
