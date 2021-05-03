@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect, Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -11,25 +11,35 @@ import ReadingCard from "./ReadingCard";
 import { Helmet } from "react-helmet";
 import Analytics from "./Analytics";
 import Tippy from "@tippyjs/react";
+import { NullUser, User } from "../../patterns/NullUser";
 
 const Dashboard = ({
   clearText,
   // getCurrentProfile,
-  auth: { user, loading },
+  auth: {
+    user: userToCheck
+    // loading: notLoaded
+  },
   // profile: { loading, profile },
   allWordsLen,
   userWordsLen
   // dictStats,
   // getDictStats
 }) => {
+  const [user, setUser] = useState(new NullUser());
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     clearText();
+    if (userToCheck) {
+      setUser(new User(userToCheck));
+      setLoading(false);
+    }
     // getCurrentProfile();
     // getDictStats();
-    // eslint-disable-next-line
-  }, []);
+  }, [userToCheck]);
 
-  return !user && loading ? (
+  return loading ? (
     <Spinner />
   ) : (
     <Fragment>
@@ -43,19 +53,17 @@ const Dashboard = ({
           <h1 className='text-primary'>Личный Кабинет</h1>
           <div className='row'>
             <div className='col-2'>
-              {user && (
-                <Tippy content='Поменять аватар' placement='bottom'>
-                  <Link to='/set_avatar'>
-                    <img src={`https://${user.avatar}`} alt='avatar' style={imgStyle} />
-                  </Link>
-                </Tippy>
-              )}
+              <Tippy content='Поменять аватар' placement='bottom'>
+                <Link to='/set_avatar'>
+                  <img src={user.avatarPic} alt='avatar' style={imgStyle} />
+                </Link>
+              </Tippy>
             </div>
             <div className='col-10'>
               <p className=''>
-                <i className='fas fa-user'></i> Привет{user && ", " + user.name}
+                <i className='fas fa-user'></i> Привет, {user.name}
               </p>
-              <p className=''>Роль: {(user && user.role) || "Изучающий"}</p>
+              <p className=''>Роль: {user.role}</p>
             </div>
           </div>
         </div>
@@ -101,26 +109,6 @@ const Dashboard = ({
               </Link>
             </div>
           </div>
-
-          {/*
-
-      {profile ? (
-        <Fragment>
-          <DashboardActions />
-        </Fragment>
-      ) : (
-        <Fragment>
-          <p>Нет никакой информации о Вас</p>
-
-          
-          <Link to='/create-profile' className='btn btn-primary my-1'>
-            Расскажите о себе
-          </Link>
-          
-        </Fragment>
-      )}
-
-      */}
         </div>
 
         <div className='col-sm-6'>
