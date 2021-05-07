@@ -11,7 +11,7 @@ import ReadingCard from "./ReadingCard";
 import { Helmet } from "react-helmet";
 import Analytics from "./Analytics";
 import Tippy from "@tippyjs/react";
-import { NullUser, User } from "../../patterns/NullUser";
+import { NullUser, User } from "../../patterns/UserClass";
 
 const Dashboard = ({
   clearText,

@@ -20,7 +20,7 @@ import {
 import Paragraph from "./Paragraph";
 import { v4 as uuid } from "uuid";
 import "./style.css";
-import { bgTextLen, smTextLen } from "../../apikeys.json";
+import { bgTextLen, smTextLen, defaultTextPic } from "../../apikeys.json";
 import { textCategories } from "../../apikeys.json";
 import { clearText } from "../../actions/texts";
 
@@ -100,7 +100,7 @@ const TextForm = ({ loadUserWords, user, textToEdit, clearText, location }) => {
     allwords: [],
     textId: "",
     pic_theme: "", // in English for pic_url
-    pic_url: "",
+    pic_url: defaultTextPic,
     theme_word: "", // rewriten usestate,
     source: "",
     categoryInd: 0
@@ -403,26 +403,26 @@ const TextForm = ({ loadUserWords, user, textToEdit, clearText, location }) => {
                     </Fragment>
                   )}
 
-                  {!formData.pic_theme && formData.title && (
-                    <Fragment>
-                      <h4 className='alert-heading'>ШАГ 2</h4>
-                      <p>Теперь впишите тему картинки на английском языке.</p>
-                    </Fragment>
-                  )}
-
-                  {formData.pic_theme && formData.title && !photosUrls && !formData.pic_url && (
-                    <Fragment>
-                      <h4 className='alert-heading'>ШАГ 3</h4>
-                      <p>Загрузите картинки для выбора, нажав кнопку 'Загрузить'.</p>
-                    </Fragment>
-                  )}
-
-                  {formData.title && photosUrls && !formData.pic_url && (
-                    <Fragment>
-                      <h4 className='alert-heading'>ШАГ 4</h4>
-                      <p>Кликните одну из картинок, чтобы выбрать ее</p>
-                    </Fragment>
-                  )}
+                  {
+                    //   !formData.pic_theme && formData.title && (
+                    //   <Fragment>
+                    //     <h4 className='alert-heading'>ШАГ 2</h4>
+                    //     <p>Теперь впишите тему картинки на английском языке.</p>
+                    //   </Fragment>
+                    // )}
+                    // {formData.pic_theme && formData.title && !photosUrls && !formData.pic_url && (
+                    //   <Fragment>
+                    //     <h4 className='alert-heading'>ШАГ 3</h4>
+                    //     <p>Загрузите картинки для выбора, нажав кнопку 'Загрузить'.</p>
+                    //   </Fragment>
+                    // )}
+                    // {formData.title && photosUrls && !formData.pic_url && (
+                    //   <Fragment>
+                    //     <h4 className='alert-heading'>ШАГ 4</h4>
+                    //     <p>Кликните одну из картинок, чтобы выбрать ее</p>
+                    //   </Fragment>
+                    // )
+                  }
 
                   {formData.title && formData.pic_url && textLen === 0 && (
                     <Fragment>
@@ -474,7 +474,7 @@ const TextForm = ({ loadUserWords, user, textToEdit, clearText, location }) => {
                         (formData.tags.length && formData.tags[0] !== "" ? 1 : 0) +
                         (formData.pic_theme ? 1 : 0) +
                         (formData.theme_word ? 1 : 0) +
-                        (formData.pic_url ? 1 : 0) +
+                        (formData.pic_url !== defaultTextPic ? 1 : 0) +
                         (photosUrls ? 1 : 0) +
                         (formData.chunkedOriginText.length && formData.chunkedOriginText[0] !== ""
                           ? 1
