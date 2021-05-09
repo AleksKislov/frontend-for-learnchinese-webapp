@@ -395,9 +395,8 @@ const TextForm = ({ loadUserWords, user, textToEdit, clearText, location }) => {
                       <h4 className='alert-heading'>ШАГ 1</h4>
                       <p>
                         <span>
-                          Красные поля - обязательные. Начните с заголовка.
-                          <br />
-                          🙏🏻 вы хорошо поможете, если заполните все поля.
+                          Заполните хотя бы заголовок. 🙏🏻 вы хорошо поможете, если заполните все
+                          поля.
                         </span>
                       </p>
                     </Fragment>
@@ -426,7 +425,7 @@ const TextForm = ({ loadUserWords, user, textToEdit, clearText, location }) => {
 
                   {formData.title && formData.pic_url && textLen === 0 && (
                     <Fragment>
-                      <h4 className='alert-heading'>ШАГ 5</h4>
+                      <h4 className='alert-heading'>ШАГ 2</h4>
                       <p>Теперь вы можете вставить китайский текст</p>
                       <p>
                         ВНИМАНИЕ: если не нужен автоматический перевод, то кликните тумблер над
@@ -437,18 +436,18 @@ const TextForm = ({ loadUserWords, user, textToEdit, clearText, location }) => {
 
                   {textLen > 0 && formData.chineseChunkedWords.length === 0 && (
                     <Fragment>
-                      <h4 className='alert-heading'>ШАГ 6</h4>
-                      <p>Обработаем и переведем китайский текст, нажав кнопку 'Предобработка'</p>
+                      <h4 className='alert-heading'>ШАГ 3</h4>
+                      <p>Нажмите кнопку 'Предобработка' для обработки и перевода текста</p>
                     </Fragment>
                   )}
 
                   {formData.chineseChunkedWords.length !== 0 && (
                     <Fragment>
-                      <h4 className='alert-heading'>ШАГ 7</h4>
+                      <h4 className='alert-heading'>ШАГ 4</h4>
                       <p>
                         <span>
-                          Шаг 7. Поправьте русский перевод и китайский оригинал при необходимости
-                          (после надо снова нажать 'Предобработка').
+                          Поправьте русский перевод и китайский оригинал при необходимости (после
+                          снова нажмитее 'Предобработка').
                           <br />
                           🔥 Если результат устраивает, то можете нажать 'Опубликовать'.
                           <br />
@@ -574,7 +573,7 @@ const TextForm = ({ loadUserWords, user, textToEdit, clearText, location }) => {
                 </div>
                 <div className='form-row'>
                   <div className='form-group col-md-3'>
-                    <label htmlFor='pic_theme'>Тема для картинки (1 слово Eng)</label>
+                    <label htmlFor='pic_theme'>Тема картинки (1 слово Eng)</label>
                     <input
                       onBlur={noticeMe}
                       onChange={e => {
@@ -582,7 +581,7 @@ const TextForm = ({ loadUserWords, user, textToEdit, clearText, location }) => {
                         setFormData({ ...formData, [e.target.id]: e.target.value });
                       }}
                       type='text'
-                      className={`form-control ${!formData.pic_theme && "is-invalid"}`}
+                      className={`form-control`}
                       id='pic_theme'
                       placeholder='На английском'
                       autoComplete='off'
