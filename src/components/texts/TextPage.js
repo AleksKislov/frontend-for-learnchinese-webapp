@@ -2,7 +2,7 @@ import React, { useEffect, Fragment, useState } from "react";
 import { connect } from "react-redux";
 import { loadText, setLoading } from "../../actions/texts";
 import { getComments } from "../../actions/comments";
-import { parseChineseWords, validURL, parseURL } from "../../actions/helpers";
+import { parseChineseWords } from "../../actions/helpers";
 import Spinner from "../layout/Spinner";
 import { v4 as uuid } from "uuid";
 import Paragraph from "./Paragraph";

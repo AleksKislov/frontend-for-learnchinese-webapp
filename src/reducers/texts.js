@@ -63,7 +63,7 @@ export default function(state = initialState, action) {
         text: null,
         loading: false,
         not_approved: [...state.not_approved, ...payload],
-        moreNotApproved: payload.length === 10 ? true : false
+        moreNotApproved: payload.length >= 10 ? true : false
       };
     case SET_LOADING:
       return {
