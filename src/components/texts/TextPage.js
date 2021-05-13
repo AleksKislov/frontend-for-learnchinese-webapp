@@ -1,6 +1,6 @@
 import React, { useEffect, Fragment, useState } from "react";
 import { connect } from "react-redux";
-import { loadText, setLoading } from "../../actions/texts";
+import { loadText, setLoading, loadLongText } from "../../actions/texts";
 import { getComments } from "../../actions/comments";
 import { parseChineseWords } from "../../actions/helpers";
 import Spinner from "../layout/Spinner";
@@ -26,6 +26,7 @@ import TextSource from "./common/TextSource";
 const TextPage = ({
   text,
   loadText,
+  loadLongText,
   match,
   loading,
   setLoading,
@@ -37,7 +38,9 @@ const TextPage = ({
 }) => {
   useEffect(() => {
     setLoading();
+    console.log(match.params);
     loadText(match.params.id);
+    if (match.params.longtextid) loadLongText(match.params.longtextid);
     getComments("text", match.params.id);
   }, [setLoading, getComments]);
 
@@ -64,7 +67,6 @@ const TextPage = ({
       (currentUser.role === "admin" ||
         currentUser.role === "moderator" ||
         (currentUser._id === text.user && text.isApproved !== 1))
-      // || (currentUser._id === text.user && currentUser.role === "moderator"))
     ) {
       setIsOkToEdit(true);
     }
@@ -188,9 +190,14 @@ const mapStateToProps = state => ({
   loading: state.texts.loading,
   isAuthenticated: state.auth.isAuthenticated,
   currentUser: state.auth.user,
-  comments: state.comments.currentComments
+  comments: state.comments.currentComments,
+  longText: state.texts.longText
 });
 
-export default connect(mapStateToProps, { loadText, loadUserWords, setLoading, getComments })(
-  TextPage
-);
+export default connect(mapStateToProps, {
+  loadText,
+  loadUserWords,
+  setLoading,
+  getComments,
+  loadLongText
+})(TextPage);

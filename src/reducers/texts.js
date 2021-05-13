@@ -8,7 +8,8 @@ import {
   LOAD_NOT_APPROVED,
   GET_COMMENTS,
   ADD_COMMENT,
-  LIKE_TEXT
+  LIKE_TEXT,
+  LOAD_LONG_TEXT
 } from "../actions/types";
 
 const initialState = {
@@ -17,6 +18,7 @@ const initialState = {
   moreTexts: true,
   moreNotApproved: true,
   text: null,
+  longText: null,
   loading: true,
   currentComments: []
 };
@@ -55,6 +57,7 @@ export default function(state = initialState, action) {
       return {
         ...state,
         text: null,
+        longText: null,
         currentComments: []
       };
     case LOAD_NOT_APPROVED:
@@ -83,6 +86,12 @@ export default function(state = initialState, action) {
       return {
         ...state,
         text: payload,
+        loading: false
+      };
+    case LOAD_LONG_TEXT:
+      return {
+        ...state,
+        longText: payload,
         loading: false
       };
     default:

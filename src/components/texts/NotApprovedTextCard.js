@@ -24,7 +24,7 @@ const NotApprovedTextCard = ({ text, user, hide, category }) => {
     pages
   } = text;
 
-  const [textLink, setTextLink] = useState(!pages ? _id : pages[0].page);
+  const [textLink, setTextLink] = useState(!pages ? _id : `${pages[0].page}/${_id}`);
 
   const dateAndTime = dateToStr(date);
   return (

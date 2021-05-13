@@ -6,7 +6,8 @@ import {
   SET_LOADING,
   CLEAR_TEXT,
   LOAD_NOT_APPROVED,
-  LIKE_TEXT
+  LIKE_TEXT,
+  LOAD_LONG_TEXT
 } from "./types";
 import axios from "axios";
 import { setAlert } from "./alert";
@@ -70,6 +71,21 @@ export const loadText = id => async dispatch => {
       payload: data
     });
   } catch (err) {
+    dispatch({
+      type: LOAD_TEXT_ERR
+    });
+  }
+};
+
+export const loadLongText = id => async dispatch => {
+  try {
+    const { data } = await axios.get(`/api/texts/longtext/${id}`);
+    dispatch({
+      type: LOAD_LONG_TEXT,
+      payload: data
+    });
+  } catch (err) {
+    console.log(err);
     dispatch({
       type: LOAD_TEXT_ERR
     });
