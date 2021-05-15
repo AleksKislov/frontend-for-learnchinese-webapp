@@ -20,6 +20,7 @@ import ReadSwitch from "./ReadSwitch";
 import ConfirmModal from "../comments/ConfirmModal";
 import LikeTextBtn from "./LikeTextBtn";
 import TextSource from "./common/TextSource";
+import Pages from "./longText/Pages";
 
 // (currentUser._id === text.user || currentUser.role === "admin") && (
 
@@ -34,11 +35,11 @@ const TextPage = ({
   isAuthenticated,
   currentUser,
   getComments,
-  comments
+  comments,
+  longText
 }) => {
   useEffect(() => {
     setLoading();
-    console.log(match.params);
     loadText(match.params.id);
     if (match.params.longtextid) loadLongText(match.params.longtextid);
     getComments("text", match.params.id);
@@ -152,6 +153,10 @@ const TextPage = ({
                 <i className='fas fa-eye'></i> {text.hits}
               </small>
             </h2>
+
+            {longText && (
+              <Pages pages={longText.pages} longTextId={longText._id} currentPageId={text._id} />
+            )}
 
             <Link to='/texts'>
               <div className='btn btn-sm btn-outline-info'>Назад</div>

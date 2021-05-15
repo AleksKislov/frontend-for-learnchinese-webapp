@@ -9,7 +9,6 @@ const TextSource = ({ textSource }) => {
   useEffect(() => {
     if (textSource) {
       if (validURL(textSource)) {
-        console.log(textSource);
         setState(parseURL(textSource));
         setIsURL(true);
       } else {
