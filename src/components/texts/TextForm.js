@@ -106,6 +106,7 @@ const TextForm = ({ loadUserWords, user, textToEdit, clearText, location }) => {
     categoryInd: 0
   });
 
+  // TODO fix bug: if no photo chosen, can't process texts
   const preprocessForm = async e => {
     e.preventDefault();
 
@@ -132,7 +133,6 @@ const TextForm = ({ loadUserWords, user, textToEdit, clearText, location }) => {
         textArea.value = chunkedOriginText.join("\n\n");
         let chunkedTranslation;
         if (!isTranslated) {
-          // console.log("HERE");
           const { translation } = await getTranslation(chunkedOriginText);
           setIsTranslated(true);
           // console.log(translation);
